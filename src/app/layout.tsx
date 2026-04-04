@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Devanagari, Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -25,8 +26,18 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
+  manifest: "/site.webmanifest",
   alternates: {
     canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon?size=32", sizes: "32x32", type: "image/png" },
+      { url: "/icon?size=192", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
   },
   openGraph: {
     title: "PixMorphy",
@@ -35,11 +46,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/icon?size=512`,
+        width: 512,
+        height: 512,
+        alt: "PixMorphy logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "PixMorphy",
     description: siteConfig.description,
+    images: [`${siteConfig.url}/icon?size=512`],
   },
 };
 
@@ -48,6 +68,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/icon?size=512`,
+    sameAs: ["https://github.com/Rajat0323/PixMorphy-Trends"],
+  };
+
   return (
     <html
       lang="en"
@@ -55,6 +84,22 @@ export default function RootLayout({
       className={`${headingFont.variable} ${bodyFont.variable} scroll-smooth`}
     >
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-MV8BT8T3J1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MV8BT8T3J1');
+          `}
+        </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <div className="site-shell">
           <SiteHeader />
           <main className="flex-1">{children}</main>
