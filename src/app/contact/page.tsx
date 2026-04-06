@@ -4,6 +4,9 @@ import { SectionHeading } from "@/components/section-heading";
 export const metadata: Metadata = {
   title: "Contact",
   description: "PixMorphy se contact karne ke liye editorial, partnership aur feedback options.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

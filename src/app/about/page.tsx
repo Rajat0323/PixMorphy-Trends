@@ -4,6 +4,9 @@ import { SectionHeading } from "@/components/section-heading";
 export const metadata: Metadata = {
   title: "About",
   description: "PixMorphy ke editorial focus, trust principles aur audience ke baare mein janiye.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

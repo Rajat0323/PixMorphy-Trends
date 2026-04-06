@@ -1,10 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { AdSlot } from "@/components/ad-slot";
 import { CategoryRail } from "@/components/category-rail";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
 import { featuredPosts, posts, siteConfig } from "@/data/content";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 function HomepageHero() {
   const lead = featuredPosts[0];

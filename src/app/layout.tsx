@@ -27,9 +27,6 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.name,
   manifest: "/site.webmanifest",
-  alternates: {
-    canonical: "/",
-  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
