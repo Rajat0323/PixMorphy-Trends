@@ -24,6 +24,9 @@ export function SiteFooter() {
             <Link href="/contact" className="block hover:text-[color:var(--accent)]">
               Contact
             </Link>
+            <Link href="/feed.xml" className="block hover:text-[color:var(--accent)]">
+              RSS Feed
+            </Link>
             <a className="block hover:text-[color:var(--accent)]" href="#latest">
               Editorial Standards
             </a>

@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.name,
   manifest: "/site.webmanifest",
+  alternates: {
+    types: {
+      "application/rss+xml": `${siteConfig.url}/feed.xml`,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
