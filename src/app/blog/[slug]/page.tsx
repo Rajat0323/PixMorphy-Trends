@@ -63,6 +63,15 @@ export default async function BlogPage({ params }: PageProps) {
   }
 
   const relatedPosts = getRelatedPosts(post.relatedSlugs);
+  const sectionImageChunks = post.galleryImages?.length
+    ? (() => {
+        const sectionCount = Math.max(post.sections.length, 1);
+        const chunkSize = Math.ceil(post.galleryImages.length / sectionCount);
+        return post.sections.map((_, index) =>
+          post.galleryImages?.slice(index * chunkSize, (index + 1) * chunkSize) ?? [],
+        );
+      })()
+    : [];
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -127,7 +136,7 @@ export default async function BlogPage({ params }: PageProps) {
                 <span>Updated {new Date(post.updatedAt ?? post.publishedAt).toLocaleDateString("en-IN")}</span>
               </div>
             </div>
-            <div className={`relative min-h-[280px] bg-gradient-to-br ${post.heroAccent}`}>
+            <div className={`relative min-h-[320px] bg-gradient-to-br ${post.heroAccent}`}>
               <Image
                 src={post.imageSrc}
                 alt={post.imageAlt}
@@ -136,37 +145,10 @@ export default async function BlogPage({ params }: PageProps) {
                 sizes="(max-width: 1024px) 100vw, 760px"
                 className="object-cover"
               />
-              <div className={`absolute inset-0 bg-gradient-to-br ${post.heroAccent} opacity-20`} />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.08),rgba(15,23,42,0.54))]" />
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                <div className="max-w-md rounded-[24px] border border-white/20 bg-white/14 p-4 backdrop-blur">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/82">
-                    Why it matters
-                  </p>
-                  <p className="mt-2 text-sm leading-7 text-white">
-                    Fresh tech explainers ko mobile users ke liye easy aur trustworthy format mein present karna Discover performance ka core part hai.
-                  </p>
-                </div>
-              </div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${post.heroAccent} opacity-15`} />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.06),rgba(15,23,42,0.38))]" />
             </div>
           </header>
-
-          <section className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--accent)]">
-              Quick Summary
-            </p>
-            <p className="mt-3 text-sm leading-7 text-[color:var(--text-secondary)]">
-              Yeh article PixMorphy ke ideal blog page wireframe ko represent karta hai: bold hero, short readable paragraphs, inline ad slots, FAQs, author trust block aur related stories.
-            </p>
-          </section>
-
-          <section className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
-            <p className="text-sm leading-7 text-[color:var(--text-secondary)]">
-              Indian mobile readers fast answers chahte hain. Isliye article layout ka first job hai unhe quickly orient karna, phir clean sections ke through detail dena.
-            </p>
-          </section>
-
-          <AdSlot label="Ad after first paragraph for monetization without blocking readability" />
 
           {post.sections.map((section, index) => (
             <section
@@ -190,19 +172,29 @@ export default async function BlogPage({ params }: PageProps) {
                   ))}
                 </ul>
               ) : null}
-              {index === 1 ? (
-                <div className="mt-6 rounded-[24px] bg-[color:var(--surface-muted)] p-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--accent)]">
-                    Affiliate Opportunity
-                  </p>
-                  <p className="mt-2 text-sm leading-7 text-[color:var(--text-secondary)]">
-                    Storage cleanup ya device-switch topics ke saath cloud backup, transfer tools aur phone accessories contextual affiliate modules ke liye relevant hain.
-                  </p>
+              {sectionImageChunks[index]?.length ? (
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  {sectionImageChunks[index].map((image) => (
+                    <div
+                      key={image.src}
+                      className="overflow-hidden rounded-[24px] border border-[color:var(--border)] bg-[color:var(--surface-muted)]"
+                    >
+                      <div className="relative aspect-[16/10]">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 360px"
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               ) : null}
-              {index === 2 ? (
+              {index === 1 ? (
                 <div className="mt-6">
-                  <AdSlot label="Mid-content ad slot with fixed height to avoid layout shift" compact />
+                  <AdSlot label="Sponsored content slot" compact />
                 </div>
               ) : null}
             </section>
@@ -211,8 +203,8 @@ export default async function BlogPage({ params }: PageProps) {
           <section className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
             <SectionHeading
               eyebrow="FAQs"
-              title="Visible FAQs jo schema ke saath trust bhi build karein."
-              description="FAQ content hidden schema-only nahi hona chahiye. Reader ko bhi answer milna chahiye aur search engines ko bhi clarity."
+              title="Readers ke common sawalon ke jawab"
+              description="Is topic se related quick questions aur simple answers."
             />
             <div className="mt-6">
               <FaqAccordion items={post.faq} />
@@ -230,8 +222,8 @@ export default async function BlogPage({ params }: PageProps) {
           <section className="space-y-6">
             <SectionHeading
               eyebrow="Related Posts"
-              title="Internal linking ko natural aur high-CTR banana zaroori hai."
-              description="Bottom recommendations same audience intent ke hisaab se choose ki gayi hain, taaki session depth improve ho."
+              title="Is topic se related aur bhi stories"
+              description="Agar aapko yeh article useful laga, to yeh related posts bhi dekh sakte hain."
             />
             <div className="grid gap-6 md:grid-cols-2">
               {relatedPosts.map((relatedPost) => (
@@ -244,39 +236,44 @@ export default async function BlogPage({ params }: PageProps) {
         <aside className="space-y-6">
           <div className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
             <h2 className="text-lg font-semibold text-[color:var(--text-primary)]">
-              Blog Page Wireframe
+              Latest Stories
             </h2>
-            <div className="mt-4 space-y-3 text-sm leading-7 text-[color:var(--text-secondary)]">
-              <p>Hero image, emotional headline, author meta, short paragraphs aur inline monetization is template ka core flow hai.</p>
-              <p>Desktop par optional sidebar mein popular posts, categories aur recent updates fit hote hain.</p>
+            <div className="mt-5 space-y-4">
+              {posts
+                .filter((item) => item.slug !== post.slug)
+                .slice(0, 3)
+                .map((item) => (
+                  <Link
+                    key={item.slug}
+                    href={`/blog/${item.slug}`}
+                    className="block rounded-[22px] bg-[color:var(--surface-muted)] p-4 transition hover:-translate-y-0.5"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
+                      {item.category}
+                    </p>
+                    <h3 className="mt-2 text-base font-semibold leading-7 text-[color:var(--text-primary)]">
+                      {item.title}
+                    </h3>
+                  </Link>
+                ))}
             </div>
           </div>
           <AdSlot label="Desktop sidebar ad or sponsor mention" />
           <div className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
             <h2 className="text-lg font-semibold text-[color:var(--text-primary)]">
-              SEO Notes
+              Categories
             </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-7 text-[color:var(--text-secondary)]">
-              <li>Clean URL structure and metadata per slug.</li>
-              <li>Article schema and FAQ schema both rendered.</li>
-              <li>Author section acts as EEAT support.</li>
-              <li>Related posts improve internal link depth.</li>
-            </ul>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {["Trending", "Tech Update", "AI Tools", "Online Earning"].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full bg-[color:var(--surface-muted)] px-4 py-2 text-sm font-medium text-[color:var(--text-secondary)]"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
-          <Link
-            href="/contact"
-            className="block rounded-[28px] bg-[linear-gradient(135deg,var(--accent),var(--accent-strong))] p-6 text-white shadow-[0_20px_48px_rgba(37,99,235,0.28)]"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/80">
-              CTA Block
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-              Brand collaboration ya sponsored campaign discuss karna hai?
-            </h2>
-            <p className="mt-3 text-sm leading-7 text-white/86">
-              Contact page is template mein trust aur monetization dono goals ko support karta hai.
-            </p>
-          </Link>
         </aside>
       </div>
     </div>
