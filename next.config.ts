@@ -111,6 +111,86 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "th-i.thgim.com",
       },
+      {
+        protocol: "https",
+        hostname: "pbs.twimg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.mos.cms.futurecdn.net",
+      },
+      {
+        protocol: "https",
+        hostname: "images.samsung.com",
+      },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
+      },
+      {
+        protocol: "https",
+        hostname: "myxprs.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.beebom.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i.imgur.com",
+      },
+      {
+        protocol: "https",
+        hostname: "s.yimg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "motorolain.vtexassets.com",
+      },
+      {
+        protocol: "https",
+        hostname: "motorolaimgrepo.vtexassets.com",
+      },
+      {
+        protocol: "https",
+        hostname: "rukminim2.flixcart.com",
+      },
+      {
+        protocol: "https",
+        hostname: "backend.paiinternational.in",
+      },
+      {
+        protocol: "https",
+        hostname: "img-prd-pim.poorvika.com",
+      },
+      {
+        protocol: "https",
+        hostname: "darlingretail.com",
+      },
+      {
+        protocol: "https",
+        hostname: "media-ik.croma.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i03.appmifile.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i02.appmifile.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ckstorage.in-maa-1.linodeobjects.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.91-img.com",
+      },
+      {
+        protocol: "https",
+        hostname: "r3.whistleout.com.au",
+      },
     ],
   },
 };
