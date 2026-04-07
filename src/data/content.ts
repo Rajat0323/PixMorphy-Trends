@@ -60,6 +60,213 @@ export const siteConfig = {
 
 export const posts: Post[] = [
   {
+    slug: "iran-vs-america-war-that-can-change-the-world",
+    title: "Iran vs America: The War That Can Change The World",
+    excerpt:
+      "US-Iran conflict ke roots, nuclear tension, oil routes, Israel factor aur global impact ko simple Hinglish mein deep format mein samjhein.",
+    category: "Trending",
+    publishedAt: "2026-04-07",
+    updatedAt: "2026-04-07",
+    readTime: "8 min read",
+    author: "Rajat Gupta",
+    imageSrc: "https://static-cdn.toi-media.com/www/uploads/2026/03/AFP__20260303__99NK89E__v1__HighRes__ComboIranUsIsraelWar.jpg",
+    heroAccent: "from-slate-950 via-red-900 to-amber-700",
+    featuredLabel: "Global Crisis",
+    imageAlt: "Iran vs America war explainer featured image",
+    galleryImages: [
+      {
+        src: "https://cdn.britannica.com/36/286736-050-76529665/strait-of-hormuz-persian-gulf-oman-iran-uae.jpg",
+        alt: "Strait of Hormuz map image",
+      },
+      {
+        src: "https://cdn.theatlantic.com/media/mt/international/mf%20photo%20mar6%20p.jpg",
+        alt: "US Iran tensions historical image",
+      },
+      {
+        src: "https://static.independent.co.uk/2026/02/28/9/18/chart.png",
+        alt: "Conflict trend chart image",
+      },
+      {
+        src: "https://www.worldatlas.com/upload/1d/57/ab/us-military-facilities.png",
+        alt: "US military facilities map image",
+      },
+      {
+        src: "https://static-cdn.toi-media.com/www/uploads/2026/03/AFP__20260303__99NK89E__v1__HighRes__ComboIranUsIsraelWar.jpg",
+        alt: "Iran US Israel war combo image",
+      },
+      {
+        src: "https://static-cdn.toi-media.com/www/uploads/2021/04/AP21107409114651.jpg",
+        alt: "Iran nuclear issue image",
+      },
+      {
+        src: "https://iranprimer.usip.org/sites/default/files/Iran%20Ballistic%20Missile%20Ranges%20DIA%202019.png",
+        alt: "Iran ballistic missile ranges image",
+      },
+      {
+        src: "https://cdn.statcdn.com/Infographic/images/normal/18019.jpeg",
+        alt: "Iran nuclear infographic image",
+      },
+      {
+        src: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202603/an-aerial-view-of-the-iranian-shores-and-the-island-of-qeshm-in-the-strait-of-hormuz-left-a-satel-023003334-16x9_0.jpg?VersionId=VXstBy6k2_rtQ07uBfdRH3R8Jj0RUab",
+        alt: "Iranian shores at Strait of Hormuz image",
+      },
+      {
+        src: "https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/images/fig1.jpg",
+        alt: "World oil chokepoints map image",
+      },
+      {
+        src: "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iX3mkvEDx_mw/v1/-1x-1.webp",
+        alt: "Oil market impact image",
+      },
+      {
+        src: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w%2Cf_auto%2Cq_auto%3Abest/rockcms/2026-03/260314-kharg-1-810046.jpg",
+        alt: "Oil facility image",
+      },
+      {
+        src: "https://i.guim.co.uk/img/media/4021aa49360f6340036872f75e4db8cf9d7d2680/256_0_2691_2153/master/2691.jpg?auto=format&fit=max&quality=85&s=6521e683951cbec958b9ae5cc8249566&width=700",
+        alt: "War escalation image 1",
+      },
+      {
+        src: "https://www.spsmai.com/news/images/VS24_tw.jpg",
+        alt: "Military escalation visual",
+      },
+      {
+        src: "https://i.guim.co.uk/img/media/8e439a8e6982ee7767a9a8fb7ae5d249a14f495e/0_71_6000_3375/6000.jpg?crop=none&dpr=1&s=none&width=465",
+        alt: "War escalation image 2",
+      },
+      {
+        src: "https://live-production.wcms.abc-cdn.net.au/7f1640451fafdcd363ca6cbf49806770?cropH=2813&cropW=5000&height=485&impolicy=wcms_crop_resize&width=862&xPos=0&yPos=259",
+        alt: "Missile and strike impact image",
+      },
+      {
+        src: "https://www.hrw.org/sites/default/files/styles/16x9_large/public/media_2024/11/202411mena_ip_gaza_salahaldinroad_evacuation.jpg?h=375d25f2&itok=QmxkVd3A",
+        alt: "Civilian evacuation image",
+      },
+      {
+        src: "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/24-04-2025-Kyiv-Ukraine-attacks-02.jpg/image1170x530cropped.jpg",
+        alt: "UN crisis response image",
+      },
+      {
+        src: "https://i.guim.co.uk/img/media/83d708c36e0567c7597a202c90bd7c7d7775b652/0_0_4128_2752/master/4128.jpg?crop=none&dpr=1&s=none&width=445",
+        alt: "Humanitarian impact image",
+      },
+      {
+        src: "https://www.unicef.org/sites/default/files/styles/press_release_feature/public/UNI453264.jpg.webp?itok=2A9oWjDJ",
+        alt: "Children affected by conflict image",
+      },
+    ],
+    keywords: [
+      "Iran vs America war",
+      "US Iran tensions explained",
+      "Iran America conflict 2026",
+      "Israel Iran US conflict",
+      "Strait of Hormuz impact",
+    ],
+    faq: [
+      {
+        question: "US-Iran conflict ka main reason kya hai?",
+        answer:
+          "Is conflict ke peeche historical distrust, nuclear fear, regional power struggle, oil routes aur Israel factor sab ek saath role play karte hain.",
+      },
+      {
+        question: "Strait of Hormuz itna important kyun hai?",
+        answer:
+          "Yeh global oil flow ka critical chokepoint hai. Yahan disruption hone se energy prices aur global markets dono par seedha impact padta hai.",
+      },
+      {
+        question: "Kya yeh conflict sirf do deshon ka issue hai?",
+        answer:
+          "Nahi. Isme Middle East, oil trade, nuclear risk, Israel factor aur global economy sab linked hain, isliye iska impact world-level par feel hota hai.",
+      },
+    ],
+    sections: [
+      {
+        heading: "US-Iran conflict achanak nahi hua, iske roots bahut purane hain",
+        paragraphs: [
+          "Jo situation aaj world dekh raha hai, woh kisi ek incident ka result nahi hai. Yeh decades-long distrust, regime change history, regional politics aur strategic rivalry ka buildup hai.",
+          "1953 se lekar 1979 revolution tak trust repeatedly break hua, aur uske baad se Washington aur Tehran ke beech relation cooperation se zyada confrontation ki direction mein chala gaya.",
+        ],
+        bullets: [
+          "Historical distrust is conflict ka foundation hai",
+          "1953 aur 1979 turning points maane jaate hain",
+          "Political memory aaj ke tensions ko shape karti hai",
+        ],
+      },
+      {
+        heading: "Nuclear issue ne modern phase ko sabse zyada dangerous banaya",
+        paragraphs: [
+          "Aaj ke conflict ka sabse sensitive angle Iran ka nuclear program hai. US aur uske allies ko concern yeh rehta hai ki agar Tehran nuclear weapon capability ke kareeb pahunchta hai, to poori regional power balance change ho sakti hai.",
+          "Iran apne nuclear program ko peaceful purpose ke context mein present karta raha hai, lekin trust deficit itna deep hai ki har enrichment update ya inspection dispute global alarm create kar deta hai.",
+        ],
+        bullets: [
+          "Nuclear fear modern trigger hai",
+          "Israel factor yahan aur zyada important ho jata hai",
+          "Arms race ka risk experts repeatedly mention karte hain",
+        ],
+      },
+      {
+        heading: "Oil aur Strait of Hormuz is conflict ko global bana dete hain",
+        paragraphs: [
+          "Middle East ki geopolitics mein oil ka role hidden nahi, central hai. Iran ka Strait of Hormuz par strategic control iss conflict ko sirf military nahi, economic crisis bhi bana sakta hai.",
+          "Agar oil transit disrupt hota hai, to iska asar sirf Gulf region tak limited nahi rehta. Fuel prices, shipping costs aur inflation jaisi cheezein Asia se Europe tak feel ki ja sakti hain.",
+        ],
+        bullets: [
+          "Hormuz global oil chokepoint hai",
+          "Energy shock se India bhi affect ho sakta hai",
+          "Economic pressure military pressure ke saath parallel chalta hai",
+        ],
+      },
+      {
+        heading: "Proxy wars aur Israel factor ne tension ko aur explosive bana diya",
+        paragraphs: [
+          "US aur Iran ne saalon tak direct war se bachne ki koshish ki, lekin proxy conflicts ke through rivalry chalti rahi. Iraq, Syria, Lebanon aur Israel-linked tensions ne is equation ko constantly unstable rakha.",
+          "Israel factor aaj ke phase mein sabse critical triggers mein se ek hai, kyunki Iran-Israel hostility ka direct effect US-Iran escalation par padta hai.",
+        ],
+        bullets: [
+          "Shadow war ka phase bahut lamba raha",
+          "Regional militias aur alliances conflict ko spread karte rahe",
+          "Israel-Iran rivalry US angle ko aur sharper banati hai",
+        ],
+      },
+      {
+        heading: "2026 mein escalation itni dangerous kyun lag rahi hai?",
+        paragraphs: [
+          "Current phase ka sabse alarming part yeh hai ki confrontation cold messaging ya indirect pressure se aage badhkar open military escalation ke level par dikh rahi hai. Airstrikes, missile exchanges aur oil route threats ne situation ko much wider crisis mein convert kar diya hai.",
+          "Isi wajah se analysts isse sirf regional flare-up nahi, balki global stability risk ke roop mein dekh rahe hain.",
+        ],
+        bullets: [
+          "Conflict open escalation zone mein dikh raha hai",
+          "Leadership targeting aur missile response ne stakes badhaye hain",
+          "Markets aur diplomacy dono par pressure hai",
+        ],
+      },
+      {
+        heading: "Human aur economic impact sabse zyada ordinary log feel karte hain",
+        paragraphs: [
+          "Is tarah ke conflicts ka sabse painful effect civilians par padta hai. Displacement, infrastructure damage, humanitarian pressure aur mental trauma ka scale sirf battlefield tak limited nahi rehta.",
+          "Saath hi economic side par oil prices, shipping, inflation aur market uncertainty jaise impacts India jaise countries tak bhi pahunchte hain. Isi liye yeh conflict world-level concern ban jata hai.",
+        ],
+        bullets: [
+          "Civilians displacement aur fear mein jeete hain",
+          "Global economy par ripple effects padte hain",
+          "War ka cost battlefield se bahut bada hota hai",
+        ],
+      },
+      {
+        heading: "Final understanding",
+        paragraphs: [
+          "Iran vs America ka conflict sirf do governments ki ladai nahi hai. Isme history, ideology, oil, nuclear fear, regional alliances aur power politics sab ek saath intertwined hain.",
+          "Simple truth yeh hai ki jo duniya aaj dekh rahi hai, woh sirf military confrontation nahi, balki global order ke control ka struggle bhi hai. Isi wajah se yeh conflict poori world politics ko reshape kar sakta hai.",
+        ],
+      },
+    ],
+    relatedSlugs: [
+      "csk-crisis-dhoni-comeback-ipl-2026",
+      "rcb-vs-csk-result-2026-viral-reason",
+      "whatsapp-new-update-2026-hidden-features",
+    ],
+  },
+  {
     slug: "csk-crisis-dhoni-comeback-ipl-2026",
     title:
       "CSK Sankat Mein! Kya Agle Match Mein Lautenge Dhoni? Kya Thala Phir Se Chennai Ko Khada Kar Payenge?",
