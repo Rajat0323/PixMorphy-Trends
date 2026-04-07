@@ -60,6 +60,171 @@ export const siteConfig = {
 
 export const posts: Post[] = [
   {
+    slug: "csk-crisis-dhoni-comeback-ipl-2026",
+    title:
+      "CSK Sankat Mein! Kya Agle Match Mein Lautenge Dhoni? Kya Thala Phir Se Chennai Ko Khada Kar Payenge?",
+    excerpt:
+      "CSK ki girti shuruaat, points table pressure, Dhoni comeback buzz aur playoff chances ko simple Hinglish mein samjhein.",
+    category: "Trending",
+    publishedAt: "2026-04-07",
+    updatedAt: "2026-04-07",
+    readTime: "6 min read",
+    author: "Rajat Gupta",
+    imageSrc: "https://media.crictracker.com/media/attachments/1774673640267_MS-Dhoni.jpeg",
+    heroAccent: "from-yellow-500 via-orange-500 to-blue-700",
+    featuredLabel: "CSK Crisis",
+    imageAlt: "MS Dhoni comeback focused CSK crisis featured image",
+    galleryImages: [
+      {
+        src: "https://c.ndtvimg.com/2026-04/aevtggik_ruturaj-and-matt-henry-afp_625x300_06_April_26.jpg?im=FeatureCrop%2Calgorithm%3Ddnn%2Cwidth%3D1200%2Cheight%3D738",
+        alt: "CSK poor start image",
+      },
+      {
+        src: "https://images.financialexpressdigital.com/2026/04/Sanju-Samson-Chetta-horror-homecoming-at-Chennai.jpg?w=1200",
+        alt: "CSK struggling image",
+      },
+      {
+        src: "https://pbs.twimg.com/media/FuvIhJKXsAAMVvo.jpg",
+        alt: "CSK team image",
+      },
+      {
+        src: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202305/untitled_design_-_2023-05-30t154001.908-sixteen_nine.jpg?VersionId=vfPcgXceJPZgolNg_xEnhWmgS7RUpVCB",
+        alt: "CSK fan emotion image",
+      },
+      {
+        src: "https://media.crictracker.com/media/attachments/1774673640267_MS-Dhoni.jpeg",
+        alt: "MS Dhoni image",
+      },
+      {
+        src: "https://i.pinimg.com/564x/a0/eb/4d/a0eb4d7d2fac6a36464a1dc31c868ab1.jpg",
+        alt: "Dhoni iconic image",
+      },
+      {
+        src: "https://imgc.ap7am.com/bimg/cr-20250409tn67f5f42996398.jpg",
+        alt: "Dhoni return buzz image",
+      },
+      {
+        src: "https://static.toiimg.com/thumb/msid-120101730%2Cimgsize-28936%2Cwidth-400%2Cresizemode-4/ms-dhoni-bcci-photo.jpg",
+        alt: "MS Dhoni BCCI photo",
+      },
+      {
+        src: "https://static.toiimg.com/thumb/msid-110244276%2Cimgsize-54498%2Cwidth-400%2Cresizemode-4/RCB.jpg",
+        alt: "IPL playoff race visual",
+      },
+      {
+        src: "https://img.etimg.com/thumb/width-640%2Cheight-480%2Cimgsize-1494178%2Cresizemode-75%2Cmsid-129751518/news/sports/csk-ipl-history-check-wins-records-statistics-key-moments-analysis-of-chennai-super-kings/csk-in-ipl-2026-heres-all-you-need-to-know-about-csks-ipl-2026-rebuildbr.jpg",
+        alt: "CSK rebuild image",
+      },
+      {
+        src: "https://static.toiimg.com/thumb/imgsize-23456%2Cmsid-120439726%2Cwidth-600%2Cresizemode-4/ipl-points-table-19-april.jpg",
+        alt: "IPL points table image",
+      },
+      {
+        src: "https://www.indiancricketfans.com/uploads/monthly_2023_04/image.png.764173fc6e38e5317bf2a14b32500ae5.png",
+        alt: "CSK qualification scenario image",
+      },
+    ],
+    keywords: [
+      "CSK crisis 2026",
+      "Dhoni comeback next match",
+      "CSK playoff chances 2026",
+      "MS Dhoni return IPL 2026",
+      "CSK latest news Hindi",
+    ],
+    faq: [
+      {
+        question: "Kya Dhoni agle match mein laut sakte hain?",
+        answer:
+          "Current buzz aur team situation ko dekhte hue fans strong comeback possibility discuss kar rahe hain, lekin final clarity team update se hi aayegi.",
+      },
+      {
+        question: "CSK ki sabse badi problem abhi kya lag rahi hai?",
+        answer:
+          "Top-order failure, middle-order role confusion aur death bowling pressure teen sabse bade visible issues lag rahe hain.",
+      },
+      {
+        question: "Kya CSK ab bhi playoffs race mein hai?",
+        answer:
+          "Haan, mathematically race abhi khatam nahi hoti, lekin team ko ab momentum jaldi recover karna hoga.",
+      },
+    ],
+    sections: [
+      {
+        heading: "CSK ki girti shuruaat ne fans ko tension mein daal diya hai",
+        paragraphs: [
+          "IPL 2026 ki shuruaat Chennai Super Kings ke liye expected tareeke se bilkul nahi gayi. Lagatar setbacks ke baad team points table ke bottom side par dikh rahi hai, aur fans ke beech panic naturally badh gaya hai.",
+          "Issue sirf matches haarne ka nahi lag raha, balki momentum tootne ka lag raha hai. Jab ek champion identity wali team itni slow start leti hai, tab har agla match pressure game ban jata hai.",
+        ],
+        bullets: [
+          "Team early phase mein pressure mein hai",
+          "Net run rate aur points dono concern bana rahe hain",
+          "Fan confidence visibly shake hua hai",
+        ],
+      },
+      {
+        heading: "CSK ki problems ka deep analysis",
+        paragraphs: [
+          "Is season CSK ki sabse badi dikkat yeh lag rahi hai ki batting aur bowling dono departments ek saath rhythm mein nahi aa pa rahe. Top order jaldi collapse karta hai to middle order par extra load aa jata hai.",
+          "Saath hi death overs mein extra runs dena team ko aur backfoot par daal raha hai. Role clarity aur execution dono areas mein inconsistency ka effect dikh raha hai.",
+        ],
+        bullets: [
+          "Top order early wickets de raha hai",
+          "Middle order role clarity weak lag rahi hai",
+          "Death bowling last overs mein costly ho rahi hai",
+          "Leadership calm ki kami feel ho rahi hai",
+        ],
+      },
+      {
+        heading: "Dhoni ki possible wapsi ka buzz kyun itna bada hai?",
+        paragraphs: [
+          "MS Dhoni sirf ek player nahi, CSK ki complete emotional identity hain. Isi wajah se jaise hi team struggle karti dikhti hai, sabse pehla sawaal Dhoni ki comeback possibility par hi aata hai.",
+          "Fans ko lagta hai ki Dhoni ki presence sirf batting ya finishing tak limited nahi hoti. Unka game reading, field setting aur dressing-room confidence bhi team ko alag level par le jata hai.",
+        ],
+        bullets: [
+          "Dhoni = leadership calm",
+          "Pressure moments mein better decision-making",
+          "Team confidence ko instant boost",
+        ],
+      },
+      {
+        heading: "Agar Dhoni lautte hain to CSK mein kya badal sakta hai?",
+        paragraphs: [
+          "Agar Dhoni next phase mein available hote hain, to sabse bada change team ke mindset mein dikhega. Bowlers ko use karne ka tarika, finishing phase ka control aur pressure situations mein composure wapas aa sakta hai.",
+          "Young players bhi zyada fearless feel karte hain jab unke saath ek proven leader hota hai. Isi wajah se Dhoni comeback ko fans revival switch ki tarah dekh rahe hain.",
+        ],
+        bullets: [
+          "Better field placements and bowling calls",
+          "Finishing phase mein calm batting option",
+          "Dressing-room energy aur belief mein jump",
+        ],
+      },
+      {
+        heading: "CSK qualification chances ki real picture kya kehti hai?",
+        paragraphs: [
+          "Abhi picture difficult zaroor lag rahi hai, lekin fully finished nahi. Tournament lamba hota hai aur ek strong winning streak poori story badal sakti hai.",
+          "Lekin clear baat yeh hai ki ab CSK ke paas error margin kaafi kam ho gaya hai. Yahan se team ko momentum, smart combinations aur quick wins ki zarurat hogi.",
+        ],
+        bullets: [
+          "Best case: strong comeback aur playoff push",
+          "Average case: qualification net run rate par atak sakti hai",
+          "Worst case: aur kuch losses season ko almost close kar sakte hain",
+        ],
+      },
+      {
+        heading: "Final verdict",
+        paragraphs: [
+          "CSK abhi khatam nahi hui hai, lekin danger zone mein zaroor dikh rahi hai. Team ko momentum recover karne ke liye sirf ek win nahi, balki confidence reset ki zarurat hai.",
+          "Aur isi point par Dhoni ka naam sabse bada factor ban jata hai. Agar Thala wapas aate hain aur team ko calm direction dete hain, to yeh season abhi bhi ek memorable comeback story ban sakta hai.",
+        ],
+      },
+    ],
+    relatedSlugs: [
+      "rcb-vs-csk-result-2026-viral-reason",
+      "srh-vs-lsg-match-prediction-2026",
+      "motorola-edge-70-fusion-2026-review",
+    ],
+  },
+  {
     slug: "samsung-galaxy-s26-ultra-2026-guide",
     title:
       "Samsung Galaxy S26 Ultra 2026: 250MP Camera Aur AI Power Ne Sabko Shock Kar Diya!",

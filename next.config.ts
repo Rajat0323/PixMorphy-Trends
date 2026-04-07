@@ -17,10 +17,6 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "www.candere.com",
-      },
-      {
-        protocol: "https",
         hostname: "resize.indiatvnews.com",
       },
       {
@@ -30,10 +26,6 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "media.assettype.com",
-      },
-      {
-        protocol: "https",
-        hostname: "static.wixstatic.com",
       },
       {
         protocol: "https",
@@ -62,10 +54,6 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "www.tradologie.com",
-      },
-      {
-        protocol: "https",
-        hostname: "akm-img-a-in.tosshub.com",
       },
       {
         protocol: "https",
@@ -190,6 +178,30 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "r3.whistleout.com.au",
+      },
+      {
+        protocol: "https",
+        hostname: "images.financialexpressdigital.com",
+      },
+      {
+        protocol: "https",
+        hostname: "media.crictracker.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i.pinimg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "imgc.ap7am.com",
+      },
+      {
+        protocol: "https",
+        hostname: "img.etimg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.indiancricketfans.com",
       },
     ],
   },
