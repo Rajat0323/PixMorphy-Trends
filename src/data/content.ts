@@ -60,6 +60,192 @@ export const siteConfig = {
 
 export const posts: Post[] = [
   {
+    slug: "mg-majestor-price-in-india-launch-features",
+    title:
+      "MG Majestor Price in India: Fortuner Ko Takkar Dene Aa Rahi Yeh Premium SUV, Price Sunke Shock Ho Jaoge!",
+    excerpt:
+      "MG Majestor ke expected price, launch timeline, premium features, interior aur India rivals ko simple Hinglish mein samjhein.",
+    category: "Tech",
+    publishedAt: "2026-04-08",
+    updatedAt: "2026-04-08",
+    readTime: "6 min read",
+    author: "Rajat Gupta",
+    imageSrc: "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Majestor/13304/1770898907264/front-left-side-47.jpg",
+    heroAccent: "from-zinc-900 via-slate-700 to-red-500",
+    featuredLabel: "SUV Launch",
+    imageAlt: "MG Majestor price in India featured image",
+    galleryImages: [
+      {
+        src: "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Majestor/13304/1770898907264/front-left-side-47.jpg",
+        alt: "MG Majestor front design image",
+      },
+      {
+        src: "https://stimg.cardekho.com/images/cms/carnewsimages/editorimages/698c136e32a3b.JPG",
+        alt: "MG Majestor exterior profile image",
+      },
+      {
+        src: "https://stimg.cardekho.com/images/cms/carnewsimages/editorimages/698099824d707.jpg",
+        alt: "MG Majestor exterior close image",
+      },
+      {
+        src: "https://asset.autocarindia.com/static/image-galleries/images/20260212_122318_d575281b.jpg",
+        alt: "MG Majestor road presence image",
+      },
+      {
+        src: "https://static.toiimg.com/thumb/126484709.jpg?photoid=126484709&resizemode=4&width=600",
+        alt: "MG Majestor launch timing image",
+      },
+      {
+        src: "https://imgd.aeplcdn.com/1280x720/n/cw/ec/216057/majestor-exterior-right-front-three-quarter.jpeg?isig=0",
+        alt: "MG Majestor right front three quarter image",
+      },
+      {
+        src: "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Hector-Plus/13137/1765892297285/front-left-side-47.jpg?impolicy=resize&imwidth=420",
+        alt: "MG SUV lineup reference image",
+      },
+      {
+        src: "https://asset.autocarindia.com/static/news/images/20260223_063929_1a2272ec.jpeg?q=75&w=728",
+        alt: "MG Majestor launch update image",
+      },
+      {
+        src: "https://cdn.carhp.in/news/1521327b-2271-43b5-8337-f5d6a3f24f89.png?format=webp&q=75&width=665",
+        alt: "MG Majestor feature highlights image",
+      },
+      {
+        src: "https://asset.autocarindia.com/static/image-galleries/images/20260212_122639_84f9baca.jpg?q=75&w=728",
+        alt: "MG Majestor premium feature image",
+      },
+      {
+        src: "https://images.carandbike.com/cms/articles/2026/2/3219538/mg_majestor_suv_unveiled_ahead_of_april_2026_launch_carandbike_5_0c360dacc9.jpg",
+        alt: "MG Majestor unveiled image",
+      },
+      {
+        src: "https://static.toiimg.com/thumb/94045591.jpg?imgsize=23456&photoid=94045591&resizemode=4&width=600",
+        alt: "MG Majestor cabin image",
+      },
+      {
+        src: "https://imgd.aeplcdn.com/370x208/n/cw/ec/166035/majestor-interior-third-row-seats.jpeg?isig=0&q=80",
+        alt: "MG Majestor third row image",
+      },
+      {
+        src: "https://stimg.cardekho.com/images/carinteriorimages/930x620/MG/Majestor/13304/1770898813792/dashboard-59.jpg",
+        alt: "MG Majestor dashboard image",
+      },
+    ],
+    keywords: [
+      "MG Majestor price in India",
+      "MG Majestor launch date",
+      "MG Majestor features",
+      "MG Majestor specifications",
+      "MG Majestor vs Fortuner",
+    ],
+    faq: [
+      {
+        question: "MG Majestor ki expected price India mein kitni ho sakti hai?",
+        answer:
+          "Recent reports ke hisaab se MG Majestor ka expected ex-showroom price band lagbhag 40 lakh se 55 lakh rupaye ke beech ho sakta hai.",
+      },
+      {
+        question: "MG Majestor kab launch ho sakti hai?",
+        answer:
+          "Current reporting ke mutabik India price reveal ya launch timeline April 2026 ke around expected hai, especially 20 April 2026 ki date kaafi discuss ho rahi hai.",
+      },
+      {
+        question: "MG Majestor kin SUVs ko rival karegi?",
+        answer:
+          "Iska direct मुकाबला Toyota Fortuner, MG Gloster, Jeep Meridian aur Skoda Kodiaq jaise premium SUVs se dekha ja raha hai.",
+      },
+    ],
+    sections: [
+      {
+        heading: "MG Majestor price in India ko lekar sabse bada buzz kya hai?",
+        paragraphs: [
+          "MG Majestor ko India ke premium SUV segment ka ek important upcoming launch maana ja raha hai. Brand is model ke through full-size SUV buyers ko target karna chahta hai jo road presence, features aur comfort ka strong mix chahte hain.",
+          "Sabse zyada discussion iss baat ko lekar ho raha hai ki MG Majestor ki pricing kahan land karegi, kyunki isi se decide hoga ki yeh Fortuner-rival space mein kitni aggressively compete karegi.",
+        ],
+        bullets: [
+          "Expected price band premium SUV category mein hai",
+          "MG is model ko flagship-style positioning de sakti hai",
+          "Fortuner alternatives dekh rahe buyers ke liye strong interest point",
+        ],
+      },
+      {
+        heading: "Expected price range aur variants ko kaise samjhein?",
+        paragraphs: [
+          "Current auto reports ke hisaab se MG Majestor ki expected ex-showroom price roughly 40 lakh se 55 lakh ke beech ho sakti hai. Yeh range suggest karti hai ki brand isse feature-rich, high-positioned product ke roop mein la sakti hai.",
+          "Base aur mid variants value-driven ho sakte hain, jabki top trims likely ADAS, luxury touches aur 4WD-style appeal ke saath aayenge. Final pricing variant mix aur feature packaging par heavily depend karegi.",
+        ],
+        bullets: [
+          "Base: around 40 to 42 lakh",
+          "Mid: around 43 to 46 lakh",
+          "Top: around 47 to 55 lakh",
+        ],
+      },
+      {
+        heading: "Launch date ko lekar latest picture kya kehti hai?",
+        paragraphs: [
+          "MG Majestor ki India launch timeline ko lekar recent coverage April 2026 ke phase ki taraf point kar rahi hai. Automotive reports mein 20 April 2026 ka date window sabse zyada mention ho raha hai.",
+          "Launch timing important isliye bhi hai kyunki MG ke liye yeh sirf ek model launch nahi, balki premium SUV lineup ko aur strengthen karne ka strategic move ho sakta hai.",
+        ],
+        bullets: [
+          "April 2026 launch buzz strongest hai",
+          "Price reveal aur bookings ek hi window mein aa sakti hain",
+          "Launch ke baad segment comparison aur bhi intense ho jayega",
+        ],
+      },
+      {
+        heading: "Specifications aur performance se kya expectation hai?",
+        paragraphs: [
+          "MG Majestor ke baare mein jo strongest expectation hai, woh 2.0-litre twin-turbo diesel setup ko lekar hai. Yeh powertrain premium SUV buyers ke liye torque-heavy highway drive aur long-distance comfort dono ko target karta hai.",
+          "2WD aur 4WD options ki possibility isse sirf urban luxury SUV nahi, balki occasional rough-road capable package bhi bana sakti hai.",
+        ],
+        bullets: [
+          "Expected 2.0L twin-turbo diesel engine",
+          "Around 215 hp aur 478 to 480 Nm torque buzz",
+          "8-speed automatic gearbox expected",
+          "2WD aur 4WD dono options ki expectation",
+        ],
+      },
+      {
+        heading: "Features aur interior hi Majestor ko alag bana sakte hain",
+        paragraphs: [
+          "MG ka strongest area generally tech-heavy cabin aur feature-loaded packaging raha hai, aur Majestor se bhi wahi expectation banti hai. Large infotainment, digital cluster, panoramic sunroof aur connected-car tech jaise features is SUV ko modern premium buyers ke liye aur attractive bana sakte hain.",
+          "Interior side par 3-row practicality, premium materials aur comfort-focused layout is model ko family SUV buyers ke liye aur relevant bana dete hain.",
+        ],
+        bullets: [
+          "Large touchscreen aur digital display setup",
+          "Panoramic sunroof, ventilated seats, wireless charging",
+          "ADAS aur 360 camera jaise premium safety touches",
+          "Spacious 3-row interior and premium dashboard feel",
+        ],
+      },
+      {
+        heading: "MG Majestor vs rivals: kahan strongest lag rahi hai?",
+        paragraphs: [
+          "Fortuner jahan brand trust aur rugged image mein strong hai, wahin MG Majestor ka likely advantage feature count, cabin tech aur comfort-driven appeal mein dikh sakta hai. Jeep Meridian aur Kodiaq ke against bhi yeh size aur feature positioning ke basis par interesting case bana sakti hai.",
+          "Agar MG pricing smart rakhti hai, to buyers ke liye Majestor ek aisa option ban sakti hai jo premium presence aur modern tech dono ko combine kare.",
+        ],
+        bullets: [
+          "Fortuner ke against better feature story possible hai",
+          "Gloster ke upar more premium positioning expected hai",
+          "Comfort + tech + size ka combination strongest hook ban sakta hai",
+        ],
+      },
+      {
+        heading: "Final verdict",
+        paragraphs: [
+          "MG Majestor India ke premium SUV market mein ek strong contender ban sakti hai, especially un buyers ke liye jo big road presence ke saath modern cabin aur advanced features chahte hain. Expected pricing ise direct spotlight mein rakhegi.",
+          "Agar MG launch ke time feature list aur pricing ko balance kar leti hai, to Majestor 2026 ki most talked-about premium SUVs mein se ek ban sakti hai.",
+        ],
+      },
+    ],
+    relatedSlugs: [
+      "samsung-galaxy-s26-ultra-2026-guide",
+      "motorola-edge-70-fusion-2026-review",
+      "redmi-note-15-pro-plus-5g-2026-review",
+    ],
+  },
+  {
     slug: "iran-vs-america-war-that-can-change-the-world",
     title: "Iran vs America: The War That Can Change The World",
     excerpt:
