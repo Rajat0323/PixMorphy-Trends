@@ -60,6 +60,323 @@ export const siteConfig = {
 
 export const posts: Post[] = [
   {
+    slug: "who-is-vaibhav-suryavanshi-why-he-is-trending-india-today",
+    title:
+      "Who Is Vaibhav Suryavanshi? 15 Saal Ke Is RR Star Ne India Ko Kyu Hila Diya (Full Story)",
+    excerpt:
+      "Vaibhav Suryavanshi ka background, rising IPL fame, Kumble reaction, Mumbai Indians buzz aur RR vs RCB match context ko detailed Hinglish mein samjhein.",
+    category: "Trending",
+    publishedAt: "2026-04-10",
+    updatedAt: "2026-04-10",
+    readTime: "10 min read",
+    author: "Rajat Gupta",
+    imageSrc: "https://c.ndtvimg.com/2026-04/lqnqu8ds_vaibhav-sooryavanshi_625x300_08_April_26.jpg?im=FeatureCrop%2Calgorithm%3Ddnn%2Cwidth%3D1200%2Cheight%3D738",
+    heroAccent: "from-pink-700 via-violet-700 to-blue-700",
+    featuredLabel: "Teen Star",
+    imageAlt: "Vaibhav Suryavanshi trending IPL story featured image",
+    galleryImages: [
+      {
+        src: "https://c.ndtvimg.com/2026-04/lqnqu8ds_vaibhav-sooryavanshi_625x300_08_April_26.jpg?im=FeatureCrop%2Calgorithm%3Ddnn%2Cwidth%3D1200%2Cheight%3D738",
+        alt: "Vaibhav Suryavanshi featured RR image",
+      },
+      {
+        src: "https://c.ndtvimg.com/2026-03/9qd8u6rg_vaibhav-sooryavanshi-pti_625x300_31_March_26.jpg?im=FeatureCrop%2Calgorithm%3Ddnn%2Cwidth%3D1200%2Cheight%3D738",
+        alt: "Vaibhav Suryavanshi in action image",
+      },
+      {
+        src: "https://c.ndtvimg.com/2026-03/i5d58njc_vaibhav-sooryavanshi-rr-bcci_625x300_30_March_26.jpg?im=FeatureCrop%2Calgorithm%3Ddnn%2Cwidth%3D1200%2Cheight%3D738",
+        alt: "Vaibhav Suryavanshi RR BCCI image",
+      },
+    ],
+    keywords: [
+      "Who is Vaibhav Suryavanshi",
+      "Vaibhav Suryavanshi trending today",
+      "Vaibhav Suryavanshi RR",
+      "Vaibhav Suryavanshi age",
+      "Vaibhav Suryavanshi full story",
+    ],
+    faq: [
+      {
+        question: "Vaibhav Suryavanshi kaun hain?",
+        answer:
+          "Vaibhav Suryavanshi ek bahut young Indian cricketer hain jo Rajasthan Royals setup ke saath rapid rise ki wajah se national discussion ka hissa ban gaye hain.",
+      },
+      {
+        question: "Vaibhav Suryavanshi aaj trend kyun kar rahe hain?",
+        answer:
+          "Unki age, batting impact, expert praise, Mumbai Indians buzz aur RR vs RCB match context ne unhe aaj ka major cricket talking point bana diya hai.",
+      },
+      {
+        question: "Aaj ke RR vs RCB match mein Vaibhav par nazar kyun hai?",
+        answer:
+          "Aaj 10 April 2026 ke RR vs RCB clash mein unka battle RCB bowlers ke against key subplot ke roop mein discuss ho raha hai, especially unki fast-start batting ki wajah se.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Vaibhav Suryavanshi aaj India mein trend kyun kar rahe hain?",
+        paragraphs: [
+          "Aaj cricket fans ke beech ek naam bahut fast trend kar raha hai: Vaibhav Suryavanshi. Jo log IPL closely follow karte hain, unke liye yeh naam ab bilkul naya nahi raha. Lekin jo casual audience hai, unke liye sabse bada sawaal yahi hai ki आखिर yeh young player itna achanak headlines mein kaise aa gaya.",
+          "Trending hone ke peeche sirf ek reason nahi hota. Vaibhav ke case mein multiple layers ek saath kaam kar rahi hain. Ek taraf unki age ne logon ko shock kiya, doosri taraf unki fearless batting aur Rajasthan Royals ke setup mein unka role discussion mein aa gaya. Teesri taraf former cricketers, analysts aur media houses unke future ko lekar openly baat karne lage. Jab itne saare signals ek saath aa jayein, tab naam national trend ban hi jata hai.",
+          "Times of India ki April 2026 report ne trend ko aur fuel diya jab ek former India cricketer ke social media post se Mumbai Indians move wali buzz nikal kar saamne aayi. BBC Sport ne unhe youngest IPL debut storyline ke context mein highlight kiya, jabki The Hindu ne Anil Kumble ke reaction ko importance di. Yeh combination hi unki virality ka base bana.",
+        ],
+        bullets: [
+          "Young age ne instant curiosity create ki",
+          "Fearless batting style ne attention grab ki",
+          "Experts aur media coverage ne story ko national level par push kiya",
+        ],
+      },
+      {
+        heading: "Who is Vaibhav Suryavanshi? Background aur early rise",
+        paragraphs: [
+          "Vaibhav Suryavanshi ko lekar sabse pehli cheez jo log search kar rahe hain, woh hai unki age aur cricket background. Cricbuzz profile aur BBC Sport coverage ke mutabik Vaibhav ko ek extraordinary young batting talent ke roop mein dekha ja raha hai, jinhone early stage par hi national-level attention khinch liya.",
+          "Aise players ka rise usually sirf natural talent se nahi hota. Iske peeche junior cricket, domestic pathway, coaching environment aur mental strength ka combination hota hai. Vaibhav ki biggest quality yeh lagti hai ki woh age ke hisaab se unusually composed aur attacking dikhte hain. Yeh combination hi unhe normal junior prospect se alag banata hai.",
+          "Unka naam jab IPL discussion ka part bana, tab se log unhe sirf ek promising youngster nahi, balki India ke next big batting project ke roop mein dekhne lage. Isi wajah se unki profile ko le kar searches rapid speed se badhi hain.",
+        ],
+        bullets: [
+          "Young age ke saath unusual confidence",
+          "Top-level batting talent ke signs early dikh rahe hain",
+          "Domestic-to-IPL jump ne public interest aur badhaya",
+        ],
+      },
+      {
+        heading: "Experts unke baare mein kya keh rahe hain?",
+        paragraphs: [
+          "The Hindu ki report ka sabse important angle yeh tha ki Anil Kumble jaise senior cricket mind ne Vaibhav ko lekar excitement ke saath-saath caution ki baat bhi ki. Report ka core message yeh tha ki talent clear hai, lekin itne young player ko natural growth ke liye waqt aur proper handling dono chahiye.",
+          "Yeh point bahut important hai, kyunki India mein jab koi very young cricketer sudden fame leta hai, to public expectation instantly sky-high ho jaati hai. Kumble ka viewpoint iss sense mein grounded tha: talent ko celebrate karo, lekin us par unnecessary pressure mat daalo.",
+          "Yeh balanced reaction Vaibhav ke trend ko aur interesting bana deta hai. Ek side par hype hai, doosri side par mature voices keh rahi hain ki is player ko patiently build karna chahiye. Isi tension ke beech public aur zyada curious hoti hai.",
+        ],
+        bullets: [
+          "Kumble ne hype ke beech patience ki advice di",
+          "Talent ko acknowledge kiya gaya, pressure se bachane ki baat hui",
+          "Yeh discussion unki importance ko aur bada banata hai",
+        ],
+      },
+      {
+        heading: "Mumbai Indians buzz ne story ko aur viral kaise bana diya?",
+        paragraphs: [
+          "Times of India ki report ne Vaibhav Suryavanshi trend ko ek naya angle diya: Mumbai Indians buzz. Report ke mutabik ek ex-India cricketer ke post ne speculation create ki ki future mein kya Vaibhav jaisi talent ko Mumbai Indians jaisa franchise target kar sakta hai.",
+          "Indian cricket audience ko franchise narratives bahut attract karte hain. Jab kisi young player ke saath MI, CSK ya RCB jaisi teams ka naam casually bhi जुड़ जाता hai, to story ka scale instantly badh jata hai. Fans comparisons karna start kar dete hain, trade possibilities discuss karte hain, aur player ki future value ka public calculation shuru ho jata hai.",
+          "Vaibhav ke case mein bhi yahi hua. Ek normal talent story suddenly future-superstar conversation mein shift ho gayi. Yeh buzz chahe officially grounded ho ya pure speculation, trend ko amplify karne mein iska role bada raha.",
+        ],
+        bullets: [
+          "Franchise buzz ne story ko social-media friendly banaya",
+          "Fans ne future-team narratives banana start kiya",
+          "Young prospect suddenly big-franchise discourse ka part ban gaya",
+        ],
+      },
+      {
+        heading: "Aaj ke RR vs RCB match mein Vaibhav par sabki nazar kyun hai?",
+        paragraphs: [
+          "10 April 2026 ko Rajasthan Royals aur Royal Challengers Bengaluru ke beech jo match schedule hai, uska ek major subplot Vaibhav Suryavanshi bhi ban chuke hain. Times of India ki preview reporting ke mutabik aaj ke match ke key battles mein unka मुकाबला Bhuvneshwar Kumar jaise experienced bowler ke against special focus mein hai.",
+          "Yeh point important hai kyunki aaj ka clash sirf RR vs RCB nahi, balki unbeaten momentum ka battle bhi hai. RR strong start ke saath aa rahi hai, aur RCB bhi defending champions ke confidence ke saath utar rahi hai. Is setting mein Vaibhav jaise young batter ka role naturally spotlight mein aa jata hai.",
+          "As of April 10, 2026, pre-match context mein unki story score se zyada expectation-driven hai. Public yeh dekhna chahti hai ki kya woh experienced attack ke khilaaf bhi apna fearless approach maintain kar paayenge. Yani aaj ka match unke liye sirf ek aur game nahi, balki hype ko validate karne ka stage ban gaya hai.",
+        ],
+        bullets: [
+          "RR vs RCB preview mein unka battle key theme bana",
+          "Bhuvneshwar Kumar ke against contest special focus mein hai",
+          "Aaj ka match hype ko test karne wala moment maana ja raha hai",
+        ],
+      },
+      {
+        heading: "Vaibhav Suryavanshi ki batting mein aisa kya special dikh raha hai?",
+        paragraphs: [
+          "Young batters ko usually do categories mein dekha jata hai: naturally gifted ya mentally advanced. Vaibhav ka current impression yeh hai ki unmein dono qualities ka mix dikh raha hai. Unki batting ke baare mein jo discussion ho rahi hai, uska center hai intent. Woh defensive survival mode mein nahi, proactive scoring mode mein dikhte hain.",
+          "Aaj ke T20 ecosystem mein yahi skill sabse precious hoti hai. Teams aise batters ko value karti hain jo early pressure ko absorb karne ke bajay usse counter-attack mein convert kar sakein. Vaibhav ko lekar excitement isi wajah se hai ki woh age ke hisaab se unusually bold stroke-play dikhate hain.",
+          "Unka shot selection aur naturally positive body language is baat ko indicate karta hai ki woh camera pressure ya big-stage nerves se immediately freeze nahi hote. Isi liye public unhe next-big-thing category mein daal rahi hai.",
+        ],
+        bullets: [
+          "Fearless strokeplay unki biggest identity ban rahi hai",
+          "T20 format ke liye naturally suited approach",
+          "Age ke hisaab se unusual confidence",
+        ],
+      },
+      {
+        heading: "Why he is trending in India today: final simple answer",
+        paragraphs: [
+          "Agar simple language mein answer diya jaye, to Vaibhav Suryavanshi aaj trend isliye kar rahe hain kyunki unke around ek perfect storm create ho gaya hai. Very young age, elite-level hype, expert reaction, franchise buzz aur big IPL match preview — yeh sab ek saath aa gaya hai.",
+          "Ek side par Anil Kumble jaisi voice keh rahi hai ki unhe time do. Doosri side par public unhe future superstar ki tarah dekhna start kar chuki hai. Teesri side par aaj ka RR vs RCB match unke liye aur bhi bada attention stage bana raha hai. Yeh combination hi unhe ordinary cricket update se utha kar national trend category mein le aata hai.",
+          "Aaj ki date, 10 April 2026, par Vaibhav Suryavanshi sirf ek talented young cricketer nahi, balki Indian cricket conversation ka live topic ban chuke hain. Ab sabki nazar is baat par hai ki kya woh aaj aur aane wale matches mein is buzz ko performance mein convert kar paayenge.",
+        ],
+        bullets: [
+          "Age + talent + hype = national trend",
+          "Expert caution ne story ko aur credible banaya",
+          "Aaj ka match unke buzz ko aur bada sakta hai",
+        ],
+      },
+    ],
+    relatedSlugs: [
+      "who-is-mukul-choudhary-why-he-is-trending-india-today",
+      "csk-crisis-dhoni-comeback-ipl-2026",
+      "rcb-vs-csk-result-2026-viral-reason",
+    ],
+  },
+  {
+    slug: "who-is-mukul-choudhary-why-he-is-trending-india-today",
+    title:
+      "Who Is Mukul Choudhary? LSG Ke 21 Saal Ke Finisher Ne India Ko Kyu Shock Kar Diya (Full Story)",
+    excerpt:
+      "Mukul Choudhary ka background, LSG breakout knock, family struggle, Dhoni connection aur viral rise ko detailed Hinglish mein samjhein.",
+    category: "Trending",
+    publishedAt: "2026-04-10",
+    updatedAt: "2026-04-10",
+    readTime: "9 min read",
+    author: "Rajat Gupta",
+    imageSrc: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202604/mukul-choudhary-091318274-16x9_0.jpg?VersionId=kig3ddRRFG8Oncb6h0oE0Roz1VByYRxz&size=690%3A388",
+    heroAccent: "from-indigo-900 via-sky-700 to-emerald-500",
+    featuredLabel: "IPL Rising Star",
+    imageAlt: "Mukul Choudhary LSG featured image",
+    galleryImages: [
+      {
+        src: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202604/mukul-choudhary-091318274-16x9_0.jpg?VersionId=kig3ddRRFG8Oncb6h0oE0Roz1VByYRxz&size=690%3A388",
+        alt: "Mukul Choudhary featured action image",
+      },
+      {
+        src: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202604/arjun-tendulkar-and-mukul-choudhary-102642358-16x9_0.jpg?VersionId=M5iu7pxkCKlEHT4dNijwt2FbNEBbOlOs&size=690%3A388",
+        alt: "Arjun Tendulkar and Mukul Choudhary image",
+      },
+      {
+        src: "https://static.toiimg.com/thumb/msid-130162518%2Cimgsize-155084%2Cwidth-400%2Cheight-225%2Cresizemode-4/130162518.jpg",
+        alt: "Mukul Choudhary story image from Times of India",
+      },
+    ],
+    keywords: [
+      "Who is Mukul Choudhary",
+      "Mukul Choudhary LSG",
+      "Mukul Choudhary trending today",
+      "Mukul Choudhary story",
+      "LSG 21 year old finisher",
+    ],
+    faq: [
+      {
+        question: "Mukul Choudhary kaun hain?",
+        answer:
+          "Mukul Choudhary Rajasthan ke Jhunjhunu se aane wale 21 saal ke wicketkeeper-batter hain, jo IPL 2026 mein Lucknow Super Giants ke liye finisher ke roop mein headline ban gaye.",
+      },
+      {
+        question: "Mukul Choudhary aaj itna trend kyun kar rahe hain?",
+        answer:
+          "KKR ke khilaf unki unbeaten 54 off 27 balls ki match-winning innings, Dhoni-style hitting aur unki emotional family story ne unhe suddenly national trending topic bana diya.",
+      },
+      {
+        question: "Kya Mukul Choudhary MS Dhoni ke fan hain?",
+        answer:
+          "Haan, India Today ki report ke mutabik Mukul khud ko MS Dhoni ka admirer mante hain, aur unki batting mein Dhoni-inspired finishing style ki discussion bhi chal rahi hai.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Mukul Choudhary aaj India mein trend kyun kar rahe hain?",
+        paragraphs: [
+          "Aaj agar aap IPL ya cricket se related social media trend list dekh rahe ho, to Mukul Choudhary ka naam almost har jagah dikh raha hoga. Reason simple hai, lekin impact bahut bada hai. Lucknow Super Giants ke liye khelne wale 21 saal ke is young batter ne Kolkata Knight Riders ke khilaf ek aisi innings kheli jise fans sirf match-winning knock nahi, balki arrival statement keh rahe hain.",
+          "Trending hone ke peeche sirf runs nahi hote. Cricket fans ko jab koi naya player pressure mein aa kar game पलट देता hai, tab story runs se bada narrative ban jaati hai. Mukul ke saath bhi exactly yahi hua. Unhone high-pressure chase mein unbeaten 54 off 27 balls banaye, saat sixes maare, aur last-over thriller mein LSG ko jeet dilayi. Is innings ke turant baad unke helicopter-style shots, unki age, unka background aur unki journey sab search hona start ho gaya.",
+          "India Today ki April 9, 2026 ki report ke mutabik Mukul ne Eden Gardens mein aisi composure dikhayi jo normally senior finishers se expect ki jaati hai. Jab LSG trouble mein thi aur chase almost haath se nikalta hua lag raha tha, tab Mukul ne panic karne ke bajay game ko deep le jaakar finish kiya. Yahi wo moment tha jahan se people started asking: 'Who is Mukul Choudhary?'",
+        ],
+        bullets: [
+          "KKR ke khilaf unbeaten 54 off 27 balls",
+          "7 sixes aur pressure mein clean finishing",
+          "Young age + Dhoni-style shotmaking + emotional backstory",
+        ],
+      },
+      {
+        heading: "KKR vs LSG match ne unki image ko overnight kaise badal diya?",
+        paragraphs: [
+          "Cricket mein kuch knocks aise hote hain jo sirf scoreboard par nahi, public imagination mein bhi register ho jaate hain. Mukul Choudhary ki innings unhi knocks mein se ek thi. India Today ki report ke hisaab se jab woh crease par aaye tab LSG already pressure mein thi. Team 104 for 5 par thi, aur situation aur difficult ho gayi jab score 128 for 7 tak pahunch gaya. Yahan se match KKR ke control mein dikh raha tha.",
+          "Lekin Mukul ne jo sabse impressive cheez dikhayi, woh tha clarity. Unhone reckless hitting nahi ki, balki chase ko absorb kiya, timing samjhi, aur phir right bowlers ko target kiya. Last over tak equation drag karna, pressure ko handle karna aur final moments mein calculated aggression dikhana kisi mature finisher ki sign hoti hai. Isi liye unki innings ko sirf 'good cameo' nahi, ek complete finishing exhibition kaha ja raha hai.",
+          "Social media par sabse zyada viral unke sixes hue. Ek whip over mid-wicket ko fans ne instantly MS Dhoni ke helicopter shot se compare karna start kar diya. Ye comparison chahe stylistic ho ya emotional, but isne unki visibility ko multiply kar diya. Cricket trends mein narrative matter karta hai, aur Mukul ka narrative us raat perfect tha: unknown youngster, impossible chase, Dhoni vibes, and last-over finish.",
+        ],
+        bullets: [
+          "LSG pressure mein thi jab Mukul crease par aaye",
+          "Unhone chase ko panic mode mein jaane nahi diya",
+          "Last-over composure ne unhe instant finisher tag दिलाया",
+        ],
+      },
+      {
+        heading: "Who is Mukul Choudhary? Background aur hometown story",
+        paragraphs: [
+          "India Today ke according Mukul Choudhary Rajasthan ke Jhunjhunu district se belong karte hain. Woh wicketkeeper-batter hain, lekin interestingly unka start wicketkeeper ke roop mein nahi hua tha. Report ke mutabik unhone pehle medium-fast bowler ke taur par shuruaat ki thi aur team requirement ki wajah se wicketkeeping pakdi. Ye detail unki adaptability ko dikhati hai, jo later unki batting role mein bhi nazar aayi.",
+          "Unka hometown Rajasthan ke ek small village ecosystem se juda hai, jahan se elite cricket infrastructure tak pahunch aasaan nahi hoti. India Today ne mention kiya ki unke father Dalip Kumar Choudhary ne proper training access dilaane ke liye kaafi sacrifice kiye. Pehle Sikar ke academy setup, phir Jaipur shift aur family relocation jaise moves ne Mukul ke cricket path ko possible banaya.",
+          "Aise backgrounds se aane wale players ke liye professional cricket tak pahunchna sirf talent ka matter nahi hota. Travel, coaching, equipment, food, time aur family support sab equally important hote hain. Isi wajah se jab fans Mukul ki story padhte hain, to woh innings aur emotional feel karne lagti hai. He is not being seen just as a new player, but as someone who has climbed from a very difficult starting point.",
+        ],
+        bullets: [
+          "Jhunjhunu, Rajasthan se rise",
+          "Wicketkeeper-batter role later develop hua",
+          "Family support aur relocation unki journey ka core part raha",
+        ],
+      },
+      {
+        heading: "Domestic cricket ne kaise banaya ek real finisher?",
+        paragraphs: [
+          "India Today ki April 9 report mein unke domestic numbers ka bhi strong mention hai, aur wahi numbers explain karte hain ki LSG management ne unmein itna potential kyun dekha. 2025 Men’s U-23 State A Trophy mein Mukul ne 617 runs banaye the, average 103 aur strike rate 142 ke saath. Itna hi nahi, unhone 34 sixes bhi maare, jo tournament mein sabse zyada the. Ye sirf consistency ka sign nahi, brute intent ka bhi sign hai.",
+          "Uske baad unhone 2025-26 Syed Mushtaq Ali Trophy mein Rajasthan ke liye 5 matches mein 173 runs banaye aur strike rate 199 ke around rakha. T20 cricket mein strike rate 199 ek huge indicator hota hai, especially jab aapko finisher role ke candidate ke roop mein dekha ja raha ho. Yani IPL breakout completely random nahi tha. Mukul ka rise domestic performances ke strong base par hi build hua tha.",
+          "Yehi wajah hai ki Justin Langer jaise experienced coach ne pehle hi unke baare mein big-finisher potential ki baat ki thi. Jab coach camp aur practice matches se hi talent ko identify karta hai, aur phir player actual match pressure mein deliver kar deta hai, tab story aur believable ho jaati hai. Mukul ki trending wave isi trust-plus-performance combination ki wajah se bani hai.",
+        ],
+        bullets: [
+          "U-23 State A Trophy mein 617 runs",
+          "34 sixes ne unki power-hitting identity banayi",
+          "Syed Mushtaq Ali Trophy strike rate ne T20 credentials strong kiye",
+        ],
+      },
+      {
+        heading: "LSG ne Mukul par itna bada bet kyun lagaya?",
+        paragraphs: [
+          "Times of India ki April 10, 2026 report ke mutabik LSG ne Mukul Choudhary ko IPL auction mein Rs 2.60 crore mein sign kiya, jo unke base price se 13 times zyada tha. Ye detail bahut important hai, kyunki isse clear hota hai ki franchise unhe sirf squad depth ke liye nahi, balki genuine future asset ke roop mein dekh rahi thi.",
+          "Young finishers T20 leagues mein sabse rare assets hote hain. Top-order batters mil jaate hain, anchors bhi mil jaate hain, lekin aise players jo 20 se kam balls mein match पलट दें aur pressure mein collapse na karein, woh kaafi kam hote hain. LSG management shayad isi rare skillset ko buy kar rahi thi. Aur jab aisa player apne pehle bada moment mein deliver karta hai, to market instantly uski value samajh leta hai.",
+          "Is auction price ka emotional side bhi TOI story mein strong tha. Report ke mutabik Mukul ne apne father se promise kiya tha ki woh cricket ke liye liye gaye loans ko repay karenge. Isliye unke liye IPL sirf fame ka platform nahi, family redemption ka bhi route tha. Jab aap is angle ko unki innings ke saath combine karte ho, tab aap samajhte ho ki woh aaj itna trend kyun kar rahe hain.",
+        ],
+        bullets: [
+          "LSG ne Rs 2.60 crore ka bet lagaya",
+          "Finisher role T20 cricket ka premium skill hota hai",
+          "Auction price unke family struggle se emotionally linked ho gaya",
+        ],
+      },
+      {
+        heading: "Unki family story ne logon ko itna emotional kyun kar diya?",
+        paragraphs: [
+          "Times of India ki report ne Mukul ki story ko sirf cricket tak limited nahi rakha. Isne ek father-son struggle ko detail mein dikhaya. Report ke mutabik Dalip Choudhary ne apne bete ke cricket sapne ke liye ghar tak becha, loan liye, business failures face kiye, aur instalments issue ki wajah se jail tak jaana pada. Yeh details harsh hain, lekin isi harshness ki wajah se public connection aur strong ho gaya.",
+          "TOI report ke lines se yeh bhi samne aaya ki relatives ne unke father ko madman tak kaha, lekin family piche nahi hatti. Jab public aisi story padhti hai aur usi week player ko IPL mein finishing masterclass karte dekhti hai, to rising-star story instantly inspirational story ban jaati hai. Aaj ke India mein sports stories tab zyada viral hoti hain jab unmein struggle, family, sacrifice aur payoff sab ek saath ho.",
+          "Mukul ke father ka yeh kehna ki unke son ne promise kiya tha ki next match mein sabko proud feel karayega, aur phir exactly waise hi deliver karna, yeh pure narrative ka emotional centerpiece ban gaya. Isi wajah se Mukul sirf cricket page par trend nahi kar rahe, balki general public mein bhi curiosity ka topic ban gaye.",
+        ],
+        bullets: [
+          "Family ne ghar becha aur loans liye",
+          "Father ne jail aur financial stress face kiya",
+          "Breakthrough innings ne struggle story ko viral bana diya",
+        ],
+      },
+      {
+        heading: "Dhoni connection aur Arjun Tendulkar angle ne trend ko aur bada kaise banaya?",
+        paragraphs: [
+          "Mukul Choudhary ke around ek aur layer jisne trend ko aur boost kiya, woh tha unka MS Dhoni admiration aur Arjun Tendulkar ka resurfaced praise. India Today ki April 10 report ke mutabik Arjun Tendulkar ne ek podcast mein Mukul ki six-hitting ability ko pehle hi praise kiya tha. Jab KKR match ke baad woh clip wapas viral hua, to logon ko laga ki kisi ne star potential ko pehle hi pehchan liya tha.",
+          "Is report mein Arjun ka yeh point highlight hua ki Mukul ground ke alag-alag areas mein six maar sakte hain. Jab ek player ke baare mein aisa quote resurfaced hota hai exactly uske breakout ke baad, to internet usse instantly pickup karta hai. Log quote share karte hain, old clips dhoondte hain, aur player ka hype organically badh jata hai.",
+          "Dhoni connection bhi equally powerful tha. India Today ne unhe Dhoni admirer bataya, aur fans ne unke shots mein helicopter-shot wali nostalgia dekhni shuru kar di. India mein Dhoni comparison khud ek virality engine hai. Jab ek young finisher pressure chase mein cool dikhe aur Dhoni-style discussion attach ho jaye, tab topic ka trend hona almost guaranteed ho jata hai.",
+        ],
+        bullets: [
+          "Arjun Tendulkar ka old praise clip viral hua",
+          "Dhoni admirer label ne emotional recall banaya",
+          "Shotmaking style discussion ne social media traction badhaya",
+        ],
+      },
+      {
+        heading: "Why he is trending in India today: final answer",
+        paragraphs: [
+          "Aaj Mukul Choudhary trend isliye kar rahe hain kyunki unki story mein cricket aur emotion dono full power ke saath aaye. Ek taraf unhone IPL 2026 ke sabse memorable finishes mein se ek diya, doosri taraf unki background story ne fans ko yeh feel karaya ki yeh sirf talent ka rise nahi, pure family sacrifice ka payoff hai.",
+          "Search interest ka exact reason agar simple language mein bolein, to woh yeh hai: people saw a new name win a huge match, then discovered he is just 21, from Rajasthan, a Dhoni admirer, bought for crores, backed by Langer and Pant, praised by Arjun Tendulkar, and shaped by a father who risked almost everything. It is the perfect recipe for a national trending sports story.",
+          "Aage kya hoga, woh alag question hai. Lekin April 10, 2026 tak ki situation mein Mukul Choudhary sirf one-innings wonder ke roop mein nahi, balki IPL ka newest talking point ke roop mein establish ho chuke hain. Agar woh agle kuch matches mein consistency dikhate hain, to yeh trending moment unke liye permanent breakthrough ban sakta hai.",
+        ],
+        bullets: [
+          "Performance + pressure + personality = trending formula",
+          "Family struggle story ne public connect build kiya",
+          "Ab sabki nazar unke next innings par hogi",
+        ],
+      },
+    ],
+    relatedSlugs: [
+      "csk-crisis-dhoni-comeback-ipl-2026",
+      "rcb-vs-csk-result-2026-viral-reason",
+      "mg-majestor-price-in-india-launch-features",
+    ],
+  },
+  {
     slug: "mg-majestor-price-in-india-launch-features",
     title:
       "MG Majestor Price in India: Fortuner Ko Takkar Dene Aa Rahi Yeh Premium SUV, Price Sunke Shock Ho Jaoge!",
