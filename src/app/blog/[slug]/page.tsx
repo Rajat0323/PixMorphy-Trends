@@ -144,6 +144,9 @@ export default async function BlogPage({ params }: PageProps) {
                 priority
                 sizes="(max-width: 1024px) 100vw, 760px"
                 className="object-cover"
+                style={{
+                  objectPosition: post.imageObjectPosition ?? "center",
+                }}
               />
               <div className={`absolute inset-0 bg-gradient-to-br ${post.heroAccent} opacity-15`} />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.06),rgba(15,23,42,0.38))]" />

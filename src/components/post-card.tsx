@@ -19,6 +19,9 @@ export function PostCard({ post, compact = false }: PostCardProps) {
           fill
           sizes={compact ? "(max-width: 1024px) 100vw, 420px" : "(max-width: 768px) 100vw, 520px"}
           className="object-cover transition duration-500 group-hover:scale-[1.03]"
+          style={{
+            objectPosition: post.imageObjectPosition ?? "center",
+          }}
         />
         <div className={`absolute inset-0 bg-gradient-to-br ${post.heroAccent} opacity-25`} />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.04),rgba(15,23,42,0.52))]" />
