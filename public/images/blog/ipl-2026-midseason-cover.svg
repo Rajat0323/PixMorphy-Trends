@@ -1,0 +1,56 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="110" y1="96" x2="1445" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#091733"/>
+      <stop offset="0.52" stop-color="#112A62"/>
+      <stop offset="1" stop-color="#4B1D95"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="1117" y1="149" x2="1448" y2="625" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="badgeOrange" x1="0" y1="0" x2="200" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A00"/>
+      <stop offset="1" stop-color="#FFC837"/>
+    </linearGradient>
+    <linearGradient id="badgePurple" x1="0" y1="0" x2="200" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#C084FC"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="44" fill="url(#bg)"/>
+  <circle cx="189" cy="128" r="144" fill="#0EA5E9" fill-opacity="0.28" filter="url(#blur)"/>
+  <circle cx="1450" cy="755" r="180" fill="#F97316" fill-opacity="0.25" filter="url(#blur)"/>
+  <circle cx="804" cy="470" r="230" fill="#8B5CF6" fill-opacity="0.15" filter="url(#blur)"/>
+  <rect x="72" y="74" width="240" height="54" rx="27" fill="#F8FAFC" fill-opacity="0.12"/>
+  <text x="118" y="109" fill="#DCE7FF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="4">PIXMORPHY</text>
+  <text x="76" y="202" fill="#9CC8FF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="7">IPL 2026 MEGA REPORT</text>
+  <text x="76" y="325" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="800">POINTS TABLE</text>
+  <text x="76" y="428" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="800">ORANGE CAP</text>
+  <text x="76" y="531" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="800">PURPLE CAP</text>
+  <text x="76" y="612" fill="#D7E4FF" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="500">RR top par, Klaasen run-machine, Prasidh bowling king.</text>
+  <rect x="76" y="676" width="252" height="72" rx="36" fill="url(#badgeOrange)"/>
+  <text x="126" y="723" fill="#251103" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">RR LEAD</text>
+  <rect x="348" y="676" width="320" height="72" rx="36" fill="url(#badgePurple)"/>
+  <text x="392" y="723" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">KLAASEN 224</text>
+  <rect x="688" y="676" width="334" height="72" rx="36" fill="#0F172A" fill-opacity="0.68" stroke="#93C5FD" stroke-opacity="0.45"/>
+  <text x="734" y="723" fill="#D7E4FF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">PRASIDH 10 WKTS</text>
+  <rect x="1064" y="116" width="458" height="606" rx="34" fill="url(#panel)" stroke="#FFFFFF" stroke-opacity="0.15"/>
+  <text x="1114" y="178" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="3">TOP 5 STANDINGS</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="48" fill="white">
+    <text x="1116" y="262">1</text><text x="1186" y="262">RR</text><text x="1430" y="262">8</text>
+    <text x="1116" y="348">2</text><text x="1186" y="348">PBKS</text><text x="1430" y="348">7</text>
+    <text x="1116" y="434">3</text><text x="1186" y="434">RCB</text><text x="1430" y="434">6</text>
+    <text x="1116" y="520">4</text><text x="1186" y="520">SRH</text><text x="1430" y="520">4</text>
+    <text x="1116" y="606">5</text><text x="1186" y="606">DC</text><text x="1430" y="606">4</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#D7E4FF" font-weight="700">
+    <text x="1328" y="178">PTS</text>
+    <text x="1108" y="774">BEST PERFORMERS</text>
+    <text x="1118" y="832">Orange Cap: Heinrich Klaasen</text>
+    <text x="1118" y="866">Purple Cap: Prasidh Krishna / Anshul Kamboj</text>
+  </g>
+</svg>

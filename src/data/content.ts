@@ -61,6 +61,194 @@ export const siteConfig = {
 
 export const posts: Post[] = [
   {
+    slug: "ipl-2026-points-table-orange-cap-purple-cap-full-analysis",
+    title:
+      "IPL 2026 Points Table Shock: RR Top Par, KKR Sabse Neeche! Orange Cap, Purple Cap Aur Har Team Ka Full Analysis",
+    excerpt:
+      "IPL 2026 ka full mid-season report: points table, Orange Cap race, Purple Cap race, best teams, breakout stars aur har franchise ka simple Hinglish analysis.",
+    category: "Trending",
+    publishedAt: "2026-04-15",
+    updatedAt: "2026-04-15",
+    readTime: "11 min read",
+    author: "Rajat Gupta",
+    imageSrc: "/images/blog/ipl-2026-custom-cover.jpeg",
+    imageObjectPosition: "center top",
+    heroAccent: "from-sky-700 via-blue-700 to-violet-700",
+    featuredLabel: "IPL Report",
+    imageAlt: "IPL 2026 players montage cover image for points table analysis",
+    galleryImages: [
+      {
+        src: "/images/blog/ipl-2026-points-table-card.svg",
+        alt: "IPL 2026 points table top five teams card",
+      },
+      {
+        src: "/images/blog/ipl-2026-orange-cap-card.svg",
+        alt: "IPL 2026 orange cap race stats card",
+      },
+      {
+        src: "/images/blog/ipl-2026-purple-cap-card.svg",
+        alt: "IPL 2026 purple cap race stats card",
+      },
+      {
+        src: "/images/blog/ipl-2026-team-trends-card.svg",
+        alt: "IPL 2026 team trend meter card",
+      },
+      {
+        src: "/images/blog/ipl-2026-best-performers-card.svg",
+        alt: "IPL 2026 best performers card",
+      },
+    ],
+    keywords: [
+      "IPL 2026 points table",
+      "IPL 2026 orange cap",
+      "IPL 2026 purple cap",
+      "IPL 2026 best performer",
+      "IPL 2026 team analysis",
+      "RR top points table",
+      "KKR last position IPL 2026",
+    ],
+    faq: [
+      {
+        question: "IPL 2026 points table mein abhi top par kaun hai?",
+        answer:
+          "15 April 2026 tak available standings ke hisaab se Rajasthan Royals top par hai, 5 matches mein 4 wins aur 8 points ke saath.",
+      },
+      {
+        question: "Orange Cap race mein kaun sabse aage hai?",
+        answer:
+          "Current run charts ke hisaab se Heinrich Klaasen 224 runs ke saath sabse aage hain, isliye Orange Cap race mein woh lead kar rahe hain.",
+      },
+      {
+        question: "Purple Cap race mein top bowler kaun hai?",
+        answer:
+          "Prasidh Krishna aur Anshul Kamboj dono 10 wickets ke saath top cluster mein hain, jabki Ravi Bishnoi close behind hain.",
+      },
+      {
+        question: "Sabse dangerous team kaun lag rahi hai?",
+        answer:
+          "Rajasthan Royals abhi best-balanced team lag rahi hai, lekin RCB ka net run rate aur batting momentum unhe sabse dangerous challengers mein daal raha hai.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Introduction: IPL 2026 ab tak kaisa raha hai?",
+        paragraphs: [
+          "IPL 2026 ab interesting shape le chuka hai. Kuch teams expected tareeke se perform kar rahi hain, kuch surprise packages nikli hain, aur kuch big franchises abhi bhi rhythm dhoondh rahi hain. 15 April 2026 tak ka points table dekhkar ek baat clear ho jaati hai ki season abhi open hai, lekin momentum ab bahut important ban chuka hai.",
+          "Iss waqt Rajasthan Royals table ke top par hai, Punjab Kings quietly solid position mein hai, aur Royal Challengers Bengaluru best net run rate ke saath bahut dangerous lag rahi hai. Doosri taraf Mumbai Indians ko quick turnaround chahiye aur Kolkata Knight Riders ka current situation sabse worrying dikh raha hai.",
+          "Is article mein hum ek hi jagah par poora breakdown karenge: points table, Orange Cap, Purple Cap, best performers, har team ka report card aur playoff race ka current shape. Language simple rakhenge, lekin analysis complete rakhenge.",
+        ],
+        bullets: [
+          "Date context: 15 April 2026",
+          "Standings and player lists current available stats par based hain",
+          "Article ka focus hype nahi, real performance trend hai",
+        ],
+      },
+      {
+        heading: "IPL 2026 points table: sabse upar kaun, sabse neeche kaun?",
+        paragraphs: [
+          "Current standings ke hisaab se Rajasthan Royals 5 matches mein 4 wins ke saath table top kar rahi hai. Punjab Kings 4 matches mein 7 points ke saath second place par hai, jabki RCB 6 points ke saath third par hote hue bhi apne strong net run rate ki wajah se title-contender vibe de rahi hai.",
+          "Middle table ka cluster kaafi tight hai. SRH, DC, GT, LSG aur CSK sab 4-point zone ke aas-paas ghoom rahe hain, jiska matlab hai ki ek achha week kisi bhi team ko top four ke andar push kar sakta hai. Isi wajah se abhi tak season one-sided nahi lag raha.",
+          "Bottom section mein Mumbai Indians aur Kolkata Knight Riders par sabse zyada pressure hai. MI ke paas abhi bhi comeback window hai, lekin KKR ke liye problem deeper lag rahi hai kyunki unke paas points bhi kam hain aur net run rate bhi worst side par hai.",
+        ],
+        bullets: [
+          "1. RR - 8 points",
+          "2. PBKS - 7 points",
+          "3. RCB - 6 points, strong NRR",
+          "10. KKR - just 1 point and heavy NRR damage",
+        ],
+      },
+      {
+        heading: "Orange Cap race: runs chart mein kaun kar raha hai raj?",
+        paragraphs: [
+          "Most runs list ke hisaab se Heinrich Klaasen is waqt sabse aage hain, 224 runs ke saath. Yeh aur bhi impressive isliye lagta hai kyunki SRH ka season mixed raha hai, phir bhi Klaasen ne individually elite output maintain kiya hai. Aise players team results se alag personal authority build karte hain.",
+          "Second spot par Ishan Kishan 213 runs ke saath maujood hain, jabki Vaibhav Sooryavanshi 200 runs ke saath season ke biggest breakout names mein se ek ban chuke hain. Rajat Patidar 195 aur Sanju Samson 185 runs ke saath top five complete karte hain. In paanch names ko dekhkar clear lagta hai ki IPL 2026 mein top-order attacking batting ka importance aur badh gaya hai.",
+          "Agar sirf cap leader poochha jaye, to answer Heinrich Klaasen hoga. Agar biggest surprise-value poochhi jaye, to Vaibhav Sooryavanshi ka naam sabse pehle aata hai. Aur agar runs plus leadership impact ka sawaal ho, to Rajat Patidar ki presence bahut strong feel hoti hai.",
+        ],
+        bullets: [
+          "Heinrich Klaasen - 224 runs",
+          "Ishan Kishan - 213 runs",
+          "Vaibhav Sooryavanshi - 200 runs",
+          "Rajat Patidar - 195 runs",
+          "Sanju Samson - 185 runs",
+        ],
+      },
+      {
+        heading: "Purple Cap race: bowlers mein sabse zyada khatarnak kaun?",
+        paragraphs: [
+          "Bowling leaderboard mein iss waqt sabse zyada spotlight Prasidh Krishna aur Anshul Kamboj par hai. Dono ke paas 10 wickets hain, jisse Purple Cap race close aur exciting ban chuki hai. Ravi Bishnoi 9 wickets ke saath bilkul peeche nahi, aur unka middle-overs control LSG ke liye big factor bana hua hai.",
+          "Jofra Archer 7 wickets ke saath RR ke bowling unit ko aggression de rahe hain, jabki Prince Yadav 6 wickets ke saath quietly solid season build kar rahe hain. Purple Cap race mein sabse interesting part yeh hai ki iss saal sirf big-name pace hi dominate nahi kar rahi; surprise names bhi chart ke top half mein dikh rahe hain.",
+          "Agar abhi best bowler choose karna ho, to Prasidh Krishna ka naam sabse natural pick lagta hai. Wickets, control aur match-shaping spells teenon unke favour mein ja rahe hain.",
+        ],
+        bullets: [
+          "Prasidh Krishna - 10 wickets",
+          "Anshul Kamboj - 10 wickets",
+          "Ravi Bishnoi - 9 wickets",
+          "Jofra Archer - 7 wickets",
+          "Prince Yadav - 6 wickets",
+        ],
+      },
+      {
+        heading: "Best teams so far: RR, PBKS ya RCB?",
+        paragraphs: [
+          "Rajasthan Royals ko iss stage par best-balanced team kehna fair lagta hai. Unke paas top-order impact hai, middle support hai, bowling strike hai aur confidence clearly visible hai. Sirf points hi nahi, unke wins ka feel bhi convincing raha hai.",
+          "Punjab Kings ka start underrated raha hai. Zyada noise nahi, lekin smart points collection hua hai. Aisi teams season ke aage chal kar bahut dangerous nikalti hain kyunki unke paas hype kam aur pressure slightly lower hota hai. RCB ka case alag hai. Points table mein third par hote hue bhi unka NRR +1.148 unhe sabse explosive contenders mein daal deta hai.",
+          "Simple verdict yeh hai: RR current table-best team hai, PBKS efficiency-best team hai, aur RCB sabse dangerous upside wali team lag rahi hai.",
+        ],
+        bullets: [
+          "RR = most complete unit",
+          "PBKS = quietly efficient",
+          "RCB = strongest momentum threat",
+        ],
+      },
+      {
+        heading: "Har team ka short report card: kisko kya fix karna hai?",
+        paragraphs: [
+          "RR ko sirf momentum preserve karna hai, jabki PBKS ko pressure phase mein composure prove karna hoga. RCB ke liye challenge yeh hoga ki woh high-scoring confidence ko long tournament consistency mein convert karein. SRH ko bowling discipline aur middle-over control chahiye. DC aur GT ko clear winning streak chahiye, warna table ke bheed-bhaad wale middle section mein atakne ka risk rahega.",
+          "LSG ka season abhi tak up-and-down raha hai, aur unhe ek stronger identity build karni hogi. CSK ko sirf wins nahi, better-margin wins bhi chahiye kyunki net run rate already damage ho chuka hai. MI ke liye ab har game ka weight badhne laga hai, aur KKR ke liye situation genuinely dangerous dikh rahi hai.",
+          "Yeh season ka woh phase hai jahan bottom teams ko sirf talent nahi, sequence of results chahiye. Ek achha comeback abhi bhi possible hai, lekin time slipping bhi start ho gaya hai.",
+        ],
+        bullets: [
+          "RR, PBKS, RCB strongest zone mein",
+          "SRH, DC, GT, LSG, CSK middle-cluster mein",
+          "MI aur KKR urgent turnaround mode mein",
+        ],
+      },
+      {
+        heading: "Best performers aur biggest breakout stories",
+        paragraphs: [
+          "Iss stage par best batter Heinrich Klaasen lagte hain, kyunki woh runs ke saath impact bhi de rahe hain. Best bowler ke roop mein Prasidh Krishna strongest pick dikhte hain. Breakout star ka award agar abhi diya jaye, to Vaibhav Sooryavanshi ka case sabse loud hai. Itni young age mein top three run-scorers mein rehna sirf headline nahi, statement hai.",
+          "Captain-impact category mein Rajat Patidar ka naam bahut strong lagta hai. Runs ke saath team momentum aur title-defending narrative ko combine karna easy nahi hota, lekin unka influence visible raha hai. Sanju Samson bhi RR ke rise ka major anchor bane hue hain, jiski wajah se team top par stable dikhti hai.",
+          "Yeh season kaafi interesting isliye bhi hai kyunki established stars aur emerging names ek saath spotlight share kar rahe hain. Isi blend ki wajah se IPL 2026 audience ke liye aur engaging lag raha hai.",
+        ],
+        bullets: [
+          "Best batter: Heinrich Klaasen",
+          "Best bowler: Prasidh Krishna",
+          "Breakout star: Vaibhav Sooryavanshi",
+          "Captain impact: Rajat Patidar",
+        ],
+      },
+      {
+        heading: "Playoff race aur final verdict: abhi sabse strong kaun dikh raha hai?",
+        paragraphs: [
+          "Playoff race ko agar teen buckets mein tod dein, to top bucket mein RR, PBKS aur RCB clearly dikhte hain. Doosra bucket SRH, DC, GT, LSG aur CSK ka hai, jahan ek ya do results poori ordering ko badal sakte hain. Third bucket mein MI aur KKR aate hain, jinhe ab delay afford nahi hai.",
+          "Aaj ke point par sabse clear conclusion yeh hai ki Rajasthan Royals ne best all-round case build kiya hai. Lekin RCB ke saath ek major warning tag bhi jodna chahiye: agar unki batting rhythm continue hui, to woh table ke top do mein bahut jaldi jump kar sakte hain. Punjab Kings ko ignore karna bhi galti hogi, kyunki unka start quietly tournament-smart रहा hai.",
+          "One-line summary yeh hai: IPL 2026 ab tak RR-led season lag raha hai, Orange Cap race Heinrich Klaasen ki story hai, Purple Cap battle Prasidh Krishna versus Anshul Kamboj shape le rahi hai, aur Vaibhav Sooryavanshi season ke biggest breakout headline ban chuke hain.",
+        ],
+        bullets: [
+          "Most complete team: RR",
+          "Most dangerous challenger: RCB",
+          "Most underrated strong start: PBKS",
+          "Most worrying situation: KKR",
+        ],
+      },
+    ],
+    relatedSlugs: [
+      "csk-crisis-dhoni-comeback-ipl-2026",
+      "who-is-vaibhav-suryavanshi-why-he-is-trending-india-today",
+      "vaibhav-suryavanshi-vs-abhishek-sharma-stats-analysis",
+    ],
+  },
+  {
     slug: "vaibhav-suryavanshi-vs-abhishek-sharma-stats-analysis",
     title:
       "Vaibhav Suryavanshi vs Abhishek Sharma: Kaun Hai Zyada Dangerous T20 Batter? Full Stats, Form Aur Match Impact Analysis",

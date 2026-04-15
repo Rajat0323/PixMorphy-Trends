@@ -1,0 +1,18 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="36" fill="#0F172A"/>
+  <rect x="36" y="36" width="1128" height="648" rx="28" fill="#111C37" stroke="#334155"/>
+  <text x="64" y="112" fill="#93C5FD" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="4">IPL 2026 POINTS TABLE</text>
+  <text x="64" y="154" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600">As of 15 April 2026</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#E2E8F0" font-weight="700">
+    <text x="74" y="220">TEAM</text><text x="350" y="220">P</text><text x="450" y="220">W</text><text x="550" y="220">L</text><text x="690" y="220">PTS</text><text x="860" y="220">NRR</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="800" fill="white">
+    <text x="74" y="284">RR</text><text x="354" y="284">5</text><text x="454" y="284">4</text><text x="554" y="284">1</text><text x="696" y="284">8</text><text x="860" y="284">+0.889</text>
+    <text x="74" y="350">PBKS</text><text x="354" y="350">4</text><text x="454" y="350">3</text><text x="554" y="350">0</text><text x="696" y="350">7</text><text x="860" y="350">+0.720</text>
+    <text x="74" y="416">RCB</text><text x="354" y="416">4</text><text x="454" y="416">3</text><text x="554" y="416">1</text><text x="696" y="416">6</text><text x="860" y="416">+1.148</text>
+    <text x="74" y="482">SRH</text><text x="354" y="482">5</text><text x="454" y="482">2</text><text x="554" y="482">3</text><text x="696" y="482">4</text><text x="860" y="482">+0.576</text>
+    <text x="74" y="548">DC</text><text x="354" y="548">4</text><text x="454" y="548">2</text><text x="554" y="548">2</text><text x="696" y="548">4</text><text x="860" y="548">+0.322</text>
+  </g>
+  <rect x="64" y="584" width="1072" height="72" rx="24" fill="#172554"/>
+  <text x="96" y="630" fill="#DBEAFE" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Biggest shock: KKR last place par, RR table ke top par.</text>
+</svg>

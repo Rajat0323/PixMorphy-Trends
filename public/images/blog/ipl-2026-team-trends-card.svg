@@ -1,0 +1,22 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="36" fill="#081B2C"/>
+  <rect x="48" y="48" width="1104" height="624" rx="28" fill="#0B253C"/>
+  <text x="76" y="112" fill="#7DD3FC" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800">TEAM TREND METER</text>
+  <rect x="76" y="174" width="320" height="156" rx="28" fill="#14532D"/>
+  <rect x="438" y="174" width="320" height="156" rx="28" fill="#166534"/>
+  <rect x="800" y="174" width="320" height="156" rx="28" fill="#1D4ED8"/>
+  <text x="108" y="236" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800">RR</text>
+  <text x="108" y="286" fill="#DCFCE7" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Best-balanced team so far</text>
+  <text x="470" y="236" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800">PBKS</text>
+  <text x="470" y="286" fill="#DCFCE7" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Quiet but efficient start</text>
+  <text x="832" y="236" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800">RCB</text>
+  <text x="832" y="286" fill="#DBEAFE" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Best NRR, rising fast</text>
+  <rect x="76" y="380" width="500" height="210" rx="28" fill="#3F1D1D"/>
+  <rect x="624" y="380" width="496" height="210" rx="28" fill="#3C1E65"/>
+  <text x="106" y="444" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800">UNDER PRESSURE</text>
+  <text x="106" y="498" fill="#FECACA" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">MI need quick turnaround</text>
+  <text x="106" y="546" fill="#FECACA" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">KKR need season rescue</text>
+  <text x="654" y="444" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800">STILL ALIVE</text>
+  <text x="654" y="498" fill="#E9D5FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">SRH, DC, GT, LSG, CSK</text>
+  <text x="654" y="546" fill="#E9D5FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Middle table is packed</text>
+</svg>

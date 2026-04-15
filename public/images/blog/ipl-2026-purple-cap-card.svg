@@ -1,0 +1,18 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="36" fill="#140E2E"/>
+  <rect x="40" y="40" width="1120" height="640" rx="28" fill="#25124D"/>
+  <text x="68" y="110" fill="#DDD6FE" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800">PURPLE CAP RACE</text>
+  <text x="68" y="154" fill="#C4B5FD" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600">Most wickets leaders</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="800" fill="white">
+    <text x="76" y="250">1. Prasidh Krishna</text><text x="1020" y="250">10</text>
+    <text x="76" y="340">2. Anshul Kamboj</text><text x="1020" y="340">10</text>
+    <text x="76" y="430">3. Ravi Bishnoi</text><text x="1020" y="430">9</text>
+    <text x="76" y="520">4. Jofra Archer</text><text x="1020" y="520">7</text>
+    <text x="76" y="610">5. Prince Yadav</text><text x="1020" y="610">6</text>
+  </g>
+  <circle cx="1030" cy="238" r="28" fill="#A855F7"/>
+  <circle cx="1030" cy="328" r="28" fill="#8B5CF6"/>
+  <circle cx="1030" cy="418" r="28" fill="#7C3AED"/>
+  <circle cx="1030" cy="508" r="28" fill="#6D28D9"/>
+  <circle cx="1030" cy="598" r="28" fill="#5B21B6"/>
+</svg>
