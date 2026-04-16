@@ -71,35 +71,31 @@ export const posts: Post[] = [
     updatedAt: "2026-04-16",
     readTime: "12 min read",
     author: "Rajat Gupta",
-    imageSrc: "/images/blog/ipl-2026-cricket-paradigm-cover.svg",
+    imageSrc: "https://images.indianexpress.com/2026/04/eden-rain-kkr-vs-pbks.jpg?w=1600",
     imageObjectPosition: "center",
     heroAccent: "from-sky-700 via-blue-700 to-violet-800",
     featuredLabel: "Cricket Deep Dive",
-    imageAlt: "IPL 2026 full analysis cover with World Cup to IPL tactical shift theme",
+    imageAlt: "Eden Gardens IPL 2026 stadium image used as cricket paradigm cover",
     galleryImages: [
       {
-        src: "/images/blog/ipl-2026-world-cup-card.svg",
-        alt: "India vs New Zealand 2026 T20 World Cup final summary card",
+        src: "https://assets.thehansindia.com/h-upload/2026/03/05/1633065-ipl.webp",
+        alt: "Chinnaswamy Stadium IPL 2026 image from The Hans India",
       },
       {
-        src: "/images/blog/ipl-2026-rcb-card.svg",
-        alt: "RCB 2026 tactical rise and standings card",
+        src: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202511/sanju-samson-182310983-16x9.png?VersionId=sU4eH2825ZuXdIEKwoAP5eOJ3OY2yY6c&size=690%3A388",
+        alt: "Sanju Samson in CSK yellow from India Today story",
       },
       {
-        src: "/images/blog/ipl-2026-samson-card.svg",
-        alt: "Sanju Samson to CSK trade analysis card",
+        src: "https://c.ndtvimg.com/2026-03/9qd8u6rg_vaibhav-sooryavanshi-pti_625x300_31_March_26.jpg?im=FeatureCrop%2Calgorithm%3Ddnn%2Cwidth%3D1200%2Cheight%3D738",
+        alt: "Vaibhav Sooryavanshi batting image from NDTV story",
       },
       {
-        src: "/images/blog/ipl-2026-vaibhav-card.svg",
-        alt: "Vaibhav Sooryavanshi breakout card",
+        src: "https://static.toiimg.com/thumb/msid-130297128%2Cimgsize-35222%2Cwidth-400%2Cheight-225%2Cresizemode-4/mnb-22.jpg",
+        alt: "Pat Cummins image from Times of India return story",
       },
       {
-        src: "/images/blog/ipl-2026-impact-rule-card.svg",
-        alt: "Impact Player rule pros and cons card",
-      },
-      {
-        src: "/images/blog/ipl-2026-comebacks-card.svg",
-        alt: "Pat Cummins return and CSK pressure card",
+        src: "https://images.indianexpress.com/2026/04/eden-rain-kkr-vs-pbks.jpg?w=1600",
+        alt: "Eden Gardens under covers image from Indian Express IPL 2026 report",
       },
     ],
     keywords: [
