@@ -61,6 +61,199 @@ export const siteConfig = {
 
 export const posts: Post[] = [
   {
+    slug: "ipl-2026-world-cup-to-ipl-arms-race-full-analysis",
+    title:
+      "IPL 2026 Full Analysis: India Ki World Cup Glory Se RCB Rise Tak, Yeh Season Cricket Ko Kaise Badal Raha Hai",
+    excerpt:
+      "India ke T20 World Cup 2026 win, IPL 2026 points table, RCB rise, Sanju Samson CSK move, Vaibhav storm aur Impact Player rule ka deep Hinglish breakdown.",
+    category: "Trending",
+    publishedAt: "2026-04-16",
+    updatedAt: "2026-04-16",
+    readTime: "12 min read",
+    author: "Rajat Gupta",
+    imageSrc: "/images/blog/ipl-2026-cricket-paradigm-cover.svg",
+    imageObjectPosition: "center",
+    heroAccent: "from-sky-700 via-blue-700 to-violet-800",
+    featuredLabel: "Cricket Deep Dive",
+    imageAlt: "IPL 2026 full analysis cover with World Cup to IPL tactical shift theme",
+    galleryImages: [
+      {
+        src: "/images/blog/ipl-2026-world-cup-card.svg",
+        alt: "India vs New Zealand 2026 T20 World Cup final summary card",
+      },
+      {
+        src: "/images/blog/ipl-2026-rcb-card.svg",
+        alt: "RCB 2026 tactical rise and standings card",
+      },
+      {
+        src: "/images/blog/ipl-2026-samson-card.svg",
+        alt: "Sanju Samson to CSK trade analysis card",
+      },
+      {
+        src: "/images/blog/ipl-2026-vaibhav-card.svg",
+        alt: "Vaibhav Sooryavanshi breakout card",
+      },
+      {
+        src: "/images/blog/ipl-2026-impact-rule-card.svg",
+        alt: "Impact Player rule pros and cons card",
+      },
+      {
+        src: "/images/blog/ipl-2026-comebacks-card.svg",
+        alt: "Pat Cummins return and CSK pressure card",
+      },
+    ],
+    keywords: [
+      "IPL 2026 full analysis",
+      "India T20 World Cup 2026",
+      "RCB points table 2026",
+      "Sanju Samson CSK trade",
+      "Vaibhav Sooryavanshi IPL 2026",
+      "Impact Player rule IPL 2026",
+      "Pat Cummins return SRH",
+    ],
+    faq: [
+      {
+        question: "2026 mein cricket ka biggest story kya rahi?",
+        answer:
+          "Sabse badi combined story India ka T20 World Cup title, RCB ka tactical reboot, Sanju Samson ka CSK move aur Vaibhav Sooryavanshi ka breakout raha.",
+      },
+      {
+        question: "IPL 2026 mein abhi sabse strong team kaun lag rahi hai?",
+        answer:
+          "16 April 2026 ke context mein RCB points table ke top par hai, lekin RR aur PBKS bhi genuinely strong contenders lage hain.",
+      },
+      {
+        question: "Impact Player rule ne game ko kaise change kiya?",
+        answer:
+          "Is rule ne specialist-heavy cricket ko push kiya hai, 200+ totals ko more common banaya hai, aur all-rounders ki traditional value par debate khadi kar di hai.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Introduction: 2026 ne cricket ka poora mood kaise badal diya?",
+        paragraphs: [
+          "2026 ka cricket season normal year jaisa feel nahi hota. Yeh woh saal lag raha hai jahan game ne public view mein officially shape change kar li. Ek taraf India ne home soil par T20 World Cup jeet kar apni white-ball authority ko cement kiya, aur doosri taraf IPL 2026 ne dikhaya ki franchise cricket ab sirf entertainment nahi, tactical warfare ban chuka hai.",
+          "March se April ke beech sirf results hi nahi aaye, poori cricket philosophy shift hoti dikhi. Powerplay aggression aur bhi zyada extreme ho gaya, bowlers ke liye margin of error aur kam hua, aur Impact Player rule ne specialist-heavy teams ko aur bold bana diya. Isi liye 2026 ka story arc casual fan ke liye bhi alag feel hota hai.",
+          "Is article ka goal simple hai: ek hi jagah par samjhana ki World Cup jeet, IPL points table, RCB ki rise, Sanju Samson ka CSK switch, Vaibhav Sooryavanshi ka breakout aur Impact Player rule milkar cricket ko kaise redefine kar rahe hain.",
+        ],
+        bullets: [
+          "World Cup win se confidence template set hua",
+          "IPL ne us template ko aur aggressive bana diya",
+          "2026 ka cricket system, stars aur strategy teenon level par change dikhata hai",
+        ],
+      },
+      {
+        heading: "India ka T20 World Cup 2026 win: sirf trophy nahi, ek template tha",
+        paragraphs: [
+          "8 March 2026 ko Ahmedabad ke Narendra Modi Stadium mein India ne New Zealand ko hara kar Men's T20 World Cup jeeta. Final ka scoreline hi dikhata hai ki yeh ek close, scraping kind of win nahi tha. India ne 255/5 banaye aur New Zealand ko 159 par rok kar 96-run ki commanding victory li.",
+          "Sabse bada point yeh tha ki India ne final ko old-school pressure game ki tarah nahi, modern T20 destruction game ki tarah jeeta. Top-order intent, rapid scoring, aur middle overs mein controlled acceleration ne dikhaya ki India ka batting model clearly evolve ho chuka hai. Sanju Samson ka 89-run knock iss run machine ka emotional aur technical center bana.",
+          "Bowling side par Jasprit Bumrah ne jo 4/15 diya, usne phir se remind kar diya ki high-scoring era mein greatness ka matlab hai impossible ko normal bana dena. Jab tournament batting-friendly ho aur aap still economy aur wicket impact ke saath dominate karo, tab discussion khatam ho jaata hai.",
+        ],
+        bullets: [
+          "India 255/5 vs New Zealand 159",
+          "Sanju Samson 89 was the stabilizer-plus-accelerator innings",
+          "Bumrah 4/15 ne final ka balance completely break kar diya",
+        ],
+      },
+      {
+        heading: "IPL 2026 points table ka early message: bold teams reward ho rahi hain",
+        paragraphs: [
+          "World Cup ke baad expected tha ki IPL mein thoda emotional slowdown dikhega, lekin hua uska opposite. 16 April 2026 tak ke standings ne dikhaya ki jo teams tactical clarity aur high-intent cricket kheli rahi hain, woh naturally upar ja rahi hain. RCB top par hai, RR aur PBKS close pressure bana rahe hain, aur middle table already jam-packed ho chuka hai.",
+          "Points table ka real reading sirf points se nahi hota; net run rate aur wins ka pattern bhi matter karta hai. RCB ka top par jaana sirf results ka matter nahi, system shift ka sign bhi hai. RR ka strong season batata hai ki all-phase balance ab bhi kaam karta hai. PBKS ka quietly efficient rise yeh dikhata hai ki hype ke bina bhi season-smart cricket aapko top zone mein rakh sakta hai.",
+          "Isi stage par bottom teams ke liye pressure bhi shape lena start ho chuka hai. IPL mein season lamba hota hai, lekin momentum gap bhi jaldi dangerous ho sakta hai. Isi liye mid-April tak ka table already narrative create kar raha hai.",
+        ],
+        bullets: [
+          "RCB early table leaders ban kar nikli",
+          "RR and PBKS strongest challengers dikh rahe hain",
+          "Middle-table chaos abhi se playoff race ko unpredictable bana raha hai",
+        ],
+      },
+      {
+        heading: "RCB renaissance: is baar Bengaluru sirf hype team nahi lag rahi",
+        paragraphs: [
+          "RCB ki sabse badi problem historically yeh rahi ki unke paas stars to hote the, lekin structure incomplete lagta tha. 2026 mein woh pattern toot raha hai. Rajat Patidar ke under team zyada calm, zyada role-based aur zyada tactical feel ho rahi hai. Yeh RCB ki biggest compliment hai, kyunki pehle unke around emotion zyada hota tha aur structural trust kam.",
+          "Virat Kohli ko selective Impact-style management ke saath use karna bhi is shift ka symbol hai. Yeh move sirf fitness management nahi, tactical confidence ka indicator hai. Team ab ek player ke around romantic attachment se nahi, total team optimization se soch rahi hai. Yeh champion teams ki sign language hoti hai.",
+          "Bowling discipline bhi pehli baar genuine talking point bana hai. Jab RCB jaise venue conditions wali team score control aur matchup pressure create karne lage, tab unke title chances naturally real lagne lagte hain. Isi liye RCB ka rise iss season ki sabse important franchise stories mein se ek hai.",
+        ],
+        bullets: [
+          "Rajat Patidar ke under clearer role cricket",
+          "Virat management tactical maturity ka sign hai",
+          "Better bowling ne RCB ko finally more complete side banaya",
+        ],
+      },
+      {
+        heading: "Sanju Samson to CSK: season ka sabse bada structural twist",
+        paragraphs: [
+          "Pre-season blockbuster trade ne hi league ka power balance hila diya tha. Sanju Samson ka CSK move ek simple player transfer nahi tha; yeh succession planning, tactical fitting aur identity transition teenon ka combined signal tha. CSK ne clearly decide kar liya ki post-Dhoni era ko naturally happen hone dene ke bajay woh usse design karenge.",
+          "Samson jaise player ka Chepauk ecosystem mein fit hona strategic level par bahut interesting hai. Woh spin ko attack kar sakte hain, middle overs ko break kar sakte hain, aur wicketkeeping ke through leadership bridge bhi provide karte hain. Isse Ruturaj Gaikwad ke role ko bhi clarity milti hai. Yaani yeh trade sirf batting depth ka nahi, structure ka trade tha.",
+          "Doosri taraf RR ne Ravindra Jadeja aur Sam Curran ke through multi-dimensional squad build ki. Isse unka team balance aur layered hua. Isliye iss deal ko one-sided kahna simplistic hoga. Sach yeh hai ki dono teams ne apne-apne cricketing problems ko alag direction mein solve karne ki koshish ki.",
+        ],
+        bullets: [
+          "CSK got future wicketkeeper-leadership bridge",
+          "RR got all-round flexibility and balance",
+          "This trade changed how both teams are built, not just who bats where",
+        ],
+      },
+      {
+        heading: "Vaibhav Sooryavanshi: IPL 2026 ka sabse loud breakout kyun hai?",
+        paragraphs: [
+          "Har IPL season ek breakout name deta hai, lekin Vaibhav Sooryavanshi ka case normal breakout jaisa nahi hai. Woh sirf young nahi hain, woh game ko instantly fast-forward kar dete hain. 15-ball fifty jaisi innings ya 17-ball assault type starts sirf scorecard numbers nahi, opposition mindset breakers hote hain.",
+          "Vaibhav ki batting ka sabse dangerous part unka intent hai. Bahut young players talent ke saath aate hain, lekin risk-free version mein khelte hain. Vaibhav us school se nahi lagte. Unki approach pehle hi over se bowling plan disrupt karne wali hai. Isi liye unke around buzz sirf age ka nahi, actual T20 relevance ka hai.",
+          "Modern Indian T20 batting ka jo next shape ho sakta hai, Vaibhav uska preview lagte hain. Fearless tempo, reputation se no-inferiority complex aur crowd-pulling six-hitting combo unhe season ke biggest narrative engines mein daal deta hai.",
+        ],
+        bullets: [
+          "Vaibhav is not just young, he is immediately impactful",
+          "His batting changes game speed within first few balls",
+          "He represents the next phase of fearless Indian T20 batting",
+        ],
+      },
+      {
+        heading: "Impact Player rule: innovation hai ya game ko tod raha hai?",
+        paragraphs: [
+          "IPL 2026 mein agar ek tactical rule sabse zyada debate create kar raha hai, to woh Impact Player rule hi hai. Captains aur players ka ek section maanta hai ki isne all-rounders ki traditional value ko weaken kiya hai, specialists ko extra advantage diya hai, aur scoring ko unnatural level tak push kar diya hai.",
+          "Lekin franchise point of view se dekhein to logic simple hai: agar rule available hai aur aapko extra tactical edge deta hai, to aap use karoge. Isi rule ki wajah se teams zyada bold batting kar rahi hain, kyunki woh jaanti hain ki squad flexibility bench par wait kar rahi hai. Isi se 200-plus totals ka trend aur common ho gaya hai.",
+          "Sach shayad beech mein hai. Yeh rule game ko fresh bhi bana raha hai aur thoda distorted bhi. Fans ke liye spectacle badha hai, lekin traditional cricketing balance ke liye sawal bhi khade hue hain. Isi wajah se Impact Player debate 2026 ke cricket discussion ka core part ban chuki hai.",
+        ],
+        bullets: [
+          "Rule ne specialist-heavy cricket ko boost kiya",
+          "All-rounder value par genuine debate khadi hui hai",
+          "Scoring explosion ka ek major reason bhi yahi rule hai",
+        ],
+      },
+      {
+        heading: "Aage kya decide karega season? Cummins comeback aur injury pressure",
+        paragraphs: [
+          "Season ka second half sirf form se decide nahi hoga, availability se bhi hoga. Pat Cummins ka late-April return target SRH ke liye massive story hai. Unka comeback sirf ek pacer ki waapsi nahi, leadership aur bowling confidence ka return hoga. SRH ke liye yeh swing point ban sakta hai.",
+          "Doosri तरफ Chennai jaise teams ko injury management aur bowling depth concerns ke saath chalna hoga. IPL ka middle phase wahi jagah hota hai jahan achhi teams depth se jeetti hain aur unstable teams cracks expose kar deti hain. Isi liye availability stories ab points table ke jitni hi important ho chuki hain.",
+          "16 April ke point par season open hai, lekin ab margin kam hota ja raha hai. Jo teams timely returns, better role clarity aur stable combinations maintain karengi, wahi genuine playoff control le paayengi.",
+        ],
+        bullets: [
+          "Pat Cummins return could reset SRH’s second half",
+          "Injury management now matters as much as form",
+          "Depth and stability will decide real contenders",
+        ],
+      },
+      {
+        heading: "Final verdict: 2026 ka cricket version alag kyun feel hota hai?",
+        paragraphs: [
+          "2026 ne humein ek saaf message diya hai: cricket, especially T20 cricket, ab sirf evolve nahi ho raha, visibly transform ho chuka hai. India ka World Cup win ek new international template ki tarah laga. IPL 2026 us template ka franchise-level hyper version ban gaya hai.",
+          "RCB ka tactical reboot, Sanju Samson ka CSK transition move, RR ka all-rounder pivot, Vaibhav Sooryavanshi ka breakout aur Impact Player rule ka chaos — yeh sab stories alag-alag nahi hain. Yeh ek hi badi shift ke parts hain. Modern cricket ab reputation se kam aur role clarity, aggression aur system intelligence se zyada defined ho raha hai.",
+          "One-line truth simple hai: 2026 mein cricket sirf tez nahi hua, smarter, riskier aur zyada ruthless ho gaya hai. Isi liye yeh saal yaad rakha jayega.",
+        ],
+        bullets: [
+          "World Cup + IPL 2026 together show a new cricket identity",
+          "Aggression is no longer optional, it is structural",
+          "This season feels like the point where modern T20 fully arrived",
+        ],
+      },
+    ],
+    relatedSlugs: [
+      "ipl-2026-points-table-orange-cap-purple-cap-full-analysis",
+      "csk-crisis-dhoni-comeback-ipl-2026",
+      "who-is-vaibhav-suryavanshi-why-he-is-trending-india-today",
+    ],
+  },
+  {
     slug: "ipl-2026-points-table-orange-cap-purple-cap-full-analysis",
     title:
       "IPL 2026 Points Table Shock: RR Top Par, KKR Sabse Neeche! Orange Cap, Purple Cap Aur Har Team Ka Full Analysis",
