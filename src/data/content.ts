@@ -1,4 +1,4 @@
-﻿export type Category = {
+export type Category = {
   name: string;
   href: string;
 };
@@ -192,7 +192,7 @@ export const posts: Post[] = [
 दोहा:
 पवन तनय संकट हरन, मंगल मूरति रूप
 राम लखन सीता सहित, हृदय बसहु सुर भूप
-,
+`,
         ]
       },
       {
