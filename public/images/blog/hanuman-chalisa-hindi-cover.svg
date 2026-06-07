@@ -1,0 +1,19 @@
+﻿<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="180" r="180" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="240" cy="760" r="220" fill="rgba(255,248,220,0.12)"/>
+  <rect x="110" y="110" width="1380" height="680" rx="40" fill="rgba(255,248,235,0.92)"/>
+  <text x="180" y="250" fill="#9A3412" font-family="Noto Sans Devanagari, Mangal, sans-serif" font-size="86" font-weight="700">हनुमान चालीसा</text>
+  <text x="180" y="355" fill="#7C2D12" font-family="Noto Sans Devanagari, Mangal, sans-serif" font-size="54" font-weight="600">हिंदी में संपूर्ण पाठ</text>
+  <text x="180" y="435" fill="#7C2D12" font-family="Noto Sans Devanagari, Mangal, sans-serif" font-size="36">आसान अर्थ • पाठ का सही समय • लाभ</text>
+  <text x="180" y="575" fill="#B45309" font-family="Noto Sans Devanagari, Mangal, sans-serif" font-size="34">जय हनुमान ज्ञान गुन सागर</text>
+  <text x="180" y="635" fill="#B45309" font-family="Noto Sans Devanagari, Mangal, sans-serif" font-size="34">जय कपीस तिहुँ लोक उजागर</text>
+  <text x="180" y="730" fill="#EA580C" font-family="Noto Sans Devanagari, Mangal, sans-serif" font-size="28" font-weight="700">PixMorphy Trends</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F97316"/>
+      <stop offset="0.55" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#DC2626"/>
+    </linearGradient>
+  </defs>
+</svg>

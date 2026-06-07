@@ -163,7 +163,9 @@ export default async function BlogPage({ params }: PageProps) {
               </h2>
               <div className="mt-4 space-y-4 text-sm leading-8 text-[color:var(--text-secondary)] sm:text-base">
                 {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph} className="whitespace-pre-line">
+                    {paragraph}
+                  </p>
                 ))}
               </div>
               {section.bullets ? (
