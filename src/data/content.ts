@@ -1,40 +1,7 @@
-export type Category = {
-  name: string;
-  href: string;
-};
+import { discoverPosts } from "./discover-posts";
+import type { Category, Post } from "./types";
 
-export type Faq = {
-  question: string;
-  answer: string;
-};
-
-export type Post = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  publishedAt: string;
-  updatedAt?: string;
-  readTime: string;
-  author: string;
-  imageSrc: string;
-  imageObjectPosition?: string;
-  heroAccent: string;
-  featuredLabel: string;
-  imageAlt: string;
-  galleryImages?: {
-    src: string;
-    alt: string;
-  }[];
-  keywords: string[];
-  faq: Faq[];
-  sections: {
-    heading: string;
-    paragraphs: string[];
-    bullets?: string[];
-  }[];
-  relatedSlugs: string[];
-};
+export type { Category, Faq, Post } from "./types";
 
 export const siteConfig = {
   name: "PixMorphy",
@@ -67,6 +34,7 @@ export const siteConfig = {
 };
 
 export const posts: Post[] = [
+  ...discoverPosts,
   {
     slug: "hanuman-chalisa-in-hindi-sampoorna-path",
     title: "हनुमान चालीसा हिंदी में: संपूर्ण पाठ और लाभ",
@@ -2883,7 +2851,12 @@ export const posts: Post[] = [
   },
 ];
 
-export const featuredPosts = posts.slice(0, 3);
+export const featuredPosts = [...discoverPosts]
+  .sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  )
+  .slice(0, 3);
 
 export const authors = {
   "Rajat Gupta": {
