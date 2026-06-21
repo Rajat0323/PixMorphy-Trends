@@ -44,9 +44,9 @@ function HomepageHero() {
               </span>
             </div>
             <div className="max-w-2xl space-y-3">
-              <h1 className="headline-font text-2xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+              <h2 className="headline-font text-2xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
                 {lead.title}
-              </h1>
+              </h2>
               <p className="max-w-xl text-sm leading-7 text-white/82 sm:text-base">
                 {lead.excerpt}
               </p>
@@ -126,6 +126,7 @@ export default function Home() {
 
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 py-6 sm:px-6 lg:px-8">
+      <h1 className="sr-only">PixMorphy - Hindi Tech, AI Tools & Viral News</h1>
       <section className="space-y-6 pt-4">
         <HomepageHero />
         <CategoryRail />
@@ -214,7 +215,8 @@ export default function Home() {
       </section>
 
       <section className="grid gap-6 lg:grid-cols-2">
-        <div id="ai-tools" className="rounded-[32px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8">
+        <div id="earn" className="rounded-[32px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8">
+          <span id="ai-tools" className="sr-only" />
           <SectionHeading
             eyebrow="AI Tools & Earn"
             title="AI aur earning category ke selected blog posts"

@@ -26,8 +26,13 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.webmanifest",
   alternates: {
+    canonical: "/",
+    languages: {
+      "hi-IN": "/",
+      "en-IN": "/",
+    },
     types: {
       "application/rss+xml": `${siteConfig.url}/feed.xml`,
     },
@@ -46,7 +51,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    locale: "en_IN",
+    locale: "hi_IN",
     type: "website",
     images: [
       {
@@ -76,12 +81,13 @@ export default function RootLayout({
     name: siteConfig.name,
     url: siteConfig.url,
     logo: `${siteConfig.url}/icon?size=512`,
-    sameAs: ["https://github.com/Rajat0323/PixMorphy-Trends"],
+    sameAs: siteConfig.socialLinks,
   };
 
   return (
     <html
-      lang="en"
+      lang="hi"
+      dir="ltr"
       data-scroll-behavior="smooth"
       className={`${headingFont.variable} ${bodyFont.variable} scroll-smooth`}
     >

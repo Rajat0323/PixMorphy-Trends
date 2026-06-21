@@ -1,13 +1,64 @@
 import type { NextConfig } from "next";
 
+const remoteImageHosts = [
+  "static.toiimg.com",
+  "akm-img-a-in.tosshub.com",
+  "c.ndtvimg.com",
+  "m.media-amazon.com",
+  "images.openai.com",
+  "stimg.cardekho.com",
+  "cdn.mos.cms.futurecdn.net",
+  "cdn.beebom.com",
+  "images.indianexpress.com",
+  "asset.autocarindia.com",
+  "i.guim.co.uk",
+  "images.samsung.com",
+  "th-i.thgim.com",
+  "imgd.aeplcdn.com",
+  "static-cdn.toi-media.com",
+  "pbs.twimg.com",
+  "s.yimg.com",
+  "motorolain.vtexassets.com",
+  "motorolaimgrepo.vtexassets.com",
+  "media.assettype.com",
+  "r3.whistleout.com.au",
+  "ichef.bbci.co.uk",
+  "cdn.supergas.com",
+  "s7ap1.scene7.com",
+  "assets.thehansindia.com",
+  "cdn.carhp.in",
+  "images.carandbike.com",
+  "cdn.britannica.com",
+  "cdn.theatlantic.com",
+  "static.independent.co.uk",
+  "www.worldatlas.com",
+  "iranprimer.usip.org",
+  "cdn.statcdn.com",
+  "www.eia.gov",
+  "assets.bwbx.io",
+  "media-cldnry.s-nbcnews.com",
+  "www.spsmai.com",
+  "live-production.wcms.abc-cdn.net.au",
+  "www.hrw.org",
+  "global.unitednations.entermediadb.net",
+  "www.unicef.org",
+  "images.financialexpressdigital.com",
+  "media.crictracker.com",
+  "i.pinimg.com",
+  "imgc.ap7am.com",
+  "img.etimg.com",
+  "www.indiancricketfans.com",
+  "myxprs.com",
+  "i.imgur.com",
+  "rukminim2.flixcart.com"
+] as const;
+
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
+    remotePatterns: remoteImageHosts.map((hostname) => ({
+      protocol: "https",
+      hostname,
+    })),
   },
 };
 

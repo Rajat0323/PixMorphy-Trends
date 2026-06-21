@@ -41,29 +41,35 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://pixmorphy-trends.vercel.app",
   description:
     "PixMorphy is a fast Hindi and Hinglish blog for AI tools, tech updates, viral trends, online earning and practical how-to guides.",
+  contactEmail: "hello@pixmorphy.in",
+  partnershipsEmail: "partnerships@pixmorphy.in",
+  socialLinks: [
+    "https://github.com/Rajat0323/PixMorphy-Trends",
+    "https://x.com/pixmorphy",
+    "https://www.instagram.com/pixmorphy",
+  ],
   nav: [
     { name: "Home", href: "/" },
-    { name: "Tech", href: "/#latest" },
-    { name: "AI Tools", href: "/#ai-tools" },
+    { name: "Blog", href: "/blog" },
+    { name: "Tech", href: "/category/tech-update" },
+    { name: "AI Tools", href: "/category/ai-tools" },
     { name: "Earn", href: "/#earn" },
-    { name: "How-To", href: "/#how-to" },
-    { name: "Trending", href: "/#trending" },
+    { name: "Trending", href: "/category/trending" },
   ] satisfies Category[],
   categories: [
-    { name: "Tech", href: "/#latest" },
-    { name: "AI Tools", href: "/#ai-tools" },
-    { name: "Online Earning", href: "/#earn" },
+    { name: "Tech", href: "/category/tech-update" },
+    { name: "AI Tools", href: "/category/ai-tools" },
+    { name: "Online Earning", href: "/category/online-earning" },
     { name: "How-To", href: "/#how-to" },
-    { name: "Trending", href: "/#trending" },
-    { name: "Apps", href: "/#latest" },
+    { name: "Trending", href: "/category/trending" },
+    { name: "All Posts", href: "/blog" },
   ] satisfies Category[],
 };
 
 export const posts: Post[] = [
   {
     slug: "hanuman-chalisa-in-hindi-sampoorna-path",
-    title:
-      "हनुमान चालीसा हिंदी में: संपूर्ण पाठ, आसान अर्थ, पढ़ने का सही समय और लाभ",
+    title: "हनुमान चालीसा हिंदी में: संपूर्ण पाठ और लाभ",
     excerpt:
       "यहां पढ़ें हनुमान चालीसा हिंदी में संपूर्ण पाठ, सरल अर्थ, मंगलवार और शनिवार के पाठ का महत्व, नियम, लाभ और भक्तों के सबसे आम सवालों के जवाब।",
     category: "Trending",
@@ -127,7 +133,8 @@ export const posts: Post[] = [
       {
         heading: "हनुमान चालीसा संपूर्ण पाठ हिंदी में",
         paragraphs: [
-          `????
+          `श्रीगुरु चरण सरोज रज, निज मन मुकुर सुधारि।
+बरनउं रघुबर बिमल जसु, जो दायक फल चारि॥
 
 जय हनुमान ज्ञान गुन सागर, जय कपीस तिहुं लोक उजागर
 रामदूत अतुलित बल धामा, अंजनि-पुत्र पवनसुत नामा
@@ -238,7 +245,7 @@ export const posts: Post[] = [
   {
     slug: "ipl-2026-world-cup-to-ipl-arms-race-full-analysis",
     title:
-      "IPL 2026 Full Analysis: India Ki World Cup Glory Se RCB Rise Tak, Yeh Season Cricket Ko Kaise Badal Raha Hai",
+      "IPL 2026 Analysis: World Cup Glory Se RCB Rise Tak",
     excerpt:
       "India ke T20 World Cup 2026 win, IPL 2026 points table, RCB rise, Sanju Samson CSK move, Vaibhav storm aur Impact Player rule ka deep Hinglish breakdown.",
     category: "Trending",
@@ -246,7 +253,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-16",
     readTime: "12 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://images.indianexpress.com/2026/04/eden-rain-kkr-vs-pbks.jpg?w=1600",
+    imageSrc: "/images/blog/imported/ipl-eden-rain.jpg",
     imageObjectPosition: "center",
     heroAccent: "from-sky-700 via-blue-700 to-violet-800",
     featuredLabel: "Cricket Deep Dive",
@@ -427,7 +434,7 @@ export const posts: Post[] = [
   {
     slug: "ipl-2026-points-table-orange-cap-purple-cap-full-analysis",
     title:
-      "IPL 2026 Points Table Shock: RR Top Par, KKR Sabse Neeche! Orange Cap, Purple Cap Aur Har Team Ka Full Analysis",
+      "IPL 2026 Points Table: Orange Cap, Purple Cap & Team Analysis",
     excerpt:
       "IPL 2026 ka full mid-season report: points table, Orange Cap race, Purple Cap race, best teams, breakout stars aur har franchise ka simple Hinglish analysis.",
     category: "Trending",
@@ -615,7 +622,7 @@ export const posts: Post[] = [
   {
     slug: "vaibhav-suryavanshi-vs-abhishek-sharma-stats-analysis",
     title:
-      "Vaibhav Suryavanshi vs Abhishek Sharma: Kaun Hai Zyada Dangerous T20 Batter? Full Stats, Form Aur Match Impact Analysis",
+      "Vaibhav vs Abhishek: Kaun Zyada Dangerous T20 Batter?",
     excerpt:
       "Vaibhav Suryavanshi aur Abhishek Sharma ke stats, form, strike rate, powerplay impact aur long-term T20 value ka detailed Hinglish breakdown.",
     category: "Trending",
@@ -793,7 +800,7 @@ export const posts: Post[] = [
   {
     slug: "who-is-vaibhav-suryavanshi-why-he-is-trending-india-today",
     title:
-      "Who Is Vaibhav Suryavanshi? 15 Saal Ke Is RR Star Ne India Ko Kyu Hila Diya (Full Story)",
+      "Who Is Vaibhav Suryavanshi? RR Star Ki Full Story",
     excerpt:
       "Vaibhav Suryavanshi ka background, rising IPL fame, Kumble reaction, Mumbai Indians buzz aur RR vs RCB match context ko detailed Hinglish mein samjhein.",
     category: "Trending",
@@ -801,7 +808,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-10",
     readTime: "10 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://c.ndtvimg.com/2026-04/lqnqu8ds_vaibhav-sooryavanshi_625x300_08_April_26.jpg?im=FeatureCrop%2Calgorithm%3Ddnn%2Cwidth%3D1200%2Cheight%3D738",
+    imageSrc: "/images/blog/vaibhav-vs-abhishek-cover.png",
     heroAccent: "from-pink-700 via-violet-700 to-blue-700",
     featuredLabel: "Teen Star",
     imageAlt: "Vaibhav Suryavanshi trending IPL story featured image",
@@ -945,7 +952,7 @@ export const posts: Post[] = [
   {
     slug: "who-is-mukul-choudhary-why-he-is-trending-india-today",
     title:
-      "Who Is Mukul Choudhary? LSG Ke 21 Saal Ke Finisher Ne India Ko Kyu Shock Kar Diya (Full Story)",
+      "Who Is Mukul Choudhary? LSG Finisher Ki Full Story",
     excerpt:
       "Mukul Choudhary ka background, LSG breakout knock, family struggle, Dhoni connection aur viral rise ko detailed Hinglish mein samjhein.",
     category: "Trending",
@@ -953,7 +960,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-10",
     readTime: "9 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202604/mukul-choudhary-091318274-16x9_0.jpg?VersionId=kig3ddRRFG8Oncb6h0oE0Roz1VByYRxz&size=690%3A388",
+    imageSrc: "/images/blog/imported/mukul-indiatoday.jpg",
     heroAccent: "from-indigo-900 via-sky-700 to-emerald-500",
     featuredLabel: "IPL Rising Star",
     imageAlt: "Mukul Choudhary LSG featured image",
@@ -1110,7 +1117,7 @@ export const posts: Post[] = [
   {
     slug: "mg-majestor-price-in-india-launch-features",
     title:
-      "MG Majestor Price in India: Fortuner Ko Takkar Dene Aa Rahi Yeh Premium SUV, Price Sunke Shock Ho Jaoge!",
+      "MG Majestor Price in India: Launch Features & Specs",
     excerpt:
       "MG Majestor ke expected price, launch timeline, premium features, interior aur India rivals ko simple Hinglish mein samjhein.",
     category: "Tech",
@@ -1118,7 +1125,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-08",
     readTime: "6 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Majestor/13304/1770898907264/front-left-side-47.jpg",
+    imageSrc: "/images/blog/imported/mg-majestor.jpg",
     heroAccent: "from-zinc-900 via-slate-700 to-red-500",
     featuredLabel: "SUV Launch",
     imageAlt: "MG Majestor price in India featured image",
@@ -1303,7 +1310,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-07",
     readTime: "8 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://static-cdn.toi-media.com/www/uploads/2026/03/AFP__20260303__99NK89E__v1__HighRes__ComboIranUsIsraelWar.jpg",
+    imageSrc: "/images/blog/imported/iran-war-toi.jpg",
     heroAccent: "from-slate-950 via-red-900 to-amber-700",
     featuredLabel: "Global Crisis",
     imageAlt: "Iran vs America war explainer featured image",
@@ -1503,7 +1510,7 @@ export const posts: Post[] = [
   {
     slug: "csk-crisis-dhoni-comeback-ipl-2026",
     title:
-      "CSK Sankat Mein! Kya Agle Match Mein Lautenge Dhoni? Kya Thala Phir Se Chennai Ko Khada Kar Payenge?",
+      "CSK Crisis: Kya Dhoni Agle Match Mein Lautenge?",
     excerpt:
       "CSK ki girti shuruaat, points table pressure, Dhoni comeback buzz aur playoff chances ko simple Hinglish mein samjhein.",
     category: "Trending",
@@ -1511,7 +1518,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-07",
     readTime: "6 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://media.crictracker.com/media/attachments/1774673640267_MS-Dhoni.jpeg",
+    imageSrc: "/images/blog/imported/ms-dhoni.jpeg",
     heroAccent: "from-yellow-500 via-orange-500 to-blue-700",
     featuredLabel: "CSK Crisis",
     imageAlt: "MS Dhoni comeback focused CSK crisis featured image",
@@ -1668,7 +1675,7 @@ export const posts: Post[] = [
   {
     slug: "samsung-galaxy-s26-ultra-2026-guide",
     title:
-      "Samsung Galaxy S26 Ultra 2026: 250MP Camera Aur AI Power Ne Sabko Shock Kar Diya!",
+      "Samsung Galaxy S26 Ultra 2026: 250MP Camera & AI Power",
     excerpt:
       "Galaxy S26 Ultra ke premium design, big AI upgrades, flagship camera buzz aur ultra-premium display ko simple Hinglish mein samjhein.",
     category: "Tech",
@@ -1676,7 +1683,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-06",
     readTime: "7 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://pbs.twimg.com/media/G3imMjMWYAAeQeN.jpg",
+    imageSrc: "/images/blog/imported/samsung-galaxy.jpg",
     heroAccent: "from-slate-900 via-blue-700 to-cyan-500",
     featuredLabel: "Flagship Buzz",
     imageAlt: "Samsung Galaxy S26 Ultra featured image",
@@ -1844,7 +1851,7 @@ export const posts: Post[] = [
   {
     slug: "motorola-edge-70-fusion-2026-review",
     title:
-      "Motorola Edge 70 Fusion 2026: 7000mAh Battery Aur Curved Display Ne Market Hila Di!",
+      "Motorola Edge 70 Fusion 2026: 7000mAh Battery Review",
     excerpt:
       "Motorola Edge 70 Fusion ke premium design, huge battery, smooth display aur clean Android style ko simple Hinglish mein samjhein.",
     category: "Tech",
@@ -1852,7 +1859,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-06",
     readTime: "6 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://motorolain.vtexassets.com/arquivos/ids/161666/motorola-edge-70-fusion-pdp-ecom-render-06-color5-4zlgawe8.png?v=639072888087570000",
+    imageSrc: "/images/blog/imported/motorola-edge.png",
     heroAccent: "from-fuchsia-600 via-violet-600 to-blue-600",
     featuredLabel: "Mid-Range Star",
     imageAlt: "Motorola Edge 70 Fusion featured image",
@@ -2012,7 +2019,7 @@ export const posts: Post[] = [
   {
     slug: "redmi-note-15-pro-plus-5g-2026-review",
     title:
-      "Redmi Note 15 Pro+ 5G 2026: 200MP Camera Aur 6500mAh Battery Is Price Par Sach Hai?",
+      "Redmi Note 15 Pro+ 5G 2026: 200MP Camera Review",
     excerpt:
       "Redmi Note 15 Pro+ 5G ke 200MP camera, big battery, premium design aur flagship-feel display ko simple Hinglish mein samjhein.",
     category: "Tech",
@@ -2020,7 +2027,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-06",
     readTime: "7 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://m.media-amazon.com/images/I/81FhRGs5%2BML._AC_UF1000%2C1000_QL80_.jpg",
+    imageSrc: "/images/blog/imported/redmi-note.jpg",
     heroAccent: "from-amber-700 via-orange-600 to-rose-600",
     featuredLabel: "Value Beast",
     imageAlt: "Redmi Note 15 Pro Plus 5G featured image",
@@ -2184,7 +2191,7 @@ export const posts: Post[] = [
   {
     slug: "rcb-vs-csk-result-2026-viral-reason",
     title:
-      "RCB vs CSK Result 2026 (5 April): Kohli-Dhoni Fever Mein Bengaluru Blast, 250 Run Se Macha Hadkamp!",
+      "RCB vs CSK Result 2026: Bengaluru Mein High-Scoring Thriller",
     excerpt:
       "5 April 2026 ke RCB vs CSK match mein 250/3 ka dhamaka, Tim David ki toofani batting aur CSK par 43-run ki badi jeet ko simple Hindi mein samjhein.",
     category: "Trending",
@@ -2192,7 +2199,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-06",
     readTime: "6 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://c.ndtvimg.com/2026-03/fcr9678c_rcb_625x300_24_March_26.jpg?im=FeatureCrop%2Calgorithm%3Ddnn%2Cwidth%3D1200%2Cheight%3D738",
+    imageSrc: "/images/blog/ipl-2026-custom-cover.jpeg",
     heroAccent: "from-red-600 via-orange-500 to-yellow-400",
     featuredLabel: "IPL Fever",
     imageAlt: "RCB vs CSK IPL 2026 result featured image",
@@ -2343,7 +2350,7 @@ export const posts: Post[] = [
   {
     slug: "aata-gold-gas-prices-india-april-2026",
     title:
-      "आटा, सोना और गैस की कीमतें फिर चर्चा में: April 2026 में आम आदमी क्यों परेशान है?",
+      "आटा, सोना और गैस की कीमतें: April 2026 Update",
     excerpt:
       "April 2026 mein aata, sona aur LPG gas ki badhti keematें aam aadmi ke budget par seedha asar daal rahi hain. Is poore issue ko simple Hindi mein samjhein.",
     category: "Trending",
@@ -2351,7 +2358,7 @@ export const posts: Post[] = [
     updatedAt: "2026-04-06",
     readTime: "5 min read",
     author: "Rajat Gupta",
-    imageSrc: "https://www.bbassets.com/media/uploads/p/l/30006887_9-aashirvaad-atta-whole-wheat.jpg",
+    imageSrc: "/images/blog/imported/aata-gold.jpg",
     heroAccent: "from-amber-500 via-yellow-400 to-orange-500",
     featuredLabel: "Price Alert",
     imageAlt: "Aata, sona aur gas prices trend article featured image",
@@ -2532,7 +2539,7 @@ export const posts: Post[] = [
   },
   {
     slug: "srh-vs-lsg-match-prediction-2026",
-    title: "आज का SRH vs LSG मैच कौन जीतेगा | Today IPL Match Prediction 2026",
+    title: "SRH vs LSG Match Prediction 2026: Aaj Ka IPL Winner",
     excerpt:
       "आज के IPL 2026 मुकाबले में SRH vs LSG के बीच कौन भारी पड़ सकता है, pitch report, probable playing 11 aur final prediction ko simple Hindi mein samjhein.",
     category: "Trending",
@@ -2637,7 +2644,7 @@ export const posts: Post[] = [
   {
     slug: "whatsapp-new-update-2026-hidden-features",
     title:
-      "WhatsApp New Update 2026: Yeh 5 Hidden Features Aapko Shock Kar Denge!",
+      "WhatsApp Update 2026: 5 Hidden Features You Must Try",
     excerpt:
       "Storage cleanup, dual accounts, anti-scam alerts aur chat transfer jaise features ko simple Hinglish mein samjho.",
     category: "Tech Update",
@@ -2731,7 +2738,7 @@ export const posts: Post[] = [
   },
   {
     slug: "top-ai-tools-2026-free-powerful",
-    title: "Top 7 AI Tools Jo Aapki Life Change Kar Denge: Free Aur Powerful Picks",
+    title: "Top 7 AI Tools 2026: Free & Powerful Picks",
     excerpt:
       "Productivity, content, image generation aur study hacks ke liye 2026 ke best AI tools ki practical list.",
     category: "AI Tools",
@@ -2787,7 +2794,7 @@ export const posts: Post[] = [
   },
   {
     slug: "instagram-algorithm-2026-reels-viral-trick",
-    title: "Instagram Algorithm 2026: Reels Viral Kaise Kare Without Guesswork",
+    title: "Instagram Algorithm 2026: Reels Viral Kaise Kare",
     excerpt:
       "Reels reach, watch-time aur retention signals ko simplify karke samjhaaya gaya hai for creators in India.",
     category: "Trending",
@@ -2831,7 +2838,7 @@ export const posts: Post[] = [
   },
   {
     slug: "chatgpt-se-paise-kaise-kamaye-2026",
-    title: "ChatGPT se Paise Kaise Kamaye 2026: Beginner Friendly Real Methods",
+    title: "ChatGPT se Paise Kaise Kamaye 2026: Beginner Guide",
     excerpt:
       "Content services, prompts, research help aur small digital offers ke practical earning models Hindi mein.",
     category: "Online Earning",

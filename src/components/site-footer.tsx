@@ -24,12 +24,18 @@ export function SiteFooter() {
             <Link href="/contact" className="block hover:text-[color:var(--accent)]">
               Contact
             </Link>
+            <Link href="/editorial-policy" className="block hover:text-[color:var(--accent)]">
+              Editorial Policy
+            </Link>
+            <Link href="/privacy" className="block hover:text-[color:var(--accent)]">
+              Privacy Policy
+            </Link>
+            <Link href="/disclaimer" className="block hover:text-[color:var(--accent)]">
+              Disclaimer
+            </Link>
             <Link href="/feed.xml" className="block hover:text-[color:var(--accent)]">
               RSS Feed
             </Link>
-            <a className="block hover:text-[color:var(--accent)]" href="#latest">
-              Editorial Standards
-            </a>
           </div>
         </div>
         <div className="space-y-3">
@@ -37,15 +43,21 @@ export function SiteFooter() {
             Categories
           </h3>
           <div className="space-y-2 text-sm text-[color:var(--text-secondary)]">
-            <a className="block hover:text-[color:var(--accent)]" href="#ai-tools">
+            <Link href="/category/ai-tools" className="block hover:text-[color:var(--accent)]">
               AI Tools
-            </a>
-            <a className="block hover:text-[color:var(--accent)]" href="#earn">
+            </Link>
+            <Link href="/category/online-earning" className="block hover:text-[color:var(--accent)]">
               Online Earning
-            </a>
-            <a className="block hover:text-[color:var(--accent)]" href="#trending">
+            </Link>
+            <Link href="/category/trending" className="block hover:text-[color:var(--accent)]">
               Trending
-            </a>
+            </Link>
+            <Link href="/category/tech-update" className="block hover:text-[color:var(--accent)]">
+              Tech Update
+            </Link>
+            <Link href="/blog" className="block hover:text-[color:var(--accent)]">
+              All Posts
+            </Link>
           </div>
         </div>
       </div>

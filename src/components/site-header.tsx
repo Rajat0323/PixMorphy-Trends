@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/data/content";
+import { MobileNav } from "@/components/mobile-nav";
 
 function SearchIcon() {
   return (
@@ -22,7 +23,7 @@ function SearchIcon() {
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/60 bg-[color:var(--surface-overlay)] backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,var(--accent),var(--accent-strong))] text-sm font-bold text-white shadow-[0_12px_24px_rgba(37,99,235,0.28)]">
             PM
@@ -50,19 +51,20 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <button
-            type="button"
+          <Link
+            href="/blog"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--border)] bg-white text-[color:var(--text-primary)] shadow-sm transition hover:-translate-y-0.5"
             aria-label="Search posts"
           >
             <SearchIcon />
-          </button>
-          <button
-            type="button"
-            className="inline-flex h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)]"
+          </Link>
+          <Link
+            href="/#trending"
+            className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] sm:inline-flex"
           >
             Trending Now
-          </button>
+          </Link>
+          <MobileNav />
         </div>
       </div>
     </header>

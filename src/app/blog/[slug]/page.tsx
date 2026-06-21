@@ -4,10 +4,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ad-slot";
 import { AuthorCard } from "@/components/author-card";
+import { Breadcrumbs, getBlogBreadcrumbs } from "@/components/breadcrumbs";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
+import { ShareButtons } from "@/components/share-buttons";
 import { getPostBySlug, getRelatedPosts, posts, siteConfig } from "@/data/content";
+import { getAbsoluteImageUrl, getAbsoluteUrl, getCategorySlug } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -25,6 +28,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {};
   }
 
+  const imageUrl = getAbsoluteImageUrl(post.imageSrc);
+  const pageUrl = getAbsoluteUrl(`/blog/${post.slug}`);
+
   return {
     title: post.title,
     description: post.excerpt,
@@ -35,23 +41,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.excerpt,
       type: "article",
-      url: `${siteConfig.url}/blog/${post.slug}`,
+      url: pageUrl,
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt ?? post.publishedAt,
+      images: [
+        {
+          url: imageUrl,
+          alt: post.imageAlt,
+        },
+      ],
     },
-    keywords: post.keywords,
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [imageUrl],
+    },
   };
-}
-
-function ShareButton({ label }: { label: string }) {
-  return (
-    <button
-      type="button"
-      className="rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--text-secondary)] transition hover:text-[color:var(--accent)]"
-    >
-      {label}
-    </button>
-  );
 }
 
 export default async function BlogPage({ params }: PageProps) {
@@ -77,6 +83,7 @@ export default async function BlogPage({ params }: PageProps) {
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
+    image: [getAbsoluteImageUrl(post.imageSrc)],
     datePublished: post.publishedAt,
     dateModified: post.updatedAt ?? post.publishedAt,
     author: {
@@ -86,8 +93,13 @@ export default async function BlogPage({ params }: PageProps) {
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/icon?size=512`,
+      },
     },
-    mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
+    mainEntityOfPage: getAbsoluteUrl(`/blog/${post.slug}`),
+    url: getAbsoluteUrl(`/blog/${post.slug}`),
   };
 
   const faqSchema = {
@@ -113,6 +125,10 @@ export default async function BlogPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
+      <div className="mb-6">
+        <Breadcrumbs items={getBlogBreadcrumbs(post)} />
+      </div>
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,760px)_320px] lg:items-start">
         <article className="space-y-8">
@@ -216,11 +232,7 @@ export default async function BlogPage({ params }: PageProps) {
             </div>
           </section>
 
-          <section className="flex flex-wrap gap-3">
-            {["WhatsApp", "Share", "Save", "Telegram"].map((item) => (
-              <ShareButton key={item} label={item} />
-            ))}
-          </section>
+          <ShareButtons title={post.title} slug={post.slug} />
 
           <AuthorCard author={post.author} />
 
@@ -270,12 +282,13 @@ export default async function BlogPage({ params }: PageProps) {
             </h2>
             <div className="mt-4 flex flex-wrap gap-3">
               {["Trending", "Tech Update", "AI Tools", "Online Earning"].map((item) => (
-                <span
+                <Link
                   key={item}
+                  href={`/category/${getCategorySlug(item)}`}
                   className="rounded-full bg-[color:var(--surface-muted)] px-4 py-2 text-sm font-medium text-[color:var(--text-secondary)]"
                 >
                   {item}
-                </span>
+                </Link>
               ))}
             </div>
           </div>
