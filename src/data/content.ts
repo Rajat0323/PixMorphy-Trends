@@ -38,7 +38,7 @@ export type Post = {
 
 export const siteConfig = {
   name: "PixMorphy",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://pixmorphy-trends.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.pixmorphy.in",
   description:
     "PixMorphy is a fast Hindi and Hinglish blog for AI tools, tech updates, viral trends, online earning and practical how-to guides.",
   contactEmail: "hello@pixmorphy.in",

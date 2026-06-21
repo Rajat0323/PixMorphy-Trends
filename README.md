@@ -159,7 +159,8 @@ https://your-domain.com/sitemap.xml
 ```
 
 Examples:
-- `https://pixmorphy-trends.vercel.app/sitemap.xml`
+- `https://www.pixmorphy.in/sitemap.xml`
+- `https://pix-morphy-trends.vercel.app/sitemap.xml`
 - `https://yourcustomdomain.com/sitemap.xml`
 
 This project already includes:

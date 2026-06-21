@@ -3,6 +3,6 @@
   "installCommand": "npm install",
   "framework": "nextjs",
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://pixmorphy-trends.vercel.app"
+    "NEXT_PUBLIC_SITE_URL": "https://www.pixmorphy.in"
   }
 }
