@@ -16,7 +16,7 @@ export const siteConfig = {
   name: "PixMorphy Bhakti",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.pixmorphy.in",
   description:
-    "पिक्समॉर्फी भक्ति — हिंदी में आरती, चालीसा, स्तोत्र, व्रत कथा और त्योहार पूजा विधि। भारत के भक्तों के लिए साफ़ देवनागरी पाठ और सरल अर्थ।",
+    "पिक्समॉर्फी भक्ति — हिंदी में हनुमान चालीसा संपूर्ण पाठ, सरल अर्थ, मंगलवार-शनिवार पूजा विधि और लाभ।",
   contactEmail: "hello@pixmorphy.in",
   partnershipsEmail: "partnerships@pixmorphy.in",
   socialLinks: [
@@ -26,20 +26,12 @@ export const siteConfig = {
   ],
   nav: [
     { name: "मुख्य पृष्ठ", href: "/" },
-    { name: "आरती संग्रह", href: "/aarti-sangrah" },
-    { name: "आरती", href: "/category/aarti" },
+    { name: "हनुमान चालीसा", href: "/blog/hanuman-chalisa-in-hindi-sampoorna-path" },
     { name: "चालीसा", href: "/category/chalisa" },
-    { name: "त्योहार", href: "/category/festivals" },
-    { name: "व्रत", href: "/category/vrat-katha" },
-    { name: "सभी पाठ", href: "/blog" },
   ] satisfies Category[],
   categories: [
-    { name: "आरती संग्रह", href: "/aarti-sangrah" },
-    { name: "आरती", href: "/category/aarti" },
+    { name: "हनुमान चालीसा", href: "/blog/hanuman-chalisa-in-hindi-sampoorna-path" },
     { name: "चालीसा", href: "/category/chalisa" },
-    { name: "त्योहार", href: "/category/festivals" },
-    { name: "व्रत और कथा", href: "/category/vrat-katha" },
-    { name: "सभी पाठ", href: "/blog" },
   ] satisfies Category[],
 };
 
@@ -214,11 +206,7 @@ export const posts: Post[] = [
         ],
       },
     ],
-    relatedSlugs: [
-      "ipl-2026-world-cup-to-ipl-arms-race-full-analysis",
-      "ipl-2026-points-table-orange-cap-purple-cap-full-analysis",
-      "who-is-vaibhav-suryavanshi-why-he-is-trending-india-today",
-    ],
+    relatedSlugs: [],
   },
   {
     slug: "ipl-2026-world-cup-to-ipl-arms-race-full-analysis",
@@ -2874,7 +2862,7 @@ export const featuredPosts = [...publicPosts]
 export const authors = {
   "Rajat Gupta": {
     role: "भक्ति सामग्री लेखक",
-    bio: "राजत हिंदी में आरती, चालीसा, व्रत और त्योहार से जुड़ी साफ़ और व्यावहारिक भक्ति मार्गदर्शिकाएँ लिखते हैं — सरल भाषा, संपूर्ण पाठ और सच्ची जानकारी।",
+    bio: "राजत हिंदी में हनुमान चालीसा और भक्ति सामग्री लिखते हैं — साफ़ देवनागरी पाठ, सरल अर्थ और सच्ची जानकारी।",
   },
 };
 

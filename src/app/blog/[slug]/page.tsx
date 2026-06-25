@@ -6,7 +6,6 @@ import { AdSlot } from "@/components/ad-slot";
 import { AuthorCard } from "@/components/author-card";
 import { Breadcrumbs, getBlogBreadcrumbs } from "@/components/breadcrumbs";
 import { FaqAccordion } from "@/components/faq-accordion";
-import { InternalLinks } from "@/components/internal-links";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
 import { ShareButtons } from "@/components/share-buttons";
@@ -222,10 +221,6 @@ export default async function BlogPage({ params }: PageProps) {
               ) : null}
             </section>
           ))}
-
-          {post.internalLinks?.length ? (
-            <InternalLinks links={post.internalLinks} />
-          ) : null}
 
           <section className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
             <SectionHeading

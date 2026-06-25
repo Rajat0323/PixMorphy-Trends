@@ -33,7 +33,7 @@ export function SiteHeader() {
               पिक्समॉर्फी भक्ति
             </p>
             <p className="text-xs text-[color:var(--text-muted)]">
-              आरती, चालीसा और त्योहार
+              हनुमान चालीसा
             </p>
           </div>
         </Link>
@@ -59,10 +59,10 @@ export function SiteHeader() {
             <SearchIcon />
           </Link>
           <Link
-            href="/aarti-sangrah"
+            href="/blog/hanuman-chalisa-in-hindi-sampoorna-path"
             className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] sm:inline-flex"
           >
-            आरती संग्रह
+            हनुमान चालीसा
           </Link>
           <MobileNav />
         </div>
