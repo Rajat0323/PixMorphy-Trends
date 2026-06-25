@@ -281,7 +281,7 @@ export default async function BlogPage({ params }: PageProps) {
               Categories
             </h2>
             <div className="mt-4 flex flex-wrap gap-3">
-              {["Trending", "Tech Update", "AI Tools", "Online Earning"].map((item) => (
+              {["Aarti", "Chalisa", "Festivals", "Vrat & Katha"].map((item) => (
                 <Link
                   key={item}
                   href={`/category/${getCategorySlug(item)}`}

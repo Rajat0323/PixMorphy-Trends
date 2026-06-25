@@ -3,7 +3,8 @@ import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "PixMorphy ke editorial focus, trust principles aur audience ke baare mein janiye.",
+  description:
+    "PixMorphy Bhakti ke baare mein — Hindi aarti, chalisa, vrat aur tyohar content ka mission aur editorial focus.",
   alternates: {
     canonical: "/about",
   },
@@ -15,14 +16,23 @@ export default function AboutPage() {
       <div className="rounded-[32px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8">
         <SectionHeading
           as="h1"
-          eyebrow="About PixMorphy"
-          title="Hindi aur Hinglish readers ke liye tech ko less confusing banana hamara core goal hai."
-          description="PixMorphy AI tools, app updates, online earning ideas aur practical how-to guides ko simple language mein present karta hai."
+          eyebrow="About PixMorphy Bhakti"
+          title="Hindi bhakton ke liye saaf aarti, chalisa aur tyohar guides"
+          description="PixMorphy Bhakti Bharat ke parivar aur yuva bhakton ke liye mobile-friendly devotional content banata hai."
         />
         <div className="mt-8 grid gap-5 text-sm leading-8 text-[color:var(--text-secondary)] sm:text-base">
-          <p>Hum hype-driven publishing se bachne ki koshish karte hain. Har article ka focus useful explanation, clear context aur mobile readability par hota hai.</p>
-          <p>Editorially, hum source-based updates, practical examples aur visible author attribution ko priority dete hain.</p>
-          <p>Goal simple hai: Indian users ko aisa blog experience mile jo fast bhi ho, premium bhi lage, aur trust bhi build kare.</p>
+          <p>
+            Hum poora aarti aur chalisa path Devanagari mein dete hain, saath mein simple arth, puja niyam
+            aur FAQ — taaki ghar ki puja aur phone dono par padhna aasan ho.
+          </p>
+          <p>
+            Har post mein visible publish date, author attribution aur structured FAQ hota hai taaki
+            readers ko trustworthy aur readable content mile.
+          </p>
+          <p>
+            Hamara goal hai ki har Indian bhakt ko ek jagah par saari zaroori bhakti jaankari mile — bina
+            confusion aur bina clickbait ke.
+          </p>
         </div>
       </div>
     </div>

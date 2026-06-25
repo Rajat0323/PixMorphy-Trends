@@ -3,19 +3,19 @@ import { BlogSearch } from "@/components/blog-search";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
-import { posts, siteConfig } from "@/data/content";
+import { publicPosts, siteConfig } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Bhakti Blog — Aarti, Chalisa aur Vrat",
   description:
-    "PixMorphy ke saare Hindi aur Hinglish blog posts — AI tools, tech updates, trending news aur online earning guides.",
+    "PixMorphy Bhakti ke saare Hindi posts — aarti, chalisa, vrat katha aur tyohar puja vidhi ek searchable archive mein.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "PixMorphy Blog",
+    title: "PixMorphy Bhakti Blog",
     description:
-      "PixMorphy ke saare Hindi aur Hinglish blog posts — AI tools, tech updates, trending news aur online earning guides.",
+      "Hindi mein aarti, chalisa, vrat katha aur tyohar puja vidhi — saare devotional posts.",
     url: `${siteConfig.url}/blog`,
     type: "website",
   },
@@ -34,22 +34,22 @@ export default async function BlogIndexPage({ searchParams }: PageProps) {
         <Breadcrumbs
           items={[
             { label: "Home", href: "/" },
-            { label: "Blog" },
+            { label: "Bhakti Blog" },
           ]}
         />
         <SectionHeading
           as="h1"
-          eyebrow="Blog Archive"
-          title="Saare PixMorphy posts ek searchable archive mein"
-          description="AI tools, tech updates, trending topics aur earning guides ko category, keyword ya title se quickly dhundhein."
+          eyebrow="Bhakti Archive"
+          title="Saare aarti, chalisa aur vrat path ek jagah"
+          description="Title, deity ya keyword se dhundhein — har post mein poora Hindi path, FAQ aur share option."
         />
-        <BlogSearch posts={posts} initialQuery={q ?? ""} />
+        <BlogSearch posts={publicPosts} initialQuery={q ?? ""} />
         <section className="space-y-6">
           <h2 className="text-xl font-semibold text-[color:var(--text-primary)]">
-            Latest posts
+            Saare bhakti posts
           </h2>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {posts.map((post) => (
+            {publicPosts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}
           </div>

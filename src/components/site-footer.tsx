@@ -6,11 +6,11 @@ export function SiteFooter() {
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
         <div className="space-y-3">
           <h2 className="text-xl font-semibold text-[color:var(--text-primary)]">
-            PixMorphy
+            PixMorphy Bhakti
           </h2>
           <p className="max-w-xl text-sm leading-7 text-[color:var(--text-secondary)]">
-            Hindi aur Hinglish readers ke liye fast, trustworthy aur mobile-first tech blog.
-            Focus hai practical guides, AI tools aur fresh updates par.
+            Hindi mein aarti, chalisa, vrat katha aur tyohar puja vidhi — saaf Devanagari
+            path, simple arth aur mobile-friendly bhakti guides.
           </p>
         </div>
         <div className="space-y-3">
@@ -30,9 +30,6 @@ export function SiteFooter() {
             <Link href="/privacy" className="block hover:text-[color:var(--accent)]">
               Privacy Policy
             </Link>
-            <Link href="/disclaimer" className="block hover:text-[color:var(--accent)]">
-              Disclaimer
-            </Link>
             <Link href="/feed.xml" className="block hover:text-[color:var(--accent)]">
               RSS Feed
             </Link>
@@ -40,23 +37,23 @@ export function SiteFooter() {
         </div>
         <div className="space-y-3">
           <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--text-muted)]">
-            Categories
+            Bhakti Categories
           </h3>
           <div className="space-y-2 text-sm text-[color:var(--text-secondary)]">
-            <Link href="/category/ai-tools" className="block hover:text-[color:var(--accent)]">
-              AI Tools
+            <Link href="/category/aarti" className="block hover:text-[color:var(--accent)]">
+              Aarti
             </Link>
-            <Link href="/category/online-earning" className="block hover:text-[color:var(--accent)]">
-              Online Earning
+            <Link href="/category/chalisa" className="block hover:text-[color:var(--accent)]">
+              Chalisa
             </Link>
-            <Link href="/category/trending" className="block hover:text-[color:var(--accent)]">
-              Trending
+            <Link href="/category/festivals" className="block hover:text-[color:var(--accent)]">
+              Tyohar
             </Link>
-            <Link href="/category/tech-update" className="block hover:text-[color:var(--accent)]">
-              Tech Update
+            <Link href="/category/vrat-katha" className="block hover:text-[color:var(--accent)]">
+              Vrat & Katha
             </Link>
             <Link href="/blog" className="block hover:text-[color:var(--accent)]">
-              All Posts
+              Saare Path
             </Link>
           </div>
         </div>

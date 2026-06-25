@@ -1,13 +1,17 @@
+import { bhaktiPosts } from "./bhakti-posts";
+import { isBhaktiCategory } from "./bhakti";
 import { discoverPosts } from "./discover-posts";
 import type { Category, Post } from "./types";
 
 export type { Category, Faq, Post } from "./types";
+export { isBhaktiCategory, BHAKTI_CATEGORIES } from "./bhakti";
+export { bhaktiPosts } from "./bhakti-posts";
 
 export const siteConfig = {
-  name: "PixMorphy",
+  name: "PixMorphy Bhakti",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.pixmorphy.in",
   description:
-    "PixMorphy is a fast Hindi and Hinglish blog for AI tools, tech updates, viral trends, online earning and practical how-to guides.",
+    "PixMorphy Bhakti — Hindi mein aarti, chalisa, stotra, vrat katha aur tyohar puja vidhi. Bharat ke bhakton ke liye saaf Devanagari path aur simple arth.",
   contactEmail: "hello@pixmorphy.in",
   partnershipsEmail: "partnerships@pixmorphy.in",
   socialLinks: [
@@ -17,30 +21,29 @@ export const siteConfig = {
   ],
   nav: [
     { name: "Home", href: "/" },
+    { name: "Aarti", href: "/category/aarti" },
+    { name: "Chalisa", href: "/category/chalisa" },
+    { name: "Tyohar", href: "/category/festivals" },
+    { name: "Vrat", href: "/category/vrat-katha" },
     { name: "Blog", href: "/blog" },
-    { name: "Tech", href: "/category/tech-update" },
-    { name: "AI Tools", href: "/category/ai-tools" },
-    { name: "Earn", href: "/#earn" },
-    { name: "Trending", href: "/category/trending" },
   ] satisfies Category[],
   categories: [
-    { name: "Tech", href: "/category/tech-update" },
-    { name: "AI Tools", href: "/category/ai-tools" },
-    { name: "Online Earning", href: "/category/online-earning" },
-    { name: "How-To", href: "/#how-to" },
-    { name: "Trending", href: "/category/trending" },
-    { name: "All Posts", href: "/blog" },
+    { name: "Aarti", href: "/category/aarti" },
+    { name: "Chalisa", href: "/category/chalisa" },
+    { name: "Tyohar", href: "/category/festivals" },
+    { name: "Vrat & Katha", href: "/category/vrat-katha" },
+    { name: "Saare Path", href: "/blog" },
   ] satisfies Category[],
 };
 
 export const posts: Post[] = [
-  ...discoverPosts,
+  ...bhaktiPosts,
   {
     slug: "hanuman-chalisa-in-hindi-sampoorna-path",
     title: "हनुमान चालीसा हिंदी में: संपूर्ण पाठ और लाभ",
     excerpt:
       "यहां पढ़ें हनुमान चालीसा हिंदी में संपूर्ण पाठ, सरल अर्थ, मंगलवार और शनिवार के पाठ का महत्व, नियम, लाभ और भक्तों के सबसे आम सवालों के जवाब।",
-    category: "Trending",
+    category: "Chalisa",
     publishedAt: "2026-06-07",
     updatedAt: "2026-06-07",
     readTime: "8 min read",
@@ -2849,9 +2852,12 @@ export const posts: Post[] = [
       "whatsapp-new-update-2026-hidden-features",
     ],
   },
+  ...discoverPosts,
 ];
 
-export const featuredPosts = [...discoverPosts]
+export const publicPosts = posts.filter((post) => isBhaktiCategory(post.category));
+
+export const featuredPosts = [...publicPosts]
   .sort(
     (a, b) =>
       new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
@@ -2860,8 +2866,8 @@ export const featuredPosts = [...discoverPosts]
 
 export const authors = {
   "Rajat Gupta": {
-    role: "Tech Writer & AI Tools Researcher",
-    bio: "Rajat practical Hindi and Hinglish explainers likhte hain jahan focus hype par nahi, useful takeaways par hota hai.",
+    role: "Bhakti Content Writer",
+    bio: "Rajat Hindi mein aarti, chalisa, vrat aur tyohar se judi saaf aur practical bhakti guides likhte hain — simple bhasha, poora path aur sachchi jaankari.",
   },
 };
 

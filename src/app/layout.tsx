@@ -21,7 +21,7 @@ const bodyFont = Noto_Sans_Devanagari({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "PixMorphy - Hindi Tech, AI Tools & Viral News",
+    default: "PixMorphy Bhakti - Hindi Aarti, Chalisa aur Tyohar",
     template: "%s | PixMorphy",
   },
   description: siteConfig.description,

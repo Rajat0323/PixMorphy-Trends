@@ -30,10 +30,10 @@ export function SiteHeader() {
           </span>
           <div>
             <p className="text-base font-semibold tracking-tight text-[color:var(--text-primary)]">
-              {siteConfig.name}
+              PixMorphy Bhakti
             </p>
             <p className="text-xs text-[color:var(--text-muted)]">
-              Tech, AI aur viral explainers
+              Aarti, Chalisa aur Tyohar
             </p>
           </div>
         </Link>
@@ -58,12 +58,12 @@ export function SiteHeader() {
           >
             <SearchIcon />
           </Link>
-          <Link
-            href="/#trending"
-            className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] sm:inline-flex"
-          >
-            Trending Now
-          </Link>
+            <Link
+              href="/category/aarti"
+              className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] sm:inline-flex"
+            >
+              Aarti Padhein
+            </Link>
           <MobileNav />
         </div>
       </div>
