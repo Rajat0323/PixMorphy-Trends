@@ -6,16 +6,16 @@ import { SectionHeading } from "@/components/section-heading";
 import { publicPosts, siteConfig } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Bhakti Blog — Aarti, Chalisa aur Vrat",
+  title: "भक्ति लेख — आरती, चालीसा और व्रत",
   description:
-    "PixMorphy Bhakti ke saare Hindi posts — aarti, chalisa, vrat katha aur tyohar puja vidhi ek searchable archive mein.",
+    "पिक्समॉर्फी भक्ति के सभी हिंदी लेख — आरती, चालीसा, व्रत कथा और त्योहार पूजा विधि एक खोज योग्य संग्रह में।",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "PixMorphy Bhakti Blog",
+    title: "पिक्समॉर्फी भक्ति लेख",
     description:
-      "Hindi mein aarti, chalisa, vrat katha aur tyohar puja vidhi — saare devotional posts.",
+      "हिंदी में आरती, चालीसा, व्रत कथा और त्योहार पूजा विधि — सभी भक्ति लेख।",
     url: `${siteConfig.url}/blog`,
     type: "website",
   },
@@ -33,20 +33,20 @@ export default async function BlogIndexPage({ searchParams }: PageProps) {
       <div className="space-y-8">
         <Breadcrumbs
           items={[
-            { label: "Home", href: "/" },
-            { label: "Bhakti Blog" },
+            { label: "मुख्य पृष्ठ", href: "/" },
+            { label: "भक्ति लेख" },
           ]}
         />
         <SectionHeading
           as="h1"
-          eyebrow="Bhakti Archive"
-          title="Saare aarti, chalisa aur vrat path ek jagah"
-          description="Title, deity ya keyword se dhundhein — har post mein poora Hindi path, FAQ aur share option."
+          eyebrow="भक्ति संग्रह"
+          title="सभी आरती, चालीसा और व्रत पाठ एक जगह"
+          description="शीर्षक, देवता या कीवर्ड से खोजें — हर लेख में संपूर्ण हिंदी पाठ, अक्सर पूछे जाने वाले प्रश्न और साझा विकल्प।"
         />
         <BlogSearch posts={publicPosts} initialQuery={q ?? ""} />
         <section className="space-y-6">
           <h2 className="text-xl font-semibold text-[color:var(--text-primary)]">
-            Saare bhakti posts
+            सभी भक्ति लेख
           </h2>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {publicPosts.map((post) => (

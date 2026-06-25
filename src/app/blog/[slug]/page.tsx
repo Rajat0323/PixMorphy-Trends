@@ -10,6 +10,7 @@ import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
 import { ShareButtons } from "@/components/share-buttons";
 import { getPostBySlug, getRelatedPosts, posts, siteConfig } from "@/data/content";
+import { BHAKTI_CATEGORIES, getCategoryLabel } from "@/data/bhakti";
 import { getAbsoluteImageUrl, getAbsoluteUrl, getCategorySlug } from "@/lib/seo";
 
 type PageProps = {
@@ -136,9 +137,9 @@ export default async function BlogPage({ params }: PageProps) {
             <div className="p-6 sm:p-8">
               <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--text-muted)]">
                 <span className="rounded-full bg-[color:var(--surface-muted)] px-3 py-1 font-semibold text-[color:var(--accent)]">
-                  {post.category}
+                  {getCategoryLabel(post.category)}
                 </span>
-                <span>{new Date(post.publishedAt).toLocaleDateString("en-IN")}</span>
+                <span>{new Date(post.publishedAt).toLocaleDateString("hi-IN")}</span>
                 <span>{post.readTime}</span>
               </div>
               <h1 className="headline-font mt-5 text-3xl font-semibold leading-tight tracking-tight text-[color:var(--text-primary)] sm:text-5xl">
@@ -149,7 +150,7 @@ export default async function BlogPage({ params }: PageProps) {
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-[color:var(--text-muted)]">
                 <span className="font-medium text-[color:var(--text-primary)]">{post.author}</span>
-                <span>Updated {new Date(post.updatedAt ?? post.publishedAt).toLocaleDateString("en-IN")}</span>
+                <span>अद्यतन {new Date(post.updatedAt ?? post.publishedAt).toLocaleDateString("hi-IN")}</span>
               </div>
             </div>
             <div className={`relative min-h-[320px] bg-gradient-to-br ${post.heroAccent}`}>
@@ -215,7 +216,7 @@ export default async function BlogPage({ params }: PageProps) {
               ) : null}
               {index === 1 ? (
                 <div className="mt-6">
-                  <AdSlot label="Sponsored content slot" compact />
+                  <AdSlot label="प्रायोजित सामग्री" compact />
                 </div>
               ) : null}
             </section>
@@ -223,9 +224,9 @@ export default async function BlogPage({ params }: PageProps) {
 
           <section className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
             <SectionHeading
-              eyebrow="FAQs"
-              title="Readers ke common sawalon ke jawab"
-              description="Is topic se related quick questions aur simple answers."
+              eyebrow="अक्सर पूछे जाने वाले प्रश्न"
+              title="पाठकों के सामान्य प्रश्नों के उत्तर"
+              description="इस विषय से जुड़े त्वरित प्रश्न और सरल उत्तर।"
             />
             <div className="mt-6">
               <FaqAccordion items={post.faq} />
@@ -238,9 +239,9 @@ export default async function BlogPage({ params }: PageProps) {
 
           <section className="space-y-6">
             <SectionHeading
-              eyebrow="Related Posts"
-              title="Is topic se related aur bhi stories"
-              description="Agar aapko yeh article useful laga, to yeh related posts bhi dekh sakte hain."
+              eyebrow="संबंधित लेख"
+              title="इस विषय से जुड़े और लेख"
+              description="यदि यह लेख उपयोगी लगा, तो ये संबंधित लेख भी देखें।"
             />
             <div className="grid gap-6 md:grid-cols-2">
               {relatedPosts.map((relatedPost) => (
@@ -253,7 +254,7 @@ export default async function BlogPage({ params }: PageProps) {
         <aside className="space-y-6">
           <div className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
             <h2 className="text-lg font-semibold text-[color:var(--text-primary)]">
-              Latest Stories
+              नवीनतम लेख
             </h2>
             <div className="mt-5 space-y-4">
               {posts
@@ -266,7 +267,7 @@ export default async function BlogPage({ params }: PageProps) {
                     className="block rounded-[22px] bg-[color:var(--surface-muted)] p-4 transition hover:-translate-y-0.5"
                   >
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
-                      {item.category}
+                      {getCategoryLabel(item.category)}
                     </p>
                     <h3 className="mt-2 text-base font-semibold leading-7 text-[color:var(--text-primary)]">
                       {item.title}
@@ -275,19 +276,19 @@ export default async function BlogPage({ params }: PageProps) {
                 ))}
             </div>
           </div>
-          <AdSlot label="Desktop sidebar ad or sponsor mention" />
+          <AdSlot label="डेस्कटॉप साइडबार विज्ञापन" />
           <div className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
             <h2 className="text-lg font-semibold text-[color:var(--text-primary)]">
-              Categories
+              श्रेणियाँ
             </h2>
             <div className="mt-4 flex flex-wrap gap-3">
-              {["Aarti", "Chalisa", "Festivals", "Vrat & Katha"].map((item) => (
+              {BHAKTI_CATEGORIES.map((item) => (
                 <Link
                   key={item}
                   href={`/category/${getCategorySlug(item)}`}
                   className="rounded-full bg-[color:var(--surface-muted)] px-4 py-2 text-sm font-medium text-[color:var(--text-secondary)]"
                 >
-                  {item}
+                  {getCategoryLabel(item)}
                 </Link>
               ))}
             </div>

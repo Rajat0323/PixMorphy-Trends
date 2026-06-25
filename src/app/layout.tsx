@@ -21,8 +21,8 @@ const bodyFont = Noto_Sans_Devanagari({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "PixMorphy Bhakti - Hindi Aarti, Chalisa aur Tyohar",
-    template: "%s | PixMorphy",
+    default: "पिक्समॉर्फी भक्ति — हिंदी आरती, चालीसा और त्योहार",
+    template: "%s | पिक्समॉर्फी",
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     shortcut: ["/favicon.ico"],
   },
   openGraph: {
-    title: "PixMorphy",
+    title: "पिक्समॉर्फी",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -58,13 +58,13 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/icon?size=512`,
         width: 512,
         height: 512,
-        alt: "PixMorphy logo",
+        alt: "पिक्समॉर्फी लोगो",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PixMorphy",
+    title: "पिक्समॉर्फी",
     description: siteConfig.description,
     images: [`${siteConfig.url}/icon?size=512`],
   },

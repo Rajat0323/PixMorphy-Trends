@@ -6,7 +6,7 @@ export function AuthorCard({ author }: { author: string }) {
   return (
     <section className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
       <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--accent)]">
-        Author
+        लेखक
       </p>
       <div className="mt-4 flex items-start gap-4">
         <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,var(--accent),var(--accent-strong))] text-lg font-bold text-white">

@@ -15,19 +15,19 @@ export function ShareButtons({ title, slug }: ShareButtonsProps) {
 
   const items = [
     {
-      label: "WhatsApp",
+      label: "व्हाट्सऐप",
       href: `https://wa.me/?text=${encodedText}`,
     },
     {
-      label: "Share",
+      label: "फ़ेसबुक",
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     },
     {
-      label: "Telegram",
+      label: "टेलीग्राम",
       href: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
     },
     {
-      label: "X",
+      label: "एक्स",
       href: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
     },
   ];

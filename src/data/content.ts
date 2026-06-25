@@ -4,14 +4,19 @@ import { discoverPosts } from "./discover-posts";
 import type { Category, Post } from "./types";
 
 export type { Category, Faq, Post } from "./types";
-export { isBhaktiCategory, BHAKTI_CATEGORIES } from "./bhakti";
+export {
+  isBhaktiCategory,
+  BHAKTI_CATEGORIES,
+  CATEGORY_LABELS,
+  getCategoryLabel,
+} from "./bhakti";
 export { bhaktiPosts } from "./bhakti-posts";
 
 export const siteConfig = {
   name: "PixMorphy Bhakti",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.pixmorphy.in",
   description:
-    "PixMorphy Bhakti — Hindi mein aarti, chalisa, stotra, vrat katha aur tyohar puja vidhi. Bharat ke bhakton ke liye saaf Devanagari path aur simple arth.",
+    "पिक्समॉर्फी भक्ति — हिंदी में आरती, चालीसा, स्तोत्र, व्रत कथा और त्योहार पूजा विधि। भारत के भक्तों के लिए साफ़ देवनागरी पाठ और सरल अर्थ।",
   contactEmail: "hello@pixmorphy.in",
   partnershipsEmail: "partnerships@pixmorphy.in",
   socialLinks: [
@@ -20,19 +25,19 @@ export const siteConfig = {
     "https://www.instagram.com/pixmorphy",
   ],
   nav: [
-    { name: "Home", href: "/" },
-    { name: "Aarti", href: "/category/aarti" },
-    { name: "Chalisa", href: "/category/chalisa" },
-    { name: "Tyohar", href: "/category/festivals" },
-    { name: "Vrat", href: "/category/vrat-katha" },
-    { name: "Blog", href: "/blog" },
+    { name: "मुख्य पृष्ठ", href: "/" },
+    { name: "आरती", href: "/category/aarti" },
+    { name: "चालीसा", href: "/category/chalisa" },
+    { name: "त्योहार", href: "/category/festivals" },
+    { name: "व्रत", href: "/category/vrat-katha" },
+    { name: "सभी पाठ", href: "/blog" },
   ] satisfies Category[],
   categories: [
-    { name: "Aarti", href: "/category/aarti" },
-    { name: "Chalisa", href: "/category/chalisa" },
-    { name: "Tyohar", href: "/category/festivals" },
-    { name: "Vrat & Katha", href: "/category/vrat-katha" },
-    { name: "Saare Path", href: "/blog" },
+    { name: "आरती", href: "/category/aarti" },
+    { name: "चालीसा", href: "/category/chalisa" },
+    { name: "त्योहार", href: "/category/festivals" },
+    { name: "व्रत और कथा", href: "/category/vrat-katha" },
+    { name: "सभी पाठ", href: "/blog" },
   ] satisfies Category[],
 };
 
@@ -46,12 +51,12 @@ export const posts: Post[] = [
     category: "Chalisa",
     publishedAt: "2026-06-07",
     updatedAt: "2026-06-07",
-    readTime: "8 min read",
+    readTime: "८ मिनट",
     author: "Rajat Gupta",
     imageSrc: "/images/blog/hanuman-chalisa-hindi-cover.svg",
     imageObjectPosition: "center",
     heroAccent: "from-orange-500 via-amber-500 to-red-600",
-    featuredLabel: "Devotional Guide",
+    featuredLabel: "चालीसा",
     imageAlt: "हनुमान चालीसा हिंदी में संपूर्ण पाठ का कवर",
     keywords: [
       "hanuman chalisa",
@@ -2866,8 +2871,8 @@ export const featuredPosts = [...publicPosts]
 
 export const authors = {
   "Rajat Gupta": {
-    role: "Bhakti Content Writer",
-    bio: "Rajat Hindi mein aarti, chalisa, vrat aur tyohar se judi saaf aur practical bhakti guides likhte hain — simple bhasha, poora path aur sachchi jaankari.",
+    role: "भक्ति सामग्री लेखक",
+    bio: "राजत हिंदी में आरती, चालीसा, व्रत और त्योहार से जुड़ी साफ़ और व्यावहारिक भक्ति मार्गदर्शिकाएँ लिखते हैं — सरल भाषा, संपूर्ण पाठ और सच्ची जानकारी।",
   },
 };
 

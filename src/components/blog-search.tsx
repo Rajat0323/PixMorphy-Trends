@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Post } from "@/data/content";
+import { getCategoryLabel } from "@/data/bhakti";
 
 type BlogSearchProps = {
   posts: Post[];
@@ -23,6 +24,7 @@ export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
         post.title,
         post.excerpt,
         post.category,
+        getCategoryLabel(post.category),
         post.author,
         ...post.keywords,
       ]
@@ -36,18 +38,18 @@ export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
   return (
     <div className="space-y-6">
       <label className="block">
-        <span className="sr-only">Search posts</span>
+        <span className="sr-only">लेख खोजें</span>
         <input
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search by title, topic, category or keyword..."
+          placeholder="शीर्षक, विषय, श्रेणी या कीवर्ड से खोजें..."
           className="w-full rounded-[24px] border border-[color:var(--border)] bg-white px-5 py-4 text-sm text-[color:var(--text-primary)] shadow-sm outline-none transition focus:border-[color:var(--accent)]"
         />
       </label>
 
       <p className="text-sm text-[color:var(--text-muted)]">
-        {filteredPosts.length} post{filteredPosts.length === 1 ? "" : "s"} found
+        {filteredPosts.length} लेख मिले
       </p>
 
       <div className="grid gap-4">
@@ -58,7 +60,7 @@ export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
             className="rounded-[24px] border border-[color:var(--border)] bg-white p-5 shadow-sm transition hover:-translate-y-0.5"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
-              {post.category}
+              {getCategoryLabel(post.category)}
             </p>
             <h2 className="mt-2 text-lg font-semibold text-[color:var(--text-primary)]">
               {post.title}

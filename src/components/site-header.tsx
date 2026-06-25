@@ -30,10 +30,10 @@ export function SiteHeader() {
           </span>
           <div>
             <p className="text-base font-semibold tracking-tight text-[color:var(--text-primary)]">
-              PixMorphy Bhakti
+              पिक्समॉर्फी भक्ति
             </p>
             <p className="text-xs text-[color:var(--text-muted)]">
-              Aarti, Chalisa aur Tyohar
+              आरती, चालीसा और त्योहार
             </p>
           </div>
         </Link>
@@ -54,16 +54,16 @@ export function SiteHeader() {
           <Link
             href="/blog"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--border)] bg-white text-[color:var(--text-primary)] shadow-sm transition hover:-translate-y-0.5"
-            aria-label="Search posts"
+            aria-label="लेख खोजें"
           >
             <SearchIcon />
           </Link>
-            <Link
-              href="/category/aarti"
-              className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] sm:inline-flex"
-            >
-              Aarti Padhein
-            </Link>
+          <Link
+            href="/category/aarti"
+            className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] sm:inline-flex"
+          >
+            आरती पढ़ें
+          </Link>
           <MobileNav />
         </div>
       </div>

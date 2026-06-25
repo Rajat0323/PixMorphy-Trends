@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Post } from "@/data/content";
+import { getCategoryLabel } from "@/data/bhakti";
 
 type PostCardProps = {
   post: Post;
@@ -34,7 +35,7 @@ export function PostCard({ post, compact = false }: PostCardProps) {
       <div className="space-y-4 p-5">
         <div className="flex items-center gap-3 text-xs text-[color:var(--text-muted)]">
           <span className="rounded-full bg-[color:var(--surface-muted)] px-2.5 py-1 font-semibold text-[color:var(--accent)]">
-            {post.category}
+            {getCategoryLabel(post.category)}
           </span>
           <span>{post.readTime}</span>
         </div>
@@ -50,7 +51,7 @@ export function PostCard({ post, compact = false }: PostCardProps) {
         </div>
         <div className="flex items-center justify-between text-sm text-[color:var(--text-muted)]">
           <span>{post.author}</span>
-          <span>{new Date(post.publishedAt).toLocaleDateString("en-IN")}</span>
+          <span>{new Date(post.publishedAt).toLocaleDateString("hi-IN")}</span>
         </div>
       </div>
     </article>

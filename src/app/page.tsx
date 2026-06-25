@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { featuredPosts, publicPosts, siteConfig } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Hindi Aarti, Chalisa aur Tyohar Guide",
+  title: "हिंदी आरती, चालीसा और त्योहार मार्गदर्शिका",
   description: siteConfig.description,
   alternates: {
     canonical: "/",
@@ -42,10 +42,10 @@ function HomepageHero() {
           <div className="relative flex h-full flex-col justify-between p-5 sm:p-7">
             <div className="flex flex-wrap items-center gap-3 text-white/92">
               <span className="rounded-full border border-white/20 bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] backdrop-blur">
-                Featured Bhakti
+                विशेष भक्ति
               </span>
               <span className="rounded-full border border-white/20 bg-black/20 px-3 py-1 text-xs font-semibold backdrop-blur">
-                {lead.category}
+                {lead.featuredLabel}
               </span>
             </div>
             <div className="max-w-2xl space-y-3">
@@ -73,10 +73,10 @@ function TopicHighlights() {
   return (
     <section className="grid gap-4 rounded-[32px] border border-[color:var(--border)] bg-white p-5 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:grid-cols-2 lg:grid-cols-4 sm:p-8">
       {[
-        ["Aarti", "Hanuman, Lakshmi, Shiv, Ganesh aur Durga aarti — poora path Hindi mein.", "/category/aarti"],
-        ["Chalisa", "Hanuman aur Shiv chalisa sahit saaf Devanagari paath aur arth.", "/category/chalisa"],
-        ["Tyohar", "Diwali, Navratri, Shravan jaise tyoharon ki puja vidhi aur mahatva.", "/category/festivals"],
-        ["Vrat & Katha", "Somvar vrat, vrat katha aur niyam — simple Hindi guide.", "/category/vrat-katha"],
+        ["आरती", "हनुमान, लक्ष्मी, शिव, गणेश और दुर्गा आरती — संपूर्ण पाठ हिंदी में।", "/category/aarti"],
+        ["चालीसा", "हनुमान और शिव चालीसा सहित साफ़ देवनागरी पाठ और अर्थ।", "/category/chalisa"],
+        ["त्योहार", "दीपावली, नवरात्रि, श्रावण जैसे त्योहारों की पूजा विधि और महत्व।", "/category/festivals"],
+        ["व्रत और कथा", "सोमवार व्रत, व्रत कथा और नियम — सरल हिंदी मार्गदर्शिका।", "/category/vrat-katha"],
       ].map(([title, copy, href]) => (
         <Link
           key={title}
@@ -101,7 +101,7 @@ export default function Home() {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 py-6 sm:px-6 lg:px-8">
       <h1 className="sr-only">
-        PixMorphy Bhakti — Hindi Aarti, Chalisa, Vrat aur Tyohar Puja Guide
+        पिक्समॉर्फी भक्ति — हिंदी आरती, चालीसा, व्रत और त्योहार पूजा मार्गदर्शिका
       </h1>
       <section className="space-y-6 pt-4">
         <HomepageHero />
@@ -112,9 +112,9 @@ export default function Home() {
 
       <section id="aarti" className="space-y-6">
         <SectionHeading
-          eyebrow="Aarti Collection"
-          title="Prachin aur lokpriya aartiyan — poora path ek jagah"
-          description="Puja ke samay padhne ke liye saaf Hindi lyrics, arth aur niyam ke saath."
+          eyebrow="आरती संग्रह"
+          title="प्राचीन और लोकप्रिय आरतीयाँ — संपूर्ण पाठ एक जगह"
+          description="पूजा के समय पढ़ने के लिए साफ़ हिंदी पाठ, अर्थ और नियम के साथ।"
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {aartiPosts.map((post) => (
@@ -128,9 +128,9 @@ export default function Home() {
         className="rounded-[32px] border border-[color:var(--border)] bg-[linear-gradient(180deg,rgba(234,88,12,0.08),rgba(255,255,255,1))] px-5 py-6 sm:px-8"
       >
         <SectionHeading
-          eyebrow="Chalisa Path"
-          title="Hanuman aur Shiv chalisa — sampoorna paath"
-          description="Mangalvar, Shanivar aur Somvar ke liye bhakton ki sabse zyada talash wale path."
+          eyebrow="चालीसा पाठ"
+          title="हनुमान और शिव चालीसा — संपूर्ण पाठ"
+          description="मंगलवार, शनिवार और सोमवार के लिए भक्तों की सबसे अधिक खोजी जाने वाली सामग्री।"
         />
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           {chalisaPosts.map((post) => (
@@ -141,9 +141,9 @@ export default function Home() {
 
       <section id="vrat" className="space-y-6">
         <SectionHeading
-          eyebrow="Vrat & Tyohar"
-          title="Vrat vidhi, katha aur tyohar puja guide"
-          description="Shravan Somvar se lekar bade tyoharon tak — practical Hindi bhakti content."
+          eyebrow="व्रत और त्योहार"
+          title="व्रत विधि, कथा और त्योहार पूजा मार्गदर्शिका"
+          description="श्रावण सोमवार से लेकर बड़े त्योहारों तक — व्यावहारिक हिंदी भक्ति सामग्री।"
         />
         <div className="grid gap-6 md:grid-cols-2">
           {vratPosts.map((post) => (
@@ -154,9 +154,9 @@ export default function Home() {
 
       <section id="latest" className="space-y-6">
         <SectionHeading
-          eyebrow="Saare Bhakti Path"
-          title="Naye aur purane sabhi devotional posts"
-          description="Mobile par padhne ke liye optimized — FAQ, schema aur share-ready format."
+          eyebrow="सभी भक्ति पाठ"
+          title="नए और पुराने सभी भक्ति लेख"
+          description="मोबाइल पर पढ़ने के लिए अनुकूलित — अक्सर पूछे जाने वाले प्रश्न, स्कीमा और साझा करने योग्य प्रारूप।"
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {publicPosts.map((post) => (
@@ -167,9 +167,9 @@ export default function Home() {
 
       <section className="rounded-[32px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8">
         <SectionHeading
-          eyebrow="WhatsApp Share"
-          title="Parivar aur mandir group mein path share karein"
-          description="Har post par WhatsApp share button hai — aarti aur chalisa jaldi pahunchayein."
+          eyebrow="व्हाट्सऐप साझा"
+          title="परिवार और मंदिर समूह में पाठ साझा करें"
+          description="हर लेख पर व्हाट्सऐप साझा बटन है — आरती और चालीसा जल्दी पहुँचाएँ।"
         />
         <div className="mt-4 flex flex-wrap gap-3">
           {siteConfig.categories.map((category) => (

@@ -16,7 +16,7 @@ export function MobileNav() {
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
       >
-        Menu
+        मेनू
       </button>
       {open ? (
         <nav
@@ -34,13 +34,6 @@ export function MobileNav() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/blog"
-              onClick={() => setOpen(false)}
-              className="rounded-2xl px-4 py-3 text-sm font-medium text-[color:var(--text-secondary)] hover:bg-[color:var(--surface-muted)]"
-            >
-              All Posts
-            </Link>
           </div>
         </nav>
       ) : null}

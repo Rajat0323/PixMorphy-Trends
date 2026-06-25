@@ -7,23 +7,23 @@ export default function NotFound() {
         404
       </p>
       <h1 className="text-3xl font-semibold text-[color:var(--text-primary)] sm:text-4xl">
-        Page nahi mila
+        पृष्ठ नहीं मिला
       </h1>
       <p className="max-w-xl text-sm leading-8 text-[color:var(--text-secondary)] sm:text-base">
-        Yeh URL exist nahi karta ya move ho chuka hai. Homepage ya blog archive se continue karein.
+        यह पता मौजूद नहीं है या स्थान बदल दिया गया है। मुख्य पृष्ठ या लेख संग्रह से आगे बढ़ें।
       </p>
       <div className="flex flex-wrap justify-center gap-3">
         <Link
           href="/"
           className="rounded-full bg-[color:var(--accent)] px-5 py-3 text-sm font-semibold text-white"
         >
-          Go Home
+          मुख्य पृष्ठ
         </Link>
         <Link
           href="/blog"
           className="rounded-full border border-[color:var(--border)] bg-white px-5 py-3 text-sm font-semibold text-[color:var(--text-secondary)]"
         >
-          Browse Blog
+          लेख देखें
         </Link>
       </div>
     </div>

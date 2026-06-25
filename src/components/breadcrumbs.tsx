@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getCategoryLabel } from "@/data/bhakti";
 import { getAbsoluteUrl, getCategorySlug } from "@/lib/seo";
 
 type BreadcrumbItem = {
@@ -54,9 +55,9 @@ export function getBlogBreadcrumbs(post: {
   const categorySlug = getCategorySlug(post.category);
 
   return [
-    { label: "Home", href: "/" },
-    { label: "Blog", href: "/blog" },
-    { label: post.category, href: `/category/${categorySlug}` },
+    { label: "मुख्य पृष्ठ", href: "/" },
+    { label: "सभी पाठ", href: "/blog" },
+    { label: getCategoryLabel(post.category), href: `/category/${categorySlug}` },
     { label: post.title },
   ];
 }

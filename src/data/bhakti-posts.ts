@@ -5,16 +5,16 @@ export const bhaktiPosts: Post[] = [
     slug: "hanuman-aarti-hindi-sampoorna",
     title: "हनुमान आरती हिंदी में: संपूर्ण पाठ",
     excerpt:
-      "हनुमान जी की आरती का संपूर्ण हिंदी पाठ, सरल अर्थ, मंगलवार-शनिवार पाठ का समय, नियम और भक्ति के लाभ — PixMorphy bhakti hub पर एक ही जगह।",
+      "हनुमान जी की आरती का संपूर्ण हिंदी पाठ, सरल अर्थ, मंगलवार-शनिवार पाठ का समय, नियम और भक्ति के लाभ — एक ही जगह पर।",
     category: "Aarti",
     publishedAt: "2026-06-18",
     updatedAt: "2026-06-18",
-    readTime: "8 min read",
+    readTime: "८ मिनट",
     author: "Rajat Gupta",
     imageSrc: "/images/blog/hanuman-aarti-cover.svg",
     imageObjectPosition: "center",
     heroAccent: "from-orange-600 via-red-600 to-amber-500",
-    featuredLabel: "Aarti",
+    featuredLabel: "आरती",
     imageAlt: "हनुमान जी की आरती संपूर्ण पाठ हिंदी में कवर",
     galleryImages: [
       {
@@ -69,7 +69,7 @@ export const bhaktiPosts: Post[] = [
     ],
     sections: [
       {
-        heading: "TL;DR — हनुमान आरती का सार",
+        heading: "संक्षेप में — हनुमान आरती का सार",
         paragraphs: [
           "हनुमान आरती भगवान हनुमान की स्तुति का संक्षिप्त और शक्तिशाली पाठ है। यह पूजा के अंत में दीपक घुमाकर या मंत्र पढ़कर की जाती है।",
           "इस पेज पर आपको संपूर्ण हिंदी आरती, सरल अर्थ, पाठ का समय, नियम और लाभ मिलेंगे — मोबाइल पर पढ़ने या घर की पूजा के लिए उपयुक्त।",
@@ -160,7 +160,7 @@ export const bhaktiPosts: Post[] = [
       {
         heading: "निष्कर्ष",
         paragraphs: [
-          "हनुमान आरती हिंदी में संपूर्ण पाठ, अर्थ और विधि — यह पेज आपकी दैनिक या साप्ताहिक भक्ति के लिए तैयार है। इसे बुकमark करें और परिवार के साथ साझा करें।",
+          "हनुमान आरती हिंदी में संपूर्ण पाठ, अर्थ और विधि — यह पेज आपकी दैनिक या साप्ताहिक भक्ति के लिए तैयार है। इसे सेव करें और परिवार के साथ साझा करें।",
           "हनुमान चालीसा के साथ मिलाकर पढ़ने से भक्ति का अनुभव और गहरा होता है। श्रद्धा और नियमितता ही सबसे महत्वपूर्ण है।",
         ],
       },
@@ -180,12 +180,12 @@ export const bhaktiPosts: Post[] = [
     category: "Aarti",
     publishedAt: "2026-06-19",
     updatedAt: "2026-06-19",
-    readTime: "7 min read",
+    readTime: "७ मिनट",
     author: "Rajat Gupta",
     imageSrc: "/images/blog/lakshmi-aarti-cover.svg",
     imageObjectPosition: "center",
     heroAccent: "from-yellow-500 via-amber-400 to-orange-300",
-    featuredLabel: "Aarti",
+    featuredLabel: "आरती",
     imageAlt: "लक्ष्मी माता की आरती हिंदी लिरिक्स कवर",
     galleryImages: [
       {
@@ -240,7 +240,7 @@ export const bhaktiPosts: Post[] = [
     ],
     sections: [
       {
-        heading: "TL;DR — लक्ष्मी आरती का सार",
+        heading: "संक्षेप में — लक्ष्मी आरती का सार",
         paragraphs: [
           "ॐ जय लक्ष्मी माता भारत की सबसे लोकप्रिय धन-समृद्धि की आरती है। शुक्रवार, दीपावली और घर की दैनिक पूजा में इसे गाया या पढ़ा जाता है।",
           "नीचे संपूर्ण हिंदी पाठ, अर्थ, समय, नियम और लाभ — एक ही पेज पर।",
@@ -285,7 +285,7 @@ export const bhaktiPosts: Post[] = [
         heading: "लक्ष्मी आरती का सरल अर्थ",
         paragraphs: [
           "इस आरती में माता लक्ष्मी को जगत की जननी, धन-समृद्धि की दाता और भक्तों की रक्षक के रूप में स्तुति की गई है। सूर्य, चंद्र, नारद और विष्णु भी उनकी महिमा गाते हैं — यह उनकी सर्वोच्चता का प्रतीक है।",
-          "आरती कहती है कि जis घर में लक्ष्मी का वास हो, वहां सद्गुण, सुख और शांति आती है। बिना उनकी कृपा के यज्ञ, वस्त्र और भोजन का वैभव भी अधूरा माना जाता है — यह आध्यात्मिक दृष्टि से समृद्धि की प्रार्थना है।",
+          "आरती कहती है कि जिस घर में लक्ष्मी का वास हो, वहां सद्गुण, सुख और शांति आती है। बिना उनकी कृपा के यज्ञ, वस्त्र और भोजन का वैभव भी अधूरा माना जाता है — यह आध्यात्मिक दृष्टि से समृद्धि की प्रार्थना है।",
           "अंत में भक्त से कहा गया है कि जो यह आरती गाता है, उसके पाप दूर होते हैं और मन में आनंद आता है।",
         ],
       },
@@ -305,7 +305,7 @@ export const bhaktiPosts: Post[] = [
       {
         heading: "लक्ष्मी आरती के नियम",
         paragraphs: [
-          "पूजा-स्थली स्वच्छ रखें, दीपक जलाएं और लक्ष्मी जी की मूर्ति या चित्र के सामने आरती करें। लाल वस्त्र, कमल, सikke और मिष्ठान चढ़ाना प्रचलित है।",
+          "पूजा-स्थली स्वच्छ रखें, दीपक जलाएं और लक्ष्मी जी की मूर्ति या चित्र के सामने आरती करें। लाल वस्त्र, कमल, सिक्के और मिष्ठान चढ़ाना प्रचलित है।",
           "आरती के दौरान घंटी बजाना, 'जय लक्ष्मी माता' उच्चारण और अंत में प्रसाद वितरण — ये सामान्य रीति हैं। पूजा के दौरान झूठ, क्रोध और अशुद्ध विचारों से बचना श्रेष्ठ माना जाता है।",
           "दीपावली पर १३ या २१ दीपक जलाकर आरती करने की परंपरा भी प्रचलित है — यह घर को प्रकाशमान और शुभ माना जाता है।",
         ],
@@ -313,7 +313,7 @@ export const bhaktiPosts: Post[] = [
       {
         heading: "लक्ष्मी आरती के लाभ",
         paragraphs: [
-          "भक्तजन मानते हैं कि लक्ष्मी आरती से घर में धन, समृद्धि और सकारात्मक ऊर्जा आती है। यह केवl भौतिक धन नहीं, बल्कि मन की शांति और संतोष की भी प्रार्थना है।",
+          "भक्तजन मानते हैं कि लक्ष्मी आरती से घर में धन, समृद्धि और सकारात्मक ऊर्जा आती है। यह केवल भौतिक धन नहीं, बल्कि मन की शांति और संतोष की भी प्रार्थना है।",
           "पारिवारिक एकता और पूजा की परंपरा बच्चों को संस्कार सिखाती है। नियमित शुक्रवार पूजा से अनुशासित जीवनशैली भी बनती है।",
           "आर्थिक कठिनाई के समय में भी यह आरती भक्त को आशा और धैर्य देती है — यह भक्तों का सामान्य अनुभव है।",
         ],
@@ -321,7 +321,7 @@ export const bhaktiPosts: Post[] = [
       {
         heading: "निष्कर्ष",
         paragraphs: [
-          "लक्ष्मी माता की आरती हिंदी में संपूर्ण पाठ — PixMorphy bhakti hub पर आपके लिए तैयार। शुक्रवार की पूजा या दीपावली की तैयारी में इस पेज को सेव करें।",
+          "लक्ष्मी माता की आरती हिंदी में संपूर्ण पाठ — पिक्समॉर्फी भक्ति पर आपके लिए तैयार। शुक्रवार की पूजा या दीपावली की तैयारी में इस पेज को सेव करें।",
           "श्रद्धा, स्वच्छता और ईमानदार परिश्रम — लक्ष्मी भक्ति के तीन स्तंभ माने जाते हैं। आरती इनका आध्यात्मिक पूरक है।",
         ],
       },
@@ -341,12 +341,12 @@ export const bhaktiPosts: Post[] = [
     category: "Aarti",
     publishedAt: "2026-06-20",
     updatedAt: "2026-06-20",
-    readTime: "8 min read",
+    readTime: "८ मिनट",
     author: "Rajat Gupta",
     imageSrc: "/images/blog/shiv-aarti-cover.svg",
     imageObjectPosition: "center",
     heroAccent: "from-blue-700 via-indigo-700 to-slate-600",
-    featuredLabel: "Aarti",
+    featuredLabel: "आरती",
     imageAlt: "ओम जय शिव ओमकारा शिव आरती हिंदी कवर",
     galleryImages: [
       {
@@ -401,7 +401,7 @@ export const bhaktiPosts: Post[] = [
     ],
     sections: [
       {
-        heading: "TL;DR — शिव आरती का सार",
+        heading: "संक्षेप में — शिव आरती का सार",
         paragraphs: [
           "ॐ जय शिव ओमकारा भगवान शिव की सबसे प्रसिद्ध आरती है। ब्रह्मा, विष्णु और सदाशिव — तीनों का स्वरूप शिव में विलीन — यही इसकी मुख्य स्तुति है।",
           "सोमवार, महाशिवरात्रि और सावन में इस आरती का विशेष महत्व है। नीचे संपूर्ण पाठ और विधि।",
@@ -445,8 +445,8 @@ export const bhaktiPosts: Post[] = [
       {
         heading: "शिव आरती का सरल अर्थ",
         paragraphs: [
-          "इस आरती में शिव को ओंकार स्वरूप, ब्रह्मा-विष्णु-सदाशिव के एक स्वरूप, और गंगा-चंदrama-सर्प adornment वाले महादेव के रूप में स्तुति की गई है। वे दो भुज, चार भुज या दस भुज धारण कर सकते हैं — यह उनकी अनंत शक्ति का प्रतीक है।",
-          "त्रिशूल, कमंडल, अkshamala और मुंडमala — ये सभी शिव के प्रतीक हैं। वे सुखदाता और दु:खहarta हैं, जो तीनों लोकों का palan करते हैं।",
+          "इस आरती में शिव को ओंकार स्वरूप, ब्रह्मा-विष्णु-सदाशिव के एक स्वरूप, और गंगा, चंद्रमा और सर्प वाले महादेव के रूप में स्तुति की गई है। वे दो भुज, चार भुज या दस भुज धारण कर सकते हैं — यह उनकी अनंत शक्ति का प्रतीक है।",
+          "त्रिशूल, कमंडल, अक्षमाला और मुंडमाला — ये सभी शिव के प्रतीक हैं। वे सुखदाता और दुःखहर्ता हैं, जो तीनों लोकों का पालन करते हैं।",
           "अंत में कहा गया है कि जो यह आरती गाता है, वह अपनी मनोकामना पूर्ण करता है — यह श्रद्धा और समर्पण का संदेश है।",
         ],
       },
@@ -454,7 +454,7 @@ export const bhaktiPosts: Post[] = [
         heading: "शिव आरती कब पढ़ें?",
         paragraphs: [
           "सोमवार शिव का दिन माना जाता है — सुबह या संध्या की पूजा में आरती करें। प्रदोष काल (सूर्यास्त के लगbhग १.५ घंटे) विशेष शुभ माना जाता है।",
-          "महाशिवरात्रि की रात जagran के साथ यह आरती अनिवार्य है। सावन के सोमवार, श्रavan maas और मासik शivratri पर भी विशेष रूप से की जाती है।",
+          "महाशिवरात्रि की रात जागरण के साथ यह आरती अनिवार्य है। सावन के सोमवार, श्रावण मास और मासिक शिवरात्रि पर भी विशेष रूप से की जाती है।",
         ],
         bullets: [
           "सोमवार — सुबह या शाम",
@@ -467,21 +467,21 @@ export const bhaktiPosts: Post[] = [
         heading: "शिव आरती के नियम",
         paragraphs: [
           "शिवलिंग पर जल, दूध, बेलपत्र और फूल चढ़ाकर आरती करें। सफेद या नीले वस्त्र पहनना शुभ माना जाता है।",
-          "आरती के दौरान 'हर हर महादेव' या 'ओm namah shivaya' का जap करें। कपूर की आरती और घंटी बजाना प्रचलित है।",
-          "शिव पूजा में तामbe (तांbe) के बर्तन, भस्म और धतूरा भी चढ़ाए जाते हैं — स्थानीय परंपरा के अनुसार।",
+          "आरती के दौरान 'हर हर महादेव' या 'ॐ नमः शिवाय' का जप करें। कपूर की आरती और घंटी बजाना प्रचलित है।",
+          "शिव पूजा में तांबे के बर्तन, भस्म और धतूरा भी चढ़ाए जाते हैं — स्थानीय परंपरा के अनुसार।",
         ],
       },
       {
         heading: "शिव आरती के लाभ",
         paragraphs: [
-          "भक्तजन मानते हैं कि शिव आरती से मन की शांति, कrodh और ego का नाश, और आध्यात्मिक उन्नति होती है। महादेव संहारक भी हैं और कalyanakar भी — यह संतुलन भक्ति का मूल है।",
+          "भक्तजन मानते हैं कि शिव आरती से मन की शांति, क्रोध और अहंकार का नाश, और आध्यात्मिक उन्नति होती है। महादेव संहारक भी हैं और कल्याणकार भी — यह संतुलन भक्ति का मूल है।",
           "नियमित सोमवार व्रत और आरती से अनुशासित जीवन बनता है। परिवार के साथ मिलकर आरती करने से घर में सकारात्मक वातावरण बनता है।",
         ],
       },
       {
         heading: "निष्कर्ष",
         paragraphs: [
-          "ॐ जय शिव ओमकारा — संपूर्ण शिव आरती हिंदी में। सोमवार की पूजा, सावन या महाशिवरात्रि की तैयारी में इस पेज को बुकमark करें।",
+          "ॐ जय शिव ओमकारा — संपूर्ण शिव आरती हिंदी में। सोमवार की पूजा, सावन या महाशिवरात्रि की तैयारी में इस पेज को सेव करें।",
           "शिव चालीसा के साथ मिलाकर पढ़ने से भक्ति का अनुभव गहरा होता है। हर हर महादेव!",
         ],
       },
@@ -497,16 +497,16 @@ export const bhaktiPosts: Post[] = [
     slug: "ganesh-aarti-jai-ganesh-deva",
     title: "जय गणेश देवा: गणेश आरती संपूर्ण",
     excerpt:
-      "जय गणेश जय गणेश देवा — गणेश जी की लोकप्रिय आरती हिंदी में, अर्थ, बुधवार-गणेश चaturthi पूजा, नियम और विघ्नहarta भक्ति के लाभ।",
+      "जय गणेश जय गणेश देवा — गणेश जी की लोकप्रिय आरती हिंदी में, अर्थ, बुधवार-गणेश चतुर्थी पूजा, नियम और विघ्नहर्ता भक्ति के लाभ।",
     category: "Aarti",
     publishedAt: "2026-06-21",
     updatedAt: "2026-06-21",
-    readTime: "7 min read",
+    readTime: "७ मिनट",
     author: "Rajat Gupta",
     imageSrc: "/images/blog/ganesh-aarti-cover.svg",
     imageObjectPosition: "center",
     heroAccent: "from-red-600 via-orange-500 to-yellow-400",
-    featuredLabel: "Aarti",
+    featuredLabel: "आरती",
     imageAlt: "जय गणेश देवा गणेश आरती हिंदी कवर",
     galleryImages: [
       {
@@ -515,7 +515,7 @@ export const bhaktiPosts: Post[] = [
       },
       {
         src: "/images/blog/ganesh-aarti-cover.svg",
-        alt: "गणेश चaturthi पूजा दीप आरती",
+        alt: "गणेश चतुर्थी पूजा दीप आरती",
       },
     ],
     keywords: [
@@ -528,7 +528,7 @@ export const bhaktiPosts: Post[] = [
       "ganesh chaturthi aarti",
       "बुधवार गणेश पूजा",
       "ganesh aarti lyrics",
-      "वighnaharta aarti",
+      "विघ्नहर्ता आरती",
       "गणेश आरती हिंदी",
       "ganesh bhakti aarti",
     ],
@@ -536,42 +536,42 @@ export const bhaktiPosts: Post[] = [
       {
         question: "गणेश आरती कब करनी चाहिए?",
         answer:
-          "गणेश चaturthi, बुधवार, और किसी भी शुभ कार्य की शुरुआत में गणेश आरती की जाती है। सुबह की पूजा और संध्या आरती दोनों प्रचलित हैं।",
+          "गणेश चतुर्थी, बुधवार और किसी भी शुभ कार्य की शुरुआत में गणेश आरती की जाती है। सुबह की पूजा और संध्या आरती दोनों प्रचलित हैं।",
       },
       {
         question: "गणेश आरती में क्या चढ़ावा दें?",
         answer:
-          "मoदक, लaddu, दूrvा, लal phool और जल गणेश पूजा में प्रमुख चढ़ावे हैं। दीपक, धूप और कपूर की आरती भी अनिवार्य मानी जाती है।",
+          "मोदक, लड्डू, दूर्वा, लाल फूल और जल गणेश पूजा में प्रमुख चढ़ावे हैं। दीपक, धूप और कपूर की आरती भी अनिवार्य मानी जाती है।",
       },
       {
-        question: "क्या गणेश आरती हर दin की जा सकती है?",
+        question: "क्या गणेश आरती हर दिन की जा सकती है?",
         answer:
-          "हां, गणेश जी 'प्रथम पूज्य' माने जाते हैं — इसलिए दैनिक पूजa की शुरुआत में आरती करना अत्यंत शुभ माना जाता है।",
+          "हां, गणेश जी 'प्रथम पूज्य' माने जाते हैं — इसलिए दैनिक पूजा की शुरुआत में आरती करना अत्यंत शुभ माना जाता है।",
       },
       {
-        question: "गणेश आरती और गणेश Atharvashirsha में क्या अंतर है?",
+        question: "गणेश आरती और गणेश अथर्वशीर्ष में क्या अंतर है?",
         answer:
-          "आरती छोटी भक्तi गीत है, जबकि Atharvashirsha विस्तृत vedic स्तuti है। दोनों गणेश भक्तi के पूरक हैं।",
+          "आरती छोटी भक्ति गीत है, जबकि अथर्वशीर्ष विस्तृत वैदिक स्तुति है। दोनों गणेश भक्ति के पूरक हैं।",
       },
       {
         question: "गणेश आरती के क्या लाभ माने जाते हैं?",
         answer:
-          "भक्तजन मानते हैं कि गणेश आरती से विघ्न दूर होते हैं, बuddhi बढ़ती है और नए कार्य सफल होते हैं। यह शुभारंभ का प्रतीक है।",
+          "भक्तजन मानते हैं कि गणेश आरती से विघ्न दूर होते हैं, बुद्धि बढ़ती है और नए कार्य सफल होते हैं। यह शुभारंभ का प्रतीक है।",
       },
     ],
     sections: [
       {
-        heading: "TL;DR — गणेश आरती का सार",
+        heading: "संक्षेप में — गणेश आरती का सार",
         paragraphs: [
-          "जय गणेश जय गणेश जय गणेश देवा — भारत की सबसे पहचानी जाने वाली गणesh आरती। हर शुभ कार्य, गणesh chaturthi और बुधवार पूजa में अनिवार्य।",
+          "जय गणेश जय गणेश जय गणेश देवा — भारत की सबसे पहचानी जाने वाली गणेश आरती। हर शुभ कार्य, गणेश चतुर्थी और बुधवार पूजा में अनिवार्य।",
           "नीचे संपूर्ण हिंदी पाठ, अर्थ, समय, नियम और लाभ।",
         ],
         bullets: [
           "जय गणेश देवा — पूरा पाठ नीचे",
-          "गणesh chaturthi और बुधवार विशेष",
-          "modak, laddu और durva चढ़ाएं",
+          "गणेश चतुर्थी और बुधवार विशेष",
+          "मोदक, लड्डू और दूर्वा चढ़ाएं",
           "शुभ कार्य की शुरुआत में अवश्य",
-          "वighnaharta — विघ्न दूर करने की प्रार्थना",
+          "विघ्नहर्ता — विघ्न दूर करने की प्रार्थना",
         ],
       },
       {
@@ -599,44 +599,44 @@ export const bhaktiPosts: Post[] = [
       {
         heading: "गणेश आरती का सरल अर्थ",
         paragraphs: [
-          "इस आरती में गणेश जी को पार्वती-पutram, एक दant, चar भujadhari और mooshak vahani के रूप में स्तुति की गई है। वे modak प्रिय, vighnaharta और buddhi के devata हैं।",
-          "आरती कहती है कि गणेश जी अंधों को आंख, कोढ़iyon को कaya, बंjhों को putra और नirddhan को maya देते हैं — यani सभी प्रकार की kami पूri करte hain।",
-          "sur aur asur दono उnki stuti karte hain — यह universal महima का प्रतीक है।",
+          "इस आरती में गणेश जी को पार्वती-पुत्र, एक दंत, चार भुजधारी और मूषक वाहनी के रूप में स्तुति की गई है। वे मोदक प्रिय, विघ्नहर्ता और बुद्धि के देवता हैं।",
+          "आरती कहती है कि गणेश जी अंधों को आंख, कोढ़ियों को काया, बंjhों को पुत्र और निर्धन को माया देते हैं — यानि सभी प्रकार की कमी पूरी करते हैं।",
+          "सुर और असुर दोनों उनकी स्तुति करते हैं — यह सार्वभौमिक महिमा का प्रतीक है।",
         ],
       },
       {
         heading: "गणेश आरती कब पढ़ें?",
         paragraphs: [
-          "गणesh chaturthi की १० दin की पूजa में daily आरती अनिवार्य है। बुधvar ko गणesh ka din mana jata hai।",
-          "vivah, griha pravesh, vyapar arambh — kisi bhi shubh karya se pehle ganesh puja aur aarti ki jati hai। subah ki puja ki shuruaat mein bhi ganesh aarti common hai।",
+          "गणेश चतुर्थी की १० दिन की पूजा में प्रतिदिन आरती अनिवार्य है। बुधवार को गणेश का दिन माना जाता है।",
+          "विवाह, गृह प्रवेश, व्यापार आरंभ — किसी भी शुभ कार्य से पहले गणेश पूजा और आरती की जाती है। सुबह की पूजा की शुरुआत में भी गणेश आरती सामान्य है।",
         ],
         bullets: [
-          "गणesh chaturthi — daily 10 din",
-          "बुधvar — ganesh ka din",
-          "shubh karya se pehle",
-          "subah ki puja ki shuruaat mein",
+          "गणेश चतुर्थी — प्रतिदिन १० दिन",
+          "बुधवार — गणेश का दिन",
+          "शुभ कार्य से पहले",
+          "सुबह की पूजा की शुरुआत में",
         ],
       },
       {
         heading: "गणेश आरती के नियम",
         paragraphs: [
-          "ganesh murti ke सामने modak, laddu, durva aur laal phool chadhaen। deepak, dhoop aur kapur ki aarti karein।",
-          "आरती के दौरान 'जay गणesh' का उच्चारण करें। बाएँ हाथ की तरफ से आरती घुमाना शुभ माना जाता है।",
-          "पूजा-स्थली स्वच्छ रखें — गणesh जी 'वighnaharta' हैं, इसलिए शुरुआत में उनकी पूजa आवश्यक मानी जाती है।",
+          "गणेश मूर्ति के सामने मोदक, लड्डू, दूर्वा और लाल फूल चढ़ाएँ। दीपक, धूप और कपूर की आरती करें।",
+          "आरती के दौरान 'जय गणेश' का उच्चारण करें। बाएँ हाथ की तरफ से आरती घुमाना शुभ माना जाता है।",
+          "पूजा-स्थली स्वच्छ रखें — गणेश जी 'विघ्नहर्ता' हैं, इसलिए शुरुआत में उनकी पूजा आवश्यक मानी जाती है।",
         ],
       },
       {
         heading: "गणेश आरती के लाभ",
         paragraphs: [
-          "भक्तजन मानते हैं कि गणesh आरती से विघ्न दूर होते हैं, बuddhi तेज होती है और नए कार्य सफल होते हैं। यह शुभारंभ का प्रतीक है।",
-          "बच्चों को पढ़ाई से पहle गणesh आरती सिखाना एक प्रachlit परंपरा है — बuddhi और एकाग्रता के लिए। पारिवारिक पूजa में सब एक साथ आरती करके जुड़te हैं।",
+          "भक्तजन मानते हैं कि गणेश आरती से विघ्न दूर होते हैं, बुद्धि तेज होती है और नए कार्य सफल होते हैं। यह शुभारंभ का प्रतीक है।",
+          "बच्चों को पढ़ाई से पहले गणेश आरती सिखाना एक प्राचलित परंपरा है — बुद्धि और एकाग्रता के लिए। पारिवारिक पूजा में सब एक साथ आरती करके जुड़ते हैं।",
         ],
       },
       {
         heading: "निष्कर्ष",
         paragraphs: [
-          "जay गणesh देवा — संपूर्ण गणesh आरती हिंदी में। गणesh chaturthi या बुधvar पूजa के लिए इस पेज को सेव करें।",
-          "हर शुभ कार्य की शुरुआत गणesh जी से — यही भारतीय संस्कृति का मूल है।",
+          "जय गणेश देवा — संपूर्ण गणेश आरती हिंदी में। गणेश चतुर्थी या बुधवार पूजा के लिए इस पेज को सेव करें।",
+          "हर शुभ कार्य की शुरुआत गणेश जी से — यही भारतीय संस्कृति का मूल है।",
         ],
       },
     ],
@@ -651,16 +651,16 @@ export const bhaktiPosts: Post[] = [
     slug: "durga-aarti-jai-ambe-gauri",
     title: "जय अम्बे गौरी: दुर्गा आरती हिंदी",
     excerpt:
-      "जय अम्बे गौरी — मां दुर्गा की संपूर्ण आरती हिंदी में, सरल अर्थ, नवरात्रि पूजa, शुक्रvar-मangalvar समय, नियम और शakti भक्तi के लाभ।",
+      "जय अम्बे गौरी — मां दुर्गा की संपूर्ण आरती हिंदी में, सरल अर्थ, नवरात्रि पूजा, शुक्रवार-मंगलवार समय, नियम और शक्ति भक्ति के लाभ।",
     category: "Aarti",
     publishedAt: "2026-06-22",
     updatedAt: "2026-06-22",
-    readTime: "9 min read",
+    readTime: "९ मिनट",
     author: "Rajat Gupta",
     imageSrc: "/images/blog/durga-aarti-cover.svg",
     imageObjectPosition: "center",
     heroAccent: "from-pink-600 via-rose-600 to-red-500",
-    featuredLabel: "Aarti",
+    featuredLabel: "आरती",
     imageAlt: "जय अम्बे गौरी दुर्गा आरती हिंदी कवर",
     galleryImages: [
       {
@@ -690,42 +690,42 @@ export const bhaktiPosts: Post[] = [
       {
         question: "दुर्गा आरती कब गाई जाती है?",
         answer:
-          "नवरात्रि के ९ दin daily sandhya aarti anivarya hai। shukrvar aur mangalvar ko bhi maa durga ki puja mein yeh aarti ki jati hai।",
+          "नवरात्रि के ९ दिन प्रतिदिन संध्या आरती अनिवार्य है। शुक्रवार और मंगलवार को भी माँ दुर्गा की पूजा में यह आरती की जाती है।",
       },
       {
-        question: "जय अम्बे गौरी किस maa ki aarti hai?",
+        question: "जय अम्बे गौरी किस माँ की आरती है?",
         answer:
-          "yeh maa durga (ambika, gauri, parvati) ki prachlit aarti hai। navratri aur shakti upasana mein sabse adhik gaayi jane wali aarti hai।",
+          "यह माँ दुर्गा (अंबिका, गौरी, पार्वती) की प्रचलित आरती है। नवरात्रि और शक्ति उपासना में सबसे अधिक गाई जाने वाली आरती है।",
       },
       {
-        question: "navratri mein aarti kaise karein?",
+        question: "नवरात्रि में आरती कैसे करें?",
         answer:
-          "ghata sthapna ke baad 9 din subah-shaam aarti karein। kalash, deepak, phool aur shringar ke saath maa ki aarti karna parampara hai।",
+          "घट स्थापना के बाद ९ दिन सुबह-शाम आरती करें। कलश, दीपक, फूल और श्रृंगार के साथ माँ की आरती करना परंपरा है।",
       },
       {
-        question: "durga aarti aur durga chalisa mein kya antar hai?",
+        question: "दुर्गा आरती और दुर्गा चालीसा में क्या अंतर है?",
         answer:
-          "aarti chhoti stuti hai jo deep ghumakar ki jati hai, jabki chalisa 40 chaupaiyon ka vistrit path hai। dono shakti bhakti ke poorak hain।",
+          "आरती छोटी स्तुति है जो दीप घुमाकर की जाती है, जबकि चालीसा ४० चौपाइयों का विस्तृत पाठ है। दोनों शक्ति भक्ति के पूरक हैं।",
       },
       {
-        question: "durga aarti ke kya labh maane jate hain?",
+        question: "दुर्गा आरती के क्या लाभ माने जाते हैं?",
         answer:
-          "bhaktjan maante hain ki durga aarti se shakti, sahas, raksha aur man ki shanti milti hai। yeh asur aur negativity se bachav ki prarthna bhi hai।",
+          "भक्तजन मानते हैं कि दुर्गा आरती से शक्ति, साहस, रक्षा और मन की शांति मिलती है। यह असुर और नकारात्मकता से बचाव की प्रार्थना भी है।",
       },
     ],
     sections: [
       {
-        heading: "TL;DR — दुर्गा आरती का सार",
+        heading: "संक्षेप में — दुर्गा आरती का सार",
         paragraphs: [
-          "जय अम्बे गौरी maa durga ki sabse prasiddh aarti hai। navratri ke 9 din har shaam yeh aarti gaayi jati hai।",
-          "neeche sampoorna hindi path, arth, samay, niyam aur labh।",
+          "जय अम्बे गौरी माँ दुर्गा की सबसे प्रसिद्ध आरती है। नवरात्रि के ९ दिन हर शाम यह आरती गाई जाती है।",
+          "नीचे संपूर्ण हिंदी पाठ, अर्थ, समय, नियम और लाभ।",
         ],
         bullets: [
-          "जय अम्बे गौरी — poora path neeche",
-          "navratri — 9 din daily aarti",
-          "shukrvar aur mangalvar vishesh",
-          "deepak, phool aur shringar ke saath",
-          "shakti, sahas aur raksha ki prarthna",
+          "जय अम्बे गौरी — पूरा पाठ नीचे",
+          "नवरात्रि — ९ दिन प्रतिदिन आरती",
+          "शुक्रवार और मंगलवार विशेष",
+          "दीपक, फूल और श्रृंगार के साथ",
+          "शक्ति, साहस और रक्षा की प्रार्थना",
         ],
       },
       {
@@ -762,45 +762,45 @@ export const bhaktiPosts: Post[] = [
       {
         heading: "दुर्गा आरती का सरल अर्थ",
         paragraphs: [
-          "is aarti mein maa durga ko gauri, mangal murti, shok vinasak aur sukh sampati data ke roop mein stuti ki gayi hai। unke shringar, kundal aur tej ka varnan hai।",
-          "shumbh-nishumbh, mahishasur aur dhumralochana ka vadh — maa ki veerta ka smaran hai। ve brahmani, rudrani, kamala rani aur shiv patrani hain — sabhi deviyon ka svaroop।",
-          "ant mein kaha gaya hai ki maa ki bhakti hi shakti hai — ve sada bhakton ki raksha karti hain।",
+          "इस आरती में माँ दुर्गा को गौरी, मंगल मूर्ति, शोक विनाशक और सुख-सम्पत्ति दाता के रूप में स्तुति की गई है। उनके श्रृंगार, कुण्डल और तेज का वर्णन है।",
+          "शुम्भ-निशुम्भ, महिषासुर और धूम्रलोचन का वध — माँ की वीरता का स्मरण है। वे ब्रह्माणी, रुद्राणी, कमला रानी और शिव पत्नी हैं — सभी देवियों का स्वरूप।",
+          "अंत में कहा गया है कि माँ की भक्ति ही शक्ति है — वे सदा भक्तों की रक्षा करती हैं।",
         ],
       },
       {
         heading: "दुर्गा आरती कब पढ़ें?",
         paragraphs: [
-          "navratri ke 9 din sandhya aarti anivarya hai — yeh shakti upasana ka mukhya ang hai।",
-          "shukrvar (durga) aur mangalvar (hanuman-durga) ko bhi maa ki aarti ki jati hai। vijayadashami par visarjan se pehle antim aarti hoti hai।",
+          "नवरात्रि के ९ दिन संध्या आरती अनिवार्य है — यह शक्ति उपासना का मुख्य अंग है।",
+          "शुक्रवार (दुर्गा) और मंगलवार को भी माँ की आarती की जाती है। विजयदशमी पर विसर्जन से पहले अंतिम आरती होती है।",
         ],
         bullets: [
-          "navratri — 9 din shaam aarti",
-          "vijayadashami — antim aarti",
-          "shukrvar aur mangalvar",
-          "kanya pujan ke din vishesh",
+          "नवरात्रि — ९ दिन शाम आरती",
+          "विजयदशमी — अंतिम आरती",
+          "शुक्रवार और मंगलवार",
+          "कन्या पूजन के दिन विशेष",
         ],
       },
       {
         heading: "दुर्गा आरती के नियम",
         paragraphs: [
-          "ghata sthapna ke saath navratri shuru karein। maa ki murti ko phool, chunri aur shringar se sajayein।",
-          "aarti ke dauran ghanti bajana, 'jai mata di' ka uchcharan aur ant mein prasad vitran — yeh sab parampara hai।",
-          "navratri vrat ke dauran satvik bhojan, swachchhata aur brahmacharya ka palan shreshth mana jata hai।",
+          "घट स्थापना के साथ नवरात्रि शुरू करें। माँ की मूर्ति को फूल, चुनरी और श्रृंगार से सजाएँ।",
+          "आरती के दौरान घंटी बजाना, 'जय माता दी' का उच्चारण और अंत में प्रसाद वितरण — ये सब परंपरा है।",
+          "नवरात्रि व्रत के दौरान सात्विक भोजन, स्वच्छता और ब्रह्मचर्य का पालन श्रेष्ठ माना जाता है।",
         ],
       },
       {
         heading: "दुर्गा आरती के लाभ",
         paragraphs: [
-          "bhaktjan maante hain ki durga aarti se shakti, sahas aur raksha milti hai। asur aur negativity se bachav ki prarthna hai।",
-          "navratri mein parivarik aarti sabko jodti hai — yeh saamuhik bhakti ka anubhav deta hai। mahilayen vishesh roop se maa ki upasana karti hain।",
-          "niyamit shakti upasana se man ki sthirta aur aatmvishwas badhta hai — yeh bhakton ka anubhav hai।",
+          "भक्तजन मानते हैं कि दुर्गा आरती से शक्ति, साहस और रक्षा मिलती है। असुर और नकारात्मकता से बचाव की प्रार्थना है।",
+          "नवरात्रि में पारिवारिक आरती सबको जोड़ती है — यह सामूहिक भक्ति का अनुभव देती है। महिलाएँ विशेष रूप से माँ की उपासना करती हैं।",
+          "नियमित शक्ति उपासना से मन की स्थिरता और आत्मविश्वास बढ़ता है — यह भक्तों का अनुभव है।",
         ],
       },
       {
         heading: "निष्कर्ष",
         paragraphs: [
-          "jai ambe gauri — sampoorna durga aarti hindi mein। navratri ki taiyari ke liye is page ko बुकमark karein।",
-          "maa ki sharan mein shakti aur shanti dono milte hain — jai mata di!",
+          "जय अम्बे गौरी — संपूर्ण दुर्गा आरती हिंदी में। नवरात्रि की तैयारी के लिए इस पृष्ठ को सेव करें।",
+          "माँ की शरण में शक्ति और शांति दोनों मिलते हैं — जय माता दी!",
         ],
       },
     ],
@@ -815,81 +815,81 @@ export const bhaktiPosts: Post[] = [
     slug: "shiv-chalisa-hindi-sampoorna",
     title: "शिव चालीसा हिंदी में: संपूर्ण पाठ",
     excerpt:
-      "शiv chalisa ka sampoorna hindi path, saral arth, somvar aur mahashivratri par path ka samay, niyam aur bhakti ke labh — ek hi page par poori guide।",
+      "शिव चालीसा का संपूर्ण हिंदी पाठ, सरल अर्थ, सोमवार और महाशिवरात्रि पर पाठ का समय, नियम और भक्ति के लाभ — एक ही पृष्ठ पर पूरी मार्गदर्शिका।",
     category: "Chalisa",
     publishedAt: "2026-06-23",
     updatedAt: "2026-06-23",
-    readTime: "10 min read",
+    readTime: "१० मिनट",
     author: "Rajat Gupta",
     imageSrc: "/images/blog/shiv-chalisa-cover.svg",
     imageObjectPosition: "center",
     heroAccent: "from-slate-700 via-blue-800 to-indigo-900",
-    featuredLabel: "Chalisa",
-    imageAlt: "शiv chalisa hindi sampoorna path cover",
+    featuredLabel: "चालीसा",
+    imageAlt: "शिव चालीसा हिंदी संपूर्ण पाठ कवर",
     galleryImages: [
       {
         src: "/images/blog/shiv-chalisa-cover.svg",
-        alt: "शiv chalisa sampoorna path cover",
+        alt: "शिव चालीसा संपूर्ण पाठ कवर",
       },
       {
         src: "/images/blog/shiv-chalisa-cover.svg",
-        alt: "somvar shiv chalisa path bhakti",
+        alt: "सोमवार शिव चालीसा पाठ भक्ति",
       },
     ],
     keywords: [
       "shiv chalisa",
-      "शiv chalisa",
+      "शिव chalisa",
       "shiv chalisa hindi",
-      "शiv chalisa hindi mein",
-      "शiv chalisa path",
+      "शिव chalisa hindi mein",
+      "शिव chalisa path",
       "shiv chalisa lyrics",
       "somvar shiv chalisa",
       "mahashivratri chalisa",
-      "शiv chalisa labh",
+      "शिव chalisa labh",
       "shiv chalisa sampoorna",
-      "हर हर महादेव chalisa",
+      "हर हर महादेव चालीसा",
       "shiv bhakti chalisa",
     ],
     faq: [
       {
-        question: "shiv chalisa kab padhni chahiye?",
+        question: "शिव चालीसा कब पढ़नी चाहिए?",
         answer:
-          "somvar, mahashivratri, savan ke somvar aur pradosh kal mein shiv chalisa ka vishesh mahatva hai। subah snan ke baad ya shaam ki puja mein path karein।",
+          "सोमवार, महाशिवरात्रि, सावन के सोमवार और प्रदोष काल में शिव चालीसा का विशेष महत्व है। सुबह स्नान के बाद या शाम की पूजा में पाठ करें।",
       },
       {
-        question: "kya shiv chalisa roz padh sakte hain?",
+        question: "क्या शिव चालीसा रोज पढ़ सकते हैं?",
         answer:
-          "haan, shraddha ke saath rozana shiv chalisa ka path kiya ja sakta hai। bahut se bhakt subah 'om namah shivaya' ke saath chalisa padhte hain।",
+          "हाँ, श्रद्धा के साथ रोजाना शिव चालीसा का पाठ किया जा सकता है। बहुत से भक्त सुबह 'ॐ नमः शिवाय' के साथ चालीसा पढ़ते हैं।",
       },
       {
-        question: "shiv chalisa padhne ke kya labh maane jate hain?",
+        question: "शिव चालीसा पढ़ने के क्या लाभ माने जाते हैं?",
         answer:
-          "bhaktjan maante hain ki niyamit path se man ki shanti, paap kam hote hain, aur mahadev ki kripa milti hai। yeh aatmik shuddhi ka sadhan bhi hai।",
+          "भक्तजन मानते हैं कि नियमित पाठ से मन की शांति, पाप कम होते हैं और महादेव की कृपा मिलती है। यह आत्मिक शुद्धि का साधन भी है।",
       },
       {
-        question: "shiv chalisa aur shiv aarti mein kya antar hai?",
+        question: "शिव चालीसा और शिव आरती में क्या अंतर है?",
         answer:
-          "chalisa 40 chaupaiyon ka vistrit path hai, jabki aarti chhoti deep-stuti hai। dono shiv bhakti ke mahatvapurn ang hain।",
+          "चालीसा ४० चौपाइयों का विस्तृत पाठ है, जबकि आरती छोटी दीप-स्तुति है। दोनों शिव भक्ति के महत्वपूर्ण अंग हैं।",
       },
       {
-        question: "bina snan ke shiv chalisa padh sakte hain?",
+        question: "बिना स्नान के शिव चालीसा पढ़ सकते हैं?",
         answer:
-          "aadarsh roop se snan aur swachchhata ke baad path karna behtar hai, lekin shraddha sabse mahatvapurn hai। saaf man aur samman ke saath path kiya ja sakta hai।",
+          "आदर्श रूप से स्नान और स्वच्छता के बाद पाठ करना बेहतर है, लेकिन श्रद्धा सबसे महत्वपूर्ण है। साफ़ मन और सम्मान के साथ पाठ किया जा सकता है।",
       },
     ],
     sections: [
       {
-        heading: "TL;DR — शिव चालीसा का सार",
+        heading: "संक्षेप में — शिव चालीसा का सार",
         paragraphs: [
-          "shiv chalisa mahadev ki 40 chaupaiyon ki stuti hai। somvar, savan aur mahashivratri par iska path vishesh roop se kiya jata hai।",
-          "neeche sampoorna hindi path, arth, samay, niyam aur labh।",
+          "शिव चालीसा महादेव की ४० चौपाइयों की स्तुति है। सोमवार, सावन और महाशिवरात्रि पर इसका पाठ विशेष रूप से किया जाता है।",
+          "नीचे संपूर्ण हिंदी पाठ, अर्थ, समय, नियम और लाभ।",
         ],
         bullets: [
-          "40 chaupaiyon ka sampoorna path neeche",
-          "somvar aur savan somvar vishesh",
-          "belpatra, jal aur deepak ke saath puja",
-          "mahashivratri par rat bhar path",
-          "shiv aarti ke saath bhi padhein",
+          "४० चौपाइयों का संपूर्ण पाठ नीचे",
+          "सोमवार और सावन सोमवार विशेष",
+          "बेलपत्र, जल और दीपक के साथ पूजा",
+          "महाशिवरात्रि पर रात भर पाठ",
+          "शिव आरती के साथ भी पढ़ें",
         ],
       },
       {
@@ -932,44 +932,44 @@ export const bhaktiPosts: Post[] = [
       {
         heading: "शिव चालीसा का सरल अर्थ",
         paragraphs: [
-          "shiv chalisa mein mahadev ko girija pati, deen dayalu, trinetra, chandrakaladhari aur ganga dhar ke roop mein stuti ki gayi hai। unka uddeshya bhakt ke dukh, rog aur chinta dur karna hai।",
-          "chaupaiyon mein shiv ke vibhinna roop — rudra, shankar, shambhu, maheshwari pati — ka varnan hai। ve maya, garv aur moh ko mitate hain।",
-          "saral bhasha mein, yeh chalisa shiv ki kripa, shanti aur mukti ki prarthna hai।",
+          "शिव चालीसा में महादेव को गिरिजा पति, दीन दयालु, त्रिनेत्र, चंद्रकलाधारी और गंगा धार के रूप में स्तुति की गई है। उनका उद्देश्य भक्त के दुःख, रोग और चिंता दूर करना है।",
+          "चौपाइयों में शिव के विभिन्न रूप — रुद्र, शंकर, शंभू, महेश्वरी पति — का वर्णन है। वे माया, गर्व और मोह को मिटाते हैं।",
+          "सरल भाषा में, यह चालीसा शिव की कृपा, शांति और मुक्ति की प्रार्थना है।",
         ],
       },
       {
         heading: "शिव चालीसा कब पढ़ें?",
         paragraphs: [
-          "somvar shiv ka din — subah ya shaam path karein। savan ke somvar par vishesh mahatva hai।",
-          "mahashivratri ki rat jagran ke saath sampoorna chalisa path karna parampara hai। pradosh kal mein bhi path shubh mana jata hai।",
+          "सोमवार शिव का दिन — सुबह या शाम पाठ करें। सावन के सोमवार पर विशेष महत्व है।",
+          "महाशिवरात्रि की रात जागरण के साथ संपूर्ण चालीसा पाठ करना परंपरा है। प्रदोष काल में भी पाठ शुभ माना जाता है।",
         ],
         bullets: [
-          "somvar — subah/shaam",
-          "savan ke 16 somvar",
-          "mahashivratri rat",
-          "pradosh kal",
+          "सोमवार — सुबह/शाम",
+          "सावन के १६ सोमवार",
+          "महाशिवरात्रि रात",
+          "प्रदोष काल",
         ],
       },
       {
         heading: "शिव चालीसा के नियम",
         paragraphs: [
-          "swachchh sthan par baithkar, yathasambhav snan ke baad path karein। shivling par jal, dudh aur belpatra chadhaen।",
-          "path ke dauran 'om namah shivaya' ya 'har har mahadev' ka jap karein। ekagrata aur spasht uchcharan rakhein।",
-          "savan vrat ke dauran ek samay ka bhojan aur satvik aahar ka palan karein — yeh shraddha badhata hai।",
+          "स्वच्छ स्थान पर बैठकर, यथासंभव स्नान के बाद पाठ करें। शिवलिंग पर जल, दूध और बेलपत्र चढ़ाएँ।",
+          "पाठ के दौरान 'ॐ नमः शिवाय' या 'हर हर महादेव' का जप करें। एकाग्रता और स्पष्ट उच्चारण रखें।",
+          "सावन व्रत के दौरान एक समay का भोजन और सात्विक आहार का पालन करें — यह श्रद्धा बढ़ाता है।",
         ],
       },
       {
         heading: "शिव चालीसा के लाभ",
         paragraphs: [
-          "bhaktjan maante hain ki niyamit path se man shant hota hai, paap kam hote hain aur mahadev ki kripa milti hai।",
-          "kathin samay mein chalisa man ko sahar deti hai — yeh bhakton ka saamanya anubhav hai। parivarik roop se path karne se gharmein bhakti ka vatavaran banta hai।",
+          "भक्तजन मानते हैं कि नियमित पाठ से मन शांत होता है, पाप कम होते हैं और महादेव की कृपा मिलती है।",
+          "कठिन समय में चालीसा मन को सहारा देती है — यह भक्तों का सामान्य अनुभव है। पारिवारिक रूप से पाठ करने से घर में भक्ति का वातावरण बनता है।",
         ],
       },
       {
         heading: "निष्कर्ष",
         paragraphs: [
-          "shiv chalisa hindi mein sampoorna path — PixMorphy bhakti hub par taiyar। somvar ya savan ki puja ke liye save karein।",
-          "shiv aarti ke saath milakar padhne se bhakti ka anubhav gehra hota hai। har har mahadev!",
+          "शिव चालीसा हिंदी में संपूर्ण पाठ — पिक्समॉर्फी भक्ति पर तैयार। सोमवार या सावन की पूजा के लिए सेव करें।",
+          "शिव आरती के साथ मिलाकर पढ़ने से भक्ति का अनुभव गहरा होता है। हर हर महादेव!",
         ],
       },
     ],
@@ -984,25 +984,25 @@ export const bhaktiPosts: Post[] = [
     slug: "savan-somvar-vrat-vidhi-2026",
     title: "सावन सोमवार व्रत विधि 2026",
     excerpt:
-      "Savan 2026 ke somvar vrat ki sampoorna vidhi, tithi, puja samagri, niyam, katha aur shiv bhakti ke labh — Hindi guide ek hi jagah।",
+      "सावन २०२६ के सोमवार व्रत की संपूर्ण विधि, तिथि, पूजा सामग्री, नियम, कथा और शिव भक्ति के लाभ — हिंदी मार्गदर्शिका एक ही जगह।",
     category: "Vrat & Katha",
     publishedAt: "2026-06-24",
     updatedAt: "2026-06-24",
-    readTime: "9 min read",
+    readTime: "९ मिनट",
     author: "Rajat Gupta",
     imageSrc: "/images/blog/savan-somvar-vrat-cover.svg",
     imageObjectPosition: "center",
     heroAccent: "from-emerald-600 via-teal-600 to-green-500",
-    featuredLabel: "Vrat Guide",
-    imageAlt: "savan somvar vrat vidhi 2026 cover",
+    featuredLabel: "व्रत मार्गदर्शिका",
+    imageAlt: "सावन सोमवार व्रत विधि २०२६ कवर",
     galleryImages: [
       {
         src: "/images/blog/savan-somvar-vrat-cover.svg",
-        alt: "savan somvar vrat vidhi 2026 cover",
+        alt: "सावन सोमवार व्रत विधि २०२६ कवर",
       },
       {
         src: "/images/blog/savan-somvar-vrat-cover.svg",
-        alt: "savan mahina shiv puja kanwar yatra",
+        alt: "सावन महीने शिव पूजा कांवड़ यात्रा",
       },
     ],
     keywords: [
@@ -1019,110 +1019,110 @@ export const bhaktiPosts: Post[] = [
       "savan somvar 2026 hindi",
       "shravan month vrat",
     ],
-    faq: [
+faq: [
       {
-        question: "savan 2026 mein kitne somvar hain?",
+        question: "सावन २०२० में कितने सोमवार हैं?",
         answer:
-          "savan 2026 mein aam taur par 4 ya 5 somvar hote hain — panchang ke anusar। poore mahine ke somvar vrat ka mahatva hai, lekin 16 somvar vrat ki parampara bhi prachlit hai।",
+          "सावन २०२० में आम तौर पर चार या पाँच सोमवार होते हैं — पंचांग के अनुसार। पूरे महीने के सोमवार व्रत का महत्व है, लेकिन १६ सोमवार व्रत की परंपरा भी प्रचलित है।",
       },
       {
-        question: "savan somvar vrat mein kya khaya ja sakta hai?",
+        question: "सावन सोमवार व्रत में क्या खाया जा सकता है?",
         answer:
-          "ek samay ka satvik bhojan, fal, sabudana, kuttu aata aur bina lahsun-pyaz ke pakwan khaye ja sakte hain। kuch log nirjala vrat bhi rakhte hain — shraddha ke anusar।",
+          "एक समय का सात्विक भोजन, फल, साबुदाना, कुट्टू आटा और बिना लहसुन-प्याज के पकवान खाए जा सकते हैं। कुछ लोग निर्जला व्रत भी रखते हैं — श्रद्धा के अनुसार।",
       },
       {
-        question: "mahilayen savan vrat rakh sakti hain?",
+        question: "महिलाएँ सावन व्रत रख सकती हैं?",
         answer:
-          "haan, shraddha ke saath sabhi savan somvar vrat rakh sakte hain। kuch parivaron mein vishesh niyam hote hain — apni parampara ke anusar palan karein।",
+          "हाँ, श्रद्धा के साथ सभी सावन सोमवार व्रत रख सकते हैं। कुछ परिवारों में विशेष नियम होते हैं — अपनी परंपरा के अनुसार पालन करें।",
       },
       {
-        question: "savan vrat ki puja samagri kya chahiye?",
+        question: "सावन व्रत की पूजा सामग्री क्या चाहिए?",
         answer:
-          "belpatra, jal, dudh, dahi, shahad, chawal, phool, deepak, dhoop, kapur, chandan aur shivling ya shiv murti — yeh mukhya samagri hai।",
+          "बेलपत्र, जल, दूध, दही, शहद, चावल, फूल, दीपक, धूप, कपूर, चन्दन और शिवलिंग या शिव मूर्ति — यह मुख्य सामग्री है।",
       },
       {
-        question: "savan somvar vrat ke kya labh maane jate hain?",
+        question: "सावन सोमवार व्रत के क्या लाभ माने जाते हैं?",
         answer:
-          "bhaktjan maante hain ki savan vrat se mahadev ki kripa, vivah ke yog, manokamna purti aur parivarik sukh milta hai। yeh shuddhi aur bhakti dono ka vrat hai।",
+          "भक्तजन मानते हैं कि सावन व्रत से महादेव की कृपा, विवाह के योग, मनोकामना पूर्ति और पारिवारिक सुख मिलता है। यह शुद्धि और भक्ति दोनों का व्रत है।",
       },
     ],
     sections: [
       {
-        heading: "TL;DR — सावन सोमवार व्रत 2026",
+        heading: "संक्षेप में — सावन सोमवार व्रत २०२०",
         paragraphs: [
-          "savan (shravan) mahina shiv ki upasana ka sabse pavitra maas mana jata hai। ismein har somvar ka vrat vishesh shubh hai।",
-          "2026 ki vidhi, tithi, puja samagri, niyam aur katha — neeche poori guide।",
+          "सावन (श्रावण) महीना शिव की उपासना का सबसे पवित्र मास माना जाता है। इसमें हर सोमवार का व्रत विशेष शुभ है।",
+          "२०२० की विधि, तिथि, पूजा सामग्री, नियम और कथा — नीचे पूरी मार्गदर्शिका।",
         ],
         bullets: [
-          "savan 2026 — somvar tithi neeche",
-          "subah snan, belpatra aur jal arpan",
-          "satvik bhojan ya nirjala vrat",
-          "shiv aarti aur chalisa path",
-          "16 somvar vrat ki parampara bhi",
+          "सावन २०२० — सोमवार तिथि नीचे",
+          "सुबह स्नान, बेलपत्र और जल अर्पण",
+          "सात्विक भोजन या निर्जला व्रत",
+          "शिव आरती और चालीसा पाठ",
+          "१६ सोमवार व्रत की परंपरा भी",
         ],
       },
       {
         heading: "सावन सोमवार व्रत कथा (संक्षिप्त)",
         paragraphs: [
-          `ek samay ek vidhva mahila apni beti ke vivah ke liye chinta mein thi। usne savan ke somvar ka vrat rakha aur shivling par jal chadhaya। uski beti ne bhi vrat rakha।
+          `एक समय एक विधवा महिला अपनी बेटी के विवाह के लिए चिंता में थी। उसने सावन के सोमवार का व्रत रखा और शिवलिंग पर जल चढ़ाया। उसकी बेटी ने भी व्रत रखा।
 
-ek din raja ka baraat uske ghar ke paas ruka। raja ne beti ko dekha aur vivah ka prastav diya। lekin ek shart thi — agli subah tak baraat wapas nahi ja sakti।
+एक दिन राजा का बारात उसके घर के पास रुका। राजा ने बेटी को देखा और विवाह का प्रस्ताव दिया। लेकिन एक शर्त थी — अगली सुबह तक बारात वापस नहीं जा सकती।
 
-raat ko raja ko ek sapna aaya — ek vidhva aur uski beti ne shiv ko jal chadhaya tha, isliye yeh vivah sambhav hua। subah raja ne sab kuch jaan liya aur shaadi dhoomdham se hui।
+रात को राजा को एक स्वप्न आया — एक विधवा और उसकी बेटी ने शिव को जल चढ़ाया था, इसलिए यह विवाह संभव हुआ। सुबह राजा ने सब कुछ जान लिया और शादी धूमधाम से हुई।
 
-moral: savan somvar vrat aur shiv aradhana se manokamna purti hoti hai — shraddha sabse mahatvapurn hai।`,
+नीति: सावन सोमवार व्रत और शिव आराधना से मनोकामना पूर्ति होती है — श्रद्धा सबसे महत्वपूर्ण है।`,
         ],
       },
       {
-        heading: "सावन 2026 सोमवार तिथi (अनुमानit)",
+        heading: "सावन २०२० सोमवार तिथि (अनुमानित)",
         paragraphs: [
-          "savan 2026 ke somvar tithi panchang ke anusar nirdharit hote hain। aam taur par july-august ke beech savan mahina hota hai।",
-          "har somvar subah jal lekar shivling par arpan karein — yeh 'jal abhishek' savan ki mukhya vidhi hai। kanwar yatra mein bhi yahi parampara hai।",
+          "सावन २०२० के सोमवार तिथि पंचांग के अनुसार निर्धारित होते हैं। आम तौर पर जुलाई-अगस्त के बीच सावन महीना होता है।",
+          "हर सोमवार सुबह जल लेकर शिवलिंग पर अर्पण करें — यह 'जल अभिषेक' सावन की मुख्य विधि है। कावड़ यात्रा में भी यही परंपरा है।",
         ],
         bullets: [
-          "panchang se exact tithi confirm karein",
-          "pratham somvar se vrat shuru karein",
-          "16 somvar vrat — lambi parampara",
-          "kanwar yatra — jal le jana",
+          "पंचांग से सटीक तिथि निश्चित करें",
+          "प्रथम सोमवार से व्रत शुरु करें",
+          "१६ सोमवार व्रत — लम्बी परंपरा",
+          "कावड़ यात्रा — जल ले जाना",
         ],
       },
       {
         heading: "सावन सोमवार व्रत विधि — चरणबद्ध",
         paragraphs: [
-          "subah jaldi uthkar snan karein। safed ya neele vastr pahnein। shivling par jal, dudh, dahi, shahad aur belpatra chadhayein।",
-          "shiv aarti ('om jai shiv omkara') aur shiv chalisa ka path karein। 'om namah shivaya' ka 108 baar jap karein।",
-          "din bhar satvik aahar lein — lahsun, pyaz, masala aur tamasic bhojan se bachein। shaam ko phir se jal arpan aur aarti karein।",
-          "vrat ka udyapan (samapti) akhri somvar ya 16ve somvar par karein — pandit se salah lekar।",
+          "सुबह जल्दी उठकर स्नान करें। सफेद या नीले वस्त्र पहनें। शिवलिंग पर जल, दूध, दही, शहद और बेलपत्र चढ़ाएं।",
+          "शिव आरती ('जय शिव ओमकारा') और शिव चालीसा का पाठ करें। 'ॐ नमः शिवाय' का १ॠ२ बार जप करें।",
+          "दिन भर सात्विक आहार लें — लहसुन, प्याज, मसाला और तामसिक भोजन से बचें। शाम को फिर से जल अर्पण और आरती करें।",
+          "व्रत का उद्यापन (समाप्ति) अंतिम सोमवार या १६वें सोमवार पर करें — पंडित से सलाह लेकर।",
         ],
       },
       {
         heading: "सावन व्रत के नियम",
         paragraphs: [
-          "swachchhata, satya bhashan aur krodh se bachna — yeh mukhya niyam hain।",
-          "vrat ke dauran maans, madira aur tamasic bhojan varjit hai।",
-          "brahmacharya ka palan, guru aur mata-pita ka samman — yeh bhi savan niyam hain।",
-          "mandir jana sambhav na ho to ghar par hi puja karein — shraddha sthan se judi hai, mandir se nahi।",
+          "स्वच्छता, सत्य भाषण और क्रोध से बचना — ये मुख्य नियम हैं।",
+          "व्रत के दौरान मांस, मदिरा और तामसिक भोजन वर्जित है।",
+          "ब्रह्मचर्य का पालन, गुरु और माता-पिता का सम्मान — ये भी सावन नियम हैं।",
+          "मन्दिर जाना संभव न हो तो घर पर ही पूजा करें — श्रद्धा स्थान से जुड़ी है, मन्दिर से नहीं।",
         ],
         bullets: [
-          "satvik bhojan — ek samay",
-          "belpatra aur jal arpan daily",
-          "om namah shivaya jap",
-          "krodh, jhooth, tamasic cheezon se doori",
+          "सात्विक भोजन — एक समय",
+          "बेलपत्र और जल अर्पण प्रतिदिन",
+          "ॐ नमः शिवाय जप",
+          "क्रोध, झूठ, तामसिक चीज़ों से दूरी",
         ],
       },
       {
         heading: "सावन सोमवार व्रत के लाभ",
         paragraphs: [
-          "bhaktjan maante hain ki savan vrat se mahadev ki kripa, vivah ke yog, santati sukh aur manokamna purti hoti hai।",
-          "mausam ke anusar savan mein vrat rakna sharir ki shuddhi bhi karta hai — yeh aayurvedik drishti se bhi labhdayak mana jata hai।",
-          "parivarik roop se vrat rakhne se ekta badhti hai aur bacchon ko sanskar milte hain।",
+          "भक्तजन मानते हैं कि सावन व्रत से महादेव की कृपा, विवाह के योग, संतति सुख और मनोकामना पूर्ति होती है।",
+          "मौसम के अनुसार सावन में व्रत रखना शरीर की शुद्धि भी करता है — यह आयुर्वेदिक दृष्टि से भी लाभदायक माना जाता है।",
+          "पारिवारिक रूप से व्रत रखने से एकता बढ़ती है और बच्चों को संस्कार मिलते हैं।",
         ],
       },
       {
         heading: "निष्कर्ष",
         paragraphs: [
-          "savan somvar vrat vidhi 2026 — poori Hindi guide PixMorphy bhakti hub par। shiv aarti aur shiv chalisa ke links related posts mein hain।",
-          "shraddha, niyamitata aur shuddh man — savan vrat ke teen stambh hain। har har mahadev!",
+          "सावन सोमवार व्रत विधि २०२० — पूरी हिंदी मार्गदर्शिका पिक्समॉर्फी भक्ति पर। शिव आरती और शिव चालीसा के लिंक संबंधित लेख में हैं।",
+          "श्रद्धा, नियमितता और शुद्ध मन — सावन व्रत के तीन स्तंभ हैं। हर हर महादेव!",
         ],
       },
     ],
