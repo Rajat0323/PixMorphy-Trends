@@ -59,10 +59,10 @@ export function SiteHeader() {
             <SearchIcon />
           </Link>
           <Link
-            href="/category/aarti"
+            href="/aarti-sangrah"
             className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] sm:inline-flex"
           >
-            आरती पढ़ें
+            आरती संग्रह
           </Link>
           <MobileNav />
         </div>

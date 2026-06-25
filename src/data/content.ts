@@ -26,6 +26,7 @@ export const siteConfig = {
   ],
   nav: [
     { name: "मुख्य पृष्ठ", href: "/" },
+    { name: "आरती संग्रह", href: "/aarti-sangrah" },
     { name: "आरती", href: "/category/aarti" },
     { name: "चालीसा", href: "/category/chalisa" },
     { name: "त्योहार", href: "/category/festivals" },
@@ -33,6 +34,7 @@ export const siteConfig = {
     { name: "सभी पाठ", href: "/blog" },
   ] satisfies Category[],
   categories: [
+    { name: "आरती संग्रह", href: "/aarti-sangrah" },
     { name: "आरती", href: "/category/aarti" },
     { name: "चालीसा", href: "/category/chalisa" },
     { name: "त्योहार", href: "/category/festivals" },

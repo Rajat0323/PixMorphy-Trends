@@ -34,4 +34,8 @@ export type Post = {
     bullets?: string[];
   }[];
   relatedSlugs: string[];
+  internalLinks?: {
+    label: string;
+    href: string;
+  }[];
 };

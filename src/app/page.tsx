@@ -73,6 +73,7 @@ function TopicHighlights() {
   return (
     <section className="grid gap-4 rounded-[32px] border border-[color:var(--border)] bg-white p-5 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:grid-cols-2 lg:grid-cols-4 sm:p-8">
       {[
+        ["आरती संग्रह", "हनुमान, लक्ष्मी, गणेश, शिव, दुर्गा — ५ आरती शुद्ध हिंदी में एक पेज पर।", "/aarti-sangrah"],
         ["आरती", "हनुमान, लक्ष्मी, शिव, गणेश और दुर्गा आरती — संपूर्ण पाठ हिंदी में।", "/category/aarti"],
         ["चालीसा", "हनुमान और शिव चालीसा सहित साफ़ देवनागरी पाठ और अर्थ।", "/category/chalisa"],
         ["त्योहार", "दीपावली, नवरात्रि, श्रावण जैसे त्योहारों की पूजा विधि और महत्व।", "/category/festivals"],
@@ -113,9 +114,17 @@ export default function Home() {
       <section id="aarti" className="space-y-6">
         <SectionHeading
           eyebrow="आरती संग्रह"
-          title="प्राचीन और लोकप्रिय आरतीयाँ — संपूर्ण पाठ एक जगह"
-          description="पूजा के समय पढ़ने के लिए साफ़ हिंदी पाठ, अर्थ और नियम के साथ।"
+          title="सम्पूर्ण आरती संग्रह — ५ देवी-देवता"
+          description="पूजा के समय पढ़ने के लिए शुद्ध हिंदी पाठ। सभी आरती एक ही पेज पर।"
         />
+        <div className="flex justify-center">
+          <Link
+            href="/aarti-sangrah"
+            className="inline-flex items-center rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)]"
+          >
+            🪔 सम्पूर्ण आरती संग्रह देखें →
+          </Link>
+        </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {aartiPosts.map((post) => (
             <PostCard key={post.slug} post={post} />
