@@ -3,6 +3,17 @@
 import { useState } from "react";
 import { useLocale } from "@/lib/i18n/locale-provider";
 
+const QUERY_INBOX = "vivgup64@gmail.com";
+
+type FormSubmitResponse = {
+  success?: string | boolean;
+  message?: string;
+};
+
+function isFormSubmitSuccess(data: FormSubmitResponse) {
+  return data.success === true || data.success === "true";
+}
+
 export function QueryForm() {
   const { tr } = useLocale();
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
@@ -13,21 +24,37 @@ export function QueryForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
 
     try {
-      const response = await fetch("/api/query", {
+      const response = await fetch(`https://formsubmit.co/ajax/${QUERY_INBOX}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-          message: formData.get("message"),
+          name,
+          email,
+          message,
+          _subject: "PixMorphy — नया प्रश्न / Query",
+          _template: "table",
+          _captcha: "false",
         }),
       });
 
-      const data = (await response.json()) as { ok?: boolean };
+      const raw = await response.text();
+      let data: FormSubmitResponse = {};
 
-      if (!response.ok || !data.ok) {
+      try {
+        data = JSON.parse(raw) as FormSubmitResponse;
+      } catch {
+        data = {};
+      }
+
+      if (!response.ok || !isFormSubmitSuccess(data)) {
         setStatus("error");
         return;
       }
@@ -85,7 +112,7 @@ export function QueryForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex items-center rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] disabled:opacity-70"
+        className="inline-flex w-full items-center justify-center rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] disabled:opacity-70 sm:w-auto"
       >
         {status === "submitting" ? tr("formSubmitting") : tr("formSubmit")}
       </button>

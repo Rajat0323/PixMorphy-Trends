@@ -54,7 +54,7 @@ export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
         {tr("blogSearchResults", { count: filteredPosts.length })}
       </p>
 
-      <div className="grid gap-4">
+      <div className="grid gap-4 notranslate blog-content-lock">
         {filteredPosts.map((post) => (
           <Link
             key={post.slug}

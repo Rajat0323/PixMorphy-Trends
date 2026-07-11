@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Post } from "@/data/content";
 import { getCategoryLabel } from "@/data/bhakti";
+import { getBlogCoverUrl } from "@/lib/blog-cover";
 
 type PostCardProps = {
   post: Post;
@@ -9,15 +10,21 @@ type PostCardProps = {
 };
 
 export function PostCard({ post, compact = false }: PostCardProps) {
+  const coverUrl = getBlogCoverUrl(post);
+
   return (
-    <article className="group overflow-hidden rounded-[28px] border border-[color:var(--border)] bg-white shadow-[0_18px_48px_rgba(15,23,42,0.07)] transition hover:-translate-y-1">
+    <article
+      className="blog-content-lock group overflow-hidden rounded-[28px] border border-[color:var(--border)] bg-white shadow-[0_18px_48px_rgba(15,23,42,0.07)] transition hover:-translate-y-1"
+      translate="no"
+    >
       <div
         className={`relative overflow-hidden ${compact ? "h-44" : "h-56"} bg-slate-900`}
       >
         <Image
-          src={post.imageSrc}
+          src={coverUrl}
           alt={post.imageAlt}
           fill
+          unoptimized={coverUrl.startsWith("/og/")}
           sizes={compact ? "(max-width: 1024px) 100vw, 420px" : "(max-width: 768px) 100vw, 520px"}
           className="object-cover transition duration-500 group-hover:scale-[1.03]"
           style={{

@@ -89,6 +89,7 @@ export default function RootLayout({
     <html
       lang="hi"
       dir="ltr"
+      translate="no"
       data-scroll-behavior="smooth"
       className={`${headingFont.variable} ${bodyFont.variable} scroll-smooth`}
     >

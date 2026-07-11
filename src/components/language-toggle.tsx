@@ -1,18 +1,40 @@
 "use client";
 
 import { useLocale } from "@/lib/i18n/locale-provider";
+import type { Locale } from "@/lib/i18n/types";
+
+const options: { id: Locale; label: string }[] = [
+  { id: "hi", label: "HI" },
+  { id: "en", label: "EN" },
+];
 
 export function LanguageToggle() {
   const { locale, setLocale, tr } = useLocale();
 
   return (
-    <button
-      type="button"
-      onClick={() => setLocale(locale === "hi" ? "en" : "hi")}
-      className="inline-flex h-11 items-center justify-center rounded-full border border-[color:var(--border)] bg-white px-3 text-xs font-semibold uppercase tracking-wide text-[color:var(--text-primary)] shadow-sm transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)] sm:px-4 sm:text-sm"
+    <div
+      className="inline-flex h-10 items-center rounded-full border border-[color:var(--border)] bg-white p-1 shadow-sm sm:h-11"
+      role="group"
       aria-label={tr("langToggleAria")}
     >
-      {tr("langToggle")}
-    </button>
+      {options.map((option) => {
+        const active = locale === option.id;
+        return (
+          <button
+            key={option.id}
+            type="button"
+            onClick={() => setLocale(option.id)}
+            aria-pressed={active}
+            className={`min-w-[42px] rounded-full px-3 py-1.5 text-xs font-bold tracking-wide transition sm:min-w-[46px] sm:text-sm ${
+              active
+                ? "bg-[color:var(--accent)] text-white shadow-[0_8px_18px_rgba(37,99,235,0.28)]"
+                : "text-[color:var(--text-secondary)] hover:text-[color:var(--accent)]"
+            }`}
+          >
+            {option.label}
+          </button>
+        );
+      })}
+    </div>
   );
 }

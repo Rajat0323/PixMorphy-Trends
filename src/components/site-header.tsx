@@ -55,18 +55,18 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <LanguageToggle />
           <Link
             href="/blog"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--border)] bg-white text-[color:var(--text-primary)] shadow-sm transition hover:-translate-y-0.5"
+            className="hidden h-11 w-11 items-center justify-center rounded-full border border-[color:var(--border)] bg-white text-[color:var(--text-primary)] shadow-sm transition hover:-translate-y-0.5 sm:inline-flex"
             aria-label={tr("navSearch")}
           >
             <SearchIcon />
           </Link>
           <Link
             href="/blog"
-            className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] sm:inline-flex"
+            className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] md:inline-flex"
           >
             {tr("navBlogsBtn")}
           </Link>

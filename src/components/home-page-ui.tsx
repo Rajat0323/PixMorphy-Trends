@@ -52,7 +52,7 @@ export function HomePageUi({ latestPosts, totalPosts, showSentMessage }: HomePag
           title={tr("homeBlogTitle")}
           description={tr("homeBlogDesc")}
         />
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 notranslate blog-content-lock">
           {latestPosts.map((post) => (
             <PostCard key={post.slug} post={post} />
           ))}
