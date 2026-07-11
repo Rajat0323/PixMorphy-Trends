@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { buildMailtoLink, sendQueryEmail } from "@/lib/send-query-email";
+import { buildMailtoLink } from "@/lib/query-mailto";
+import { sendTelegramQuery, sendWeb3FormsQuery } from "@/lib/send-query-providers";
 
 export async function POST(request: Request) {
   try {
@@ -17,17 +18,26 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Valid email required" }, { status: 400 });
     }
 
-    const result = await sendQueryEmail({ name, email, message });
+    const payload = { name, email, message };
+    const web3Key = process.env.WEB3FORMS_ACCESS_KEY ?? process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
-    if (!result.ok) {
-      return NextResponse.json({
-        ok: false,
-        useMailto: true,
-        mailto: buildMailtoLink({ name, email, message }),
-      });
+    if (web3Key) {
+      const web3 = await sendWeb3FormsQuery(web3Key, payload);
+      if (web3.ok) {
+        return NextResponse.json({ ok: true });
+      }
     }
 
-    return NextResponse.json({ ok: true });
+    const telegram = await sendTelegramQuery(payload);
+    if (telegram.ok) {
+      return NextResponse.json({ ok: true });
+    }
+
+    return NextResponse.json({
+      ok: false,
+      useMailto: true,
+      mailto: buildMailtoLink(payload),
+    });
   } catch {
     return NextResponse.json({ error: "सर्वर त्रुटि" }, { status: 500 });
   }

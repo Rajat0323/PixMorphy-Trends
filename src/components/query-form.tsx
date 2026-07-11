@@ -6,6 +6,8 @@ import { siteConfig } from "@/data/content";
 import { buildMailtoLink } from "@/lib/query-mailto";
 import { useLocale } from "@/lib/i18n/locale-provider";
 
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
+
 type QueryFormProps = {
   redirectUrl?: string;
 };
@@ -16,6 +18,32 @@ type ApiResponse = {
   mailto?: string;
   error?: string;
 };
+
+type Web3FormsResponse = {
+  success?: boolean;
+};
+
+async function submitViaWeb3Forms(payload: { name: string; email: string; message: string }) {
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      access_key: WEB3FORMS_KEY,
+      name: payload.name,
+      email: payload.email,
+      message: payload.message,
+      subject: "PixMorphy — नया प्रश्न / Query",
+      from_name: siteConfig.name,
+      botcheck: "",
+    }),
+  });
+
+  const data = (await response.json()) as Web3FormsResponse;
+  return response.ok && Boolean(data.success);
+}
 
 export function QueryForm({ redirectUrl }: QueryFormProps) {
   const { tr } = useLocale();
@@ -29,12 +57,23 @@ export function QueryForm({ redirectUrl }: QueryFormProps) {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const name = String(formData.get("name") ?? "").trim();
-    const email = String(formData.get("email") ?? "").trim();
-    const message = String(formData.get("message") ?? "").trim();
-    const payload = { name, email, message };
+    const payload = {
+      name: String(formData.get("name") ?? "").trim(),
+      email: String(formData.get("email") ?? "").trim(),
+      message: String(formData.get("message") ?? "").trim(),
+    };
 
     try {
+      if (WEB3FORMS_KEY) {
+        const sent = await submitViaWeb3Forms(payload);
+        if (sent) {
+          form.reset();
+          setStatus("done");
+          window.history.replaceState(null, "", redirect);
+          return;
+        }
+      }
+
       const response = await fetch("/api/query", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -51,8 +90,7 @@ export function QueryForm({ redirectUrl }: QueryFormProps) {
       }
 
       if (data.useMailto) {
-        const mailto = data.mailto ?? buildMailtoLink(payload);
-        window.location.href = mailto;
+        window.location.href = data.mailto ?? buildMailtoLink(payload);
         setStatus("mailto");
         return;
       }
