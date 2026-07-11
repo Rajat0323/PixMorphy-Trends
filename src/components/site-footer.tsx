@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/data/content";
 
 export function SiteFooter() {
   return (
@@ -6,11 +7,11 @@ export function SiteFooter() {
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
         <div className="space-y-3">
           <h2 className="text-xl font-semibold text-[color:var(--text-primary)]">
-            पिक्समॉर्फी भक्ति
+            {siteConfig.name}
           </h2>
           <p className="max-w-xl text-sm leading-7 text-[color:var(--text-secondary)]">
-            हिंदी में आरती, चालीसा, व्रत कथा और त्योहार पूजा विधि — साफ़ देवनागरी पाठ, सरल अर्थ
-            और मोबाइल के अनुकूल भक्ति मार्गदर्शिकाएँ।
+            भारतीय छात्रों के लिए करियर, AI और वास्तविक अनुभव पर हिंदी ब्लॉग।
+            साथ ही टेक, क्रिकेट और भक्ति सामग्री भी उपलब्ध है।
           </p>
         </div>
         <div className="space-y-3">
@@ -37,11 +38,11 @@ export function SiteFooter() {
         </div>
         <div className="space-y-3">
           <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--text-muted)]">
-            भक्ति श्रेणियाँ
+            श्रेणियाँ
           </h3>
           <div className="space-y-2 text-sm text-[color:var(--text-secondary)]">
-            <Link href="/category/aarti" className="block hover:text-[color:var(--accent)]">
-              आरती
+            <Link href="/blog" className="block hover:text-[color:var(--accent)]">
+              सभी ब्लॉग
             </Link>
             <Link href="/category/chalisa" className="block hover:text-[color:var(--accent)]">
               चालीसा

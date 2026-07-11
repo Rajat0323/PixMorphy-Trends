@@ -1,4 +1,4 @@
-import { publicPosts, siteConfig } from "@/data/content";
+import { posts, siteConfig } from "@/data/content";
 
 function escapeXml(value: string) {
   return value
@@ -10,7 +10,7 @@ function escapeXml(value: string) {
 }
 
 export async function GET() {
-  const items = publicPosts
+  const items = posts
     .slice()
     .sort(
       (a, b) =>

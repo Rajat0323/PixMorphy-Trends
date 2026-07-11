@@ -13,11 +13,26 @@ export {
 export { bhaktiPosts } from "./bhakti-posts";
 
 export const siteConfig = {
-  name: "PixMorphy Bhakti",
+  name: "PixMorphy",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.pixmorphy.in",
   description:
-    "पिक्समॉर्फी भक्ति — हिंदी में हनुमान चालीसा संपूर्ण पाठ, सरल अर्थ, मंगलवार-शनिवार पूजा विधि और लाभ।",
+    "भारतीय B.Tech और ग्रेजुएशन छात्रों के लिए करियर, नौकरी, AI और वास्तविक अनुभव पर हिंदी ब्लॉग — कोई शॉर्टकट नहीं, लंबी यात्रा, सही मार्गदर्शन।",
+  homepageTitle:
+    "भारतीय छात्रों के लिए करियर और AI मार्गदर्शन — वास्तविक अनुभव, हिंदी में",
+  homepageKeywords: [
+    "career guidance hindi",
+    "indian students career",
+    "btech career india",
+    "ai career hindi",
+    "naukri tips hindi",
+    "graduation career guide",
+    "करियर मार्गदर्शन हिंदी",
+    "B.Tech करियर",
+    "भारतीय छात्र करियर",
+    "AI सीखें हिंदी",
+  ],
   contactEmail: "hello@pixmorphy.in",
+  queryEmail: process.env.NEXT_PUBLIC_QUERY_EMAIL || "group64@gmail.com",
   partnershipsEmail: "partnerships@pixmorphy.in",
   socialLinks: [
     "https://github.com/Rajat0323/PixMorphy-Trends",
@@ -26,11 +41,14 @@ export const siteConfig = {
   ],
   nav: [
     { name: "मुख्य पृष्ठ", href: "/" },
-    { name: "हनुमान चालीसा", href: "/blog/hanuman-chalisa-in-hindi-sampoorna-path" },
-    { name: "चालीसा", href: "/category/chalisa" },
+    { name: "ब्लॉग", href: "/blog" },
+    { name: "प्रश्न पूछें", href: "/#query" },
+    { name: "संपर्क", href: "/contact" },
   ] satisfies Category[],
   categories: [
-    { name: "हनुमान चालीसा", href: "/blog/hanuman-chalisa-in-hindi-sampoorna-path" },
+    { name: "ब्लॉग", href: "/blog" },
+    { name: "करियर", href: "/blog" },
+    { name: "AI और टेक", href: "/category/ai-tools" },
     { name: "चालीसा", href: "/category/chalisa" },
   ] satisfies Category[],
 };

@@ -30,10 +30,10 @@ export function SiteHeader() {
           </span>
           <div>
             <p className="text-base font-semibold tracking-tight text-[color:var(--text-primary)]">
-              पिक्समॉर्फी भक्ति
+              {siteConfig.name}
             </p>
             <p className="text-xs text-[color:var(--text-muted)]">
-              हनुमान चालीसा
+              करियर, AI और हिंदी ब्लॉग
             </p>
           </div>
         </Link>
@@ -59,10 +59,10 @@ export function SiteHeader() {
             <SearchIcon />
           </Link>
           <Link
-            href="/blog/hanuman-chalisa-in-hindi-sampoorna-path"
+            href="/blog"
             className="hidden h-11 items-center justify-center rounded-full bg-[color:var(--accent)] px-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] sm:inline-flex"
           >
-            हनुमान चालीसा
+            Blogs
           </Link>
           <MobileNav />
         </div>

@@ -1,125 +1,139 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { CategoryRail } from "@/components/category-rail";
+import { QueryForm } from "@/components/query-form";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
-import { publicPosts, siteConfig } from "@/data/content";
+import { posts, siteConfig } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "हनुमान चालीसा हिंदी में — संपूर्ण पाठ",
+  title: siteConfig.homepageTitle,
   description: siteConfig.description,
+  keywords: siteConfig.homepageKeywords,
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    title: siteConfig.homepageTitle,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    type: "website",
+    locale: "hi_IN",
+  },
 };
 
-const HANUMAN_CHALISA_SLUG = "hanuman-chalisa-in-hindi-sampoorna-path";
+const latestPosts = [...posts]
+  .sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  )
+  .slice(0, 9);
 
-function HomepageHero() {
-  const chalisa = publicPosts.find((post) => post.slug === HANUMAN_CHALISA_SLUG);
+type PageProps = {
+  searchParams: Promise<{ sent?: string }>;
+};
 
-  if (!chalisa) {
-    return null;
-  }
+export default async function Home({ searchParams }: PageProps) {
+  const { sent } = await searchParams;
 
-  return (
-    <section>
-      <Link
-        href={`/blog/${chalisa.slug}`}
-        className="group block overflow-hidden rounded-[32px] border border-[color:var(--border)] bg-white shadow-[0_24px_60px_rgba(15,23,42,0.14)]"
-      >
-        <div className="relative h-[360px] overflow-hidden sm:h-[430px]">
-          <Image
-            src={chalisa.imageSrc}
-            alt={chalisa.imageAlt}
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 860px"
-            className="object-cover object-center transition duration-500 group-hover:scale-[1.02]"
-          />
-          <div className={`absolute inset-0 bg-gradient-to-br ${chalisa.heroAccent} opacity-15`} />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.08),rgba(15,23,42,0.74))]" />
-          <div className="relative flex h-full flex-col justify-between p-5 sm:p-7">
-            <div className="flex flex-wrap items-center gap-3 text-white/92">
-              <span className="rounded-full border border-white/20 bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] backdrop-blur">
-                भक्ति पाठ
-              </span>
-              <span className="rounded-full border border-white/20 bg-black/20 px-3 py-1 text-xs font-semibold backdrop-blur">
-                {chalisa.featuredLabel}
-              </span>
-            </div>
-            <div className="max-w-2xl space-y-3">
-              <h2 className="headline-font text-2xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
-                {chalisa.title}
-              </h2>
-              <p className="max-w-xl text-sm leading-7 text-white/82 sm:text-base">
-                {chalisa.excerpt}
-              </p>
-              <span className="inline-flex rounded-full bg-white px-5 py-2 text-sm font-semibold text-[color:var(--accent)]">
-                संपूर्ण पाठ पढ़ें →
-              </span>
-            </div>
-          </div>
-        </div>
-      </Link>
-    </section>
-  );
-}
-
-export default function Home() {
-  const chalisaPosts = publicPosts.filter((post) => post.category === "Chalisa");
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    description: siteConfig.description,
+    inLanguage: "hi-IN",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteConfig.url}/blog?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
 
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 py-6 sm:px-6 lg:px-8">
-      <h1 className="sr-only">
-        पिक्समॉर्फी भक्ति — हनुमान चालीसा हिंदी में संपूर्ण पाठ
-      </h1>
-      <section className="space-y-6 pt-4">
-        <HomepageHero />
-        <CategoryRail />
-        <div className="flex justify-center">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+
+      <section className="rounded-[32px] border border-[color:var(--border)] bg-[linear-gradient(180deg,rgba(37,99,235,0.08),rgba(255,255,255,1))] p-6 shadow-[0_24px_60px_rgba(15,23,42,0.08)] sm:p-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[color:var(--accent)]">
+          भारतीय छात्रों के लिए
+        </p>
+        <h1 className="headline-font mt-4 max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-[color:var(--text-primary)] sm:text-5xl">
+          {siteConfig.homepageTitle}
+        </h1>
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-8 text-[color:var(--text-secondary)]">
+          <p>
+            यहाँ हम करियर, नौकरी, AI, टेक और वास्तविक जीवन के अनुभव पर हिंदी में
+            बात करते हैं — खासकर उन छात्रों के लिए जो B.Tech, ग्रेजुएशन या नई
+            नौकरी की तैयारी कर रहे हैं।
+          </p>
+          <p>
+            कोई शॉर्टकट नहीं, कोई झूठी कहानी नहीं। सिर्फ लंबी यात्रा, सीखने की
+            प्रक्रिया, गलतियाँ, सफलता और वो सबक जो भारत में करियर बनाते समय
+            काम आते हैं।
+          </p>
+          <p>
+            चाहे AI सीखना हो, पहली नौकरी की तैयारी हो, या विदेश/भारत में आगे
+            बढ़ने की योजना — यहाँ मिलेंगे सच्चे अनुभव, सुझाव और प्रेरणा।
+          </p>
+        </div>
+        <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/blog"
             className="inline-flex items-center rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] hover:-translate-y-0.5"
           >
             Blogs
           </Link>
+          <Link
+            href="#query"
+            className="inline-flex items-center rounded-full border border-[color:var(--border)] bg-white px-6 py-3 text-sm font-semibold text-[color:var(--text-primary)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
+          >
+            प्रश्न पूछें
+          </Link>
         </div>
+      </section>
+
+      <section id="blogs" className="space-y-6">
+        <SectionHeading
+          eyebrow="ब्लॉग"
+          title="सभी लेख — करियर, AI, टेक और अन्य विषय"
+          description="पहले से मौजूद सभी ब्लॉग यहाँ हैं। नए लेख समय-समय पर जोड़े जाते हैं।"
+        />
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {latestPosts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
+        </div>
+        {posts.length > latestPosts.length ? (
+          <div className="flex justify-center">
+            <Link
+              href="/blog"
+              className="inline-flex items-center rounded-full border border-[color:var(--border)] bg-white px-6 py-3 text-sm font-semibold text-[color:var(--text-primary)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
+            >
+              सभी {posts.length} ब्लॉग देखें →
+            </Link>
+          </div>
+        ) : null}
       </section>
 
       <section
-        id="chalisa"
-        className="rounded-[32px] border border-[color:var(--border)] bg-[linear-gradient(180deg,rgba(234,88,12,0.08),rgba(255,255,255,1))] px-5 py-6 sm:px-8"
+        id="query"
+        className="rounded-[32px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8"
       >
         <SectionHeading
-          eyebrow="चालीसा पाठ"
-          title="हनुमान चालीसा — संपूर्ण हिंदी पाठ"
-          description="मंगलवार और शनिवार के लिए भक्तों की सबसे अधिक खोजी जाने वाली सामग्री।"
+          eyebrow="प्रश्न पूछें"
+          title="करियर, AI या पढ़ाई से जुड़ा कोई सवाल?"
+          description="नीचे फॉर्म भरें — आपका संदेश सीधे हमारी टीम के ईमेल पर पहुँचेगा।"
         />
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {chalisaPosts.map((post) => (
-            <PostCard key={post.slug} post={post} compact />
-          ))}
-        </div>
-      </section>
-
-      <section className="rounded-[32px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8">
-        <SectionHeading
-          eyebrow="व्हाट्सऐप साझा"
-          title="परिवार और मंदिर समूह में पाठ साझा करें"
-          description="हनुमान चालीसा पेज पर व्हाट्सऐप साझा बटन है — जल्दी पहुँचाएँ।"
-        />
-        <div className="mt-4 flex flex-wrap gap-3">
-          {siteConfig.categories.map((category) => (
-            <Link
-              key={category.name}
-              href={category.href}
-              className="rounded-full bg-[color:var(--surface-muted)] px-4 py-2 text-sm font-medium text-[color:var(--text-secondary)] hover:text-[color:var(--accent)]"
-            >
-              {category.name}
-            </Link>
-          ))}
+        {sent === "1" ? (
+          <p className="mt-4 rounded-2xl bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
+            धन्यवाद! आपका प्रश्न भेज दिया गया है। हम जल्द जवाब देंगे।
+          </p>
+        ) : null}
+        <div className="mt-6 max-w-2xl">
+          <QueryForm actionEmail={siteConfig.queryEmail} siteUrl={siteConfig.url} />
         </div>
       </section>
     </div>

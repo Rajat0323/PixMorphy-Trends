@@ -3,19 +3,18 @@ import { BlogSearch } from "@/components/blog-search";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
-import { publicPosts, siteConfig } from "@/data/content";
+import { posts, siteConfig } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "भक्ति लेख — आरती, चालीसा और व्रत",
+  title: "ब्लॉग — करियर, AI, टेक और हिंदी लेख",
   description:
-    "पिक्समॉर्फी भक्ति के सभी हिंदी लेख — आरती, चालीसा, व्रत कथा और त्योहार पूजा विधि एक खोज योग्य संग्रह में।",
+    "PixMorphy के सभी हिंदी ब्लॉग — करियर मार्गदर्शन, AI, टेक, क्रिकेट, भक्ति और अन्य विषय एक खोज योग्य संग्रह में।",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "पिक्समॉर्फी भक्ति लेख",
-    description:
-      "हिंदी में आरती, चालीसा, व्रत कथा और त्योहार पूजा विधि — सभी भक्ति लेख।",
+    title: "PixMorphy ब्लॉग",
+    description: siteConfig.description,
     url: `${siteConfig.url}/blog`,
     type: "website",
   },
@@ -34,22 +33,22 @@ export default async function BlogIndexPage({ searchParams }: PageProps) {
         <Breadcrumbs
           items={[
             { label: "मुख्य पृष्ठ", href: "/" },
-            { label: "भक्ति लेख" },
+            { label: "ब्लॉग" },
           ]}
         />
         <SectionHeading
           as="h1"
-          eyebrow="भक्ति संग्रह"
-          title="सभी आरती, चालीसा और व्रत पाठ एक जगह"
-          description="शीर्षक, देवता या कीवर्ड से खोजें — हर लेख में संपूर्ण हिंदी पाठ, अक्सर पूछे जाने वाले प्रश्न और साझा विकल्प।"
+          eyebrow="ब्लॉग संग्रह"
+          title="सभी हिंदी ब्लॉग एक जगह"
+          description="शीर्षक या विषय से खोजें — करियर, AI, टेक, क्रिकेट, भक्ति और अन्य सभी लेख।"
         />
-        <BlogSearch posts={publicPosts} initialQuery={q ?? ""} />
+        <BlogSearch posts={posts} initialQuery={q ?? ""} />
         <section className="space-y-6">
           <h2 className="text-xl font-semibold text-[color:var(--text-primary)]">
-            सभी भक्ति लेख
+            सभी ब्लॉग ({posts.length})
           </h2>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {publicPosts.map((post) => (
+            {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}
           </div>

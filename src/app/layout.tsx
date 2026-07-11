@@ -21,8 +21,8 @@ const bodyFont = Noto_Sans_Devanagari({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "पिक्समॉर्फी भक्ति — हिंदी आरती, चालीसा और त्योहार",
-    template: "%s | पिक्समॉर्फी",
+    default: siteConfig.homepageTitle,
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     shortcut: ["/favicon.ico"],
   },
   openGraph: {
-    title: "पिक्समॉर्फी",
+    title: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "पिक्समॉर्फी",
+    title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/icon?size=512`],
   },
