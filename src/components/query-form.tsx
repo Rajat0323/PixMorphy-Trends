@@ -1,75 +1,71 @@
 "use client";
 
 import { useState } from "react";
+import { siteConfig } from "@/data/content";
 import { useLocale } from "@/lib/i18n/locale-provider";
 
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
 const FORMSUBMIT_ID =
   process.env.NEXT_PUBLIC_FORMSUBMIT_ID ?? "c11b349aff2b9c98ec77c0e4f38859f7";
 
-type FormSubmitResponse = {
-  success?: string | boolean;
+type QueryFormProps = {
+  redirectUrl?: string;
+};
+
+type Web3FormsResponse = {
+  success?: boolean;
   message?: string;
 };
 
-function isFormSubmitSuccess(data: FormSubmitResponse) {
-  return data.success === true || data.success === "true";
-}
-
-export function QueryForm() {
+export function QueryForm({ redirectUrl }: QueryFormProps) {
   const { tr } = useLocale();
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  const redirect =
+    redirectUrl ?? `${siteConfig.url}/?sent=1#query`;
+
+  async function handleWeb3Submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("submitting");
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const name = String(formData.get("name") ?? "").trim();
-    const email = String(formData.get("email") ?? "").trim();
-    const message = String(formData.get("message") ?? "").trim();
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_ID}`, {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          name,
-          email,
-          message,
-          _subject: "PixMorphy — नया प्रश्न / Query",
-          _template: "table",
-          _captcha: "false",
+          access_key: WEB3FORMS_KEY,
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+          subject: "PixMorphy — नया प्रश्न / Query",
+          from_name: siteConfig.name,
+          botcheck: "",
         }),
       });
 
-      const raw = await response.text();
-      let data: FormSubmitResponse = {};
+      const data = (await response.json()) as Web3FormsResponse;
 
-      try {
-        data = JSON.parse(raw) as FormSubmitResponse;
-      } catch {
-        data = {};
-      }
-
-      if (!response.ok || !isFormSubmitSuccess(data)) {
+      if (!response.ok || !data.success) {
         setStatus("error");
         return;
       }
 
       form.reset();
       setStatus("done");
-      window.history.replaceState(null, "", "/?sent=1#query");
+      window.history.replaceState(null, "", redirect);
     } catch {
       setStatus("error");
     }
   }
 
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+  const fields = (
+    <>
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block space-y-2">
           <span className="text-sm font-medium text-[color:var(--text-primary)]">
@@ -110,6 +106,8 @@ export function QueryForm() {
         />
       </label>
 
+      <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" style={{ display: "none" }} />
+
       <button
         type="submit"
         disabled={status === "submitting"}
@@ -124,6 +122,28 @@ export function QueryForm() {
       {status === "error" ? (
         <p className="text-sm text-red-600">{tr("formError")}</p>
       ) : null}
+    </>
+  );
+
+  if (WEB3FORMS_KEY) {
+    return (
+      <form onSubmit={handleWeb3Submit} className="space-y-4">
+        {fields}
+      </form>
+    );
+  }
+
+  return (
+    <form
+      action={`https://formsubmit.co/${FORMSUBMIT_ID}`}
+      method="POST"
+      className="space-y-4"
+    >
+      <input type="hidden" name="_next" value={redirect} />
+      <input type="hidden" name="_subject" value="PixMorphy — नया प्रश्न / Query" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      {fields}
     </form>
   );
 }

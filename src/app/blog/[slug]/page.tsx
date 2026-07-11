@@ -260,7 +260,7 @@ export default async function BlogPage({ params }: PageProps) {
 
           <ShareButtons title={post.title} slug={post.slug} />
 
-          <BlogPostQuerySection />
+          <BlogPostQuerySection slug={post.slug} />
 
           <AuthorCard author={post.author} />
 

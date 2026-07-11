@@ -7,6 +7,7 @@ import { AdSlot } from "@/components/ad-slot";
 import { QueryForm } from "@/components/query-form";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
+import { siteConfig } from "@/data/content";
 import { useLocale } from "@/lib/i18n/locale-provider";
 import { getCategorySlug } from "@/lib/seo";
 
@@ -65,8 +66,9 @@ export function BlogPostFaqSection({ children }: { children: React.ReactNode }) 
   );
 }
 
-export function BlogPostQuerySection() {
+export function BlogPostQuerySection({ slug }: { slug: string }) {
   const { tr } = useLocale();
+  const redirectUrl = `${siteConfig.url}/blog/${slug}?sent=1#query`;
 
   return (
     <section
@@ -79,7 +81,7 @@ export function BlogPostQuerySection() {
         description={tr("postQueryDesc")}
       />
       <div className="mt-6 max-w-2xl">
-        <QueryForm />
+        <QueryForm redirectUrl={redirectUrl} />
       </div>
     </section>
   );
