@@ -3,6 +3,11 @@ export type Category = {
   href: string;
 };
 
+export type NavItem = {
+  id: "home" | "blog" | "query" | "contact";
+  href: string;
+};
+
 export type Faq = {
   question: string;
   answer: string;

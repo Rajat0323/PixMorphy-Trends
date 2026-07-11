@@ -1,18 +1,27 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AdSlot } from "@/components/ad-slot";
 import { AuthorCard } from "@/components/author-card";
-import { Breadcrumbs, getBlogBreadcrumbs } from "@/components/breadcrumbs";
+import {
+  BlogPostFaqSection,
+  BlogPostInternalLinks,
+  BlogPostQuerySection,
+  BlogPostRelatedSection,
+  BlogPostSidebarUi,
+  PostUpdatedLabel,
+  SponsoredAdSlot,
+} from "@/components/blog-post-ui";
 import { FaqAccordion } from "@/components/faq-accordion";
-import { QueryForm } from "@/components/query-form";
-import { PostCard } from "@/components/post-card";
-import { SectionHeading } from "@/components/section-heading";
+import {
+  getBlogBreadcrumbItems,
+} from "@/lib/breadcrumbs";
+import {
+  LocalizedBreadcrumbs,
+} from "@/components/localized-breadcrumbs";
 import { ShareButtons } from "@/components/share-buttons";
 import { getPostBySlug, getRelatedPosts, posts, siteConfig } from "@/data/content";
-import { BHAKTI_CATEGORIES, getCategoryLabel } from "@/data/bhakti";
-import { getAbsoluteImageUrl, getAbsoluteUrl, getCategorySlug } from "@/lib/seo";
+import { getCategoryLabel } from "@/data/bhakti";
+import { getAbsoluteImageUrl, getAbsoluteUrl } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -129,7 +138,7 @@ export default async function BlogPage({ params }: PageProps) {
       />
 
       <div className="mb-6">
-        <Breadcrumbs items={getBlogBreadcrumbs(post)} />
+        <LocalizedBreadcrumbs items={getBlogBreadcrumbItems(post)} />
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,760px)_320px] lg:items-start">
@@ -151,7 +160,9 @@ export default async function BlogPage({ params }: PageProps) {
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-[color:var(--text-muted)]">
                 <span className="font-medium text-[color:var(--text-primary)]">{post.author}</span>
-                <span>अद्यतन {new Date(post.updatedAt ?? post.publishedAt).toLocaleDateString("hi-IN")}</span>
+                <PostUpdatedLabel
+                  date={new Date(post.updatedAt ?? post.publishedAt).toLocaleDateString("hi-IN")}
+                />
               </div>
             </div>
             <div className={`relative min-h-[320px] bg-gradient-to-br ${post.heroAccent}`}>
@@ -217,116 +228,31 @@ export default async function BlogPage({ params }: PageProps) {
               ) : null}
               {index === 1 ? (
                 <div className="mt-6">
-                  <AdSlot label="प्रायोजित सामग्री" compact />
+                  <SponsoredAdSlot compact />
                 </div>
               ) : null}
             </section>
           ))}
 
           {post.internalLinks?.length ? (
-            <section className="rounded-[28px] border border-[color:var(--border)] bg-[linear-gradient(180deg,rgba(37,99,235,0.06),rgba(255,255,255,1))] p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
-              <h2 className="headline-font text-xl font-semibold text-[color:var(--text-primary)]">
-                संबंधित लिंक
-              </h2>
-              <div className="mt-4 flex flex-wrap gap-3">
-                {post.internalLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--text-secondary)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </section>
+            <BlogPostInternalLinks links={post.internalLinks} />
           ) : null}
 
-          <section className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
-            <SectionHeading
-              eyebrow="अक्सर पूछे जाने वाले प्रश्न"
-              title="पाठकों के सामान्य प्रश्नों के उत्तर"
-              description="इस विषय से जुड़े त्वरित प्रश्न और सरल उत्तर।"
-            />
-            <div className="mt-6">
-              <FaqAccordion items={post.faq} />
-            </div>
-          </section>
+          <BlogPostFaqSection>
+            <FaqAccordion items={post.faq} />
+          </BlogPostFaqSection>
 
           <ShareButtons title={post.title} slug={post.slug} />
 
-          <section
-            id="query"
-            className="rounded-[28px] border border-[color:var(--border)] bg-[linear-gradient(180deg,rgba(234,88,12,0.06),rgba(255,255,255,1))] p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]"
-          >
-            <SectionHeading
-              eyebrow="प्रश्न पूछें"
-              title="इस विषय पर अपना सवाल भेजें"
-              description="नीचे फॉर्म भरें — आपका संदेश सीधे हम तक पहुँचेगा। विस्तृत जवाब, blog या video के रूप में।"
-            />
-            <div className="mt-6 max-w-2xl">
-              <QueryForm />
-            </div>
-          </section>
+          <BlogPostQuerySection />
 
           <AuthorCard author={post.author} />
 
-          <section className="space-y-6">
-            <SectionHeading
-              eyebrow="संबंधित लेख"
-              title="इस विषय से जुड़े और लेख"
-              description="यदि यह लेख उपयोगी लगा, तो ये संबंधित लेख भी देखें।"
-            />
-            <div className="grid gap-6 md:grid-cols-2">
-              {relatedPosts.map((relatedPost) => (
-                <PostCard key={relatedPost.slug} post={relatedPost} compact />
-              ))}
-            </div>
-          </section>
+          <BlogPostRelatedSection relatedPosts={relatedPosts} />
         </article>
 
         <aside className="space-y-6">
-          <div className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
-            <h2 className="text-lg font-semibold text-[color:var(--text-primary)]">
-              नवीनतम लेख
-            </h2>
-            <div className="mt-5 space-y-4">
-              {posts
-                .filter((item) => item.slug !== post.slug)
-                .slice(0, 3)
-                .map((item) => (
-                  <Link
-                    key={item.slug}
-                    href={`/blog/${item.slug}`}
-                    className="block rounded-[22px] bg-[color:var(--surface-muted)] p-4 transition hover:-translate-y-0.5"
-                  >
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
-                      {getCategoryLabel(item.category)}
-                    </p>
-                    <h3 className="mt-2 text-base font-semibold leading-7 text-[color:var(--text-primary)]">
-                      {item.title}
-                    </h3>
-                  </Link>
-                ))}
-            </div>
-          </div>
-          <AdSlot label="डेस्कटॉप साइडबार विज्ञापन" />
-          <div className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
-            <h2 className="text-lg font-semibold text-[color:var(--text-primary)]">
-              श्रेणियाँ
-            </h2>
-            <div className="mt-4 flex flex-wrap gap-3">
-              {BHAKTI_CATEGORIES.map((item) => (
-                <Link
-                  key={item}
-                  href={`/category/${getCategorySlug(item)}`}
-                  className="rounded-full bg-[color:var(--surface-muted)] px-4 py-2 text-sm font-medium text-[color:var(--text-secondary)]"
-                >
-                  {getCategoryLabel(item)}
-                </Link>
-              ))}
-            </div>
-          </div>
+          <BlogPostSidebarUi currentSlug={post.slug} posts={posts} />
         </aside>
       </div>
     </div>

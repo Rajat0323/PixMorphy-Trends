@@ -2,6 +2,15 @@ import { NextResponse } from "next/server";
 
 const QUERY_INBOX = "vivgup64@gmail.com";
 
+type FormSubmitResponse = {
+  success?: string | boolean;
+  message?: string;
+};
+
+function isFormSubmitSuccess(data: FormSubmitResponse) {
+  return data.success === true || data.success === "true";
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -25,11 +34,17 @@ export async function POST(request: Request) {
         message,
         _subject: "PixMorphy — नया प्रश्न / Query",
         _template: "table",
+        _captcha: "false",
       }),
     });
 
-    if (!response.ok) {
-      return NextResponse.json({ error: "भेजने में समस्या हुई" }, { status: 502 });
+    const data = (await response.json()) as FormSubmitResponse;
+
+    if (!response.ok || !isFormSubmitSuccess(data)) {
+      return NextResponse.json(
+        { error: data.message ?? "भेजने में समस्या हुई" },
+        { status: 502 },
+      );
     }
 
     return NextResponse.json({ ok: true });

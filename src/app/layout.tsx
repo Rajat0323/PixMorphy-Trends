@@ -5,6 +5,7 @@ import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig } from "@/data/content";
+import { LocaleProvider } from "@/lib/i18n/locale-provider";
 
 const headingFont = Poppins({
   variable: "--font-heading",
@@ -109,9 +110,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <div className="site-shell">
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
+          <LocaleProvider>
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+          </LocaleProvider>
         </div>
       </body>
     </html>

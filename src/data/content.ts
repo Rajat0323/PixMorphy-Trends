@@ -2,7 +2,7 @@ import { bhaktiPosts } from "./bhakti-posts";
 import { careerPosts } from "./career-posts";
 import { isBhaktiCategory } from "./bhakti";
 import { discoverPosts } from "./discover-posts";
-import type { Category, Post } from "./types";
+import type { Category, NavItem, Post } from "./types";
 
 export type { Category, Faq, Post } from "./types";
 export {
@@ -41,11 +41,11 @@ export const siteConfig = {
     "https://www.instagram.com/pixmorphy",
   ],
   nav: [
-    { name: "मुख्य पृष्ठ", href: "/" },
-    { name: "ब्लॉग", href: "/blog" },
-    { name: "प्रश्न पूछें", href: "/#query" },
-    { name: "संपर्क", href: "/contact" },
-  ] satisfies Category[],
+    { id: "home", href: "/" },
+    { id: "blog", href: "/blog" },
+    { id: "query", href: "/#query" },
+    { id: "contact", href: "/contact" },
+  ] satisfies NavItem[],
   categories: [
     { name: "ब्लॉग", href: "/blog" },
     { name: "करियर", href: "/blog/btech-fresher-ai-career-strategy-2025-2026-hindi" },

@@ -3,9 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/data/content";
+import { getNavLabel } from "@/lib/i18n/translations";
+import { useLocale } from "@/lib/i18n/locale-provider";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const { locale, tr } = useLocale();
 
   return (
     <div className="lg:hidden">
@@ -16,7 +19,7 @@ export function MobileNav() {
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
       >
-        मेनू
+        {tr("navMenu")}
       </button>
       {open ? (
         <nav
@@ -26,12 +29,12 @@ export function MobileNav() {
           <div className="flex flex-col gap-2">
             {siteConfig.nav.map((item) => (
               <Link
-                key={item.name}
+                key={item.id}
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className="rounded-2xl px-4 py-3 text-sm font-medium text-[color:var(--text-secondary)] hover:bg-[color:var(--surface-muted)]"
               >
-                {item.name}
+                {getNavLabel(locale, item.id)}
               </Link>
             ))}
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { getAbsoluteUrl } from "@/lib/seo";
+import { useLocale } from "@/lib/i18n/locale-provider";
 
 type ShareButtonsProps = {
   title: string;
@@ -8,6 +9,7 @@ type ShareButtonsProps = {
 };
 
 export function ShareButtons({ title, slug }: ShareButtonsProps) {
+  const { tr } = useLocale();
   const shareUrl = getAbsoluteUrl(`/blog/${slug}`);
   const encodedTitle = encodeURIComponent(title);
   const encodedUrl = encodeURIComponent(shareUrl);
@@ -15,19 +17,19 @@ export function ShareButtons({ title, slug }: ShareButtonsProps) {
 
   const items = [
     {
-      label: "व्हाट्सऐप",
+      label: tr("shareWhatsapp"),
       href: `https://wa.me/?text=${encodedText}`,
     },
     {
-      label: "फ़ेसबुक",
+      label: tr("shareFacebook"),
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     },
     {
-      label: "टेलीग्राम",
+      label: tr("shareTelegram"),
       href: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
     },
     {
-      label: "एक्स",
+      label: tr("shareX"),
       href: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
     },
   ];

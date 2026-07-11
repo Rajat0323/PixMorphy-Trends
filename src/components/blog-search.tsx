@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Post } from "@/data/content";
 import { getCategoryLabel } from "@/data/bhakti";
+import { useLocale } from "@/lib/i18n/locale-provider";
 
 type BlogSearchProps = {
   posts: Post[];
@@ -12,6 +13,7 @@ type BlogSearchProps = {
 
 export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
   const [query, setQuery] = useState(initialQuery);
+  const { tr } = useLocale();
 
   const filteredPosts = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -38,18 +40,18 @@ export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
   return (
     <div className="space-y-6">
       <label className="block">
-        <span className="sr-only">लेख खोजें</span>
+        <span className="sr-only">{tr("navSearch")}</span>
         <input
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="शीर्षक, विषय, श्रेणी या कीवर्ड से खोजें..."
+          placeholder={tr("blogSearchPlaceholder")}
           className="w-full rounded-[24px] border border-[color:var(--border)] bg-white px-5 py-4 text-sm text-[color:var(--text-primary)] shadow-sm outline-none transition focus:border-[color:var(--accent)]"
         />
       </label>
 
       <p className="text-sm text-[color:var(--text-muted)]">
-        {filteredPosts.length} लेख मिले
+        {tr("blogSearchResults", { count: filteredPosts.length })}
       </p>
 
       <div className="grid gap-4">

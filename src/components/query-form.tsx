@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale } from "@/lib/i18n/locale-provider";
 
 export function QueryForm() {
+  const { tr } = useLocale();
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -23,7 +25,9 @@ export function QueryForm() {
         }),
       });
 
-      if (!response.ok) {
+      const data = (await response.json()) as { ok?: boolean };
+
+      if (!response.ok || !data.ok) {
         setStatus("error");
         return;
       }
@@ -40,22 +44,26 @@ export function QueryForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block space-y-2">
-          <span className="text-sm font-medium text-[color:var(--text-primary)]">आपका नाम</span>
+          <span className="text-sm font-medium text-[color:var(--text-primary)]">
+            {tr("formName")}
+          </span>
           <input
             type="text"
             name="name"
             required
-            placeholder="अपना नाम लिखें"
+            placeholder={tr("formNamePlaceholder")}
             className="w-full rounded-2xl border border-[color:var(--border)] bg-white px-4 py-3 text-sm text-[color:var(--text-primary)] outline-none transition focus:border-[color:var(--accent)]"
           />
         </label>
         <label className="block space-y-2">
-          <span className="text-sm font-medium text-[color:var(--text-primary)]">ईमेल</span>
+          <span className="text-sm font-medium text-[color:var(--text-primary)]">
+            {tr("formEmail")}
+          </span>
           <input
             type="email"
             name="email"
             required
-            placeholder="you@email.com"
+            placeholder={tr("formEmailPlaceholder")}
             className="w-full rounded-2xl border border-[color:var(--border)] bg-white px-4 py-3 text-sm text-[color:var(--text-primary)] outline-none transition focus:border-[color:var(--accent)]"
           />
         </label>
@@ -63,13 +71,13 @@ export function QueryForm() {
 
       <label className="block space-y-2">
         <span className="text-sm font-medium text-[color:var(--text-primary)]">
-          आपका प्रश्न / संदेश
+          {tr("formMessage")}
         </span>
         <textarea
           name="message"
           required
           rows={5}
-          placeholder="करियर, नौकरी, AI, पढ़ाई या किसी भी विषय पर अपना सवाल यहाँ लिखें..."
+          placeholder={tr("formMessagePlaceholder")}
           className="w-full rounded-2xl border border-[color:var(--border)] bg-white px-4 py-3 text-sm leading-7 text-[color:var(--text-primary)] outline-none transition focus:border-[color:var(--accent)]"
         />
       </label>
@@ -79,16 +87,14 @@ export function QueryForm() {
         disabled={status === "submitting"}
         className="inline-flex items-center rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] disabled:opacity-70"
       >
-        {status === "submitting" ? "भेजा जा रहा है..." : "प्रश्न भेजें"}
+        {status === "submitting" ? tr("formSubmitting") : tr("formSubmit")}
       </button>
 
       {status === "done" ? (
-        <p className="text-sm text-emerald-700">धन्यवाद! आपका संदेश भेज दिया गया है।</p>
+        <p className="text-sm text-emerald-700">{tr("formSuccess")}</p>
       ) : null}
       {status === "error" ? (
-        <p className="text-sm text-red-600">
-          कुछ गलत हो गया। कृपया दोबारा कोशिश करें या संपर्क पृष्ठ से ईमेल करें।
-        </p>
+        <p className="text-sm text-red-600">{tr("formError")}</p>
       ) : null}
     </form>
   );
