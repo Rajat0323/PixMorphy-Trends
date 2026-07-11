@@ -125,7 +125,7 @@ export default async function Home({ searchParams }: PageProps) {
         <SectionHeading
           eyebrow="प्रश्न पूछें"
           title="करियर, AI या पढ़ाई से जुड़ा कोई सवाल?"
-          description="नीचे फॉर्म भरें — आपका संदेश सीधे हमारी टीम के ईमेल पर पहुँचेगा।"
+          description="नीचे फॉर्म भरें — आपका संदेश सीधे हम तक पहुँचेगा।"
         />
         {sent === "1" ? (
           <p className="mt-4 rounded-2xl bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
@@ -133,7 +133,7 @@ export default async function Home({ searchParams }: PageProps) {
           </p>
         ) : null}
         <div className="mt-6 max-w-2xl">
-          <QueryForm actionEmail={siteConfig.queryEmail} siteUrl={siteConfig.url} />
+          <QueryForm />
         </div>
       </section>
     </div>

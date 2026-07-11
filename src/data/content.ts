@@ -31,9 +31,8 @@ export const siteConfig = {
     "भारतीय छात्र करियर",
     "AI सीखें हिंदी",
   ],
-  contactEmail: "hello@pixmorphy.in",
-  queryEmail: process.env.NEXT_PUBLIC_QUERY_EMAIL || "group64@gmail.com",
-  partnershipsEmail: "partnerships@pixmorphy.in",
+  contactEmail: "vivgup64@gmail.com",
+  partnershipsEmail: "vivgup64@gmail.com",
   socialLinks: [
     "https://github.com/Rajat0323/PixMorphy-Trends",
     "https://x.com/pixmorphy",

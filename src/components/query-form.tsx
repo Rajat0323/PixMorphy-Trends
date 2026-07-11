@@ -2,26 +2,42 @@
 
 import { useState } from "react";
 
-type QueryFormProps = {
-  actionEmail: string;
-  siteUrl: string;
-};
+export function QueryForm() {
+  const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
 
-export function QueryForm({ actionEmail, siteUrl }: QueryFormProps) {
-  const [status, setStatus] = useState<"idle" | "submitting" | "done">("idle");
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("submitting");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/query", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (!response.ok) {
+        setStatus("error");
+        return;
+      }
+
+      form.reset();
+      setStatus("done");
+      window.history.replaceState(null, "", "/?sent=1#query");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
-    <form
-      action={`https://formsubmit.co/${actionEmail}`}
-      method="POST"
-      className="space-y-4"
-      onSubmit={() => setStatus("submitting")}
-    >
-      <input type="hidden" name="_subject" value="PixMorphy — नया प्रश्न / Query" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_next" value={`${siteUrl}/?sent=1#query`} />
-
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block space-y-2">
           <span className="text-sm font-medium text-[color:var(--text-primary)]">आपका नाम</span>
@@ -68,6 +84,11 @@ export function QueryForm({ actionEmail, siteUrl }: QueryFormProps) {
 
       {status === "done" ? (
         <p className="text-sm text-emerald-700">धन्यवाद! आपका संदेश भेज दिया गया है।</p>
+      ) : null}
+      {status === "error" ? (
+        <p className="text-sm text-red-600">
+          कुछ गलत हो गया। कृपया दोबारा कोशिश करें या संपर्क पृष्ठ से ईमेल करें।
+        </p>
       ) : null}
     </form>
   );
