@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { useLocale } from "@/lib/i18n/locale-provider";
 
-const QUERY_INBOX = "vivgup64@gmail.com";
+const FORMSUBMIT_ID =
+  process.env.NEXT_PUBLIC_FORMSUBMIT_ID ?? "c11b349aff2b9c98ec77c0e4f38859f7";
 
 type FormSubmitResponse = {
   success?: string | boolean;
@@ -29,7 +30,7 @@ export function QueryForm() {
     const message = String(formData.get("message") ?? "").trim();
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${QUERY_INBOX}`, {
+      const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_ID}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

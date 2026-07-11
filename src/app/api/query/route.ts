@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-const QUERY_INBOX = "vivgup64@gmail.com";
+const FORMSUBMIT_ID =
+  process.env.NEXT_PUBLIC_FORMSUBMIT_ID ?? "c11b349aff2b9c98ec77c0e4f38859f7";
 
 type FormSubmitResponse = {
   success?: string | boolean;
@@ -22,7 +23,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "सभी फ़ील्ड भरें" }, { status: 400 });
     }
 
-    const response = await fetch(`https://formsubmit.co/ajax/${QUERY_INBOX}`, {
+    const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_ID}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

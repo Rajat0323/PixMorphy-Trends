@@ -3,6 +3,7 @@
   "installCommand": "npm install",
   "framework": "nextjs",
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://www.pixmorphy.in"
+    "NEXT_PUBLIC_SITE_URL": "https://www.pixmorphy.in",
+    "NEXT_PUBLIC_FORMSUBMIT_ID": "c11b349aff2b9c98ec77c0e4f38859f7"
   }
 }
