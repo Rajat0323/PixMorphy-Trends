@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/ad-slot";
 import { AuthorCard } from "@/components/author-card";
 import { Breadcrumbs, getBlogBreadcrumbs } from "@/components/breadcrumbs";
 import { FaqAccordion } from "@/components/faq-accordion";
+import { QueryForm } from "@/components/query-form";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
 import { ShareButtons } from "@/components/share-buttons";
@@ -222,6 +223,25 @@ export default async function BlogPage({ params }: PageProps) {
             </section>
           ))}
 
+          {post.internalLinks?.length ? (
+            <section className="rounded-[28px] border border-[color:var(--border)] bg-[linear-gradient(180deg,rgba(37,99,235,0.06),rgba(255,255,255,1))] p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
+              <h2 className="headline-font text-xl font-semibold text-[color:var(--text-primary)]">
+                संबंधित लिंक
+              </h2>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {post.internalLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--text-secondary)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
           <section className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
             <SectionHeading
               eyebrow="अक्सर पूछे जाने वाले प्रश्न"
@@ -234,6 +254,20 @@ export default async function BlogPage({ params }: PageProps) {
           </section>
 
           <ShareButtons title={post.title} slug={post.slug} />
+
+          <section
+            id="query"
+            className="rounded-[28px] border border-[color:var(--border)] bg-[linear-gradient(180deg,rgba(234,88,12,0.06),rgba(255,255,255,1))] p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]"
+          >
+            <SectionHeading
+              eyebrow="प्रश्न पूछें"
+              title="इस विषय पर अपना सवाल भेजें"
+              description="नीचे फॉर्म भरें — आपका संदेश सीधे हम तक पहुँचेगा। विस्तृत जवाब, blog या video के रूप में।"
+            />
+            <div className="mt-6 max-w-2xl">
+              <QueryForm />
+            </div>
+          </section>
 
           <AuthorCard author={post.author} />
 

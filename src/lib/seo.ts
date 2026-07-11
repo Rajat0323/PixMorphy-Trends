@@ -18,6 +18,7 @@ export const categorySlugMap: Record<string, string> = {
   Chalisa: "chalisa",
   Festivals: "festivals",
   "Vrat & Katha": "vrat-katha",
+  Career: "career",
   Trending: "trending",
   "Tech Update": "tech-update",
   "AI Tools": "ai-tools",

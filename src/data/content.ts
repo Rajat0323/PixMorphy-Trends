@@ -1,4 +1,5 @@
 import { bhaktiPosts } from "./bhakti-posts";
+import { careerPosts } from "./career-posts";
 import { isBhaktiCategory } from "./bhakti";
 import { discoverPosts } from "./discover-posts";
 import type { Category, Post } from "./types";
@@ -11,6 +12,7 @@ export {
   getCategoryLabel,
 } from "./bhakti";
 export { bhaktiPosts } from "./bhakti-posts";
+export { careerPosts } from "./career-posts";
 
 export const siteConfig = {
   name: "PixMorphy",
@@ -46,13 +48,14 @@ export const siteConfig = {
   ] satisfies Category[],
   categories: [
     { name: "ब्लॉग", href: "/blog" },
-    { name: "करियर", href: "/blog" },
+    { name: "करियर", href: "/blog/btech-fresher-ai-career-strategy-2025-2026-hindi" },
     { name: "AI और टेक", href: "/category/ai-tools" },
     { name: "चालीसा", href: "/category/chalisa" },
   ] satisfies Category[],
 };
 
 export const posts: Post[] = [
+  ...careerPosts,
   ...bhaktiPosts,
   {
     slug: "hanuman-chalisa-in-hindi-sampoorna-path",
@@ -2877,6 +2880,10 @@ export const featuredPosts = [...publicPosts]
   .slice(0, 3);
 
 export const authors = {
+  PixMorphy: {
+    role: "करियर और AI मार्गदर्शक",
+    bio: "भारतीय B.Tech और graduation छात्रों के लिए करियर, AI, नौकरी और वास्तविक अनुभव पर हिंदी में practical guides।",
+  },
   "Rajat Gupta": {
     role: "भक्ति सामग्री लेखक",
     bio: "राजत हिंदी में हनुमान चालीसा और भक्ति सामग्री लिखते हैं — साफ़ देवनागरी पाठ, सरल अर्थ और सच्ची जानकारी।",
