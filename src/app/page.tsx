@@ -78,6 +78,14 @@ export default function Home() {
       <section className="space-y-6 pt-4">
         <HomepageHero />
         <CategoryRail />
+        <div className="flex justify-center">
+          <Link
+            href="/blog"
+            className="inline-flex items-center rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.3)] transition hover:bg-[color:var(--accent-strong)] hover:-translate-y-0.5"
+          >
+            Blogs
+          </Link>
+        </div>
       </section>
 
       <section
