@@ -64,6 +64,9 @@ const translations = {
     formSuccess: "धन्यवाद! आपका संदेश भेज दिया गया है।",
     formError:
       "कुछ गलत हो गया। कृपया दोबारा कोशिश करें या संपर्क पृष्ठ से ईमेल करें।",
+    formMailtoHint:
+      "आपका ईमेल ऐप खुल गया होगा — वहाँ से Send दबाएँ, संदेश सीधे हम तक पहुँचेगा।",
+    formDirectEmail: "या सीधे ईमेल करें:",
     blogHome: "मुख्य पृष्ठ",
     blogTitle: "ब्लॉग",
     blogEyebrow: "ब्लॉग संग्रह",
@@ -163,6 +166,9 @@ const translations = {
     formSubmitting: "Sending...",
     formSuccess: "Thank you! Your message has been sent.",
     formError: "Something went wrong. Please try again or email via Contact page.",
+    formMailtoHint:
+      "Your email app should open — tap Send and your message will reach us directly.",
+    formDirectEmail: "Or email directly:",
     blogHome: "Home",
     blogTitle: "Blog",
     blogEyebrow: "Blog Archive",

@@ -1,71 +1,71 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { siteConfig } from "@/data/content";
+import { buildMailtoLink } from "@/lib/query-mailto";
 import { useLocale } from "@/lib/i18n/locale-provider";
-
-const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
-const FORMSUBMIT_ID =
-  process.env.NEXT_PUBLIC_FORMSUBMIT_ID ?? "c11b349aff2b9c98ec77c0e4f38859f7";
 
 type QueryFormProps = {
   redirectUrl?: string;
 };
 
-type Web3FormsResponse = {
-  success?: boolean;
-  message?: string;
+type ApiResponse = {
+  ok?: boolean;
+  useMailto?: boolean;
+  mailto?: string;
+  error?: string;
 };
 
 export function QueryForm({ redirectUrl }: QueryFormProps) {
   const { tr } = useLocale();
-  const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error" | "mailto">("idle");
 
-  const redirect =
-    redirectUrl ?? `${siteConfig.url}/?sent=1#query`;
+  const redirect = redirectUrl ?? `${siteConfig.url}/?sent=1#query`;
 
-  async function handleWeb3Submit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("submitting");
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const payload = { name, email, message };
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/query", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          name: formData.get("name"),
-          email: formData.get("email"),
-          message: formData.get("message"),
-          subject: "PixMorphy — नया प्रश्न / Query",
-          from_name: siteConfig.name,
-          botcheck: "",
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
-      const data = (await response.json()) as Web3FormsResponse;
+      const data = (await response.json()) as ApiResponse;
 
-      if (!response.ok || !data.success) {
-        setStatus("error");
+      if (data.ok) {
+        form.reset();
+        setStatus("done");
+        window.history.replaceState(null, "", redirect);
         return;
       }
 
-      form.reset();
-      setStatus("done");
-      window.history.replaceState(null, "", redirect);
-    } catch {
+      if (data.useMailto) {
+        const mailto = data.mailto ?? buildMailtoLink(payload);
+        window.location.href = mailto;
+        setStatus("mailto");
+        return;
+      }
+
       setStatus("error");
+    } catch {
+      window.location.href = buildMailtoLink(payload);
+      setStatus("mailto");
     }
   }
 
-  const fields = (
-    <>
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block space-y-2">
           <span className="text-sm font-medium text-[color:var(--text-primary)]">
@@ -106,8 +106,6 @@ export function QueryForm({ redirectUrl }: QueryFormProps) {
         />
       </label>
 
-      <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" style={{ display: "none" }} />
-
       <button
         type="submit"
         disabled={status === "submitting"}
@@ -119,31 +117,22 @@ export function QueryForm({ redirectUrl }: QueryFormProps) {
       {status === "done" ? (
         <p className="text-sm text-emerald-700">{tr("formSuccess")}</p>
       ) : null}
+      {status === "mailto" ? (
+        <p className="text-sm text-emerald-700">{tr("formMailtoHint")}</p>
+      ) : null}
       {status === "error" ? (
         <p className="text-sm text-red-600">{tr("formError")}</p>
       ) : null}
-    </>
-  );
 
-  if (WEB3FORMS_KEY) {
-    return (
-      <form onSubmit={handleWeb3Submit} className="space-y-4">
-        {fields}
-      </form>
-    );
-  }
-
-  return (
-    <form
-      action={`https://formsubmit.co/${FORMSUBMIT_ID}`}
-      method="POST"
-      className="space-y-4"
-    >
-      <input type="hidden" name="_next" value={redirect} />
-      <input type="hidden" name="_subject" value="PixMorphy — नया प्रश्न / Query" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      {fields}
+      <p className="text-sm text-[color:var(--text-muted)]">
+        {tr("formDirectEmail")}{" "}
+        <Link
+          href={`mailto:${siteConfig.contactEmail}`}
+          className="font-medium text-[color:var(--accent)] hover:underline"
+        >
+          {siteConfig.contactEmail}
+        </Link>
+      </p>
     </form>
   );
 }
