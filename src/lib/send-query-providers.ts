@@ -11,11 +11,13 @@ export async function sendTelegramQuery({ name, email, message }: QueryPayload) 
   const text = [
     "📩 PixMorphy — New Query",
     "",
-    `Name: ${name}`,
-    `Email: ${email}`,
+    `👤 Name: ${name}`,
+    `📧 Reply to: ${email}`,
     "",
-    "Message:",
+    "💬 Message:",
     message,
+    "",
+    "↩️ User se contact karne ke liye upar wale email par reply karein.",
   ].join("\n");
 
   const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
