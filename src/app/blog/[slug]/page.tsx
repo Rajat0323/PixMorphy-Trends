@@ -81,13 +81,28 @@ export default async function BlogPage({ params }: PageProps) {
   }
 
   const relatedPosts = getRelatedPosts(post.relatedSlugs);
-  const sectionImageChunks = post.galleryImages?.length
+  const sectionImageSrcs = new Set(
+    post.sections.map((section) => section.image?.src).filter(Boolean),
+  );
+  const galleryImagesForSections =
+    post.galleryImages?.filter((image) => !sectionImageSrcs.has(image.src)) ?? [];
+  const sectionImageChunks = galleryImagesForSections.length
     ? (() => {
-        const sectionCount = Math.max(post.sections.length, 1);
-        const chunkSize = Math.ceil(post.galleryImages.length / sectionCount);
-        return post.sections.map((_, index) =>
-          post.galleryImages?.slice(index * chunkSize, (index + 1) * chunkSize) ?? [],
-        );
+        const sectionsWithoutImage = post.sections.filter((section) => !section.image);
+        const sectionCount = Math.max(sectionsWithoutImage.length, 1);
+        const chunkSize = Math.ceil(galleryImagesForSections.length / sectionCount);
+        let galleryIndex = 0;
+        return post.sections.map((section) => {
+          if (section.image) {
+            return [];
+          }
+          const chunk = galleryImagesForSections.slice(
+            galleryIndex * chunkSize,
+            (galleryIndex + 1) * chunkSize,
+          );
+          galleryIndex += 1;
+          return chunk;
+        });
       })()
     : [];
   const coverUrl = getBlogCoverUrl(post);
@@ -219,7 +234,22 @@ export default async function BlogPage({ params }: PageProps) {
                   ))}
                 </ul>
               ) : null}
-              {sectionImageChunks[index]?.length ? (
+              {section.image ? (
+                <figure className="mt-6 overflow-hidden rounded-[24px] border border-[color:var(--border)] bg-[color:var(--surface-muted)]">
+                  <div className="relative aspect-[16/10]">
+                    <BlogImage
+                      src={section.image.src}
+                      alt={section.image.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 720px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="px-4 py-3 text-sm text-[color:var(--text-muted)]">
+                    {section.image.alt}
+                  </figcaption>
+                </figure>
+              ) : sectionImageChunks[index]?.length ? (
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   {sectionImageChunks[index].map((image) => (
                     <div
