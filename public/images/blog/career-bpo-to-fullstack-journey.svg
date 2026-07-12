@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="BPO se developer journey">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e7490"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="url(#g)"/>
+  <text x="60" y="90" fill="#67e8f9" font-family="Arial,sans-serif" font-size="22" font-weight="700">REAL STORY</text>
+  <text x="60" y="150" fill="#fff" font-family="Arial,sans-serif" font-size="34" font-weight="700">BPO ’ Coding ’ Full Stack Developer</text>
+  <line x1="100" y1="320" x2="860" y2="320" stroke="#ffffff" stroke-opacity="0.35" stroke-width="4"/>
+  <circle cx="160" cy="320" r="36" fill="#fff"/>
+  <text x="145" y="330" font-family="Arial,sans-serif" font-size="20" font-weight="700">Y1</text>
+  <circle cx="400" cy="320" r="36" fill="#fff"/>
+  <text x="378" y="330" font-family="Arial,sans-serif" font-size="20" font-weight="700">Y5</text>
+  <circle cx="640" cy="320" r="36" fill="#fff"/>
+  <text x="618" y="330" font-family="Arial,sans-serif" font-size="20" font-weight="700">Y10</text>
+  <circle cx="820" cy="320" r="44" fill="#22d3ee"/>
+  <text x="804" y="330" fill="#0f172a" font-family="Arial,sans-serif" font-size="18" font-weight="700">Dev</text>
+  <text x="60" y="430" fill="#cffafe" font-family="Arial,sans-serif" font-size="22">Shuruaat aaj decide nahi karti  mehnat + learning decide karti hai</text>
+</svg>

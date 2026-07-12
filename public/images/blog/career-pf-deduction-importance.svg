@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="PF deduction experience proof">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="url(#g)"/>
+  <text x="60" y="90" fill="#fed7aa" font-family="Arial,sans-serif" font-size="22" font-weight="700">IMPORTANT</text>
+  <text x="60" y="150" fill="#fff" font-family="Arial,sans-serif" font-size="38" font-weight="700">PF Deduction = Experience Proof</text>
+  <text x="60" y="210" fill="#ffedd5" font-family="Arial,sans-serif" font-size="24">2G interview .G industrial experience &?>(G > base</text>
+  <rect x="60" y="260" width="840" height="200" rx="24" fill="#ffffff" fill-opacity="0.14"/>
+  <text x="100" y="330" fill="#fff" font-family="Arial,sans-serif" font-size="28"> UAN / PF linked job</text>
+  <text x="100" y="380" fill="#fff" font-family="Arial,sans-serif" font-size="28"> Gap kam, resume strong</text>
+  <text x="100" y="430" fill="#fff" font-family="Arial,sans-serif" font-size="28"> Side-by-side skills continue</text>
+</svg>

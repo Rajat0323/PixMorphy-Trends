@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Sarkari exam loop decision">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="url(#g)"/>
+  <text x="60" y="90" fill="#93c5fd" font-family="Arial,sans-serif" font-size="22" font-weight="700">STEP 1</text>
+  <text x="60" y="150" fill="#fff" font-family="Arial,sans-serif" font-size="38" font-weight="700">&K (>5K .G *H0 .$ 0K</text>
+  <text x="60" y="210" fill="#dbeafe" font-family="Arial,sans-serif" font-size="24">UPSC " Railway " State exams  90 2 .9@(G (/> +I0M.</text>
+  <circle cx="480" cy="340" r="120" fill="none" stroke="#60a5fa" stroke-width="8" stroke-dasharray="16 12"/>
+  <text x="430" y="350" fill="#fff" font-family="Arial,sans-serif" font-size="28" font-weight="700">Loop</text>
+  <text x="60" y="470" fill="#bfdbfe" font-family="Arial,sans-serif" font-size="22">*92G $/ 0K: Private career /> prep   A(K</text>
+</svg>

@@ -48,7 +48,7 @@ export const siteConfig = {
   ] satisfies NavItem[],
   categories: [
     { name: "ब्लॉग", href: "/blog" },
-    { name: "करियर", href: "/blog/btech-fresher-ai-career-strategy-2025-2026-hindi" },
+    { name: "करियर", href: "/blog/sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi" },
     { name: "AI और टेक", href: "/category/ai-tools" },
     { name: "चालीसा", href: "/category/chalisa" },
   ] satisfies Category[],

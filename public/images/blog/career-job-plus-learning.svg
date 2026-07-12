@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Job ke sath skill learning">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="url(#g)"/>
+  <text x="60" y="90" fill="#c4b5fd" font-family="Arial,sans-serif" font-size="22" font-weight="700">STEP 3</text>
+  <text x="60" y="150" fill="#fff" font-family="Arial,sans-serif" font-size="36" font-weight="700">Job + 23 G 0K< 8@(></text>
+  <text x="60" y="210" fill="#ede9fe" font-family="Arial,sans-serif" font-size="24">Testing " Python " Web Dev " AI " Cloud</text>
+  <rect x="60" y="260" width="400" height="200" rx="20" fill="#ffffff" fill-opacity="0.12"/>
+  <text x="90" y="330" fill="#fff" font-size="40"><</text>
+  <text x="90" y="390" fill="#f5f3ff" font-family="Arial,sans-serif" font-size="22">Office ke baad self-study</text>
+  <rect x="500" y="260" width="400" height="200" rx="20" fill="#ffffff" fill-opacity="0.12"/>
+  <text x="530" y="330" fill="#fff" font-size="40">¶</text>
+  <text x="530" y="390" fill="#f5f3ff" font-family="Arial,sans-serif" font-size="22">YouTube free resources</text>
+</svg>
