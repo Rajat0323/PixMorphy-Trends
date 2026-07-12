@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Post } from "@/data/content";
 import { getCategoryLabel } from "@/data/bhakti";
+import { BlogImage } from "@/components/blog-image";
 import { getBlogCoverUrl } from "@/lib/blog-cover";
 
 type PostCardProps = {
@@ -20,11 +20,10 @@ export function PostCard({ post, compact = false }: PostCardProps) {
       <div
         className={`relative overflow-hidden ${compact ? "h-44" : "h-56"} bg-slate-900`}
       >
-        <Image
+        <BlogImage
           src={coverUrl}
           alt={post.imageAlt}
           fill
-          unoptimized={coverUrl.startsWith("/og/")}
           sizes={compact ? "(max-width: 1024px) 100vw, 420px" : "(max-width: 768px) 100vw, 520px"}
           className="object-cover transition duration-500 group-hover:scale-[1.03]"
           style={{

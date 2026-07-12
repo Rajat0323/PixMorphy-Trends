@@ -1,7 +1,7 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AuthorCard } from "@/components/author-card";
+import { BlogImage } from "@/components/blog-image";
 import {
   BlogPostFaqSection,
   BlogPostInternalLinks,
@@ -21,7 +21,7 @@ import {
 import { ShareButtons } from "@/components/share-buttons";
 import { getPostBySlug, getRelatedPosts, posts, siteConfig } from "@/data/content";
 import { getCategoryLabel } from "@/data/bhakti";
-import { getBlogCoverUrl } from "@/lib/blog-cover";
+import { getBlogCoverUrl, getBlogSocialCoverUrl } from "@/lib/blog-cover";
 import { getAbsoluteImageUrl, getAbsoluteUrl } from "@/lib/seo";
 
 type PageProps = {
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {};
   }
 
-  const imageUrl = getAbsoluteImageUrl(getBlogCoverUrl(post));
+  const imageUrl = getAbsoluteImageUrl(getBlogSocialCoverUrl(post));
   const pageUrl = getAbsoluteUrl(`/blog/${post.slug}`);
 
   return {
@@ -156,12 +156,11 @@ export default async function BlogPage({ params }: PageProps) {
         <article className="blog-content-lock space-y-8" translate="no">
           <header className="overflow-hidden rounded-[32px] border border-[color:var(--border)] bg-white shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
             <div className={`relative article-hero-cover bg-gradient-to-br ${post.heroAccent}`}>
-              <Image
+              <BlogImage
                 src={coverUrl}
                 alt={post.imageAlt}
                 fill
                 priority
-                unoptimized={coverUrl.startsWith("/og/")}
                 sizes="(max-width: 1280px) 100vw, 760px"
                 className="object-cover"
                 style={{
@@ -228,7 +227,7 @@ export default async function BlogPage({ params }: PageProps) {
                       className="overflow-hidden rounded-[24px] border border-[color:var(--border)] bg-[color:var(--surface-muted)]"
                     >
                       <div className="relative aspect-[16/10]">
-                        <Image
+                        <BlogImage
                           src={image.src}
                           alt={image.alt}
                           fill
