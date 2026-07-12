@@ -11,31 +11,31 @@ export const careerPosts: Post[] = [
     updatedAt: "2026-07-12",
     readTime: "१४ मिनट",
     author: "PixMorphy",
-    imageSrc: "/images/blog/govt-job-to-it-career-2026-cover.svg",
-    imageObjectPosition: "center",
+    imageSrc: "/images/blog/govt-job-to-it-career-2026-cover.png",
+    imageObjectPosition: "center top",
     heroAccent: "from-teal-600 via-blue-600 to-violet-600",
     featuredLabel: "करियर गाइड",
     imageAlt:
       "Sarkari naukri chhod kar IT job kaise paye 2026 Hindi career guide cover",
     galleryImages: [
       {
-        src: "/images/blog/career-govt-exam-loop.svg",
-        alt: "Sarkari exam loop aur ek clear career decision — do naavon mein paair mat rakho",
+        src: "/images/blog/career-govt-exam-loop.png",
+        alt: "Sarkari exam loop aur clear career decision — do naavon mein paair mat rakho",
       },
       {
-        src: "/images/blog/career-industry-entry-first-job.svg",
-        alt: "Pehli industry entry job BPO operations documentation finance process",
+        src: "/images/blog/career-industry-entry-first-job.png",
+        alt: "Pehli industry entry job — BPO, operations, documentation ya finance process",
       },
       {
-        src: "/images/blog/career-pf-deduction-importance.svg",
+        src: "/images/blog/career-pf-deduction-importance.png",
         alt: "PF deduction aur professional experience proof kyun important hai",
       },
       {
-        src: "/images/blog/career-job-plus-learning.svg",
-        alt: "Job ke sath roz 2-3 ghante skill learning YouTube self study",
+        src: "/images/blog/career-job-plus-learning.png",
+        alt: "Job ke sath roz 2-3 ghante skill learning aur self-study",
       },
       {
-        src: "/images/blog/career-bpo-to-fullstack-journey.svg",
+        src: "/images/blog/career-bpo-to-fullstack-journey.png",
         alt: "BPO se coding seekh kar full stack developer tak career journey",
       },
     ],
@@ -110,6 +110,10 @@ export const careerPosts: Post[] = [
           "Family ko apna plan clearly batayein — support badhega",
           "Government form sirf tab bharein jab genuinely usi path par wapas jaana ho",
         ],
+        image: {
+          src: "/images/blog/career-govt-exam-loop.png",
+          alt: "Sarkari exam loop se bahar nikal kar ek clear career decision lena",
+        },
       },
       {
         heading: "सीधे IT में नौकरी मिलना मुश्किल हो सकता है — यह normal है",
@@ -118,6 +122,10 @@ export const careerPosts: Post[] = [
           "Iska matlab yeh **nahi** ki aapka career khatam ho gaya। Iska matlab sirf itna hai ki aapko pehle **industry mein kadam rakhna hoga** — kahin se bhi।",
           "Target banao: 'Kisi bhi company mein entry-level role jahan main professional environment seekh sakoon.' IT baad mein aayega — pehle industry entry।",
         ],
+        image: {
+          src: "/images/blog/career-industry-entry-first-job.png",
+          alt: "Pehle industry mein entry — IT se pehle professional experience zaroori",
+        },
       },
       {
         heading: "पहली नौकरी छोटी हो सकती है — और यह ठीक है",
@@ -139,6 +147,10 @@ export const careerPosts: Post[] = [
           "Jab company aapka PF kaat ti hai, UAN link hota hai — matlab employment record banta hai। Agle interview mein aap keh sakte ho: 'Maine X months/years industry mein kaam kiya' — aur yeh verify ho sakta hai।",
           "Gap badhna sabse bada risk hai। Industry mein rehna — chahe role related na ho — long term mein zyada safe strategy hai।",
         ],
+        image: {
+          src: "/images/blog/career-pf-deduction-importance.png",
+          alt: "PF deduction aur UAN linked job — resume par official experience proof",
+        },
       },
       {
         heading: "नौकरी के साथ Skill सीखें — roz 2–3 ghante",
@@ -154,6 +166,10 @@ export const careerPosts: Post[] = [
           "AI era — ChatGPT tools + automation scripts seekhna",
           "GitHub par chhote projects upload karte rahein",
         ],
+        image: {
+          src: "/images/blog/career-job-plus-learning.png",
+          alt: "Job ke baad roz 2-3 ghante skill learning — testing, Python, web dev, AI basics",
+        },
       },
       {
         heading: "वास्तविक उदाहरण — BPO se Full Stack Developer tak",
@@ -162,6 +178,10 @@ export const careerPosts: Post[] = [
           "Aaj woh full stack developer ya automation engineer ke roop mein achhe packages par hain। Unki shuruaat BPO thi — ant developer role hai।",
           "Yeh prove karta hai: **aaj ki starting aapka ant decide nahi karti** — aapki learning aur lagatar mehnat decide karti hai।",
         ],
+        image: {
+          src: "/images/blog/career-bpo-to-fullstack-journey.png",
+          alt: "BPO se shuru karke full stack developer tak — real career journey example",
+        },
       },
       {
         heading: "6 महीने का practical action plan",

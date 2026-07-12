@@ -37,6 +37,10 @@ export type Post = {
     heading: string;
     paragraphs: string[];
     bullets?: string[];
+    image?: {
+      src: string;
+      alt: string;
+    };
   }[];
   relatedSlugs: string[];
   internalLinks?: {
