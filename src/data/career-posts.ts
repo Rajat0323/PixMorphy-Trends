@@ -5,11 +5,11 @@ export const careerPosts: Post[] = [
     slug: "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
     title: "सरकारी नौकरी छोड़ दी? अब IT में जॉब कैसे पाएँ? (2026 की पूरी गाइड)",
     excerpt:
-      "2–4 साल के gap, सरकारी exam preparation छोड़ने के बाद IT में entry — BPO se shuruat, PF, industry experience, side-by-side skills aur AI career tak ka practical Hindi guide.",
+      "UPSC, Railway, SSC ki taiyari ke baad 2–4 saal gap? Koi textbook advice nahi — jo maine khud jhela (ECE, COVID confusion, industry entry, PF, side learning), wahi step-by-step is guide mein hai.",
     category: "Career",
     publishedAt: "2026-07-12",
-    updatedAt: "2026-07-12",
-    readTime: "१४ मिनट",
+    updatedAt: "2026-07-17",
+    readTime: "११ मिनट",
     author: "PixMorphy",
     imageSrc: "/images/blog/govt-job-to-it-career-2026-cover.png",
     imageObjectPosition: "center top",
@@ -58,162 +58,123 @@ export const careerPosts: Post[] = [
     ],
     faq: [
       {
-        question: "सरकारी नौकरी की तैयारी बीच में छोड़नी चाहिए या नहीं?",
+        question: "Sarkari exam ki taiyari beech mein chhodni chahiye?",
         answer:
-          "यह आपकी financial situation और clarity पर depend करता है। अगर आपने तय कर लिया है कि अब private sector में career बनाना है, तो half-half preparation से बचें — एक clear decision लें और उसी पर focus करें।",
+          "Depend karta hai aapki financial situation aur clarity par. Agar decide ho gaya hai ki private sector mein jaana hai, to half-half preparation se bacho — ek clear decision lo aur usi par focus karo.",
       },
       {
-        question: "4 साल gap के बाद भी IT में job मिल सकती है?",
+        question: "4 saal gap ke baad IT job mil sakti hai?",
         answer:
-          "हाँ, लेकिन शायद सीधे developer role में नहीं। पहले किसी entry-level job से industry experience बनाएँ, PF linked job लें, side-by-side skills सीखें — फिर IT roles के लिए apply करें।",
+          "Haan, lekin shayad seedhe developer role mein nahi. Pehle kisi entry-level job se industry experience banao, PF linked job lo, side mein skills seekho, phir IT roles ke liye apply karo.",
       },
       {
-        question: "BPO job लेना career के लिए गलत है?",
+        question: "BPO job lena galat decision hai?",
         answer:
-          "शुरुआत के लिए BPO या similar role गलत नहीं है। कई लोगों ने BPO में काम करते हुए coding सीखी और बाद में developer roles में shift किया। पहली job का goal experience और stability दोनों हो सकता है।",
+          "Bilkul nahi. Kai logon ne BPO mein kaam karte hue coding seekhi aur baad mein developer role mein shift kiye. Pehli job ka goal experience aur stability, dono ho sakte hain.",
       },
       {
-        question: "PF deduction वाली job क्यों important है?",
+        question: "PF deduction wali job kyun important hai?",
         answer:
-          "PF linked job official employment record बनाती है। अगले interview में experience prove करना आसान होता है और resume में gap explain करने में मदद मिलती है।",
+          "Ye official employment record banati hai. Agle interview mein experience prove karna aasan hota hai aur resume ka gap explain karna bhi.",
       },
       {
-        question: "Job करते हुए क्या सीखना चाहिए — Testing या Development?",
+        question: "Job karte hue testing seekhein ya development?",
         answer:
-          "आपकी interest पर depend करता है। Testing (manual/automation), Python, web development, data analytics, AI basics — YouTube पर free content available है। Roz 2–3 ghante consistent learning सबसे important है।",
+          "Aapki interest par depend karta hai. Testing, Python, web development, data analytics, AI basics — sab YouTube par free available hai. Roz 2-3 ghante consistency sabse zyada matter karti hai.",
       },
       {
-        question: "2025 या 2026 pass-out के लिए यह गाइड useful है?",
+        question: "2025 ya 2026 pass-out ke liye ye guide useful hai?",
         answer:
-          "यह गाइड खासकर उनके लिए है जिनका 2–4 साल gap है या जो government exam preparation में थे। Fresh pass-out के लिए पहला career blog भी पढ़ें — दोनों strategies अलग हैं।",
+          "Ye khaas un logon ke liye hai jinka 2-4 saal ka gap hai ya jo government exam preparation mein the. Fresh pass-out ke liye alag career blog padhein, dono strategies alag hain.",
       },
     ],
     sections: [
       {
-        heading: "यह गाइड किसके लिए है?",
+        heading: "Shuruaat",
         paragraphs: [
-          "अगर आपने 2026, 2025, 2024, 2023 या उससे पहले B.Tech / graduation किया है — और पिछले 2–4 साल सरकारी नौकरी, UPSC, Railway, State exams या किसी non-technical preparation में निकाल दिए — लेकिन अब आप financially independent होना चाहते हैं, तो यह लेख आपके लिए है।",
-          "यह किताबी theory नहीं — real struggle, real decisions aur real industry entry par based hai। Kai students ke do type hote hain: ek jo pehle thoda financially stable hona chahte hain phir job dekhte hain, aur ek jinhe abhi turant job chahiye। Dono ke liye core advice same hai: **do naavon mein paair mat rakho।**",
-          "Is guide mein hum step-by-step dekhenge: decision, first job, PF, side learning, aur long-term IT/AI career path।",
+          "अगर आपने 2023, 2024, 2025 या उससे पहले B.Tech ya graduation kiya hai, aur uske baad 2-4 saal UPSC, Railway, SSC ya kisi state exam ki taiyari mein nikal diye — to ye blog aapke liye hi likha hai. Koi textbook advice nahi, wahi cheezein jo maine khud jhela hai.",
+          "Meri background Electronics & Communication thi. COVID ke peak time — 2020-21 ke aas-paas — mera bhi lagbhag ek saal sirf \"aage kya karoon\" sochne mein chala gaya. Na government prep serious thi, na private side move kiya tha. Us confusion se nikalne mein jo samajh aaya, wahi is guide mein hai.",
         ],
       },
       {
-        heading: "सबसे पहले एक फैसला लें — दो नावों में पैर नहीं",
+        heading: "Sabse pehle: do naavon mein paair mat rakho",
         paragraphs: [
-          "Sarkari naukri ka ek loop hota hai — har do mahine koi na koi non-technical exam form aa jata hai: UPSC phases, Railway, SSC, state exams, banking… List lambi hai।",
-          "Har baar lagta hai: 'Bas yeh wala form bhar leta hoon, phir next wala chhod dunga.' Lekin next do mahine mein naya form aa jata hai। Isi cycle mein 2–3 saal nikal jate hain — aur pata bhi nahi chalta।",
-          "Mere saath bhi aisa hua tha। COVID ke peak time (2020–21) mein lagbhag ek saal sirf yeh sochne mein chala gaya ki aage kya karna hai — na government prep properly hui, na private side par move kiya।",
-          "Isliye pehla step hai: **clear decision.** Agar aapne decide kar liya hai ki ab private industry mein career banana hai — to usi par poora focus karein। Half government prep + half job search = dono weak।",
-        ],
-        bullets: [
-          "Exam loop se bahar nikalne ke liye written decision likhein",
-          "Family ko apna plan clearly batayein — support badhega",
-          "Government form sirf tab bharein jab genuinely usi path par wapas jaana ho",
+          "Sarkari exam ka ek loop hota hai. Har do-teen mahine mein koi naya form aa jata hai — UPSC ka koi phase, Railway, SSC, banking, state exam. List kabhi khatam nahi hoti. Aur har baar wahi soch: \"ye wala bhar leta hoon, phir chhod dunga.\" Agle mahine phir naya form.",
+          "Isi cycle mein 2-3 saal aise nikal jate hain ki pata bhi nahi chalta. Maine ye khud dekha hai — apne aap mein bhi, aur un dosto mein bhi jo mere saath prepare kar rahe the.",
+          "Agar aapne genuinely decide kar liya hai ki ab private industry mein jaana hai, to half-half mat karo. Ek clear decision likh lo, family ko batao (support badh jata hai), aur government form sirf tab bharo jab sach mein wapas us path par jaana ho.",
         ],
         image: {
           src: "/images/blog/career-govt-exam-loop.png",
-          alt: "Sarkari exam loop se bahar nikal kar ek clear career decision lena",
+          alt: "Sarkari exam loop — do naavon mein paair mat rakho, ek clear decision lo",
         },
       },
       {
-        heading: "सीधे IT में नौकरी मिलना मुश्किल हो सकता है — यह normal है",
+        heading: "Seedha IT job milna mushkil hoga — ye normal hai",
         paragraphs: [
-          "Aaj ki reality yeh hai: aap B.Tech kar chuke ho, skills ho sakti hain — lekin **bina experience ke** company turant IT role mein hire nahi karti। Gap ke saath yeh aur common hai।",
-          "Iska matlab yeh **nahi** ki aapka career khatam ho gaya। Iska matlab sirf itna hai ki aapko pehle **industry mein kadam rakhna hoga** — kahin se bhi।",
-          "Target banao: 'Kisi bhi company mein entry-level role jahan main professional environment seekh sakoon.' IT baad mein aayega — pehle industry entry।",
+          "B.Tech ho ya kuch bhi ho, bina experience ke koi company aapko turant IT role nahi degi. Gap ho to aur mushkil. Lekin iska matlab career khatam nahi hota — sirf itna hai ki pehle kahin se bhi industry mein kadam rakhna padega.",
+          "Target simple rakho: \"koi bhi entry-level role jahan main professional environment seekh sakoon.\" IT baad mein aayega, pehle industry mein entry.",
         ],
         image: {
           src: "/images/blog/career-industry-entry-first-job.png",
-          alt: "Pehle industry mein entry — IT se pehle professional experience zaroori",
+          alt: "Pehle industry entry — seedha IT role har kisi ko turant nahi milta",
         },
       },
       {
-        heading: "पहली नौकरी छोटी हो सकती है — और यह ठीक है",
+        heading: "Pehli job chhoti ho sakti hai, aur ye theek hai",
         paragraphs: [
-          "Delhi NCR, Lucknow, Pune, Bangalore jaise cities mein bahut saari apps aur portals hain jahan qualification dal kar entry-level jobs milti hain — BPO, customer support, operations, documentation, finance process, back-office, data entry type roles।",
-          "Job chhoti badi nahi hoti — **starting point** hoti hai। 6 mahine ke liye mehnat karni padti hai — yeh normal hai।",
-          "Pehli job ka purpose sirf paisa nahi — **Professional Experience** banana bhi hai। Office culture, deadlines, team work, communication — yeh sab baad mein IT interviews mein kaam aata hai।",
-        ],
-        bullets: [
-          "BPO / Operations / Documentation — valid starting roles",
-          "Referral ya relative se bhi first break mil sakta hai",
-          "Job chhote size ki ho — learning badi honi chahiye",
-        ],
-      },
-      {
-        heading: "PF Deduction — experience ka sabse strong proof",
-        paragraphs: [
-          "Main PF deduction ko isliye zyada mention karta hoon kyunki yeh aapke resume ka **official proof** ban jata hai।",
-          "Jab company aapka PF kaat ti hai, UAN link hota hai — matlab employment record banta hai। Agle interview mein aap keh sakte ho: 'Maine X months/years industry mein kaam kiya' — aur yeh verify ho sakta hai।",
-          "Gap badhna sabse bada risk hai। Industry mein rehna — chahe role related na ho — long term mein zyada safe strategy hai।",
-        ],
-        image: {
-          src: "/images/blog/career-pf-deduction-importance.png",
-          alt: "PF deduction aur UAN linked job — resume par official experience proof",
-        },
-      },
-      {
-        heading: "नौकरी के साथ Skill सीखें — roz 2–3 ghante",
-        paragraphs: [
-          "Job milne ke baad sab kuch khatam nahi — **asli preparation tab shuru hoti hai.** Office ke baad roz 2–3 ghante apni skill par lagayein।",
-          "Aaj YouTube par almost sab kuch free mein available hai — course khareedna zaroori nahi। Consistency zaroori hai।",
-          "Apni interest ke hisaab se choose karein: Software Testing (manual + automation), Python, Web Development, Data Analytics, AI basics, Cloud, DevOps introduction।",
-          "6 mahine job + 6 mahine side learning = aapka profile fresher se kaafi strong ho jata hai।",
-        ],
-        bullets: [
-          "Testing track — Selenium, Playwright basics",
-          "Development — Python, JavaScript, React basics",
-          "AI era — ChatGPT tools + automation scripts seekhna",
-          "GitHub par chhote projects upload karte rahein",
-        ],
-        image: {
-          src: "/images/blog/career-job-plus-learning.png",
-          alt: "Job ke baad roz 2-3 ghante skill learning — testing, Python, web dev, AI basics",
-        },
-      },
-      {
-        heading: "वास्तविक उदाहरण — BPO se Full Stack Developer tak",
-        paragraphs: [
-          "Mere kai dost hain jinhone 10–12 saal BPO mein kaam kiya। Unhone job chhod kar nahi — **job ke saath** coding seekhi, projects banaye, certifications nahi bhi ho to chalega agar practical skills hon।",
-          "Aaj woh full stack developer ya automation engineer ke roop mein achhe packages par hain। Unki shuruaat BPO thi — ant developer role hai।",
-          "Yeh prove karta hai: **aaj ki starting aapka ant decide nahi karti** — aapki learning aur lagatar mehnat decide karti hai।",
+          "Delhi NCR, Lucknow, Pune, Bangalore jaisi cities mein bahut saari jobs milti hain — BPO, customer support, operations, back-office, documentation, data entry type roles. Naukri.com, LinkedIn, Indeed par qualification daal ke apply kar sakte ho, ya kisi jaan-pehchaan wale se referral mil jaaye to aur accha.",
+          "Job ka size nahi, starting point matter karta hai. Pehle 6 mahine thoda mushkil lagenge — office culture, deadlines, team communication, ye sab naya lagega. Lekin yehi cheezein baad mein IT interviews mein kaam aati hain.",
+          "Mere kai dost hain jinhone 10-12 saal BPO mein kaam kiya. Unhone job nahi chhodi — job ke saath coding seekhi, chhote projects banaye, aur aaj full stack developer ya automation engineer hain, achhe package par. Certification zaroori nahi thi, practical skill zaroori thi. Iska matlab: aaj ki starting aapka future decide nahi karti, aapki consistency karti hai.",
         ],
         image: {
           src: "/images/blog/career-bpo-to-fullstack-journey.png",
-          alt: "BPO se shuru karke full stack developer tak — real career journey example",
+          alt: "BPO se shuru karke full stack ya automation engineer tak — real dost ka example",
         },
       },
       {
-        heading: "6 महीने का practical action plan",
+        heading: "PF deduction ko halke mat lo",
         paragraphs: [
-          "Month 1: Clear decision — government loop band (ya limited), resume update, Naukri/LinkedIn/Indeed profiles ready। Delhi NCR ya apne city mein entry-level jobs apply karein।",
-          "Month 2: First job join karein — PF confirm karein। Office ke rules, tools, communication observe karein।",
-          "Month 3–4: Roz 2 ghante ek skill track par focus — testing ya Python choose karein। Ek chhota project complete karein।",
-          "Month 5–6: Better roles ke liye apply shuru karein — ab resume mein experience + projects dono honge। Pehle career blog ki LinkedIn query bhi use kar sakte hain।",
+          "Ye ek cheez hai jo main baar-baar bolta hoon: PF deduction wali job resume ka official proof ban jati hai. UAN link hota hai, employment record banta hai. Agle interview mein \"maine X months industry mein kaam kiya\" bolna aur usko verify karna, dono aasan ho jate hain.",
+          "Resume mein gap sabse bada risk hota hai. Industry mein rehna — role relevant ho ya na ho — long term mein safer strategy hai.",
+        ],
+        image: {
+          src: "/images/blog/career-pf-deduction-importance.png",
+          alt: "PF aur UAN — resume par experience ka official proof",
+        },
+      },
+      {
+        heading: "Job ke saath seekhna kab shuru karein",
+        paragraphs: [
+          "Job mil gayi to kaam khatam nahi hua, asli taiyari yahin se shuru hoti hai. Office ke baad roz 2-3 ghante apni skill par lagao. YouTube par lagbhag sab kuch free available hai, course kharidna zaroori nahi — consistency zaroori hai.",
+          "Interest ke hisaab se choose karo: software testing (Selenium, Playwright basics), Python, web development (JavaScript, React basics), data analytics, ya AI tools aur automation scripts. GitHub par chhote-chhote projects daalte raho, chahe wo perfect na hon.",
+          "6 mahine job aur 6 mahine side learning ke baad aapka profile fresh graduate se kaafi strong ho jata hai.",
+        ],
+        image: {
+          src: "/images/blog/career-job-plus-learning.png",
+          alt: "Job ke baad roz 2-3 ghante — testing, Python, web dev ya AI tools",
+        },
+      },
+      {
+        heading: "Agle 6 mahine ka roadmap",
+        paragraphs: [
+          "Ek rough timeline jo kaam kar sakti hai:",
         ],
         bullets: [
-          "Pehle 30 din: maximum applications, minimum overthinking",
-          "PF wali job priority",
-          "Roz learning non-negotiable",
-          "6th month: internal switch ya external IT-related role target",
+          "Mahina 1: Decision clear karo, resume update karo, Naukri/LinkedIn/Indeed par profile ready karo, apne city mein entry-level jobs apply karo.",
+          "Mahina 2: Job join karo, PF confirm karo, office ke rules aur tools observe karo.",
+          "Mahina 3-4: Roz 2 ghante ek skill track par focus, ek chhota project complete karo.",
+          "Mahina 5-6: Ab experience + project dono resume mein hain, better roles ke liye apply karna shuru karo.",
+          "Pehle 30 din mein maximum applications bhejo, minimum overthinking karo. PF wali job ko priority do. Learning ko non-negotiable rakho.",
         ],
       },
       {
-        heading: "Meri kahani — Government preparation se AI career tak",
+        heading: "Meri apni kahani",
         paragraphs: [
-          "Yeh blog generic advice nahi — yeh wahi raasta hai jisse main khud guzra hoon। Electronics & Communication background tha। Engineering services aur government-oriented preparation mein kaafi time gaya। COVID aur financial pressure ke baad samajh aaya ki sirf 'sochna' se kaam nahi chalega — **decision** chahiye।",
-          "Pehli job core IT mein nahi mili। Industry mein entry li — experience aur PF priority thi। Side-by-side coding, automation aur AI tools seekhe — YouTube, projects, trial-error sab use kiya।",
-          "4 saal ke gap ke baad bhi entry possible thi — kyunki strategy yeh thi: pehle industry, phir skills, phir shift। Aaj AI engineer ke roop mein kaam ho raha hai — isliye yeh steps textbook nahi, tested path hain।",
-          "Agar aap bhi is phase mein hain — confused, gap ke saath, family pressure ke saath — to pehle breathe karein। Phir ek decision likhein। Phir pehli job ka target set karein। Baaki step-by-step aata hai।",
-        ],
-      },
-      {
-        heading: "याद रखें — har field mein paisa hai",
-        paragraphs: [
-          "2026 mein paiso ki demand har family mein real hai। Time lag sakta hai — technically bhi, emotionally bhi। Lekin jab aap industry mein kadam rakhoge, 3 mahine baad aapko khud idea aayega ki aage kya karna hai, kaunsa path fit hai।",
-          "Har field mein paisa hai — farq aapki capability, skills, communication aur lagatar seekhne ki aadat se padta hai।",
-          "Aaj jo bhi shuruaat mile — accept karein। Industry mein ghusein। Seekhte rahein। Dheere dheere apne pasandida career ki taraf badhein।",
-          "Neeche query form mein apni specific situation likhein — city, gap years, branch — us par agla blog ya video banaya jayega।",
+          "Ye advice generic nahi hai — main khud isi raaste se guzra hoon. Engineering services aur government-oriented preparation mein kaafi time gaya tha. COVID aur financial pressure ke baad samajh aaya ki sirf sochte rehne se kuch nahi hota, decision chahiye.",
+          "Pehli job core IT mein nahi mili. Industry mein kahin se bhi entry li, experience aur PF ko priority di. Side mein coding, automation aur AI tools seekhe — YouTube, trial-error, chhote projects, sab kuch use kiya. 4 saal ke gap ke baad bhi entry possible thi, kyunki strategy simple thi: pehle industry, phir skills, phir shift. Aaj AI engineer ke roop mein kaam kar raha hoon — isliye ye steps textbook nahi, tested path hain.",
+          "Agar aap bhi confused ho, gap ke saath ho, family ka pressure feel kar rahe ho — to pehle ek saans lo. Phir ek decision likho. Phir pehli job ka target set karo. Baaki dheere-dheere aata hai.",
+          "Har field mein paisa hai — farq capability, skills, communication aur seekhte rehne ki aadat se padta hai. Jo bhi shuruaat mile, accept karo, industry mein ghuso, seekhte raho.",
+          "Apni specific situation — city, gap years, branch — niche query form mein likhein, us par agla blog ya video banaya jayega.",
         ],
       },
     ],
