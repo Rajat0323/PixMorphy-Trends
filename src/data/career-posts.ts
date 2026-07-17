@@ -199,11 +199,11 @@ export const careerPosts: Post[] = [
     title:
       "B.Tech Fresher करियर रणनीति 2025–2026: AI युग में पहली नौकरी कैसे पाएँ",
     excerpt:
-      "2025 और 2026 pass-out छात्रों के लिए AI era की करियर रणनीति — coding, LinkedIn search, walk-in interviews, internship और पहली नौकरी की व्यावहारिक हिंदी गाइड।",
+      "2025–2026 pass-out freshers ke liye — EC se AI engineer tak ka tested path: coding basics, LinkedIn Boolean query, walk-ins, internship, aur core field na mile to bhi industry entry.",
     category: "Career",
     publishedAt: "2026-07-11",
-    updatedAt: "2026-07-11",
-    readTime: "१२ मिनट",
+    updatedAt: "2026-07-17",
+    readTime: "१० मिनट",
     author: "PixMorphy",
     imageSrc: "/images/blog/ai-tools-students-2026.svg",
     imageObjectPosition: "center",
@@ -229,166 +229,104 @@ export const careerPosts: Post[] = [
     ],
     faq: [
       {
-        question: "2026 pass-out fresher को सबसे पहले क्या करना चाहिए?",
+        question: "2026 pass-out fresher ko sabse pehle kya karna chahiye?",
         answer:
-          "सबसे पहले किसी एक programming language की basics मजबूत करें, फिर AI/ML के basic concepts और अपने branch से जुड़े frameworks की जानकारी रखें। Resume और LinkedIn पर AI skills ईमानदारी से mention करें।",
+          "Pehle ek programming language ki basics mazboot karo, phir AI/ML ke basic concepts aur apni branch se juda framework thoda samjho. Resume aur LinkedIn par AI skills honestly likho, sirf keyword mat daalo.",
       },
       {
-        question: "Campus placement नहीं हुई — क्या अब भी नौकरी मिल सकती है?",
+        question: "Campus placement nahi hui — ab bhi naukri mil sakti hai?",
         answer:
-          "हाँ। LinkedIn search, walk-in interviews, internship और related field में entry-level job लेकर experience बनाना — ये सब viable paths हैं। Gap बढ़ाने से बचें, industry में entry priority रखें।",
+          "Haan. LinkedIn search, walk-in interviews, internship, aur related field mein entry-level job leke experience banana — ye sab realistic raste hain. Gap badhane se bacho, industry mein entry ko priority do.",
       },
       {
-        question: "Resume में AI mention करना फायदेमंद है?",
+        question: "Resume mein AI mention karna fayda deta hai?",
         answer:
-          "2026 में HR shortlisting में AI-related keywords profile को अलग दिखाते हैं। लेकिन सिर्फ keyword stuffing न करें — basic understanding और projects ईमानदारी से लिखें।",
+          "2026 mein AI-related keywords HR shortlisting mein profile ko alag dikhate hain, lekin sirf keyword stuffing na karo — basic samajh aur real projects honestly likho.",
       },
       {
-        question: "LinkedIn पर fresher jobs कैसे खोजें?",
+        question: "LinkedIn par fresher jobs kaise dhoondein?",
         answer:
-          "LinkedIn Jobs में Boolean search use करें — job role + hiring + location + date posted filter। इस लेख में ready-made query दिया गया है।",
+          "LinkedIn Jobs mein Boolean search use karo — role + hiring + location + date posted filter. Isi blog mein ek ready query di gayi hai, use apne role/city ke hisaab se badal sakte ho.",
       },
       {
-        question: "Core field की job न मिले तो क्या करें?",
+        question: "Core field ki job na mile to kya karein?",
         answer:
-          "Related field में entry-level job लें — PF और industrial experience priority। Side-by-side अपनी core field और AI skills continue करें, फिर shift करें।",
+          "Related field mein entry-level job le lo, PF aur industry experience ko priority do. Side mein apni core field aur AI skills seekhna continue rakho, phir shift karo.",
       },
     ],
     sections: [
       {
-        heading: "यह गाइड किसके लिए है?",
+        heading: "Shuruaat",
         paragraphs: [
-          "आज भारत में engineering students की दो बड़ी categories हैं — जिन्हें अलग-अलग strategy चाहिए, लेकिन कुछ कदम common भी हैं।",
-          "पहली category: 2026 या 2025 में pass-out freshers — जो अभी campus placement, off-campus या internship की तैयारी कर रहे हैं।",
-          "दूसरी category: 2024, 2025 या उससे पहले pass-out — जिनको अभी तक campus selection नहीं मिला, या वे किसी exam/preparation में थे। उनके लिए अलग विस्तृत गाइड आगे आएगी।",
-          "यह लेख सिर्फ 2025 और 2026 pass-out freshers पर focused है — क्योंकि AI era में job market के rules पहले से बदल chuke hain।",
-        ],
-        bullets: [
-          "2026 pass-out — अभी fresher category में",
-          "2025 pass-out — अभी भी fresher tag के साथ apply कर सकते हैं",
-          "2024 या उससे पहले — अगला blog उनके लिए अलग strategy",
+          "Aaj engineering students mein do tarah ke log hain. Ek jinhone 2025 ya 2026 mein pass-out kiya hai aur abhi campus placement ya off-campus process mein hain. Doosre jo 2024 ya usse pehle pass-out hue lekin abhi tak selection nahi mila — unke liye alag detailed guide alag se aayegi. Ye wala blog pehli category ke liye hai, kyunki AI era mein job market ke rules kaafi tezi se badle hain.",
+          "Main career advice se pehle ek cheez clear kar doon: main khud CS background se nahi aaya. EC (Electronics & Communication) padha tha, aur graduation ke baad seedha job market mein nahi gaya — engineering services ki taiyari mein kaafi saal chale gaye. COVID ke time financial situation tight ho gayi, aur akhir mein IT sector mein entry leni padi, wo bhi ek fresher ki tarah, 4 saal late. Us waqt lagta tha shayad der ho chuki hai. Aaj usi field mein AI engineer ke roop mein kaam kar raha hoon. Isliye jo neeche likh raha hoon, wo koi generic career-coach advice nahi hai — practically try kiya hua hai.",
         ],
       },
       {
-        heading: "वास्तविक अनुभव — gap के बाद भी fresher की तरह शुरुआत",
+        heading: "Coding basics — branch koi bhi ho, ye step skip mat karo",
         paragraphs: [
-          "यह strategy किसी textbook से नहीं — real journey se aayi hai। EC (Electronics & Communication) background se shuruat hui, engineering services ki preparation mein kai saal gaye, COVID aur financial constraints ke baad IT sector mein entry leni padi।",
-          "Char saal ke gap ke baad bhi as a fresher join kiya — matlab aaj ke students jo sochte hain 'mera gap hai, ab kuch nahi hoga' — unke liye yeh proof hai ki strategy sahi ho toh rasta banta hai।",
-          "Aaj AI engineer ke roop mein kaam ho raha hai — isliye yeh steps tested hain, theory nahi।",
+          "CS ho, EC ho, Mechanical ho — sabse pehla kaam ek programming language ki basics mazboot karna hai. CS students ko ye exposure pehle se milta hai, lekin non-CS branches ke liye ye step aur bhi zaroori ho jata hai.",
+          "Bahut deep jaane ki zaroorat nahi — variables, loops, functions, basic data structures, aur do-teen chhote projects, itna kaafi hai shuruat ke liye. AI/ML path ke liye Python sabse practical choice hai, lekin agar aapne pehle se Java ya JavaScript shuru kar rakhi hai to usi ko deep karo — language badalne se zyada important ek language ko achhe se seekhna hai. Jo bhi projects banao, GitHub par rakho, chahe chhote hi kyun na hon.",
         ],
       },
       {
-        heading: "Step 1: किसी भी branch से हों — पहले coding basics मजबूत करें",
+        heading: "AI tools ke saath comfortable dikhna — deep expert hone ki zaroorat nahi",
         paragraphs: [
-          "Chahe aap CS hon, EC hon, Mechanical hon ya koi bhi branch — sabse pehla step ek programming language seekhna hai। CS students ko coding ka exposure pehle se milta hai, lekin use thoda aur strong karna hoga। Non-CS branches ke liye yeh step aur bhi important hai।",
-          "Zyada nahi — basics level par ek language achhi tarah aani chahiye: variables, loops, functions, basic data structures, simple projects।",
-          "Python AI/ML ke liye sabse practical choice hai, lekin Java, JavaScript ya C++ bhi chalega — ek language deeply seekho।",
-        ],
-        bullets: [
-          "Ek language choose karein — AI path ke liye Python recommended",
-          "Basics strong karein — solid foundation pehle",
-          "2–3 chhote projects banayein — GitHub par rakhein",
+          "Fresher se company deep AI expertise nahi maangti, basic samajh maangti hai — AI kaise kaam karta hai, ML kya hai, aapne practically kaunse tools try kiye.",
+          "Agar Python side mein ho to Django, Flask, FastAPI, Pandas, NumPy jaise basic tools ka use pata hona chahiye. Testing/QA track choose kiya hai to Playwright, Selenium, aur CI/CD automation ki basic samajh AI-era mein kaafi demand mein hai.",
+          "Interview mein sabse acha jawab yehi hota hai: \"maine ye tool use kiya, ye chhota problem solve kiya\" — certificate se zyada practical proof kaam aata hai. Ek chhota AI-related project — chatbot, data analysis script, ya automation task — banake dikhana kaafi difference karta hai.",
         ],
       },
       {
-        heading: "Step 2: AI se interface banayein — frameworks aur libraries",
+        heading: "Resume aur LinkedIn par AI ko honestly likho",
         paragraphs: [
-          "Fresher se company zyada deep knowledge nahi maangti — basic understanding maangti hai: AI kaise kaam karta hai, ML kya hai, aapne kaunse tools use kiye।",
-          "Python developer ho to: Django, Flask, FastAPI, Pandas, NumPy jaise frameworks/libraries ka basic use pata hona chahiye।",
-          "Testing/QA track par ho to: Playwright, Selenium, CI/CD integration, automation basics — AI-era mein bahut demand mein hain।",
-          "Goal: interview mein bol paayein ki 'maine yeh tool use kiya, yeh problem solve ki' — certificate se zyada practical knowledge matter karti hai।",
-        ],
-        bullets: [
-          "AI/ML basic concepts — supervised, unsupervised learning (high level)",
-          "Apne track ke 2–3 frameworks ka naam aur use case",
-          "Ek chhota AI-related project — chatbot, data analysis, automation script",
+          "2026 mein resume ya LinkedIn profile mein AI-related skills honi HR ki shortlisting priority badha deti hai — lekin sirf \"AI, ML, ChatGPT\" keyword daalna kaam nahi karega. 1-2 lines mein likho ki kya seekha, kya banaya, kyunki interview mein isi par sawaal aayega.",
+          "LinkedIn headline simple aur clear rakho — jaise \"Fresher | Python | AI Enthusiast | B.Tech 2026\" type format.",
         ],
       },
       {
-        heading: "Step 3: Resume aur LinkedIn par AI mention karein",
+        heading: "LinkedIn job search — ready-made query",
         paragraphs: [
-          "2026 mein agar aapke resume, LinkedIn profile ya Naukri profile mein AI-related skills mention hain — HR ki shortlisting priority badh jaati hai।",
-          "Lekin sirf 'AI, ML, ChatGPT' likhna kaafi nahi — 1–2 lines mein likhein ki aapne kya seekha, kya project banaya। Interview mein poochha jayega।",
-          "LinkedIn headline mein clear likhein: 'Fresher | Python | AI Enthusiast | B.Tech 2026' jaisa format।",
-        ],
-      },
-      {
-        heading: "Step 4: LinkedIn Job Search Query — copy-paste ready",
-        paragraphs: [
-          "LinkedIn Jobs section mein yeh Boolean query paste karein। 'Date posted' filter lagayein — 'Past week' ya 'Past 24 hours' — taaki fresh openings milein।",
-          "Automation QA ke liye example query (apne role ke hisaab se badal sakte hain):",
+          "LinkedIn ke Jobs section mein niche jaisi Boolean query paste kar sakte ho, \"Date posted\" filter \"Past week\" ya \"Past 24 hours\" par rakhna zaroori hai taaki fresh openings dikhein.",
+          "Automation QA role ke liye ek example:",
           `Automation QA engineer AND (hiring OR "looking for") AND (Noida OR Delhi OR Gurugram)`,
-          "Tips: 'Fresher' ya 'Entry level' bhi query mein add kar sakte hain। Location apne city ke hisaab se change karein — Pune, Bangalore, Hyderabad, etc.",
-          "Har din 15–20 minute LinkedIn search karein — apply karein aur recruiter ko connect request short note ke saath bhejein।",
+          "\"Fresher\" ya \"Entry level\" word bhi query mein add kar sakte ho, aur city apne hisaab se badal sakte ho — Pune, Bangalore, Hyderabad jo bhi suit kare. Roz 15-20 minute isi tarah search karke apply karo, aur jahan interesting lage wahan recruiter ko ek chhota connect note ke saath bhejo.",
+        ],
+      },
+      {
+        heading: "Walk-in interviews — Delhi NCR mein active flow",
+        paragraphs: [
+          "Delhi, Noida, Gurugram mein walk-in interviews ka flow especially QA, BPO-tech aur startup roles mein kaafi active rehta hai. LinkedIn par \"walk in interview\" + apna city search karte raho.",
+          "Walk-in jaate waqt kam se kam 10 resume copies, ID proof, pen, aur company ka basic research karke jaana — ye chhoti si taiyari interview ke tone ko badal deti hai.",
+        ],
+      },
+      {
+        heading: "Internship ko \"chhota\" mat samjho",
+        paragraphs: [
+          "Agar full-time job turant nahi mil rahi, paid ya unpaid internship le lo. 3-6 mahine ki internship resume mein genuinely valuable hoti hai, aur is dauran GitHub active rakhna, LinkedIn par weekly kuch seekha hua post karna, company ke tools seekhna — ye sab aage kaam aata hai. Kai baar internship se PPO (Pre-Placement Offer) bhi mil jata hai.",
+        ],
+      },
+      {
+        heading: "Core field na mile to bhi ruko mat",
+        paragraphs: [
+          "Ye shayad sabse practical baat hai is poore guide mein: agar CS/EC/IT jaisi core field mein job nahi mil rahi, to finance, sales, operations — jo bhi entry-level mile, le lo.",
+          "Wajah simple hai — companies aaj experience aur PF (Provident Fund) ko dekhti hain, gap ko nahi. Gap badhna sabse bada risk hai, industry mein kahin bhi rehna sabse bada advantage. Maan lo CS branch thi lekin sales mein job mili — theek hai, wahan se PF link hoga, experience banega. Side mein apna coding/AI seekhna continue rakho, aur 6-12 mahine baad apni field mein shift karne ki koshish karo.",
+          "Agli company mein ye batana ki \"pehli company mein ye kaam kiya, saath mein side projects mein AI/coding bhi seekhi\" — ye sirf fresher resume se kaafi zyada strong lagta hai.",
+        ],
+      },
+      {
+        heading: "Agle 7 din ka plan",
+        paragraphs: [
+          "Iske baad roz ek ghanta coding practice aur 15 minute job search ko routine bana lo, aur hafte mein ek project update GitHub par zaroor daalo.",
+          "Agar aap 2024 ya usse pehle pass-out ho aur abhi tak placement nahi hui, uske liye alag strategy chahiye — gap explain karna, skills rebuild karna, off-campus focus. Us par alag blog jald aayega. Apni specific situation — branch, city, skills — niche query form mein likhein, uske hisaab se detailed content banega.",
         ],
         bullets: [
-          "LinkedIn → Jobs → search bar mein query paste karein",
-          "Filter: Date posted = Past week",
-          "Filter: Experience level = Entry level / Internship",
-          "Walk-in interviews ke posts par extra dhyaan dein",
-        ],
-      },
-      {
-        heading: "Step 5: Walk-in interviews — Delhi NCR mein opportunities",
-        paragraphs: [
-          "Delhi, Noida, Gurugram mein walk-in interviews ka flow kaafi active rehta hai — especially QA, BPO-tech, startup roles mein।",
-          "LinkedIn par 'walk in interview' + apna city search karein।",
-          "Walk-in ke liye: 10+ resume copies, ID proof, pen, aur basic company research saath le jayein।",
-        ],
-      },
-      {
-        heading: "Step 6: Internship par focus — experience zero mat rakhein",
-        paragraphs: [
-          "Agar full-time job nahi mil rahi — paid ya unpaid internship lein। 3–6 mahine ki internship resume mein valuable hoti hai।",
-          "Internship ke dauran: GitHub active rakhein, LinkedIn par weekly kuch seekh kar post karein, company ke tools seekhein।",
-          "Internship se PPO (Pre-Placement Offer) milne ke chances bhi badhte hain।",
-        ],
-      },
-      {
-        heading: "Step 7: Core field nahi mile — kahin se bhi industry mein entry lein",
-        paragraphs: [
-          "Yeh sabse important practical advice hai: agar core field (CS/EC/IT) mein job nahi mil rahi — tab tak kisi related field mein entry-level job lein। Finance, sales, operations — kuch bhi।",
-          "Kyun? Aaj companies experience aur PF (Provident Fund) dekhti hain। Gap badhna sabse bada risk hai — industry mein rehna sabse bada advantage।",
-          "Example: CS branch thi, lekin sales mein job mili — theek hai। Wahan se PF link hua, experience aaya। Side-by-side AI/coding continue karein। 6–12 mahine baad apni field mein shift karein।",
-          "Second company mein dikha sakte hain: 'Pehli company mein yeh kaam kiya + side projects mein AI/coding ki' — yeh fresher se zyada strong profile banata hai।",
-        ],
-        bullets: [
-          "Gap na badhayein — kahin se bhi start karein",
-          "PF linked job = experience proof",
-          "Side-by-side apni field ki skills continue rakhein",
-          "6–12 months baad better company mein shift karein",
-        ],
-      },
-      {
-        heading: "2024 ya usse pehle pass-out? — Agla blog aane wala hai",
-        paragraphs: [
-          "Agar aap 2024, 2023 ya usse pehle pass-out hain aur abhi bhi placement nahi mili — aapke liye alag strategy hai (gap explanation, skill rebuild, off-campus focus)।",
-          "Agar aapko lagta hai woh blog aapke liye useful hoga — neeche query form mein likhein। Us par detailed blog aur video bhi banaya jayega।",
-        ],
-      },
-      {
-        heading: "Aaj se kya karein — 7 din ka action plan",
-        paragraphs: [
-          "Day 1–2: Ek language ki basics revise karein + GitHub account banayein।",
-          "Day 3: LinkedIn profile update karein — AI skills, headline, photo।",
-          "Day 4: Upar wali LinkedIn query se 10 jobs apply karein।",
-          "Day 5: Ek chhota project shuru karein (Python script, automation, data task)।",
-          "Day 6: Walk-in listings search karein — Delhi NCR ya apna city।",
-          "Day 7: Internship portals check karein — Internshala, LinkedIn, Indeed।",
-        ],
-        bullets: [
-          "Roz 1 ghanta coding practice",
-          "Roz 15 minute LinkedIn job search",
-          "Hafte mein 1 project update GitHub par",
-          "Neeche query form mein apna specific sawaal bhejein",
-        ],
-      },
-      {
-        heading: "Apna sawaal bhejein — personal guidance ke liye",
-        paragraphs: [
-          "Agar aap 2025 ya 2026 pass-out hain aur apni specific situation par baat karni hai — branch, city, skills — neeche query form bhariye।",
-          "Aapka sawaal milte hi us topic par detailed blog ya video banaya jayega। Contact page se direct email bhi kar sakte hain।",
-          "Agla blog: 2024 aur usse pehle pass-out students ke liye alag strategy — gap, preparation aur rebuild par।",
+          "Din 1-2: Ek language ki basics revise karo, GitHub account bana lo agar nahi hai.",
+          "Din 3: LinkedIn profile update — AI skills, headline, photo sahi karo.",
+          "Din 4: Upar wali LinkedIn query se 10 jobs apply karo.",
+          "Din 5: Ek chhota project shuru karo — Python script, automation task, kuch bhi.",
+          "Din 6: Apne city mein walk-in listings search karo.",
+          "Din 7: Internshala, LinkedIn, Indeed par internship portals check karo.",
         ],
       },
     ],
