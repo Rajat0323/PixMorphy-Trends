@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AuthorCard } from "@/components/author-card";
+import { BlogArticleTable } from "@/components/blog-article-table";
 import { BlogImage } from "@/components/blog-image";
 import {
   BlogPostFaqSection,
@@ -233,6 +234,13 @@ export default async function BlogPage({ params }: PageProps) {
                     </li>
                   ))}
                 </ul>
+              ) : null}
+              {section.table ? (
+                <BlogArticleTable
+                  caption={section.table.caption}
+                  headers={section.table.headers}
+                  rows={section.table.rows}
+                />
               ) : null}
               {section.image ? (
                 <figure className="mt-6 overflow-hidden rounded-[24px] border border-[color:var(--border)] bg-[color:var(--surface-muted)]">
