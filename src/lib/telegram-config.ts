@@ -1,5 +1,5 @@
 export function getTelegramBotUsername() {
-  return process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME ?? "Pixmorphy_bot";
+  return process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME ?? "pixmorphy1_bot";
 }
 
 export function getTelegramBotUrl(startPayload?: string) {
