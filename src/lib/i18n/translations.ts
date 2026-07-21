@@ -67,6 +67,11 @@ const translations = {
     formMailtoHint:
       "आपका ईमेल ऐप खुल गया होगा — वहाँ से Send दबाएँ, संदेश सीधे हम तक पहुँचेगा।",
     formDirectEmail: "या सीधे ईमेल करें:",
+    formTelegramTitle: "Telegram se connect karein",
+    formTelegramDesc:
+      "Pehle @Pixmorphy_bot par Start dabayein — uske baad neeche form se bheja hua message aapke Telegram par aayega.",
+    formTelegramButton: "Telegram par Connect karein",
+    formTelegramHint: "Form bharne se pehle ek baar bot par /start zaroor karein.",
     blogHome: "मुख्य पृष्ठ",
     blogTitle: "ब्लॉग",
     blogEyebrow: "ब्लॉग संग्रह",
@@ -97,6 +102,10 @@ const translations = {
     contactResponseTime: "अनुमानित उत्तर समय: २४ से ४८ घंटे",
     contactFormLink: "त्वरित प्रश्न के लिए मुख्य पृष्ठ पर फॉर्म भी उपलब्ध है।",
     contactFormLinkText: "मुख्य पृष्ठ पर फॉर्म",
+    contactTelegramLabel: "Telegram",
+    contactTelegramHint:
+      "Query form ke messages Telegram par bhi mil sakte hain — pehle bot se connect karein.",
+    contactTelegramButton: "@Pixmorphy_bot par jayein",
     shareLabel: "साझा करें",
     adSponsored: "प्रायोजित सामग्री",
     adSidebar: "डेस्कटॉप साइडबार विज्ञापन",
@@ -169,6 +178,11 @@ const translations = {
     formMailtoHint:
       "Your email app should open — tap Send and your message will reach us directly.",
     formDirectEmail: "Or email directly:",
+    formTelegramTitle: "Connect on Telegram",
+    formTelegramDesc:
+      "First tap Start on @Pixmorphy_bot — then messages from this form will reach your Telegram.",
+    formTelegramButton: "Connect on Telegram",
+    formTelegramHint: "Send /start to the bot once before using the form.",
     blogHome: "Home",
     blogTitle: "Blog",
     blogEyebrow: "Blog Archive",
@@ -199,6 +213,10 @@ const translations = {
     contactResponseTime: "Estimated response time: 24 to 48 hours",
     contactFormLink: "For quick questions, the homepage form is also available.",
     contactFormLinkText: "Homepage form",
+    contactTelegramLabel: "Telegram",
+    contactTelegramHint:
+      "Query form messages can also arrive on Telegram — connect with the bot first.",
+    contactTelegramButton: "Open @Pixmorphy_bot",
     shareLabel: "Share",
     adSponsored: "Sponsored content",
     adSidebar: "Desktop sidebar ad",

@@ -19,6 +19,22 @@ export function ContactPageUi() {
       <div className="mt-8 space-y-6 text-sm leading-8 text-[color:var(--text-secondary)] sm:text-base">
         <div className="rounded-[24px] bg-[color:var(--surface-muted)] p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
+            {tr("contactTelegramLabel")}
+          </p>
+          <p className="mt-2 text-sm leading-7 text-[color:var(--text-muted)]">
+            {tr("contactTelegramHint")}
+          </p>
+          <a
+            href={`https://t.me/${siteConfig.telegramBotUsername}?start=connect`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center rounded-full bg-[#229ED9] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1b8bc2]"
+          >
+            {tr("contactTelegramButton")}
+          </a>
+        </div>
+        <div className="rounded-[24px] bg-[color:var(--surface-muted)] p-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
             {tr("contactEmailLabel")}
           </p>
           <Link

@@ -1,8 +1,9 @@
 import type { QueryPayload } from "./query-mailto";
+import { resolveTelegramChatId } from "./telegram-bot";
 
 export async function sendTelegramQuery({ name, email, message }: QueryPayload) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
+  const chatId = await resolveTelegramChatId();
 
   if (!token || !chatId) {
     return { ok: false as const, reason: "not_configured" as const };

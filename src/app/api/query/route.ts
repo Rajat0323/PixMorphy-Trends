@@ -21,16 +21,16 @@ export async function POST(request: Request) {
     const payload = { name, email, message };
     const web3Key = process.env.WEB3FORMS_ACCESS_KEY ?? process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
+    const telegram = await sendTelegramQuery(payload);
+    if (telegram.ok) {
+      return NextResponse.json({ ok: true, channel: "telegram" });
+    }
+
     if (web3Key) {
       const web3 = await sendWeb3FormsQuery(web3Key, payload);
       if (web3.ok) {
-        return NextResponse.json({ ok: true });
+        return NextResponse.json({ ok: true, channel: "email" });
       }
-    }
-
-    const telegram = await sendTelegramQuery(payload);
-    if (telegram.ok) {
-      return NextResponse.json({ ok: true });
     }
 
     return NextResponse.json({
