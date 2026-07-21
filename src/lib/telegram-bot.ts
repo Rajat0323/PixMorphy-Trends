@@ -2,6 +2,7 @@ import {
   loadTelegramChatIdFromUpstash,
   saveTelegramChatIdToUpstash,
 } from "./telegram-chat-store";
+import { getTelegramBotToken } from "./telegram-env";
 
 type TelegramApiResponse = {
   ok: boolean;
@@ -9,7 +10,7 @@ type TelegramApiResponse = {
 };
 
 async function callTelegramApi<T>(method: string, body: Record<string, unknown>) {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const token = getTelegramBotToken();
 
   if (!token) {
     return { ok: false as const, reason: "not_configured" as const };
@@ -75,7 +76,7 @@ export async function setTelegramWebhook(webhookUrl: string) {
 }
 
 export async function getTelegramWebhookInfo() {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const token = getTelegramBotToken();
 
   if (!token) {
     return { ok: false as const, url: null };
@@ -101,10 +102,10 @@ export async function getTelegramWebhookInfo() {
 }
 
 export async function getTelegramBotProfile() {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const token = getTelegramBotToken();
 
   if (!token) {
-    return { ok: false as const };
+    return { ok: false as const, reason: "missing_token" as const };
   }
 
   const response = await fetch(`https://api.telegram.org/bot${token}/getMe`, {
@@ -112,11 +113,16 @@ export async function getTelegramBotProfile() {
   });
   const data = (await response.json()) as {
     ok: boolean;
+    description?: string;
     result?: { username?: string; first_name?: string };
   };
 
   if (!response.ok || !data.ok || !data.result?.username) {
-    return { ok: false as const };
+    return {
+      ok: false as const,
+      reason: "invalid_token" as const,
+      telegramError: data.description ?? "Telegram getMe failed",
+    };
   }
 
   return {
