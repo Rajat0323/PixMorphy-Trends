@@ -2,6 +2,184 @@ import type { Post } from "./types";
 
 export const careerPosts: Post[] = [
   {
+    slug: "ai-engineer-salary-india-2026-real-journey",
+    title:
+      "AI Engineer Salary India 2026: Core Electronics se GenAI Engineer Tak — Real Salary Journey",
+    excerpt:
+      "2022 se 2026 tak ka real career aur salary safar — core Electronics job se automation engineer, phir GenAI engineer tak. Koi generic salary report nahi, meri aur mere dost logon ki real numbers ke saath.",
+    category: "Career",
+    publishedAt: "2026-07-21",
+    updatedAt: "2026-07-21",
+    readTime: "१२ मिनट",
+    author: "PixMorphy",
+    imageSrc: "/images/blog/ai-engineer-salary-india-2026-cover.png",
+    imageObjectPosition: "center",
+    heroAccent: "from-indigo-600 via-violet-600 to-fuchsia-600",
+    featuredLabel: "Salary Journey",
+    imageAlt:
+      "AI engineer salary India 2026 real journey from core electronics to GenAI engineer cover",
+    keywords: [
+      "AI engineer salary in India",
+      "AI engineer salary India 2026",
+      "GenAI engineer salary",
+      "automation engineer se AI engineer",
+      "AI salary growth real experience",
+      "electronics to AI engineer salary",
+      "GenAI engineer salary India",
+      "automation engineer salary India",
+      "AI career salary journey",
+      "real AI salary experience India",
+      "AI engineer LPA India 2026",
+      "core electronics to AI career",
+    ],
+    faq: [
+      {
+        question: "AI Engineer ki starting salary kitni hoti hai India mein?",
+        answer:
+          "Ye experience aur background par depend karta hai. Meri apni journey mein core Electronics se start karke, automation ke through, GenAI Engineer tak pahunchne mein salary ₹30,000/month se ₹21 LPA tak grow hui — ye ek multi-year path tha, overnight nahi.",
+      },
+      {
+        question: "Automation se AI mein switch karna sahi decision hai?",
+        answer:
+          "Mere experience mein haan — jab automation ki demand girne lagi aur AI ki demand badhne lagi, tab switch karna sahi raha. Apni field mein LinkedIn par job postings aur demand trend track karte rehna helpful hota hai.",
+      },
+      {
+        question: "GenAI Engineer banne ke liye kya karna padta hai?",
+        answer:
+          "Pehle se kisi related field (jaise automation) ka experience help karta hai, lekin zaroori nahi. Demand research, relevant skills seekhna, aur real projects/experience dikhana — ye core steps hain.",
+      },
+      {
+        question: "8-12 saal experience ke baad bhi salary kam kyun rehti hai kuch fields mein?",
+        answer:
+          "Kuch fields ka long-term growth ceiling limited hota hai, chahe experience kitna bhi ho. Isliye field/domain selection career ke shuru mein hi carefully karna important hai.",
+      },
+      {
+        question: "Kya ye salary numbers sabke liye guaranteed hain?",
+        answer:
+          "Nahi. Ye ek individual aur unke kuch connections ki real experience hai, official survey nahi. Company, city, skillset aur negotiation ke hisaab se numbers alag ho sakte hain.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Ye guide kis liye hai",
+        paragraphs: [
+          "\"AI engineer ki salary kitni hoti hai\" — ye sabse zyada pucha jaane wala sawaal hai, lekin internet par jyadatar answers generic survey reports se aate hain, kisi real insaan ki journey se nahi.",
+          "Main yahan koi third-party report share nahi kar raha. Ye meri khud ki 2022 se 2026 tak ki salary journey hai — core Electronics job se lekar aaj GenAI Engineer banne tak — saath mein kuch close dost logon ke real numbers bhi, jinse maine LinkedIn ke through directly baat ki hai. Ye ek individual experience hai, official survey nahi — lekin isiliye zyada real hai.",
+        ],
+      },
+      {
+        heading: "Meri Salary Journey — 2022 se 2026 tak",
+        paragraphs: [
+          "Neeche table mein meri salary growth ka poora timeline hai — har stage par role, approximate salary, aur time period clearly likha hai.",
+        ],
+        table: {
+          caption:
+            "Meri personal salary journey (2022–2026) — individual experience, official survey nahi.",
+          headers: ["Stage", "Role", "Salary (approx.)", "Time period"],
+          rows: [
+            [
+              "Stage 1",
+              "Core Electronics Engineer",
+              "₹30,000/month (~₹3.6 LPA)",
+              "2022, job start",
+            ],
+            [
+              "Stage 2",
+              "Automation Engineer (transition)",
+              "₹40,000/month (~₹4.8 LPA)",
+              "Shift ke turant baad",
+            ],
+            [
+              "Stage 3",
+              "Automation Engineer (1-2 saal experience)",
+              "₹50,000/month (~₹6 LPA)",
+              "Increments ke saath",
+            ],
+            [
+              "Stage 4",
+              "Automation Engineer (better opportunity switch)",
+              "~₹1,00,000/month, package ~₹14 LPA",
+              "1 saal baad",
+            ],
+            ["Stage 5", "GenAI Engineer", "₹21 LPA", "2025-26, current"],
+          ],
+        },
+      },
+      {
+        heading: "Core Electronics mein kyun ruk gaya growth?",
+        paragraphs: [
+          "B.Tech mera Electronics & Communication (core) mein tha. Graduation ke baad 4 saal government exam ki taiyari ki — nahi hua — to phir kisi bhi field mein industry entry lene ka decision liya. 2022 mein core Electronics job mili, ₹30,000/month par — us waqt ke liye theek thi.",
+          "Lekin 6 mahine kaam karne ke baad ek cheez clearly dikhi: jo log 8 saal, yahan tak ki 12 saal se is field mein the, unki package bhi zyada nahi badhi thi — approximately ₹17-18 LPA par hi atke hue the. Seniors se baat ki, thoda future scope research kiya — samajh aaya ki is specific core field mein long-term growth utni nahi hai jitni expect kar raha tha.",
+          "Ye pehla bada lesson tha: experience jitna zaroori hai, field ka selection utna hi zaroori hai. Sirf industry mein rehna kaafi nahi — sahi trend wali field mein rehna zaroori hai.",
+        ],
+      },
+      {
+        heading: "Automation Engineer mein shift — pehla real jump",
+        paragraphs: [
+          "Us waqt automation engineering ka trend achha chal raha tha. Kuch automation tools seekhe, unpar kaam start kiya, phir interviews diye. Automation engineer ke roop mein opportunity mili — salary ₹30,000 se ₹40,000/month tak pahunch gayi.",
+          "Agle 1-2 saal automation mein hi kaam kiya, experience banaya. Increments ke saath salary approximately ₹50,000/month tak pahunchi. Uske baad ek better opportunity ke liye switch kiya — same automation field mein, lekin better package ke saath. Experience achha ho chuka tha, aur jo interview mein dikha raha tha wo bhi automation-focused hi tha — isliye is switch mein salary approximately ₹1,00,000/month tak pahunch gayi, aur ek saal baad package ~₹14 LPA ho gaya.",
+        ],
+      },
+      {
+        heading: "Automation se AI/GenAI mein switch kyun kiya",
+        paragraphs: [
+          "2025-26 ke transition period mein ek pattern clearly dikhne laga: AI ka trend tezi se badh raha tha, aur automation projects, automation-related job postings LinkedIn par kam hote dikhe. Jo tools automation mein use hote the, unki demand bhi girne lagi.",
+          "Isi observation ke basis par decision liya — automation chhod kar AI mein shift karna hai. Pehle demand check ki, phir LinkedIn ke through un logon se directly baat ki jo already AI field mein kaam kar rahe the — unki salary kaisi hai, growth kaisa hai, ye sab pucha. Jawab positive tha, to phir GenAI Engineer banne ki taiyari shuru ki.",
+        ],
+      },
+      {
+        heading: "AI Engineer banne ke baad ki salary — real number",
+        paragraphs: [
+          "Automation mein jo ~₹14 LPA ka package tha, GenAI preparation ke baad wo badhkar ₹21 LPA ho gaya hai — ye meri current salary hai, 2026 mein.",
+        ],
+      },
+      {
+        heading: "Mere saath kaam karne wale logon ki salary (peer benchmarks)",
+        paragraphs: [
+          "Kuch close connections jinse maine directly baat ki hai, unke approximate numbers (2026 ke hisaab se):",
+        ],
+        bullets: [
+          "6-8 saal experience wale AI professionals: approximately ₹35 LPA",
+          "11-12 saal experience wala AI professional (ek close dost): approximately ₹55 LPA",
+          "Ye sirf reference points hain, guarantee nahi — har company, role, aur skill-set ke hisaab se number alag ho sakta hai.",
+        ],
+      },
+      {
+        heading: "2026 mein AI Engineer Salary — kya seekha",
+        paragraphs: [],
+        bullets: [
+          "Field selection matters as much as hard work. Core Electronics mein mehnat kam nahi thi, lekin field ka growth ceiling limited tha.",
+          "Trend ko track karna zaroori hai. Automation se AI ka shift sirf \"AI hype\" dekhkar nahi liya — LinkedIn job postings aur demand pattern dekhkar liya.",
+          "Networking se real data milta hai. Salary decide karne se pehle LinkedIn ke through directly logon se baat ki — generic articles se zyada trustworthy yehi tareeka laga.",
+          "Domain switch karte waqt bhi purana experience kaam aata hai. Automation ka experience GenAI transition mein bhi credibility banane mein useful raha.",
+        ],
+      },
+      {
+        heading: "Ek honest disclaimer",
+        paragraphs: [
+          "Ye numbers kisi official salary survey se nahi aaye — ye meri aur mere kuch connections ki personal, real experience hai. Company, city, skillset, aur negotiation ke hisaab se aapka number alag ho sakta hai. Isse ek realistic reference point ki tarah lein, guarantee ki tarah nahi.",
+        ],
+      },
+    ],
+    relatedSlugs: [
+      "btech-fresher-ai-career-strategy-2025-2026-hindi",
+      "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
+      "chatgpt-hindi-mein-kaise-use-kare-2026",
+      "free-ai-tools-students-2026-hindi",
+    ],
+    internalLinks: [
+      {
+        label: "B.Tech Fresher करियर रणनीति 2025–2026",
+        href: "/blog/btech-fresher-ai-career-strategy-2025-2026-hindi",
+      },
+      {
+        label: "सरकारी नौकरी छोड़ दी? अब IT में जॉब कैसे पाएँ?",
+        href: "/blog/sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
+      },
+      { label: "प्रश्न पूछें — Query Form", href: "/#query" },
+    ],
+  },
+  {
     slug: "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
     title: "सरकारी नौकरी छोड़ दी? अब IT में जॉब कैसे पाएँ? (2026 की पूरी गाइड)",
     excerpt:
@@ -179,6 +357,7 @@ export const careerPosts: Post[] = [
       },
     ],
     relatedSlugs: [
+      "ai-engineer-salary-india-2026-real-journey",
       "btech-fresher-ai-career-strategy-2025-2026-hindi",
       "freelancing-beginner-roadmap-india-2026",
       "chatgpt-hindi-mein-kaise-use-kare-2026",
@@ -331,6 +510,7 @@ export const careerPosts: Post[] = [
       },
     ],
     relatedSlugs: [
+      "ai-engineer-salary-india-2026-real-journey",
       "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
       "chatgpt-hindi-mein-kaise-use-kare-2026",
       "free-ai-tools-students-2026-hindi",
