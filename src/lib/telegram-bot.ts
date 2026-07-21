@@ -69,6 +69,59 @@ export async function setTelegramWebhook(webhookUrl: string) {
   return callTelegramApi("setWebhook", {
     url: webhookUrl,
     allowed_updates: ["message"],
+    drop_pending_updates: true,
     ...(secret ? { secret_token: secret } : {}),
   });
+}
+
+export async function getTelegramWebhookInfo() {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+
+  if (!token) {
+    return { ok: false as const, url: null };
+  }
+
+  const response = await fetch(`https://api.telegram.org/bot${token}/getWebhookInfo`, {
+    cache: "no-store",
+  });
+  const data = (await response.json()) as {
+    ok: boolean;
+    result?: { url?: string; last_error_message?: string };
+  };
+
+  if (!response.ok || !data.ok) {
+    return { ok: false as const, url: null };
+  }
+
+  return {
+    ok: true as const,
+    url: data.result?.url ?? "",
+    lastError: data.result?.last_error_message ?? null,
+  };
+}
+
+export async function getTelegramBotProfile() {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+
+  if (!token) {
+    return { ok: false as const };
+  }
+
+  const response = await fetch(`https://api.telegram.org/bot${token}/getMe`, {
+    cache: "no-store",
+  });
+  const data = (await response.json()) as {
+    ok: boolean;
+    result?: { username?: string; first_name?: string };
+  };
+
+  if (!response.ok || !data.ok || !data.result?.username) {
+    return { ok: false as const };
+  }
+
+  return {
+    ok: true as const,
+    username: data.result.username,
+    firstName: data.result.first_name ?? "Bot",
+  };
 }

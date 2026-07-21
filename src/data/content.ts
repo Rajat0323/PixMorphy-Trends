@@ -35,7 +35,7 @@ export const siteConfig = {
   ],
   contactEmail: "vivgup64@gmail.com",
   partnershipsEmail: "vivgup64@gmail.com",
-  telegramBotUsername: process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME ?? "Pixmorphy_bot",
+  telegramBotUsername: process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME ?? "pixmorphy1_bot",
   socialLinks: [
     "https://github.com/Rajat0323/PixMorphy-Trends",
     "https://x.com/pixmorphy",

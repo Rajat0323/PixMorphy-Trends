@@ -69,7 +69,7 @@ const translations = {
     formDirectEmail: "या सीधे ईमेल करें:",
     formTelegramTitle: "Telegram se connect karein",
     formTelegramDesc:
-      "Pehle @Pixmorphy_bot par Start dabayein — uske baad neeche form se bheja hua message aapke Telegram par aayega.",
+      "Pehle @pixmorphy1_bot par Start dabayein — uske baad neeche form se bheja hua message aapke Telegram par aayega.",
     formTelegramButton: "Telegram par Connect karein",
     formTelegramHint: "Form bharne se pehle ek baar bot par /start zaroor karein.",
     blogHome: "मुख्य पृष्ठ",
@@ -105,7 +105,7 @@ const translations = {
     contactTelegramLabel: "Telegram",
     contactTelegramHint:
       "Query form ke messages Telegram par bhi mil sakte hain — pehle bot se connect karein.",
-    contactTelegramButton: "@Pixmorphy_bot par jayein",
+    contactTelegramButton: "@pixmorphy1_bot par jayein",
     shareLabel: "साझा करें",
     adSponsored: "प्रायोजित सामग्री",
     adSidebar: "डेस्कटॉप साइडबार विज्ञापन",
@@ -180,7 +180,7 @@ const translations = {
     formDirectEmail: "Or email directly:",
     formTelegramTitle: "Connect on Telegram",
     formTelegramDesc:
-      "First tap Start on @Pixmorphy_bot — then messages from this form will reach your Telegram.",
+      "First tap Start on @pixmorphy1_bot — then messages from this form will reach your Telegram.",
     formTelegramButton: "Connect on Telegram",
     formTelegramHint: "Send /start to the bot once before using the form.",
     blogHome: "Home",
@@ -216,7 +216,7 @@ const translations = {
     contactTelegramLabel: "Telegram",
     contactTelegramHint:
       "Query form messages can also arrive on Telegram — connect with the bot first.",
-    contactTelegramButton: "Open @Pixmorphy_bot",
+    contactTelegramButton: "Open @pixmorphy1_bot",
     shareLabel: "Share",
     adSponsored: "Sponsored content",
     adSidebar: "Desktop sidebar ad",

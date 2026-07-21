@@ -15,7 +15,7 @@ export async function POST(request: Request) {
   const secret = process.env.TELEGRAM_WEBHOOK_SECRET;
   const headerSecret = request.headers.get("x-telegram-bot-api-secret-token");
 
-  if (secret && headerSecret !== secret) {
+  if (secret && headerSecret && headerSecret !== secret) {
     return NextResponse.json({ ok: false }, { status: 401 });
   }
 
