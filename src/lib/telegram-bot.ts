@@ -1,0 +1,74 @@
+import {
+  loadTelegramChatIdFromUpstash,
+  saveTelegramChatIdToUpstash,
+} from "./telegram-chat-store";
+
+type TelegramApiResponse = {
+  ok: boolean;
+  description?: string;
+};
+
+async function callTelegramApi<T>(method: string, body: Record<string, unknown>) {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+
+  if (!token) {
+    return { ok: false as const, reason: "not_configured" as const };
+  }
+
+  const response = await fetch(`https://api.telegram.org/bot${token}/${method}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+
+  const data = (await response.json()) as TelegramApiResponse & T;
+
+  if (!response.ok || !data.ok) {
+    return { ok: false as const, reason: "send_failed" as const };
+  }
+
+  return { ok: true as const, data };
+}
+
+export async function sendTelegramText(chatId: string, text: string) {
+  return callTelegramApi("sendMessage", {
+    chat_id: chatId,
+    text,
+  });
+}
+
+export async function registerTelegramChat(chatId: string, firstName?: string) {
+  await saveTelegramChatIdToUpstash(chatId);
+
+  const name = firstName ? ` ${firstName}` : "";
+  const persistedNote = process.env.TELEGRAM_CHAT_ID
+    ? "Site ke query form se ab aapko messages yahan milenge."
+    : "Ab site ke query form se messages yahan aayenge. (Vercel mein TELEGRAM_CHAT_ID set karein taaki har deploy par stable rahe.)";
+
+  return sendTelegramText(
+    chatId,
+    [
+      `✅ PixMorphy Telegram connect ho gaya${name}!`,
+      "",
+      persistedNote,
+      "",
+      `Aapka Chat ID: ${chatId}`,
+      "",
+      "Query form: https://www.pixmorphy.in/#query",
+    ].join("\n"),
+  );
+}
+
+export async function resolveTelegramChatId() {
+  return loadTelegramChatIdFromUpstash();
+}
+
+export async function setTelegramWebhook(webhookUrl: string) {
+  const secret = process.env.TELEGRAM_WEBHOOK_SECRET;
+
+  return callTelegramApi("setWebhook", {
+    url: webhookUrl,
+    allowed_updates: ["message"],
+    ...(secret ? { secret_token: secret } : {}),
+  });
+}
