@@ -51,17 +51,20 @@ export function SiteFooter() {
             <Link href="/blog" className="block hover:text-[color:var(--accent)]">
               {tr("footerAllBlogs")}
             </Link>
-            <Link href="/category/chalisa" className="block hover:text-[color:var(--accent)]">
-              {tr("footerChalisa")}
+            <Link href="/category/career" className="block hover:text-[color:var(--accent)]">
+              {tr("footerCareer")}
             </Link>
-            <Link href="/category/festivals" className="block hover:text-[color:var(--accent)]">
-              {tr("footerFestivals")}
+            <Link
+              href="/blog/sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi"
+              className="block hover:text-[color:var(--accent)]"
+            >
+              {tr("footerGovtToIt")}
             </Link>
-            <Link href="/category/vrat-katha" className="block hover:text-[color:var(--accent)]">
-              {tr("footerVrat")}
-            </Link>
-            <Link href="/blog" className="block hover:text-[color:var(--accent)]">
-              {tr("footerAllPosts")}
+            <Link
+              href="/blog/ai-engineer-salary-india-2026-real-journey"
+              className="block hover:text-[color:var(--accent)]"
+            >
+              {tr("footerSalaryJourney")}
             </Link>
           </div>
         </div>

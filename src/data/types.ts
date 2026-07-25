@@ -13,6 +13,8 @@ export type Faq = {
   answer: string;
 };
 
+export type LayoutVariant = "timeline" | "journey" | "playbook";
+
 export type Post = {
   slug: string;
   title: string;
@@ -22,6 +24,8 @@ export type Post = {
   updatedAt?: string;
   readTime: string;
   author: string;
+  layoutVariant: LayoutVariant;
+  experienceNote?: string;
   imageSrc: string;
   imageObjectPosition?: string;
   heroAccent: string;

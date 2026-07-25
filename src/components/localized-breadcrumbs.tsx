@@ -21,7 +21,7 @@ export function LocalizedBreadcrumbs({ items }: LocalizedBreadcrumbsProps) {
       case "blog":
         return { label: tr("blogTitle"), href: "/blog" };
       case "allPosts":
-        return { label: tr("footerAllPosts"), href: "/blog" };
+        return { label: tr("footerAllBlogs"), href: "/blog" };
       case "category":
         return {
           label: getCategoryLabel(item.category),

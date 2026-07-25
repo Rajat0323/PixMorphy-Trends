@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AuthorCard } from "@/components/author-card";
-import { BlogArticleTable } from "@/components/blog-article-table";
 import { BlogImage } from "@/components/blog-image";
 import {
   BlogPostFaqSection,
@@ -10,8 +9,11 @@ import {
   BlogPostRelatedSection,
   BlogPostSidebarUi,
   PostUpdatedLabel,
-  SponsoredAdSlot,
 } from "@/components/blog-post-ui";
+import {
+  BlogPostSections,
+  ExperienceDisclaimer,
+} from "@/components/blog-post-sections";
 import { FaqAccordion } from "@/components/faq-accordion";
 import {
   getBlogBreadcrumbItems,
@@ -20,7 +22,7 @@ import {
   LocalizedBreadcrumbs,
 } from "@/components/localized-breadcrumbs";
 import { ShareButtons } from "@/components/share-buttons";
-import { getPostBySlug, getRelatedPosts, posts, siteConfig } from "@/data/content";
+import { authors, getPostBySlug, getRelatedPosts, posts, siteConfig } from "@/data/content";
 import { getCategoryLabel } from "@/data/bhakti";
 import { getBlogCoverUrl, getBlogSocialCoverUrl } from "@/lib/blog-cover";
 import { getAbsoluteImageUrl, getAbsoluteUrl } from "@/lib/seo";
@@ -82,31 +84,8 @@ export default async function BlogPage({ params }: PageProps) {
   }
 
   const relatedPosts = getRelatedPosts(post.relatedSlugs);
-  const sectionImageSrcs = new Set(
-    post.sections.map((section) => section.image?.src).filter(Boolean),
-  );
-  const galleryImagesForSections =
-    post.galleryImages?.filter((image) => !sectionImageSrcs.has(image.src)) ?? [];
-  const sectionImageChunks = galleryImagesForSections.length
-    ? (() => {
-        const sectionsWithoutImage = post.sections.filter((section) => !section.image);
-        const sectionCount = Math.max(sectionsWithoutImage.length, 1);
-        const chunkSize = Math.ceil(galleryImagesForSections.length / sectionCount);
-        let galleryIndex = 0;
-        return post.sections.map((section) => {
-          if (section.image) {
-            return [];
-          }
-          const chunk = galleryImagesForSections.slice(
-            galleryIndex * chunkSize,
-            (galleryIndex + 1) * chunkSize,
-          );
-          galleryIndex += 1;
-          return chunk;
-        });
-      })()
-    : [];
   const coverUrl = getBlogCoverUrl(post);
+  const authorProfile = authors[post.author as keyof typeof authors];
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -122,6 +101,9 @@ export default async function BlogPage({ params }: PageProps) {
     author: {
       "@type": "Person",
       name: post.author,
+      jobTitle: authorProfile?.jobTitle,
+      knowsAbout: authorProfile?.knowsAbout,
+      description: authorProfile?.bio,
     },
     publisher: {
       "@type": "Organization",
@@ -203,6 +185,9 @@ export default async function BlogPage({ params }: PageProps) {
               </p>
               <div className="flex flex-wrap items-center gap-4 border-t border-[color:var(--border)] pt-4 text-sm text-[color:var(--text-muted)]">
                 <span className="font-medium text-[color:var(--text-primary)]">{post.author}</span>
+                {authorProfile?.credentials ? (
+                  <span>{authorProfile.credentials}</span>
+                ) : null}
                 <PostUpdatedLabel
                   date={new Date(post.updatedAt ?? post.publishedAt).toLocaleDateString("hi-IN")}
                 />
@@ -210,81 +195,13 @@ export default async function BlogPage({ params }: PageProps) {
             </div>
           </header>
 
-          <div className="article-prose mx-auto w-full max-w-3xl space-y-8">
-          {post.sections.map((section, index) => (
-            <section
-              key={section.heading}
-              className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8"
-            >
-              <h2 className="headline-font text-2xl font-semibold tracking-tight text-[color:var(--text-primary)] sm:text-3xl">
-                {section.heading}
-              </h2>
-              <div className="mt-5 space-y-4">
-                {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph} className="whitespace-pre-line">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-              {section.bullets ? (
-                <ul className="mt-5 space-y-3">
-                  {section.bullets.map((bullet) => (
-                    <li key={bullet} className="rounded-2xl bg-[color:var(--surface-muted)] px-4 py-3">
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              {section.table ? (
-                <BlogArticleTable
-                  caption={section.table.caption}
-                  headers={section.table.headers}
-                  rows={section.table.rows}
-                />
-              ) : null}
-              {section.image ? (
-                <figure className="mt-6 overflow-hidden rounded-[24px] border border-[color:var(--border)] bg-[color:var(--surface-muted)]">
-                  <div className="relative aspect-[16/10]">
-                    <BlogImage
-                      src={section.image.src}
-                      alt={section.image.alt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 720px"
-                      className="object-cover"
-                    />
-                  </div>
-                  <figcaption className="px-4 py-3 text-sm text-[color:var(--text-muted)]">
-                    {section.image.alt}
-                  </figcaption>
-                </figure>
-              ) : sectionImageChunks[index]?.length ? (
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  {sectionImageChunks[index].map((image) => (
-                    <div
-                      key={image.src}
-                      className="overflow-hidden rounded-[24px] border border-[color:var(--border)] bg-[color:var(--surface-muted)]"
-                    >
-                      <div className="relative aspect-[16/10]">
-                        <BlogImage
-                          src={image.src}
-                          alt={image.alt}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 360px"
-                          className="object-cover"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : null}
-              {index === 1 ? (
-                <div className="mt-6">
-                  <SponsoredAdSlot compact />
-                </div>
-              ) : null}
-            </section>
-          ))}
-          </div>
+          {post.experienceNote ? (
+            <div className="mx-auto w-full max-w-3xl">
+              <ExperienceDisclaimer note={post.experienceNote} />
+            </div>
+          ) : null}
+
+          <BlogPostSections post={post} />
 
           <div className="mx-auto w-full max-w-3xl space-y-8">
           {post.internalLinks?.length ? (

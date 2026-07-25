@@ -12,6 +12,9 @@ export const careerPosts: Post[] = [
     updatedAt: "2026-07-21",
     readTime: "१२ मिनट",
     author: "PixMorphy",
+    layoutVariant: "timeline",
+    experienceNote:
+      "Ye article meri personal salary journey par based hai (2022–2026). Ye koi official HR survey ya guaranteed package promise nahi hai.",
     imageSrc: "/images/blog/ai-engineer-salary-india-2026-cover.png",
     imageObjectPosition: "center",
     heroAccent: "from-indigo-600 via-violet-600 to-fuchsia-600",
@@ -164,8 +167,6 @@ export const careerPosts: Post[] = [
     relatedSlugs: [
       "btech-fresher-ai-career-strategy-2025-2026-hindi",
       "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
-      "chatgpt-hindi-mein-kaise-use-kare-2026",
-      "free-ai-tools-students-2026-hindi",
     ],
     internalLinks: [
       {
@@ -189,6 +190,9 @@ export const careerPosts: Post[] = [
     updatedAt: "2026-07-17",
     readTime: "११ मिनट",
     author: "PixMorphy",
+    layoutVariant: "journey",
+    experienceNote:
+      "Ye guide meri khud ki sarkari prep, gap aur IT entry ki kahani par based hai — textbook career coaching nahi.",
     imageSrc: "/images/blog/govt-job-to-it-career-2026-cover.png",
     imageObjectPosition: "center top",
     heroAccent: "from-teal-600 via-blue-600 to-violet-600",
@@ -359,9 +363,6 @@ export const careerPosts: Post[] = [
     relatedSlugs: [
       "ai-engineer-salary-india-2026-real-journey",
       "btech-fresher-ai-career-strategy-2025-2026-hindi",
-      "freelancing-beginner-roadmap-india-2026",
-      "chatgpt-hindi-mein-kaise-use-kare-2026",
-      "free-ai-tools-students-2026-hindi",
     ],
     internalLinks: [
       {
@@ -384,6 +385,9 @@ export const careerPosts: Post[] = [
     updatedAt: "2026-07-17",
     readTime: "१० मिनट",
     author: "PixMorphy",
+    layoutVariant: "playbook",
+    experienceNote:
+      "Ye fresher strategy EC background se AI engineer tak pahunchne wale practical steps hain — main khud isi raaste se guzra hoon.",
     imageSrc: "/images/blog/ai-tools-students-2026.svg",
     imageObjectPosition: "center",
     heroAccent: "from-blue-600 via-indigo-600 to-violet-600",
@@ -512,9 +516,6 @@ export const careerPosts: Post[] = [
     relatedSlugs: [
       "ai-engineer-salary-india-2026-real-journey",
       "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
-      "chatgpt-hindi-mein-kaise-use-kare-2026",
-      "free-ai-tools-students-2026-hindi",
-      "freelancing-beginner-roadmap-india-2026",
     ],
     internalLinks: [
       {
