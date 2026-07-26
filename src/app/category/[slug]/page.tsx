@@ -5,14 +5,14 @@ import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
 import { CATEGORY_SLUG_LABELS } from "@/data/bhakti";
 import { siteConfig } from "@/data/content";
-import { getPostsByCategorySlug, slugToCategory } from "@/lib/seo";
+import { getActiveCategorySlugs, getPostsByCategorySlug, slugToCategory } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return Object.keys(slugToCategory).map((slug) => ({ slug }));
+  return getActiveCategorySlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${label} — लेख`,
-    description: `पिक्समॉर्फी पर ${label} श्रेणी के नवीनतम हिंदी भक्ति लेख।`,
+    description: `PixMorphy par ${label} category ke experience-based Hindi career articles.`,
     alternates: {
       canonical: `/category/${slug}`,
     },
     openGraph: {
-      title: `${label} | पिक्समॉर्फी`,
-      description: `पिक्समॉर्फी पर ${label} श्रेणी के नवीनतम हिंदी भक्ति लेख।`,
+      title: `${label} | PixMorphy`,
+      description: `PixMorphy par ${label} category ke experience-based Hindi career articles.`,
       url: `${siteConfig.url}/category/${slug}`,
       type: "website",
     },
@@ -55,7 +55,7 @@ export default async function CategoryPage({ params }: PageProps) {
         <Breadcrumbs
           items={[
             { label: "मुख्य पृष्ठ", href: "/" },
-            { label: "सभी पाठ", href: "/blog" },
+            { label: "सभी ब्लॉग", href: "/blog" },
             { label: label ?? category },
           ]}
         />
@@ -63,7 +63,7 @@ export default async function CategoryPage({ params }: PageProps) {
           as="h1"
           eyebrow="श्रेणी"
           title={`${label} — लेख`}
-          description={`${label} श्रेणी के चुने हुए भक्ति पाठ, अर्थ और पूजा विधि।`}
+          description={`${label} category ke experience-based career guides — personal journey, honest guidance.`}
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {categoryPosts.map((post) => (

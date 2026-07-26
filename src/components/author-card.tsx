@@ -23,9 +23,19 @@ export function AuthorCard({ author }: { author: string }) {
           <p className="text-sm font-medium text-[color:var(--text-muted)]">
             {profile?.role}
           </p>
+          {profile?.credentials ? (
+            <p className="text-xs font-medium text-[color:var(--accent)]">
+              {profile.credentials}
+            </p>
+          ) : null}
           <p className="text-sm leading-7 text-[color:var(--text-secondary)]">
             {profile?.bio}
           </p>
+          {profile?.experienceNote ? (
+            <p className="rounded-2xl bg-[color:var(--surface-muted)] px-4 py-3 text-xs leading-6 text-[color:var(--text-muted)]">
+              {profile.experienceNote}
+            </p>
+          ) : null}
         </div>
       </div>
     </section>

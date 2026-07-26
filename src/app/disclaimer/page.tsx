@@ -4,7 +4,8 @@ import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
   title: "अस्वीकरण",
-  description: "पिक्समॉर्फी अस्वीकरण — संपादकीय सामग्री, सहबद्ध लिंक और सूचनात्मक सटीकता।",
+  description:
+    "PixMorphy disclaimer — career guidance, salary information, and content accuracy for Indian students.",
   alternates: {
     canonical: "/disclaimer",
   },
@@ -17,32 +18,39 @@ export default function DisclaimerPage() {
         <SectionHeading
           as="h1"
           eyebrow="अस्वीकरण"
-          title="सामग्री की सटीकता, सहबद्ध उल्लेख और दायित्व सूचना"
-          description="पाठकों के लिए महत्वपूर्ण पारदर्शिता बिंदु।"
+          title="Career guidance, salary data aur content accuracy"
+          description="Important transparency points for readers."
         />
         <div className="mt-8 space-y-5 text-sm leading-8 text-[color:var(--text-secondary)] sm:text-base">
           <p>
-            पिक्समॉर्फी के लेख सूचनात्मक और शैक्षिक उद्देश्य के लिए हैं। तकनीकी अपडेट, मूल्य,
-            ऐप सुविधाएँ और समाचार समय के साथ बदल सकते हैं।
+            PixMorphy ke articles informational aur educational purpose ke liye hain. Career paths,
+            salary numbers, aur job market conditions company, city, skills aur time ke saath change
+            ho sakte hain.
           </p>
           <p>
-            ऑनलाइन कमाई, निवेश या उत्पाद सिफ़ारिश मार्गदर्शिकाएँ व्यक्तिगत शोध के बाद ही
-            अपनाएँ। पिक्समॉर्फी वित्तीय सलाह प्रदान नहीं करता।
+            Salary tables aur growth timelines author ki personal experience par based hain — ye
+            official HR reports, government data, ya guaranteed packages nahi hain. Apne decisions
+            lene se pehle apna research karein.
           </p>
           <p>
-            कुछ लेखों में सहबद्ध या प्रायोजित स्थान हो सकते हैं। ऐसी सामग्री स्पष्ट रूप से
-            चिह्नित रहेगी।
+            PixMorphy financial advice, legal advice, ya job placement guarantee provide nahi karta.
+            Koi bhi career step lene se pehle apni situation, family support aur financial needs
+            evaluate karein.
           </p>
           <p>
-            सुधार के लिए{" "}
+            Kuch pages par sponsored ad slots ho sakte hain — ye clearly labeled hote hain aur
+            editorial content se alag treat kiye jate hain.
+          </p>
+          <p>
+            Corrections ke liye{" "}
             <Link href="/contact" className="text-[color:var(--accent)]">
-              संपर्क करें
+              contact karein
             </Link>{" "}
-            या{" "}
+            ya{" "}
             <Link href="/editorial-policy" className="text-[color:var(--accent)]">
-              संपादकीय नीति
+              editorial policy
             </Link>{" "}
-            देखें।
+            dekhein.
           </p>
         </div>
       </div>

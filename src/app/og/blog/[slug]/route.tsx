@@ -6,15 +6,6 @@ export const runtime = "edge";
 
 const CATEGORY_THEMES: Record<string, { from: string; to: string; emoji: string }> = {
   Career: { from: "#1d4ed8", to: "#7c3aed", emoji: "🎓" },
-  Chalisa: { from: "#ea580c", to: "#dc2626", emoji: "🙏" },
-  Aarti: { from: "#f97316", to: "#db2777", emoji: "🪔" },
-  Festivals: { from: "#d97706", to: "#e11d48", emoji: "🎉" },
-  "Vrat & Katha": { from: "#9333ea", to: "#2563eb", emoji: "📿" },
-  Cricket: { from: "#15803d", to: "#0f766e", emoji: "🏏" },
-  Tech: { from: "#0891b2", to: "#4f46e5", emoji: "📱" },
-  "AI Tools": { from: "#06b6d4", to: "#4f46e5", emoji: "🤖" },
-  Discover: { from: "#2563eb", to: "#db2777", emoji: "🔥" },
-  News: { from: "#dc2626", to: "#7c2d12", emoji: "📰" },
 };
 
 function getTheme(category: string) {

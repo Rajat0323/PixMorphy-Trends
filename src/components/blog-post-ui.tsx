@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { Post } from "@/data/content";
-import { BHAKTI_CATEGORIES, getCategoryLabel } from "@/data/bhakti";
+import { BLOG_CATEGORIES, getCategoryLabel } from "@/data/bhakti";
 import { AdSlot } from "@/components/ad-slot";
 import { QueryForm } from "@/components/query-form";
 import { PostCard } from "@/components/post-card";
@@ -150,7 +150,7 @@ export function BlogPostSidebarUi({ currentSlug, posts }: BlogPostSidebarUiProps
           {tr("postCategories")}
         </h2>
         <div className="mt-4 flex flex-wrap gap-3">
-          {BHAKTI_CATEGORIES.map((item) => (
+          {BLOG_CATEGORIES.map((item) => (
             <Link
               key={item}
               href={`/category/${getCategorySlug(item)}`}

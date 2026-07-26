@@ -4,7 +4,8 @@ import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
   title: "संपादकीय नीति",
-  description: "पिक्समॉर्फी संपादकीय मानक, तथ्य-जाँच दृष्टिकोण और सुधार नीति।",
+  description:
+    "PixMorphy editorial standards — experience-based career content, fact-checking, corrections, and E-E-A-T transparency.",
   alternates: {
     canonical: "/editorial-policy",
   },
@@ -17,25 +18,36 @@ export default function EditorialPolicyPage() {
         <SectionHeading
           as="h1"
           eyebrow="संपादकीय नीति"
-          title="तथ्य-जाँच, श्रेय और सुधार कार्यप्रणाली"
-          description="पिक्समॉर्फी के विश्वास सिद्धांत जो हर प्रकाशित लेख पर लागू होते हैं।"
+          title="Experience, Expertise, Authoritativeness, Trust (E-E-A-T)"
+          description="PixMorphy par sirf personal career experience par based Hindi articles publish hote hain."
         />
         <div className="mt-8 space-y-5 text-sm leading-8 text-[color:var(--text-secondary)] sm:text-base">
           <p>
-            हर लेख में लेखक का नाम, प्रकाशन तिथि और अद्यतन तिथि स्पष्ट रूप से दी जाती है।
-            जहाँ प्रासंगिक हों, स्रोतों का स्पष्ट उल्लेख किया जाता है।
+            <strong>Experience:</strong> Har career article author ki khud ki journey — job switch,
+            salary growth, gap, ya fresher strategy — par based hota hai. Third-party AI-generated
+            filler content ya unrelated trending topics publish nahi kiye jate.
           </p>
           <p>
-            हम भ्रामक शीर्षकों से बचते हैं और पाठकों के लिए व्यावहारिक मूल्य को प्राथमिकता
-            देते हैं। प्रायोजित या सहबद्ध सामग्री अलग से पहचानी जाती है।
+            <strong>Expertise:</strong> Author GenAI engineer ke roop mein kaam karta hai aur ECE se
+            IT/AI transition personally experience kar chuka hai. Technical aur career guidance dono
+            isi background se aate hain.
           </p>
           <p>
-            यदि किसी तथ्य में त्रुटि मिले, तो हम २४–४८ घंटे के भीतर समीक्षा करके सुधार
-            अपडेट करते हैं।{" "}
+            <strong>Authoritativeness:</strong> Salary figures, timelines aur job strategies clearly
+            labeled hote hain — &quot;personal experience&quot;, &quot;approximate&quot;, ya
+            &quot;individual case&quot; — taaki reader ko official guarantee na lage.
+          </p>
+          <p>
+            <strong>Trust:</strong> Misleading headlines, fake urgency, ya guaranteed income/job
+            promises avoid kiye jate hain. Sponsored ya affiliate content alag se mark kiya jayega.
+          </p>
+          <p>
+            Har article mein author name, publish date, update date aur FAQ section hota hai. Agar
+            kisi fact mein correction chahiye,{" "}
             <Link href="/contact" className="text-[color:var(--accent)]">
-              संपर्क पृष्ठ
+              contact page
             </Link>{" "}
-            के माध्यम से सूचित करें।
+            par 24–48 ghante ke andar review kiya jata hai.
           </p>
         </div>
       </div>

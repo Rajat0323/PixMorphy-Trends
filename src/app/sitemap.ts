@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { posts, siteConfig } from "@/data/content";
-import { slugToCategory } from "@/lib/seo";
+import { getActiveCategorySlugs } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${siteConfig.url}/blog`,
       lastModified: new Date(),
-      changeFrequency: "daily",
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.4,
     },
-    ...Object.keys(slugToCategory).map((slug) => ({
+    ...getActiveCategorySlugs().map((slug) => ({
       url: `${siteConfig.url}/category/${slug}`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
