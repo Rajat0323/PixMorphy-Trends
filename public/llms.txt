@@ -12,6 +12,7 @@ Sitemap: https://www.pixmorphy.in/sitemap.xml
 - AI engineer salary journey (personal experience, 2022–2026)
 - Government exam preparation to IT job transition
 - B.Tech fresher career strategy in AI era
+- AI career roadmap for beginners (Generative AI, RAG, Python)
 
 ## Key pages
 - Homepage: https://www.pixmorphy.in/
@@ -21,6 +22,7 @@ Sitemap: https://www.pixmorphy.in/sitemap.xml
 - Contact: https://www.pixmorphy.in/contact
 
 ## Blog posts (experience-based only)
+- AI mein Career kaise shuru kare — Beginners Roadmap 2026: https://www.pixmorphy.in/blog/ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi
 - AI Engineer Salary India 2026: Core Electronics se GenAI Engineer Tak — Real Salary Journey: https://www.pixmorphy.in/blog/ai-engineer-salary-india-2026-real-journey
 - Sarkari naukri chhod kar IT job kaise paye (2026 Hindi guide): https://www.pixmorphy.in/blog/sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi
 - B.Tech Fresher Career Strategy 2025–2026: AI yug mein pehli naukri: https://www.pixmorphy.in/blog/btech-fresher-ai-career-strategy-2025-2026-hindi

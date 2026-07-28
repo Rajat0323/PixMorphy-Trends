@@ -206,58 +206,124 @@ export function BlogPostSections({ post }: { post: Post }) {
     );
   }
 
-  return (
-    <div className="article-prose mx-auto w-full max-w-3xl space-y-8">
-      {post.sections.map((section, index) => {
-        const isChecklist = Boolean(section.bullets?.length);
-        return (
-          <section
-            key={section.heading}
-            className={`rounded-[28px] border p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8 ${
-              isChecklist
-                ? "border-blue-200 bg-[linear-gradient(180deg,rgba(37,99,235,0.06),rgba(255,255,255,1))]"
-                : "border-[color:var(--border)] bg-white"
-            }`}
-          >
-            <div className="flex items-start gap-3">
-              {isChecklist ? (
-                <span className="mt-1 rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
-                  Action
+  if (post.layoutVariant === "roadmap") {
+    return (
+      <div className="article-prose mx-auto w-full max-w-3xl space-y-8">
+        {post.sections.map((section, index) => {
+          const stepMatch = section.heading.match(/^Step\s+(\d+)/i);
+          const stepNumber = stepMatch?.[1] ?? String(index + 1);
+          const isResourceStep = section.heading.toLowerCase().includes("resource");
+
+          return (
+            <section
+              key={section.heading}
+              className={`relative rounded-[28px] border p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8 ${
+                isResourceStep
+                  ? "border-emerald-200 bg-[linear-gradient(180deg,rgba(16,185,129,0.08),rgba(255,255,255,1))]"
+                  : "border-[color:var(--border)] bg-white"
+              }`}
+            >
+              <div className="mb-4 flex items-start gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#2563eb,#7c3aed)] text-sm font-bold text-white shadow-md">
+                  {stepNumber}
                 </span>
-              ) : null}
-              <h2 className="headline-font text-2xl font-semibold tracking-tight text-[color:var(--text-primary)] sm:text-3xl">
-                {section.heading}
-              </h2>
-            </div>
-            <SectionBody section={section} skipBullets={isChecklist} />
-            {section.bullets ? (
-              <ol className="mt-5 space-y-3">
-                {section.bullets.map((bullet, bulletIndex) => (
-                  <li
-                    key={bullet}
-                    className="flex gap-3 rounded-2xl border border-blue-100 bg-white px-4 py-3"
-                  >
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
-                      {bulletIndex + 1}
-                    </span>
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ol>
-            ) : null}
-            <SectionImageBlock
-              section={section}
-              index={index}
-              sectionImageChunks={sectionImageChunks}
-            />
-            {index === 1 ? (
-              <div className="mt-6">
-                <SponsoredAdSlot compact />
+                <div className="min-w-0 flex-1">
+                  {isResourceStep ? (
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-600">
+                      Free Resources
+                    </p>
+                  ) : null}
+                  <h2 className="headline-font text-2xl font-semibold tracking-tight text-[color:var(--text-primary)] sm:text-3xl">
+                    {section.heading.replace(/^Step\s+\d+:\s*/i, "")}
+                  </h2>
+                </div>
               </div>
-            ) : null}
-          </section>
-        );
-      })}
-    </div>
-  );
+              <SectionBody section={section} skipBullets={Boolean(section.bullets?.length)} />
+              {section.bullets ? (
+                <ul className="mt-5 space-y-3">
+                  {section.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-4 py-3"
+                    >
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+              <SectionImageBlock
+                section={section}
+                index={index}
+                sectionImageChunks={sectionImageChunks}
+              />
+              {index === 2 ? (
+                <div className="mt-6">
+                  <SponsoredAdSlot compact />
+                </div>
+              ) : null}
+            </section>
+          );
+        })}
+      </div>
+    );
+  }
+
+  if (post.layoutVariant === "playbook") {
+    return (
+      <div className="article-prose mx-auto w-full max-w-3xl space-y-8">
+        {post.sections.map((section, index) => {
+          const isChecklist = Boolean(section.bullets?.length);
+          return (
+            <section
+              key={section.heading}
+              className={`rounded-[28px] border p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8 ${
+                isChecklist
+                  ? "border-blue-200 bg-[linear-gradient(180deg,rgba(37,99,235,0.06),rgba(255,255,255,1))]"
+                  : "border-[color:var(--border)] bg-white"
+              }`}
+            >
+              <div className="flex items-start gap-3">
+                {isChecklist ? (
+                  <span className="mt-1 rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
+                    Action
+                  </span>
+                ) : null}
+                <h2 className="headline-font text-2xl font-semibold tracking-tight text-[color:var(--text-primary)] sm:text-3xl">
+                  {section.heading}
+                </h2>
+              </div>
+              <SectionBody section={section} skipBullets={isChecklist} />
+              {section.bullets ? (
+                <ol className="mt-5 space-y-3">
+                  {section.bullets.map((bullet, bulletIndex) => (
+                    <li
+                      key={bullet}
+                      className="flex gap-3 rounded-2xl border border-blue-100 bg-white px-4 py-3"
+                    >
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
+                        {bulletIndex + 1}
+                      </span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ol>
+              ) : null}
+              <SectionImageBlock
+                section={section}
+                index={index}
+                sectionImageChunks={sectionImageChunks}
+              />
+              {index === 1 ? (
+                <div className="mt-6">
+                  <SponsoredAdSlot compact />
+                </div>
+              ) : null}
+            </section>
+          );
+        })}
+      </div>
+    );
+  }
+
+  return null;
 }

@@ -1,6 +1,8 @@
 import type { Post } from "./types";
+import { aiCareerRoadmapPost } from "./ai-career-roadmap-post";
 
 export const careerPosts: Post[] = [
+  aiCareerRoadmapPost,
   {
     slug: "ai-engineer-salary-india-2026-real-journey",
     title:
@@ -165,6 +167,7 @@ export const careerPosts: Post[] = [
       },
     ],
     relatedSlugs: [
+      "ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi",
       "btech-fresher-ai-career-strategy-2025-2026-hindi",
       "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
     ],
@@ -361,6 +364,7 @@ export const careerPosts: Post[] = [
       },
     ],
     relatedSlugs: [
+      "ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi",
       "ai-engineer-salary-india-2026-real-journey",
       "btech-fresher-ai-career-strategy-2025-2026-hindi",
     ],
@@ -514,6 +518,7 @@ export const careerPosts: Post[] = [
       },
     ],
     relatedSlugs: [
+      "ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi",
       "ai-engineer-salary-india-2026-real-journey",
       "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
     ],

@@ -13,7 +13,7 @@ export type Faq = {
   answer: string;
 };
 
-export type LayoutVariant = "timeline" | "journey" | "playbook";
+export type LayoutVariant = "timeline" | "journey" | "playbook" | "roadmap";
 
 export type Post = {
   slug: string;
