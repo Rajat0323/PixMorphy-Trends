@@ -268,6 +268,64 @@ export function BlogPostSections({ post }: { post: Post }) {
     );
   }
 
+  if (post.layoutVariant === "course") {
+    return (
+      <div className="article-prose mx-auto w-full max-w-3xl space-y-8">
+        {post.sections.map((section, index) => (
+          <section
+            key={section.heading}
+            className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-violet-600">
+              Learning Phase {index + 1}
+            </p>
+            <h2 className="headline-font mt-2 text-2xl font-semibold tracking-tight text-[color:var(--text-primary)] sm:text-3xl">
+              {section.heading}
+            </h2>
+            <SectionBody section={section} skipBullets={Boolean(section.bullets?.length)} />
+            {section.bullets ? (
+              <ul className="mt-5 space-y-3">
+                {section.bullets.map((bullet) => (
+                  <li
+                    key={bullet}
+                    className="rounded-2xl bg-[color:var(--surface-muted)] px-4 py-3"
+                  >
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            <SectionImageBlock
+              section={section}
+              index={index}
+              sectionImageChunks={sectionImageChunks}
+            />
+            {section.actionItems?.length ? (
+              <aside className="mt-6 rounded-[22px] border border-emerald-200 bg-emerald-50/90 p-5">
+                <p className="text-sm font-semibold text-emerald-900">आज का Task</p>
+                <ul className="mt-3 space-y-2 text-sm leading-7 text-emerald-950">
+                  {section.actionItems.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span aria-hidden className="text-emerald-600">
+                        →
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+            ) : null}
+            {index === 2 ? (
+              <div className="mt-6">
+                <SponsoredAdSlot compact />
+              </div>
+            ) : null}
+          </section>
+        ))}
+      </div>
+    );
+  }
+
   if (post.layoutVariant === "playbook") {
     return (
       <div className="article-prose mx-auto w-full max-w-3xl space-y-8">
