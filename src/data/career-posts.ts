@@ -1,7 +1,9 @@
 import type { Post } from "./types";
 import { aiCareerRoadmapPost } from "./ai-career-roadmap-post";
+import { genaiCoursesEngineeringPost } from "./genai-courses-engineering-post";
 
 export const careerPosts: Post[] = [
+  genaiCoursesEngineeringPost,
   aiCareerRoadmapPost,
   {
     slug: "ai-engineer-salary-india-2026-real-journey",
@@ -167,9 +169,9 @@ export const careerPosts: Post[] = [
       },
     ],
     relatedSlugs: [
+      "generative-ai-courses-engineering-students-roadmap-2026-hindi",
       "ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi",
       "btech-fresher-ai-career-strategy-2025-2026-hindi",
-      "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
     ],
     internalLinks: [
       {
@@ -364,9 +366,9 @@ export const careerPosts: Post[] = [
       },
     ],
     relatedSlugs: [
+      "generative-ai-courses-engineering-students-roadmap-2026-hindi",
       "ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi",
       "ai-engineer-salary-india-2026-real-journey",
-      "btech-fresher-ai-career-strategy-2025-2026-hindi",
     ],
     internalLinks: [
       {
@@ -518,7 +520,7 @@ export const careerPosts: Post[] = [
       },
     ],
     relatedSlugs: [
-      "ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi",
+      "generative-ai-courses-engineering-students-roadmap-2026-hindi",
       "ai-engineer-salary-india-2026-real-journey",
       "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
     ],

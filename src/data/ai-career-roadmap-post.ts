@@ -221,9 +221,9 @@ export const aiCareerRoadmapPost: Post = {
     },
   ],
   relatedSlugs: [
+    "generative-ai-courses-engineering-students-roadmap-2026-hindi",
     "ai-engineer-salary-india-2026-real-journey",
     "btech-fresher-ai-career-strategy-2025-2026-hindi",
-    "sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi",
   ],
   internalLinks: [
     {
