@@ -5,10 +5,15 @@ import { issueAdminSession } from "@/lib/cms-auth";
 
 const scrypt = promisify(scryptCallback);
 export async function POST(request: Request) {
-  const sql = cmsDb();
-  const ip = request.headers.get("x-real-ip") ?? request.headers.get("x-forwarded-for")?.split(",").at(-1)?.trim() ?? "unknown";
-  const ipHash = createHash("sha256").update(`${process.env.ADMIN_SESSION_SECRET}:${ip}`).digest("hex");
   try {
+    const sessionSecret = process.env.ADMIN_SESSION_SECRET;
+    if (!sessionSecret || !process.env.ADMIN_EMAIL || !process.env.ADMIN_PASSWORD_HASH) {
+      console.error("CMS login configuration is incomplete");
+      return Response.json({ error: "Admin sign-in is not configured. Contact the site administrator." }, { status: 503 });
+    }
+    const sql = cmsDb();
+    const ip = request.headers.get("x-real-ip") ?? request.headers.get("x-forwarded-for")?.split(",").at(-1)?.trim() ?? "unknown";
+    const ipHash = createHash("sha256").update(`${sessionSecret}:${ip}`).digest("hex");
     const attempts = await sql`SELECT count(*)::int AS count FROM cms_login_attempts WHERE ip_hash=${ipHash} AND created_at > now() - interval '15 minutes' AND success=false`;
     if (Number(attempts[0]?.count ?? 0) >= 8) return Response.json({ error: "Too many login attempts. Try again in 15 minutes." }, { status: 429 });
     const body = await request.json();
