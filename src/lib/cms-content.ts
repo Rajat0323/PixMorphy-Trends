@@ -24,7 +24,7 @@ export function sanitizeCmsContent(value: unknown) {
     exclusiveFilter: (frame) => frame.tag === "img" && isPinterestPinPage(frame.attribs.src ?? ""),
   });
 
-  return safe
+  let normalized = safe
     .replace(/<figure>\s*(?:<figcaption>\s*<\/figcaption>)?\s*<\/figure>/gi, "")
     .replace(/<h([23])>\s*(<figure\b[\s\S]*?<\/figure>)\s*([\s\S]*?)\s*<\/h\1>/gi, (_match, level: string, figure: string, text: string) => `${figure}${text.trim() ? `<h${level}>${text}</h${level}>` : ""}`)
     .replace(/<h([23])>([\s\S]*?)<\/h\1>/gi, (_match, level: string, inner: string) => {
@@ -37,5 +37,12 @@ export function sanitizeCmsContent(value: unknown) {
         : body;
     })
     .replace(/<h([23])>([\s\S]*?)<\/h\1>/gi, (_match, level: string, text: string) => `<h${level}>${text.replace(/(?:<br\s*\/?\s*>)+/gi, " ").trim()}</h${level}>`);
+
+  const firstH2 = normalized.search(/<h2\b/i);
+  const firstH3 = normalized.search(/<h3\b/i);
+  if (firstH3 >= 0 && (firstH2 < 0 || firstH3 < firstH2)) {
+    normalized = normalized.replace(/<h3\b([^>]*)>([\s\S]*?)<\/h3>/i, "<h2$1>$2</h2>");
+  }
+  return normalized;
 }
 
