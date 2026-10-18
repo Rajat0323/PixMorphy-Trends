@@ -19,12 +19,21 @@ export async function issueAdminSession(email: string) {
   const expires = Math.floor(Date.now() / 1000) + MAX_AGE;
   const payload = Buffer.from(JSON.stringify({ email, expires })).toString("base64url");
   (await cookies()).set(COOKIE, `${payload}.${signature(payload)}`, {
-    httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax", path: "/admin", maxAge: MAX_AGE,
+    httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax", path: "/", maxAge: MAX_AGE,
   });
 }
 
 export async function clearAdminSession() {
-  (await cookies()).delete(COOKIE);
+  const store = await cookies();
+  const options = {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax" as const,
+    maxAge: 0,
+  };
+  // Clear both paths because older deployments scoped the cookie to /admin.
+  store.set(COOKIE, "", { ...options, path: "/" });
+  store.set(COOKIE, "", { ...options, path: "/admin" });
 }
 
 export async function isAdmin() {

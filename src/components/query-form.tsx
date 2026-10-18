@@ -53,15 +53,25 @@ export function QueryForm({ redirectUrl }: QueryFormProps) {
       }
 
       if (data.useMailto) {
-        window.location.href = data.mailto ?? buildMailtoLink(payload);
-        setStatus("mailto");
+        const mailto = data.mailto ?? buildMailtoLink(payload);
+        if (mailto) {
+          window.location.href = mailto;
+          setStatus("mailto");
+        } else {
+          setStatus("error");
+        }
         return;
       }
 
       setStatus("error");
     } catch {
-      window.location.href = buildMailtoLink(payload);
-      setStatus("mailto");
+      const mailto = buildMailtoLink(payload);
+      if (mailto) {
+        window.location.href = mailto;
+        setStatus("mailto");
+      } else {
+        setStatus("error");
+      }
     }
   }
 
@@ -125,7 +135,7 @@ export function QueryForm({ redirectUrl }: QueryFormProps) {
         <p className="text-sm text-red-600">{tr("formError")}</p>
       ) : null}
 
-      <p className="text-sm text-[color:var(--text-muted)]">
+      {siteConfig.contactEmail ? <p className="text-sm text-[color:var(--text-muted)]">
         {tr("formDirectEmail")}{" "}
         <Link
           href={`mailto:${siteConfig.contactEmail}`}
@@ -133,7 +143,7 @@ export function QueryForm({ redirectUrl }: QueryFormProps) {
         >
           {siteConfig.contactEmail}
         </Link>
-      </p>
+      </p> : null}
     </form>
   );
 }

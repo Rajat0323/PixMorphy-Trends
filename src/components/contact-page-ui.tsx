@@ -17,7 +17,7 @@ export function ContactPageUi() {
         description={tr("contactDesc")}
       />
       <div className="mt-8 space-y-6 text-sm leading-8 text-[color:var(--text-secondary)] sm:text-base">
-        <div className="rounded-[24px] bg-[color:var(--surface-muted)] p-6">
+        {siteConfig.contactEmail ? <div className="rounded-[24px] bg-[color:var(--surface-muted)] p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
             {tr("contactEmailLabel")}
           </p>
@@ -28,7 +28,7 @@ export function ContactPageUi() {
             {siteConfig.contactEmail}
           </Link>
           <p className="mt-2 text-sm text-[color:var(--text-muted)]">{tr("contactEmailHint")}</p>
-        </div>
+        </div> : null}
         <p>{tr("contactResponseTime")}</p>
         <p>
           {tr("contactFormLink")}{" "}

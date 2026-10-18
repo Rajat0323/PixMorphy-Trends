@@ -7,6 +7,7 @@ export type QueryPayload = {
 };
 
 export function buildMailtoLink({ name, email, message }: QueryPayload) {
+  if (!siteConfig.contactEmail) return "";
   const subject = encodeURIComponent(`PixMorphy Query — ${name}`);
   const body = encodeURIComponent(
     `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,

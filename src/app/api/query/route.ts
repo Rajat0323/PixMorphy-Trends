@@ -33,11 +33,9 @@ export async function POST(request: Request) {
       }
     }
 
-    return NextResponse.json({
-      ok: false,
-      useMailto: true,
-      mailto: buildMailtoLink(payload),
-    });
+    const mailto = buildMailtoLink(payload);
+    if (mailto) return NextResponse.json({ ok: false, useMailto: true, mailto });
+    return NextResponse.json({ error: "Contact form delivery is not configured yet." }, { status: 503 });
   } catch {
     return NextResponse.json({ error: "सर्वर त्रुटि" }, { status: 500 });
   }

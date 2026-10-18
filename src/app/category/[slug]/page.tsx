@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${label} — लेख`,
-    description: `PixMorphy par ${label} category ke experience-based Hindi career articles.`,
+    description: `PixMorphy par ${label} category ke Hindi career guides.`,
     alternates: {
       canonical: `/category/${slug}`,
     },
     openGraph: {
       title: `${label} | PixMorphy`,
-      description: `PixMorphy par ${label} category ke experience-based Hindi career articles.`,
+      description: `PixMorphy par ${label} category ke Hindi career guides.`,
       url: `${siteConfig.url}/category/${slug}`,
       type: "website",
     },
@@ -63,7 +63,7 @@ export default async function CategoryPage({ params }: PageProps) {
           as="h1"
           eyebrow="श्रेणी"
           title={`${label} — लेख`}
-          description={`${label} category ke experience-based career guides — personal journey, honest guidance.`}
+          description={`${label} पर व्यावहारिक करियर मार्गदर्शन और सीखने की योजनाएँ।`}
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {categoryPosts.map((post) => (

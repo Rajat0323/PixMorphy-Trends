@@ -1,18 +1,17 @@
 # PixMorphy
 
-> Hindi career and AI guidance blog for Indian B.Tech and graduation students — based on real personal experience.
+> Hindi-first career, technology, and AI guides for students and early-career readers.
 
 Site: https://www.pixmorphy.in
-Contact: vivgup64@gmail.com
 RSS: https://www.pixmorphy.in/feed.xml
 Sitemap: https://www.pixmorphy.in/sitemap.xml
 
 ## Topics
-- Career guidance for B.Tech and graduation students in India
-- AI engineer salary journey (personal experience, 2022–2026)
-- Government exam preparation to IT job transition
-- B.Tech fresher career strategy in AI era
-- Generative AI courses roadmap for engineering students (2026)
+- Career planning and entry-level technology roles
+- AI career and project roadmaps
+- Researching compensation and comparing job offers
+- Career transitions after study or exam preparation
+- Generative AI, retrieval, and application evaluation
 
 ## Key pages
 - Homepage: https://www.pixmorphy.in/
@@ -21,9 +20,9 @@ Sitemap: https://www.pixmorphy.in/sitemap.xml
 - Editorial policy: https://www.pixmorphy.in/editorial-policy
 - Contact: https://www.pixmorphy.in/contact
 
-## Blog posts (experience-based only)
-- Engineering Students ke liye Generative AI Courses — Complete Roadmap 2026: https://www.pixmorphy.in/blog/generative-ai-courses-engineering-students-roadmap-2026-hindi
-- AI mein Career kaise shuru kare — Beginners Roadmap 2026: https://www.pixmorphy.in/blog/ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi
-- AI Engineer Salary India 2026: Core Electronics se GenAI Engineer Tak — Real Salary Journey: https://www.pixmorphy.in/blog/ai-engineer-salary-india-2026-real-journey
-- Sarkari naukri chhod kar IT job kaise paye (2026 Hindi guide): https://www.pixmorphy.in/blog/sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi
-- B.Tech Fresher Career Strategy 2025–2026: AI yug mein pehli naukri: https://www.pixmorphy.in/blog/btech-fresher-ai-career-strategy-2025-2026-hindi
+## Blog posts
+- Generative AI Learning Roadmap for Engineering Students: https://www.pixmorphy.in/blog/generative-ai-courses-engineering-students-roadmap-2026-hindi
+- AI Career Roadmap for Beginners: https://www.pixmorphy.in/blog/ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi
+- AI Engineer Salary in India: Researching Offers and Career Planning: https://www.pixmorphy.in/blog/ai-engineer-salary-india-2026-real-journey
+- Career after government exam preparation: https://www.pixmorphy.in/blog/sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi
+- Graduate Career Strategy: https://www.pixmorphy.in/blog/btech-fresher-ai-career-strategy-2025-2026-hindi

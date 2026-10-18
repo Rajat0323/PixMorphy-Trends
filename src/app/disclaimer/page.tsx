@@ -23,32 +23,30 @@ export default function DisclaimerPage() {
         />
         <div className="mt-8 space-y-5 text-sm leading-8 text-[color:var(--text-secondary)] sm:text-base">
           <p>
-            PixMorphy ke articles informational aur educational purpose ke liye hain. Career paths,
-            salary numbers, aur job market conditions company, city, skills aur time ke saath change
-            ho sakte hain.
+            PixMorphy articles are for general information and education. Career requirements,
+            compensation, and market conditions vary by role, location, and date.
           </p>
           <p>
-            Salary tables aur growth timelines author ki personal experience par based hain — ye
-            official HR reports, government data, ya guaranteed packages nahi hain. Apne decisions
-            lene se pehle apna research karein.
+            Compensation information should cite its source and date. Examples and estimates are not
+            official statistics, financial advice, or guaranteed packages. Verify current details
+            independently before making a decision.
           </p>
           <p>
-            PixMorphy financial advice, legal advice, ya job placement guarantee provide nahi karta.
-            Koi bhi career step lene se pehle apni situation, family support aur financial needs
-            evaluate karein.
+            PixMorphy does not provide financial or legal advice or guarantee employment. Consider
+            your own circumstances before making career or financial decisions.
           </p>
           <p>
             Kuch pages par sponsored ad slots ho sakte hain — ye clearly labeled hote hain aur
             editorial content se alag treat kiye jate hain.
           </p>
           <p>
-            Corrections ke liye{" "}
+            For corrections, use the{" "}
             <Link href="/contact" className="text-[color:var(--accent)]">
               contact karein
             </Link>{" "}
             ya{" "}
             <Link href="/editorial-policy" className="text-[color:var(--accent)]">
-              editorial policy
+            editorial policy
             </Link>{" "}
             dekhein.
           </p>

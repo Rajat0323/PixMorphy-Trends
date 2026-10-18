@@ -1,4 +1,5 @@
 import { posts, siteConfig } from "@/data/content";
+import { getCmsPublishedPosts } from "@/lib/cms-db";
 
 function escapeXml(value: string) {
   return value
@@ -10,16 +11,25 @@ function escapeXml(value: string) {
 }
 
 export async function GET() {
-  const items = posts
-    .slice()
-    .sort(
-      (a, b) =>
-        new Date(b.updatedAt ?? b.publishedAt).getTime() -
-        new Date(a.updatedAt ?? a.publishedAt).getTime(),
-    )
+  const cmsPosts = await getCmsPublishedPosts();
+  const items = [
+    ...posts.map((post) => ({
+      slug: post.slug,
+      title: post.title,
+      excerpt: post.excerpt,
+      date: post.updatedAt ?? post.publishedAt,
+    })),
+    ...cmsPosts.map((post) => ({
+      slug: post.slug,
+      title: post.title,
+      excerpt: post.excerpt,
+      date: post.published_at ?? new Date().toISOString(),
+    })),
+  ]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .map((post) => {
       const url = `${siteConfig.url}/blog/${post.slug}`;
-      const pubDate = new Date(post.updatedAt ?? post.publishedAt).toUTCString();
+      const pubDate = new Date(post.date).toUTCString();
 
       return `
         <item>

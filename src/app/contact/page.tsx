@@ -3,7 +3,7 @@ import { ContactPageUi } from "@/components/contact-page-ui";
 
 export const metadata: Metadata = {
   title: "संपर्क",
-  description: "PixMorphy से संपर्क करें — vivgup64@gmail.com पर ईमेल करें।",
+  description: "PixMorphy को सुझाव या सुधार भेजने के लिए संपर्क करें।",
   alternates: {
     canonical: "/contact",
   },

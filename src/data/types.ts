@@ -58,3 +58,16 @@ export type Post = {
     href: string;
   }[];
 };
+
+export type CmsPostPreview = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  categories: string[];
+  tags: string[];
+  author: string;
+  published_at: string | null;
+  updated_at: string;
+  featured_image: string;
+  featured_image_alt: string;
+};

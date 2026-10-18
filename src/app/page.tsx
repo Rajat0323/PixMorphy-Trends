@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HomePageUi } from "@/components/home-page-ui";
 import { posts, siteConfig } from "@/data/content";
+import { getCmsPublishedPosts } from "@/lib/cms-db";
 
 export const metadata: Metadata = {
   title: siteConfig.homepageTitle,
@@ -31,6 +32,7 @@ type PageProps = {
 
 export default async function Home({ searchParams }: PageProps) {
   const { sent } = await searchParams;
+  const cmsPosts = await getCmsPublishedPosts();
 
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -55,7 +57,8 @@ export default async function Home({ searchParams }: PageProps) {
 
       <HomePageUi
         latestPosts={latestPosts}
-        totalPosts={posts.length}
+        latestCmsPosts={cmsPosts.slice(0, 3)}
+        totalPosts={posts.length + cmsPosts.length}
         showSentMessage={sent === "1"}
       />
     </div>

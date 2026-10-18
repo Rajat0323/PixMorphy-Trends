@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
-import { siteConfig } from "@/data/content";
 
 export const metadata: Metadata = {
   title: "हमारे बारे में",
   description:
-    "PixMorphy — भारतीय B.Tech और graduation छात्रों के लिए करियर, AI और वास्तविक अनुभव पर हिंदी ब्लॉग। ECE से GenAI engineer tak ki real journey.",
+    "PixMorphy — भारतीय छात्रों के लिए करियर, तकनीक और AI पर व्यावहारिक हिंदी मार्गदर्शन।",
   alternates: {
     canonical: "/about",
   },
@@ -19,33 +18,19 @@ export default function AboutPage() {
         <SectionHeading
           as="h1"
           eyebrow="PixMorphy"
-          title="भारतीय छात्रों के लिए करियर और AI मार्गदर्शन — वास्तविक अनुभव से"
-          description="Ye site generic AI articles ya shortcut promises ke liye nahi hai — sirf tested career journey aur honest guidance ke liye."
+          title="भारतीय छात्रों के लिए करियर और AI मार्गदर्शन"
+          description="PixMorphy shares practical, clearly sourced guides on careers, software, automation, and AI."
         />
         <div className="mt-8 grid gap-5 text-sm leading-8 text-[color:var(--text-secondary)] sm:text-base">
+          <p>PixMorphy is a Hindi-first publication for students and early-career readers exploring careers, software, automation, and AI.</p>
+          <p>We aim to explain technical choices, practical steps, limitations, and sources in plain language. Personal claims are used only when an author has supplied and approved evidence for publication.</p>
+          <p>Salary articles focus on dated, attributable public information and explain uncertainty. One person&apos;s compensation is not presented as a market average.</p>
           <p>
-            PixMorphy ek Hindi career blog hai jo Electronics & Communication (ECE) background se
-            core job, automation engineer, aur ab GenAI engineer tak pahunchne wale real experience
-            par based hai. Sarkari exam preparation, 4 saal ka gap, aur IT industry mein late entry —
-            ye sab khud jhela gaya hai, isliye yahan jo likha hai wo textbook advice nahi, practical
-            path hai.
-          </p>
-          <p>
-            Har article mein author ka naam, publish date, update date, FAQ aur personal experience
-            disclaimer clearly diya jata hai. Salary numbers, job timelines aur career steps individual
-            experience par based hain — official survey ya guaranteed outcome nahi.
-          </p>
-          <p>
-            Agar aap B.Tech fresher ho, sarkari prep chhod kar IT mein jaana chahte ho, ya AI career
-            ki real salary journey samajhna chahte ho — yahan sirf wahi content hai jo is journey se
-            directly juda hai.
-          </p>
-          <p>
-            Suggestions ya corrections ke liye{" "}
+            Suggestions or corrections ke liye{" "}
             <Link href="/contact" className="text-[color:var(--accent)]">
               contact page
             </Link>{" "}
-            ya homepage par query form use karein. Email: {siteConfig.contactEmail}
+            or use the query form on the home page.
           </p>
         </div>
       </div>

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import type { Post } from "@/data/content";
+import type { CmsPostPreview } from "@/data/types";
+import { CmsPostCard } from "@/components/cms-post-card";
 import { QueryForm } from "@/components/query-form";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
@@ -9,12 +11,28 @@ import { useLocale } from "@/lib/i18n/locale-provider";
 
 type HomePageUiProps = {
   latestPosts: Post[];
+  latestCmsPosts: CmsPostPreview[];
   totalPosts: number;
   showSentMessage: boolean;
 };
 
-export function HomePageUi({ latestPosts, totalPosts, showSentMessage }: HomePageUiProps) {
-  const { tr } = useLocale();
+export function HomePageUi({ latestPosts, latestCmsPosts, totalPosts, showSentMessage }: HomePageUiProps) {
+  const { tr, locale } = useLocale();
+  const careerPaths = locale === "en"
+    ? [
+        { title: "Starting after graduation", detail: "Build a first-job plan and a small portfolio.", href: "/blog/btech-fresher-ai-career-strategy-2025-2026-hindi" },
+        { title: "Exploring AI careers", detail: "See a beginner path into AI and applied projects.", href: "/blog/ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi" },
+        { title: "Changing fields after a gap", detail: "Plan a realistic return to work and skill building.", href: "/blog/sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi" },
+        { title: "Researching pay and growth", detail: "Compare roles, source quality, and offer components.", href: "/blog/ai-engineer-salary-india-2026-real-journey" },
+      ]
+    : [
+        { title: "पढ़ाई के बाद शुरुआत", detail: "पहली नौकरी और छोटे पोर्टफोलियो की योजना बनाएँ।", href: "/blog/btech-fresher-ai-career-strategy-2025-2026-hindi" },
+        { title: "AI करियर की खोज", detail: "AI और प्रोजेक्ट्स में शुरुआत का रास्ता देखें।", href: "/blog/ai-career-kaise-shuru-kare-beginners-roadmap-2026-hindi" },
+        { title: "गैप के बाद करियर", detail: "काम पर लौटने और कौशल सीखने की व्यावहारिक योजना।", href: "/blog/sarkari-naukri-chhod-it-job-kaise-paye-2026-hindi" },
+        { title: "वेतन और आगे की तरक्की", detail: "भूमिका, स्रोत और नौकरी के प्रस्ताव को समझें।", href: "/blog/ai-engineer-salary-india-2026-real-journey" },
+      ];
+  const visibleStaticPosts = latestPosts.slice(0, Math.max(0, 9 - latestCmsPosts.length));
+  const visiblePostsCount = latestCmsPosts.length + visibleStaticPosts.length;
 
   return (
     <>
@@ -46,18 +64,38 @@ export function HomePageUi({ latestPosts, totalPosts, showSentMessage }: HomePag
         </div>
       </section>
 
+      <section aria-labelledby="career-paths-heading" className="space-y-5">
+        <SectionHeading
+          eyebrow={locale === "en" ? "Choose a starting point" : "अपनी शुरुआत चुनें"}
+          title={locale === "en" ? "Career guidance for your next step" : "आपके अगले कदम के लिए करियर मार्गदर्शन"}
+          description={locale === "en" ? "Start with the situation you are in, then follow the guides that fit your path." : "आप जिस स्थिति में हैं, वहीं से शुरू करें और अपने रास्ते से जुड़े गाइड पढ़ें।"}
+        />
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {careerPaths.map((path) => (
+            <Link key={path.href} href={path.href} className="rounded-2xl border border-[color:var(--border)] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[color:var(--accent)]">
+              <h3 className="font-semibold text-[color:var(--text-primary)]">{path.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-[color:var(--text-secondary)]">{path.detail}</p>
+              <span className="mt-4 inline-flex text-sm font-semibold text-[color:var(--accent)]">{locale === "en" ? "Open guide →" : "गाइड पढ़ें →"}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section id="blogs" className="space-y-6">
         <SectionHeading
           eyebrow={tr("homeBlogEyebrow")}
           title={tr("homeBlogTitle")}
           description={tr("homeBlogDesc")}
         />
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 notranslate blog-content-lock">
-          {latestPosts.map((post) => (
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 blog-content-lock">
+          {latestCmsPosts.map((post) => (
+            <CmsPostCard key={post.slug} post={post} />
+          ))}
+          {visibleStaticPosts.map((post) => (
             <PostCard key={post.slug} post={post} />
           ))}
         </div>
-        {totalPosts > latestPosts.length ? (
+        {totalPosts > visiblePostsCount ? (
           <div className="flex justify-center">
             <Link
               href="/blog"

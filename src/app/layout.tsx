@@ -30,10 +30,6 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   alternates: {
     canonical: "/",
-    languages: {
-      "hi-IN": "/",
-      "en-IN": "/",
-    },
     types: {
       "application/rss+xml": `${siteConfig.url}/feed.xml`,
     },
@@ -87,9 +83,8 @@ export default function RootLayout({
 
   return (
     <html
-      lang="hi"
+      lang="hi-IN"
       dir="ltr"
-      translate="no"
       data-scroll-behavior="smooth"
       className={`${headingFont.variable} ${bodyFont.variable} scroll-smooth`}
     >

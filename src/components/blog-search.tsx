@@ -3,30 +3,38 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Post } from "@/data/content";
+import type { CmsPostPreview } from "@/data/types";
 import { getCategoryLabel } from "@/data/bhakti";
 import { useLocale } from "@/lib/i18n/locale-provider";
 
 type BlogSearchProps = {
   posts: Post[];
+  cmsPosts: CmsPostPreview[];
   initialQuery?: string;
 };
 
-export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
+type SearchResult = { slug: string; title: string; excerpt: string; category: string; author: string; keywords: string[] };
+
+export function BlogSearch({ posts, cmsPosts, initialQuery = "" }: BlogSearchProps) {
   const [query, setQuery] = useState(initialQuery);
   const { tr } = useLocale();
+
+  const searchablePosts = useMemo<SearchResult[]>(() => [
+    ...cmsPosts.map((post) => ({ slug: post.slug, title: post.title, excerpt: post.excerpt, category: (post.categories ?? []).join(" · "), author: post.author || "PixMorphy", keywords: post.tags ?? [] })),
+    ...posts.map((post) => ({ slug: post.slug, title: post.title, excerpt: post.excerpt, category: getCategoryLabel(post.category), author: post.author, keywords: post.keywords })),
+  ], [posts, cmsPosts]);
 
   const filteredPosts = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     if (!normalized) {
-      return posts;
+      return searchablePosts;
     }
 
-    return posts.filter((post) => {
+    return searchablePosts.filter((post) => {
       const haystack = [
         post.title,
         post.excerpt,
         post.category,
-        getCategoryLabel(post.category),
         post.author,
         ...post.keywords,
       ]
@@ -35,7 +43,7 @@ export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
 
       return haystack.includes(normalized);
     });
-  }, [posts, query]);
+  }, [searchablePosts, query]);
 
   return (
     <div className="space-y-6">
@@ -54,7 +62,7 @@ export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
         {tr("blogSearchResults", { count: filteredPosts.length })}
       </p>
 
-      <div className="grid gap-4 notranslate blog-content-lock">
+      <div className="grid gap-4 blog-content-lock">
         {filteredPosts.map((post) => (
           <Link
             key={post.slug}
@@ -62,7 +70,7 @@ export function BlogSearch({ posts, initialQuery = "" }: BlogSearchProps) {
             className="rounded-[24px] border border-[color:var(--border)] bg-white p-5 shadow-sm transition hover:-translate-y-0.5"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
-              {getCategoryLabel(post.category)}
+              {post.category}
             </p>
             <h2 className="mt-2 text-lg font-semibold text-[color:var(--text-primary)]">
               {post.title}
