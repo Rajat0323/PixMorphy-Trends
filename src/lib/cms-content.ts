@@ -26,8 +26,16 @@ export function sanitizeCmsContent(value: unknown) {
 
   return safe
     .replace(/<figure>\s*(?:<figcaption>\s*<\/figcaption>)?\s*<\/figure>/gi, "")
-    .replace(/<(h[23])>\s*<p>\s*([\s\S]*?)\s*<\/p>\s*<\/\1>/gi, "<$1>$2</$1>")
     .replace(/<h([23])>\s*(<figure\b[\s\S]*?<\/figure>)\s*([\s\S]*?)\s*<\/h\1>/gi, (_match, level: string, figure: string, text: string) => `${figure}${text.trim() ? `<h${level}>${text}</h${level}>` : ""}`)
+    .replace(/<h([23])>([\s\S]*?)<\/h\1>/gi, (_match, level: string, inner: string) => {
+      const block = /<(?:p|table|ul|ol|figure|blockquote|hr)\b/i.exec(inner);
+      if (!block || block.index === undefined) return `<h${level}>${inner}</h${level}>`;
+      const heading = inner.slice(0, block.index).trim();
+      const body = inner.slice(block.index).trim();
+      return heading.replace(/<[^>]*>/g, "").trim()
+        ? `<h${level}>${heading}</h${level}>${body}`
+        : body;
+    })
     .replace(/<h([23])>([\s\S]*?)<\/h\1>/gi, (_match, level: string, text: string) => `<h${level}>${text.replace(/(?:<br\s*\/?\s*>)+/gi, " ").trim()}</h${level}>`);
 }
 
