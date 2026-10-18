@@ -8,7 +8,7 @@ export function CmsPostCard({ post }: { post: CmsPostPreview }) {
       <Link href={`/blog/${post.slug}`} className="flex h-full flex-col">
         <div className="blog-card__image">
           {post.featured_image ? (
-            <CmsFeaturedImage src={post.featured_image} alt={post.featured_image_alt || ""} title={post.title} compact />
+            <CmsFeaturedImage src={post.featured_image} alt={post.featured_image_alt || post.title} title={post.title} compact />
           ) : (
             <div aria-hidden="true" className="flex h-full items-center justify-center bg-[color:var(--surface-muted)] text-2xl font-bold tracking-tight text-[color:var(--accent)]">PM</div>
           )}

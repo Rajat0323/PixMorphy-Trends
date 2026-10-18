@@ -22,7 +22,7 @@ export async function getCmsPublishedPosts(limit = 100): Promise<CmsPostPreview[
       SELECT slug,title,excerpt,categories,tags,'PixMorphy Editorial Team' AS author,published_at,updated_at,featured_image,featured_image_alt
       FROM cms_posts
       WHERE status='published'
-      ORDER BY published_at DESC NULLS LAST, updated_at DESC
+      ORDER BY GREATEST(published_at, updated_at) DESC NULLS LAST, published_at DESC NULLS LAST
       LIMIT ${safeLimit}
     `;
     return rows as unknown as CmsPostPreview[];

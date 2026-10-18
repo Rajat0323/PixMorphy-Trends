@@ -32,7 +32,7 @@ export function BlogIndexUi({ posts, cmsPosts, initialQuery }: BlogIndexUiProps)
         <h2 className="text-xl font-semibold text-[color:var(--text-primary)]">
           {tr("blogAllCount", { count: posts.length + cmsPosts.length })}
         </h2>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="blog-card-grid">
           {cmsPosts.map((post) => (
             <CmsPostCard key={post.slug} post={post} />
           ))}

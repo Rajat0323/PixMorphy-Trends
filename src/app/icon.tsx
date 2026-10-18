@@ -17,12 +17,12 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background:
-            "linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(109, 40, 217) 100%)",
+          background: "#176b58",
           color: "white",
-          fontSize: 220,
+          borderRadius: 112,
+          fontSize: 178,
           fontWeight: 800,
-          fontFamily: "Arial",
+          fontFamily: "Arial, sans-serif",
         }}
       >
         PM

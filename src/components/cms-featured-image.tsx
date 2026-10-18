@@ -29,14 +29,36 @@ export function CmsFeaturedImage({ src, alt, title, onStatusChange, editor = fal
     ? "This is a Pinterest pin page, not an image file. Upload the image in Media or use its direct image URL."
     : "This image could not be loaded. Check the URL or upload the image in Media.";
 
+  if (compact) {
+    return failed ? (
+      <div className="absolute inset-0 flex items-center justify-center bg-[color:var(--surface-muted)] p-5 text-center text-sm font-semibold text-[color:var(--text-secondary)]">
+        {title || "PixMorphy"}
+      </div>
+    ) : (
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 639px) 100vw, (max-width: 1199px) 50vw, 33vw"
+        unoptimized
+        className="object-cover"
+        onLoad={() => onStatusChange?.("loaded")}
+        onError={() => {
+          setFailedSrc(src);
+          onStatusChange?.("failed");
+        }}
+      />
+    );
+  }
+
   return (
     <div>
       {failed ? (
-        <div role={editor ? "status" : undefined} className={`flex items-center justify-center rounded-2xl border border-dashed border-[color:var(--border)] bg-[color:var(--surface-muted)] p-6 text-center text-sm text-[color:var(--text-secondary)] ${editor ? "min-h-28" : compact ? "h-full w-full rounded-none" : "aspect-[1200/630] max-h-[520px]"}`}>
+        <div role={editor ? "status" : undefined} className={`flex items-center justify-center rounded-2xl border border-dashed border-[color:var(--border)] bg-[color:var(--surface-muted)] p-6 text-center text-sm text-[color:var(--text-secondary)] ${editor ? "min-h-28" : "aspect-[1200/630] max-h-[520px]"}`}>
           {editor ? failedMessage : <span className="font-semibold text-slate-700">{title || "PixMorphy"}</span>}
         </div>
       ) : (
-        <div className={`relative overflow-hidden rounded-2xl ${editor ? "aspect-[1200/630] max-w-md" : compact ? "h-full w-full rounded-none" : "mb-8 aspect-[1200/630] max-h-[520px]"}`}>
+        <div className={`relative overflow-hidden rounded-2xl ${editor ? "aspect-[1200/630] max-w-md" : "mb-8 aspect-[1200/630] max-h-[520px]"}`}>
           <Image
             src={src}
             alt={alt}

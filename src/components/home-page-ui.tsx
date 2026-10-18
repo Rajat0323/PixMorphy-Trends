@@ -75,6 +75,25 @@ export function HomePageUi({ latestPosts, latestCmsPosts, totalPosts, showSentMe
         </aside>
       </section>
 
+      <section id="blogs" className="space-y-6">
+        <SectionHeading
+          eyebrow={tr("homeBlogEyebrow")}
+          title={tr("homeBlogTitle")}
+          description={tr("homeBlogDesc")}
+        />
+        <div className="blog-card-grid blog-content-lock">
+          {latestCmsPosts.map((post) => <CmsPostCard key={post.slug} post={post} />)}
+          {visibleStaticPosts.map((post) => <PostCard key={post.slug} post={post} />)}
+        </div>
+        {totalPosts > visiblePostsCount ? (
+          <div className="flex justify-center pt-2">
+            <Link href="/blog" className="inline-flex min-h-12 items-center rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-3 text-sm font-bold text-[color:var(--text-primary)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]">
+              {tr("homeViewAll", { count: totalPosts })}
+            </Link>
+          </div>
+        ) : null}
+      </section>
+
       <section aria-labelledby="career-paths-heading" className="space-y-6">
         <SectionHeading
           eyebrow={locale === "en" ? "Start with your situation" : "अपनी स्थिति से शुरुआत करें"}
@@ -91,25 +110,6 @@ export function HomePageUi({ latestPosts, latestCmsPosts, totalPosts, showSentMe
             </Link>
           ))}
         </div>
-      </section>
-
-      <section id="blogs" className="space-y-6">
-        <SectionHeading
-          eyebrow={tr("homeBlogEyebrow")}
-          title={tr("homeBlogTitle")}
-          description={tr("homeBlogDesc")}
-        />
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3 blog-content-lock">
-          {latestCmsPosts.map((post) => <CmsPostCard key={post.slug} post={post} />)}
-          {visibleStaticPosts.map((post) => <PostCard key={post.slug} post={post} />)}
-        </div>
-        {totalPosts > visiblePostsCount ? (
-          <div className="flex justify-center pt-2">
-            <Link href="/blog" className="inline-flex min-h-12 items-center rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-3 text-sm font-bold text-[color:var(--text-primary)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]">
-              {tr("homeViewAll", { count: totalPosts })}
-            </Link>
-          </div>
-        ) : null}
       </section>
 
       <section id="query" className="grid gap-8 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:grid-cols-[.85fr_1.15fr] sm:p-9">

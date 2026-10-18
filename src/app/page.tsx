@@ -3,6 +3,8 @@ import { HomePageUi } from "@/components/home-page-ui";
 import { posts, siteConfig } from "@/data/content";
 import { getCmsPublishedPosts } from "@/lib/cms-db";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: siteConfig.homepageTitle,
   description: siteConfig.description,
