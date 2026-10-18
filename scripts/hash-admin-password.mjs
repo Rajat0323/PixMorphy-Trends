@@ -1,0 +1,12 @@
+import { randomBytes, scrypt as scryptCallback } from 'node:crypto';
+import { promisify } from 'node:util';
+import { createInterface } from 'node:readline/promises';
+import { stdin, stdout } from 'node:process';
+const scrypt=promisify(scryptCallback);
+const readline=createInterface({input:stdin,output:stdout});
+const password=await readline.question('Enter a new administrator password (input is visible): ');
+readline.close();
+if(password.length<14) throw new Error('Use at least 14 characters.');
+const salt=randomBytes(16).toString('hex');
+const hash=(await scrypt(password,salt,64)).toString('hex');
+console.log(`ADMIN_PASSWORD_HASH=${salt}:${hash}`);

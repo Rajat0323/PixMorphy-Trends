@@ -1,0 +1,8 @@
+"use client";
+import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
+export default function AdminLogin() {
+  const [error,setError]=useState(""); const [loading,setLoading]=useState(false); const router=useRouter();
+  async function submit(event:FormEvent<HTMLFormElement>) { event.preventDefault(); setLoading(true); setError(""); const data=new FormData(event.currentTarget); const response=await fetch("/api/admin/login",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({email:data.get("email"),password:data.get("password")})}); const result=await response.json(); setLoading(false); if(!response.ok){setError(result.error??"Unable to sign in.");return;} router.replace("/admin"); }
+  return <main className="mx-auto mt-20 max-w-md rounded-3xl border border-slate-200 bg-white p-8 shadow-xl"><p className="text-sm font-bold uppercase tracking-widest text-blue-700">PixMorphy CMS</p><h1 className="mt-3 text-3xl font-bold">Admin sign in</h1><p className="mt-2 text-slate-600">Use the administrator credentials configured for this site.</p><form onSubmit={submit} className="mt-7 space-y-4"><label className="block text-sm font-semibold">Email<input required type="email" name="email" autoComplete="username" className="mt-1 w-full rounded-xl border p-3" /></label><label className="block text-sm font-semibold">Password<input required type="password" name="password" autoComplete="current-password" className="mt-1 w-full rounded-xl border p-3" /></label>{error&&<p role="alert" className="text-sm text-red-700">{error}</p>}<button disabled={loading} className="w-full rounded-xl bg-blue-700 p-3 font-bold text-white disabled:opacity-60">{loading?"Signing in…":"Sign in"}</button></form></main>;
+}

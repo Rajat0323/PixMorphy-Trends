@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { posts, siteConfig } from "@/data/content";
 import { getActiveCategorySlugs } from "@/lib/seo";
+import { cmsDb } from "@/lib/cms-db";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: siteConfig.url,
@@ -54,6 +55,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
+  let cmsPosts: {slug:string;updated_at:string}[]=[];
+  if(process.env.DATABASE_URL){try{cmsPosts=await cmsDb()`SELECT slug,updated_at FROM cms_posts WHERE status='published'` as typeof cmsPosts;}catch{/* an unavailable CMS database does not remove the static sitemap */}}
   return [
     ...staticPages,
     ...posts.map((post) => ({
@@ -62,5 +65,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
+    ...cmsPosts.map((post)=>({url:`${siteConfig.url}/blog/${post.slug}`,lastModified:new Date(post.updated_at),changeFrequency:"weekly" as const,priority:0.8})),
   ];
 }

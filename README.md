@@ -19,6 +19,8 @@ The current build includes:
 
 ## Local Development
 
+Use Node.js 22.12 or newer.
+
 Install dependencies:
 
 ```bash
@@ -32,6 +34,30 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000)
+
+## Manual blog CMS setup
+
+The CMS adds an administrator-only manual editor while keeping existing static articles intact. Drafts are stored in Neon Postgres and are not public. An administrator must press **Publish manually** to publish a CMS article. The Google guidance feed is reviewed by a human and never automatically changes scoring logic.
+
+1. Link this folder to the Neon project with `neon link`, then run `neon env pull` to write branch credentials to `.env.local`.
+2. Run `npm run db:migrate` to create the CMS tables in the linked branch. Use `DATABASE_URL_UNPOOLED` for this migration; app queries use pooled `DATABASE_URL`.
+3. Set `ADMIN_EMAIL`, `ADMIN_SESSION_SECRET` (at least 32 random characters), and a separate random `CRON_SECRET` for the daily update monitor.
+4. Run `npm run cms:password-hash` and enter a password of at least 14 characters. Copy the generated `ADMIN_PASSWORD_HASH` into local and production environment settings. The script uses scrypt; do not commit secrets.
+5. Neon Object Storage backs `/admin/media` uploads. `neon env pull` supplies its `AWS_*` credentials; the `assets` bucket is public so published article images load directly. `BLOB_READ_WRITE_TOKEN` remains an optional fallback.
+6. Configure `DATABASE_URL`, the `AWS_*` storage variables, `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH`, `ADMIN_SESSION_SECRET`, and `CRON_SECRET` in Vercel. The Vercel Cron job checks the official Search Central documentation RSS feed daily. Admins can also trigger a manual check under `/admin/seo/guidelines`.
+7. Open `/admin/login`. The initial administrator is created by setting these environment variables; no public registration exists. Neon Auth is enabled on the branch, while the CMS keeps its existing administrator login.
+
+Neon Functions deploys the `hello` endpoint for a backend connectivity check. `npm run neon:verify` checks Postgres, Auth, Functions, and Object Storage end to end. AI Gateway provisioning is omitted because Neon Free does not serve gateway requests; add `aiGateway: true` to `neon.ts` after upgrading to a paid Neon plan.
+
+Search Console OAuth is not configured. The CMS does not show fabricated Search Console metrics. The meter separates objective field checks from editorial heuristics and unknown live checks; its score is not a Google ranking prediction.
+
+### CMS routes
+
+- `/admin/login`, `/admin`, `/admin/posts`, `/admin/posts/new`
+- `/admin/posts/[id]/edit`, `/admin/categories`, `/admin/media`
+- `/admin/seo`, `/admin/seo/guidelines`, `/admin/settings`
+
+The CMS uses the existing `/blog/[slug]` public URL shape. CMS posts are included in the blog index, sitemap, and canonical metadata after explicit publication. Admin pages are marked noindex and disallowed in robots.txt.
 
 Useful commands:
 

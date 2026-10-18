@@ -30,8 +30,10 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setLocaleState(readStoredLocale());
-    setReady(true);
+    queueMicrotask(() => {
+      setLocaleState(readStoredLocale());
+      setReady(true);
+    });
   }, []);
 
   useEffect(() => {

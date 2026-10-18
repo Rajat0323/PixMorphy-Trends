@@ -26,6 +26,7 @@ import { authors, getPostBySlug, getRelatedPosts, posts, siteConfig } from "@/da
 import { getCategoryLabel } from "@/data/bhakti";
 import { getBlogCoverUrl, getBlogSocialCoverUrl } from "@/lib/blog-cover";
 import { getAbsoluteImageUrl, getAbsoluteUrl } from "@/lib/seo";
+import { getCmsPublishedPost } from "@/lib/cms-db";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -37,6 +38,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+  const cmsPost = await getCmsPublishedPost(slug);
+  if (cmsPost) return { title: String(cmsPost.seo_title || cmsPost.title), description: String(cmsPost.meta_description || cmsPost.excerpt), alternates: { canonical: String(cmsPost.canonical || `/blog/${slug}`) }, robots: { index: true, follow: true }, openGraph: { title: String(cmsPost.og_title || cmsPost.seo_title || cmsPost.title), description: String(cmsPost.og_description || cmsPost.meta_description || cmsPost.excerpt), type: "article", url: getAbsoluteUrl(`/blog/${slug}`), publishedTime: String(cmsPost.published_at), modifiedTime: String(cmsPost.updated_at), images: cmsPost.featured_image ? [String(cmsPost.featured_image)] : [] } };
   const post = getPostBySlug(slug);
 
   if (!post) {
@@ -77,6 +80,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogPage({ params }: PageProps) {
   const { slug } = await params;
+  const cmsPost = await getCmsPublishedPost(slug);
+  if (cmsPost) return <main className="mx-auto w-full max-w-4xl px-4 py-10 sm:px-6"><article className="rounded-3xl border bg-white p-6 shadow-sm sm:p-10">{cmsPost.featured_image&&<figure className="mb-8"><img src={String(cmsPost.featured_image)} alt={String(cmsPost.featured_image_alt??"")} className="max-h-[520px] w-full rounded-2xl object-cover"/></figure>}<p className="text-sm text-slate-600">{String(cmsPost.author||"PixMorphy")} · {new Date(String(cmsPost.published_at??cmsPost.created_at)).toLocaleDateString("en-IN")}</p><h1 className="mt-3 text-4xl font-bold leading-tight">{String(cmsPost.title)}</h1>{cmsPost.excerpt&&<p className="mt-5 text-xl leading-8 text-slate-600">{String(cmsPost.excerpt)}</p>}<div className="prose prose-slate mt-8 max-w-none" dangerouslySetInnerHTML={{__html:String(cmsPost.content)}}/>{String(cmsPost.sources??"").trim()&&<section className="mt-10 border-t pt-6"><h2 className="text-xl font-bold">References and sources</h2><ul className="mt-3 list-inside list-disc space-y-2 text-sm">{String(cmsPost.sources).split(/\r?\n/).filter(Boolean).map((source:string,index:number)=>{const url=source.match(/https:\/\/\S+/)?.[0];return <li key={`${source}-${index}`}>{url?<><span>{source.slice(0,source.indexOf(url)).trim()}</span> <a href={url} target="_blank" rel="noopener noreferrer" className="break-all text-blue-700 underline">{url}</a></>:source}</li>})}</ul></section>}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"Article",headline:String(cmsPost.title),description:String(cmsPost.excerpt),datePublished:String(cmsPost.published_at),dateModified:String(cmsPost.updated_at),author:{"@type":"Person",name:String(cmsPost.author||"PixMorphy")},image:cmsPost.featured_image?[String(cmsPost.featured_image)]:undefined,mainEntityOfPage:getAbsoluteUrl(`/blog/${slug}`)})}}/></article></main>;
   const post = getPostBySlug(slug);
 
   if (!post) {
