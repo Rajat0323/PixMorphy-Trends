@@ -1,1 +1,21 @@
-"use client";import Link from"next/link";import{useEffect,useState}from"react";type M={id:string;url:string;filename:string;content_type:string};export default function Media(){const[items,setItems]=useState<M[]>([]);const[message,setMessage]=useState("");useEffect(()=>{fetch("/api/admin/media").then(r=>r.json()).then(x=>setItems(Array.isArray(x)?x:[]))},[]);async function upload(e:React.FormEvent<HTMLFormElement>){e.preventDefault();const f=new FormData(e.currentTarget);const r=await fetch("/api/admin/media",{method:"POST",body:f});const x=await r.json();setMessage(r.ok?"Image uploaded. Use its URL in the editor.":x.error);if(r.ok)location.reload()}return <main className="mx-auto max-w-5xl px-5 py-12"><Link href="/admin">← Dashboard</Link><h1 className="mt-5 text-3xl font-bold">Media library</h1><p className="mt-2 text-sm text-slate-600">Public image files are hosted in Vercel Blob. JPEG, PNG, WebP, or GIF up to 10 MB.</p><form onSubmit={upload} className="mt-5 flex flex-wrap gap-3"><input name="file" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required/><button className="rounded-xl bg-blue-700 px-4 py-2 font-bold text-white">Upload image</button></form><p className="mt-3">{message}</p><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{items.map(x=><article key={x.id} className="rounded-xl border p-3"><img src={x.url} alt="" className="h-40 w-full rounded-lg object-cover"/><p className="mt-2 text-sm font-medium">{x.filename}</p><input readOnly value={x.url} className="mt-2 w-full rounded border p-2 text-xs"/></article>)}</div></main>}
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { MediaLibrary } from "@/components/admin/media-library";
+import { isAdmin } from "@/lib/cms-auth";
+
+export const dynamic = "force-dynamic";
+
+export default async function MediaPage() {
+  if (!await isAdmin()) redirect("/admin/login");
+
+  return (
+    <main className="mx-auto max-w-5xl px-5 py-12">
+      <Link href="/admin">← Dashboard</Link>
+      <h1 className="mt-5 text-3xl font-bold">Media library</h1>
+      <p className="mt-2 text-sm text-slate-600">
+        Public image files are hosted in Vercel Blob. JPEG, PNG, WebP, or GIF up to 10 MB.
+      </p>
+      <MediaLibrary />
+    </main>
+  );
+}
