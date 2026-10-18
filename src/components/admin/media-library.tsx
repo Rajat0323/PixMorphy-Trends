@@ -17,8 +17,6 @@ export function MediaLibrary() {
   const [needsLogin, setNeedsLogin] = useState(false);
 
   const loadMedia = useCallback(async () => {
-    setLoading(true);
-    setMessage("");
     try {
       const response = await fetch("/api/admin/media");
       if (isUnauthorized(response)) {
@@ -37,7 +35,10 @@ export function MediaLibrary() {
     }
   }, []);
 
-  useEffect(() => { void loadMedia(); }, [loadMedia]);
+  useEffect(() => {
+    const timer = window.setTimeout(() => void loadMedia(), 0);
+    return () => window.clearTimeout(timer);
+  }, [loadMedia]);
 
   async function upload(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();

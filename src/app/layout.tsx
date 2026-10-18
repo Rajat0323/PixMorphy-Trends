@@ -107,8 +107,9 @@ export default function RootLayout({
         />
         <div className="site-shell">
           <LocaleProvider>
+            <a href="#main-content" className="skip-link">Skip to main content</a>
             <SiteHeader />
-            <main className="flex-1">{children}</main>
+            <div id="main-content" className="flex-1">{children}</div>
             <SiteFooter />
           </LocaleProvider>
         </div>

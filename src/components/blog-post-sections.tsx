@@ -1,7 +1,6 @@
 import type { Post } from "@/data/types";
 import { BlogArticleTable } from "@/components/blog-article-table";
 import { BlogImage } from "@/components/blog-image";
-import { SponsoredAdSlot } from "@/components/blog-post-ui";
 
 type SectionImageChunks = ReturnType<typeof buildSectionImageChunks>;
 
@@ -153,7 +152,7 @@ export function BlogPostSections({ post }: { post: Post }) {
           </section>
         ) : null}
 
-        {narrativeSections.map((section, index) => (
+        {narrativeSections.map((section) => (
           <section
             key={section.heading}
             className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] sm:p-8"
@@ -162,11 +161,6 @@ export function BlogPostSections({ post }: { post: Post }) {
               {section.heading}
             </h2>
             <SectionBody section={section} />
-            {index === 1 ? (
-              <div className="mt-6">
-                <SponsoredAdSlot compact />
-              </div>
-            ) : null}
           </section>
         ))}
       </div>
@@ -195,11 +189,6 @@ export function BlogPostSections({ post }: { post: Post }) {
               index={index}
               sectionImageChunks={sectionImageChunks}
             />
-            {index === 1 ? (
-              <div className="mt-6">
-                <SponsoredAdSlot compact />
-              </div>
-            ) : null}
           </section>
         ))}
       </div>
@@ -256,11 +245,6 @@ export function BlogPostSections({ post }: { post: Post }) {
                 index={index}
                 sectionImageChunks={sectionImageChunks}
               />
-              {index === 2 ? (
-                <div className="mt-6">
-                  <SponsoredAdSlot compact />
-                </div>
-              ) : null}
             </section>
           );
         })}
@@ -315,11 +299,6 @@ export function BlogPostSections({ post }: { post: Post }) {
                 </ul>
               </aside>
             ) : null}
-            {index === 2 ? (
-              <div className="mt-6">
-                <SponsoredAdSlot compact />
-              </div>
-            ) : null}
           </section>
         ))}
       </div>
@@ -371,11 +350,6 @@ export function BlogPostSections({ post }: { post: Post }) {
                 index={index}
                 sectionImageChunks={sectionImageChunks}
               />
-              {index === 1 ? (
-                <div className="mt-6">
-                  <SponsoredAdSlot compact />
-                </div>
-              ) : null}
             </section>
           );
         })}

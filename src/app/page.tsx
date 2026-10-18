@@ -31,8 +31,7 @@ type PageProps = {
 };
 
 export default async function Home({ searchParams }: PageProps) {
-  const { sent } = await searchParams;
-  const cmsPosts = await getCmsPublishedPosts();
+  const [{ sent }, cmsPosts] = await Promise.all([searchParams, getCmsPublishedPosts()]);
 
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -41,15 +40,10 @@ export default async function Home({ searchParams }: PageProps) {
     url: siteConfig.url,
     description: siteConfig.description,
     inLanguage: "hi-IN",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${siteConfig.url}/blog?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 py-6 sm:px-6 lg:px-8">
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 py-6 sm:px-6 lg:px-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
@@ -61,6 +55,6 @@ export default async function Home({ searchParams }: PageProps) {
         totalPosts={posts.length + cmsPosts.length}
         showSentMessage={sent === "1"}
       />
-    </div>
+    </main>
   );
 }

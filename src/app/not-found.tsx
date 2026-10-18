@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-4 py-20 text-center sm:px-6">
+    <main className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-4 py-20 text-center sm:px-6">
       <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[color:var(--accent)]">
         404
       </p>
@@ -26,6 +26,6 @@ export default function NotFound() {
           लेख देखें
         </Link>
       </div>
-    </div>
+    </main>
   );
 }

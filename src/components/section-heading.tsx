@@ -13,11 +13,11 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className="space-y-3">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--accent)]">
+      <p className="eyebrow">
         {eyebrow}
       </p>
       <div className="space-y-2">
-        <Heading className="text-2xl font-semibold tracking-tight text-[color:var(--text-primary)] sm:text-3xl">
+        <Heading className="headline-font text-2xl font-semibold leading-tight tracking-tight text-[color:var(--text-primary)] sm:text-3xl">
           {title}
         </Heading>
         <p className="max-w-2xl text-sm leading-7 text-[color:var(--text-secondary)] sm:text-base">

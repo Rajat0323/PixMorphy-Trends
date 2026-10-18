@@ -3,7 +3,6 @@
 import Link from "next/link";
 import type { Post } from "@/data/content";
 import { BLOG_CATEGORIES, getCategoryLabel } from "@/data/bhakti";
-import { AdSlot } from "@/components/ad-slot";
 import { QueryForm } from "@/components/query-form";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
@@ -23,10 +22,26 @@ export function PostUpdatedLabel({ date }: PostUpdatedLabelProps) {
     </span>
   );
 }
-
 type BlogPostInternalLinksProps = {
   links: NonNullable<Post["internalLinks"]>;
 };
+
+export function BlogPostReferences({ references }: { references: { label: string; url: string }[] }) {
+  return (
+    <section className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+      <h2 className="text-lg font-bold text-[color:var(--text-primary)]">Sources and further reading</h2>
+      <ul className="mt-4 space-y-3 text-sm">
+        {references.map((reference) => (
+          <li key={reference.url}>
+            <a href={reference.url} target="_blank" rel="noopener noreferrer" className="font-medium text-[color:var(--accent)] underline underline-offset-4">
+              {reference.label} <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
 
 export function BlogPostInternalLinks({ links }: BlogPostInternalLinksProps) {
   const { tr } = useLocale();
@@ -144,7 +159,6 @@ export function BlogPostSidebarUi({ currentSlug, posts }: BlogPostSidebarUiProps
             ))}
         </div>
       </div>
-      <AdSlot label={tr("adSidebar")} />
       <div className="rounded-[28px] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
         <h2 className="text-lg font-semibold text-[color:var(--text-primary)]">
           {tr("postCategories")}
@@ -163,9 +177,4 @@ export function BlogPostSidebarUi({ currentSlug, posts }: BlogPostSidebarUiProps
       </div>
     </>
   );
-}
-
-export function SponsoredAdSlot({ compact = false }: { compact?: boolean }) {
-  const { tr } = useLocale();
-  return <AdSlot label={tr("adSponsored")} compact={compact} />;
 }

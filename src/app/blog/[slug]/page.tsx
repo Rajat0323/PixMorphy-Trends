@@ -5,6 +5,7 @@ import { AuthorCard } from "@/components/author-card";
 import { BlogImage } from "@/components/blog-image";
 import {
   BlogPostFaqSection,
+  BlogPostReferences,
   BlogPostInternalLinks,
   BlogPostQuerySection,
   BlogPostRelatedSection,
@@ -148,14 +149,15 @@ export default async function BlogPage({ params }: PageProps) {
     const cmsImageUrl = getCmsImageUrl(cmsPost.featured_image);
     const articleSchema = {
       "@context": "https://schema.org",
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: String(cmsPost.title),
       description: String(cmsPost.meta_description || cmsPost.excerpt || ""),
       datePublished: publishedAt || undefined,
       dateModified: updatedAt || undefined,
       articleSection: categories,
       keywords: tags,
-      author: { "@type": "Organization", name: authorName },
+      inLanguage: "en-IN",
+      author: { "@type": "Organization", name: authorName, url: siteConfig.url },
       publisher: {
         "@type": "Organization",
         name: siteConfig.name,
@@ -175,36 +177,36 @@ export default async function BlogPage({ params }: PageProps) {
           <span aria-hidden="true"> / </span>
           <span aria-current="page" className="text-slate-900">{String(cmsPost.title)}</span>
         </nav>
-        <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
-          {cmsPost.featured_image ? (
-            <figure>
-              <CmsFeaturedImage src={String(cmsPost.featured_image)} alt={String(cmsPost.featured_image_alt ?? "")} title={String(cmsPost.title)} />
-            </figure>
-          ) : null}
-          <div className="flex flex-wrap items-center gap-3 text-sm text-slate-600">
-            {categories.map((category) => <span key={category} className="rounded-full bg-blue-50 px-3 py-1 font-medium text-blue-800">{category}</span>)}
+        <article lang="en-IN" className="mx-auto rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-9">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--text-muted)]">
+            {categories.map((category) => <span key={category} className="rounded-full bg-[color:var(--surface-muted)] px-3 py-1 font-semibold text-[color:var(--accent)]">{category}</span>)}
             <span>{authorName}</span>
             {publishedAt ? <time dateTime={publishedAt}>{new Date(publishedAt).toLocaleDateString("en-IN")}</time> : null}
             {updatedAt && updatedAt !== publishedAt ? <span>Updated {new Date(updatedAt).toLocaleDateString("en-IN")}</span> : null}
           </div>
-          <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 sm:text-4xl">{String(cmsPost.title)}</h1>
-          {cmsPost.excerpt ? <p className="mt-5 text-xl leading-8 text-slate-600">{String(cmsPost.excerpt)}</p> : null}
+          <h1 className="headline-font mt-5 text-3xl font-bold leading-tight tracking-tight text-[color:var(--text-primary)] sm:text-5xl">{String(cmsPost.title)}</h1>
+          {cmsPost.excerpt ? <p className="mt-5 max-w-3xl text-lg leading-8 text-[color:var(--text-secondary)]">{String(cmsPost.excerpt)}</p> : null}
+          {cmsPost.featured_image ? (
+            <figure className="mt-8 overflow-hidden rounded-xl border border-[color:var(--border)]">
+              <CmsFeaturedImage src={String(cmsPost.featured_image)} alt={String(cmsPost.featured_image_alt ?? "")} title={String(cmsPost.title)} />
+            </figure>
+          ) : null}
           <div className="cms-article-body mt-8" dangerouslySetInnerHTML={{ __html: sanitizeCmsContent(cmsPost.content) }} />
           {internalLinks.length ? (
-            <nav aria-label="Related guides" className="mt-10 rounded-2xl border border-blue-100 bg-blue-50/60 p-5">
-              <h2 className="text-lg font-bold text-slate-900">Related guides</h2>
+            <nav aria-label="Related guides" className="mt-10 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface-muted)] p-5">
+              <h2 className="text-lg font-bold text-[color:var(--text-primary)]">Related guides</h2>
               <ul className="mt-3 list-inside list-disc space-y-2">
-                {internalLinks.map((link) => <li key={`${link.href}-${link.label}`}><a href={link.href} className="font-medium text-blue-800 underline underline-offset-2">{link.label}</a></li>)}
+                {internalLinks.map((link) => <li key={`${link.href}-${link.label}`}><a href={link.href} className="font-medium text-[color:var(--accent)] underline underline-offset-2">{link.label}</a></li>)}
               </ul>
             </nav>
           ) : null}
           {String(cmsPost.sources ?? "").trim() ? (
-            <section className="mt-10 border-t pt-6">
-              <h2 className="text-xl font-bold">References and sources</h2>
+            <section className="mt-10 border-t border-[color:var(--border)] pt-6">
+              <h2 className="text-xl font-bold text-[color:var(--text-primary)]">References and sources</h2>
               <ul className="mt-3 list-inside list-disc space-y-2 text-sm">
                 {String(cmsPost.sources).split(/\r?\n/).filter(Boolean).map((source: string, index: number) => {
                   const url = source.match(/https:\/\/\S+/)?.[0];
-                  return <li key={`${source}-${index}`}>{url ? <><span>{source.slice(0, source.indexOf(url)).trim()}</span> <a href={url} target="_blank" rel="noopener noreferrer" className="break-all text-blue-700 underline">{url}</a></> : source}</li>;
+                  return <li key={`${source}-${index}`}>{url ? <><span>{source.slice(0, source.indexOf(url)).trim()}</span> <a href={url} target="_blank" rel="noopener noreferrer" className="break-all text-[color:var(--accent)] underline">{url}</a></> : source}</li>;
                 })}
               </ul>
             </section>
@@ -225,13 +227,13 @@ export default async function BlogPage({ params }: PageProps) {
   const authorProfile = authors[post.author as keyof typeof authors];
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
     image: [getAbsoluteImageUrl(coverUrl)],
     datePublished: post.publishedAt,
     dateModified: post.updatedAt ?? post.publishedAt,
-    inLanguage: "hi-IN",
+    inLanguage: "en-IN",
     articleSection: getCategoryLabel(post.category),
     keywords: post.keywords.join(", "),
     isAccessibleForFree: true,
@@ -239,6 +241,7 @@ export default async function BlogPage({ params }: PageProps) {
       "@type": "Organization",
       name: post.author,
       description: authorProfile?.bio,
+      url: siteConfig.url,
     },
     publisher: {
       "@type": "Organization",
@@ -252,43 +255,38 @@ export default async function BlogPage({ params }: PageProps) {
     url: getAbsoluteUrl(`/blog/${post.slug}`),
   };
 
-  const faqSchema =
-    post.faq.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: post.faq.map((item) => ({
-            "@type": "Question",
-            name: item.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: item.answer,
-            },
-          })),
-        }
-      : null;
-
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <main className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(articleSchema) }}
       />
-      {faqSchema ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      ) : null}
 
       <div className="mb-6">
         <LocalizedBreadcrumbs items={getBlogBreadcrumbItems(post)} />
       </div>
 
       <div className="grid gap-8 xl:grid-cols-[minmax(0,760px)_300px] xl:items-start">
-        <article className="blog-content-lock space-y-8">
-          <header className="overflow-hidden rounded-[32px] border border-[color:var(--border)] bg-white shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
-            <div className={`relative article-hero-cover bg-gradient-to-br ${post.heroAccent}`}>
+        <article lang="en-IN" className="blog-content-lock space-y-8">
+          <header className="overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)]">
+            <div className="p-5 sm:p-8">
+              <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--text-muted)]">
+                <span className="rounded-full bg-[color:var(--surface-muted)] px-3 py-1 font-semibold text-[color:var(--accent)]">{getCategoryLabel(post.category)}</span>
+                <time dateTime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString("en-IN")}</time>
+                <span>{post.readTime}</span>
+              </div>
+              <h1 className="headline-font mt-5 max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-[color:var(--text-primary)] sm:text-5xl">
+                {post.title}
+              </h1>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-[color:var(--text-secondary)]">{post.excerpt}</p>
+              <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-[color:var(--border)] pt-4 text-sm text-[color:var(--text-muted)]">
+                <span className="font-semibold text-[color:var(--text-primary)]">{post.author}</span>
+                {post.updatedAt && post.updatedAt !== post.publishedAt ? (
+                  <PostUpdatedLabel date={new Date(post.updatedAt).toLocaleDateString("en-IN")} />
+                ) : null}
+              </div>
+            </div>
+            <figure className={`relative article-hero-cover bg-gradient-to-br ${post.heroAccent}`}>
               <BlogImage
                 src={coverUrl}
                 alt={post.imageAlt}
@@ -300,36 +298,14 @@ export default async function BlogPage({ params }: PageProps) {
                   objectPosition: post.imageObjectPosition ?? "center",
                 }}
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.08),rgba(15,23,42,0.72))]" />
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                <div className="flex flex-wrap items-center gap-3 text-sm text-white/85">
-                  <span className="rounded-full bg-white/15 px-3 py-1 font-semibold text-white backdrop-blur">
-                    {getCategoryLabel(post.category)}
-                  </span>
-                  <span>{new Date(post.publishedAt).toLocaleDateString("hi-IN")}</span>
-                  <span>{post.readTime}</span>
-                </div>
-                <h1 className="headline-font mt-4 max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-                  {post.title}
-                </h1>
-              </div>
-            </div>
-            <div className="space-y-4 p-6 sm:p-8">
-              <p className="article-prose mt-0 max-w-none text-lg leading-8 text-[color:var(--text-secondary)]">
-                {post.excerpt}
-              </p>
-              <div className="flex flex-wrap items-center gap-4 border-t border-[color:var(--border)] pt-4 text-sm text-[color:var(--text-muted)]">
-                <span className="font-medium text-[color:var(--text-primary)]">{post.author}</span>
-                <PostUpdatedLabel
-                  date={new Date(post.updatedAt ?? post.publishedAt).toLocaleDateString("hi-IN")}
-                />
-              </div>
-            </div>
+              <figcaption className="sr-only">{post.imageAlt}</figcaption>
+            </figure>
           </header>
 
           <BlogPostSections post={post} />
 
           <div className="mx-auto w-full max-w-3xl space-y-8">
+          {post.references?.length ? <BlogPostReferences references={post.references} /> : null}
           {post.internalLinks?.length ? (
             <BlogPostInternalLinks links={post.internalLinks} />
           ) : null}
@@ -352,6 +328,6 @@ export default async function BlogPage({ params }: PageProps) {
           <BlogPostSidebarUi currentSlug={post.slug} posts={posts} />
         </aside>
       </div>
-    </div>
+    </main>
   );
 }

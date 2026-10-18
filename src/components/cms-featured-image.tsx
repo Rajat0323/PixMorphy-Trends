@@ -32,11 +32,11 @@ export function CmsFeaturedImage({ src, alt, title, onStatusChange, editor = fal
   return (
     <div>
       {failed ? (
-        <div role={editor ? "status" : undefined} className={`flex items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-gradient-to-br from-blue-50 to-violet-50 p-6 text-center text-sm text-slate-600 ${editor ? "min-h-28" : compact ? "h-48 w-full" : "aspect-[1200/630] max-h-[520px]"}`}>
+        <div role={editor ? "status" : undefined} className={`flex items-center justify-center rounded-2xl border border-dashed border-[color:var(--border)] bg-[color:var(--surface-muted)] p-6 text-center text-sm text-[color:var(--text-secondary)] ${editor ? "min-h-28" : compact ? "h-full w-full rounded-none" : "aspect-[1200/630] max-h-[520px]"}`}>
           {editor ? failedMessage : <span className="font-semibold text-slate-700">{title || "PixMorphy"}</span>}
         </div>
       ) : (
-        <div className={`relative overflow-hidden rounded-2xl ${editor ? "aspect-[1200/630] max-w-md" : compact ? "h-48 w-full rounded-none" : "mb-8 aspect-[1200/630] max-h-[520px]"}`}>
+        <div className={`relative overflow-hidden rounded-2xl ${editor ? "aspect-[1200/630] max-w-md" : compact ? "h-full w-full rounded-none" : "mb-8 aspect-[1200/630] max-h-[520px]"}`}>
           <Image
             src={src}
             alt={alt}

@@ -39,6 +39,7 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!ready) return;
     document.documentElement.dataset.uiLocale = locale;
+    document.documentElement.lang = locale === "en" ? "en-IN" : "hi-IN";
     localStorage.setItem(LOCALE_COOKIE, locale);
   }, [locale, ready]);
 

@@ -36,6 +36,7 @@ export type Post = {
     alt: string;
   }[];
   keywords: string[];
+  references?: { label: string; url: string }[];
   faq: Faq[];
   sections: {
     heading: string;

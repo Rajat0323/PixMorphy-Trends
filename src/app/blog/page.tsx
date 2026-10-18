@@ -4,17 +4,18 @@ import { posts, siteConfig } from "@/data/content";
 import { getCmsPublishedPosts } from "@/lib/cms-db";
 
 export const metadata: Metadata = {
-  title: "ब्लॉग — करियर, AI, टेक और हिंदी लेख",
+  title: "Career and AI Guides for Students",
   description:
-    "PixMorphy के सभी हिंदी ब्लॉग — करियर मार्गदर्शन, AI, टेक, क्रिकेट, भक्ति और अन्य विषय एक खोज योग्य संग्रह में।",
+    "Browse practical career guides for choosing a first role, learning applied AI, building projects, preparing job applications, and comparing salary research.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "PixMorphy ब्लॉग",
-    description: siteConfig.description,
+    title: "Career and AI Guides | PixMorphy",
+    description: "Practical, clearly sourced guides for students and early-career professionals.",
     url: `${siteConfig.url}/blog`,
     type: "website",
+    locale: "en_IN",
   },
 };
 
@@ -23,12 +24,11 @@ type PageProps = {
 };
 
 export default async function BlogIndexPage({ searchParams }: PageProps) {
-  const { q } = await searchParams;
-  const cmsPosts = await getCmsPublishedPosts();
+  const [{ q }, cmsPosts] = await Promise.all([searchParams, getCmsPublishedPosts()]);
 
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <main className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <BlogIndexUi posts={posts} cmsPosts={cmsPosts} initialQuery={q ?? ""} />
-    </div>
+    </main>
   );
 }

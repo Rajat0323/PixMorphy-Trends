@@ -23,7 +23,7 @@ export async function GET() {
       slug: post.slug,
       title: post.title,
       excerpt: post.excerpt,
-      date: post.published_at ?? new Date().toISOString(),
+          date: post.published_at ?? post.updated_at,
     })),
   ]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -47,8 +47,8 @@ export async function GET() {
   <channel>
     <title>${escapeXml(siteConfig.name)}</title>
     <link>${siteConfig.url}</link>
-    <description>${escapeXml(siteConfig.description)}</description>
-    <language>hi-in</language>
+    <description>Practical career and AI guides for students and early-career readers.</description>
+    <language>en-in</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>${items}
   </channel>
 </rss>`;
