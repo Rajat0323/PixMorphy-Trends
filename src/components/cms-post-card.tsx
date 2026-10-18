@@ -1,17 +1,13 @@
 import Link from "next/link";
 import type { CmsPostPreview } from "@/data/types";
+import { CmsFeaturedImage } from "@/components/cms-featured-image";
 
 export function CmsPostCard({ post }: { post: CmsPostPreview }) {
   return (
     <article className="group overflow-hidden rounded-[28px] border border-[color:var(--border)] bg-white shadow-[0_18px_48px_rgba(15,23,42,0.07)] transition hover:-translate-y-1">
       <Link href={`/blog/${post.slug}`} className="block h-full">
         {post.featured_image ? (
-          <img
-            src={post.featured_image}
-            alt={post.featured_image_alt || ""}
-            loading="lazy"
-            className="h-48 w-full object-cover"
-          />
+          <CmsFeaturedImage src={post.featured_image} alt={post.featured_image_alt || ""} title={post.title} compact />
         ) : (
           <div
             aria-hidden="true"

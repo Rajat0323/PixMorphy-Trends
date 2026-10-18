@@ -27,6 +27,9 @@ import { getCategoryLabel } from "@/data/bhakti";
 import { getBlogCoverUrl, getBlogSocialCoverUrl } from "@/lib/blog-cover";
 import { getAbsoluteImageUrl, getAbsoluteUrl } from "@/lib/seo";
 import { getCmsPublishedPost } from "@/lib/cms-db";
+import { sanitizeCmsContent } from "@/lib/cms-content";
+import { CmsFeaturedImage } from "@/components/cms-featured-image";
+import { getCmsImageUrl } from "@/lib/cms-image";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -70,7 +73,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (cmsPost) {
     const title = String(cmsPost.seo_title || cmsPost.title);
     const description = String(cmsPost.meta_description || cmsPost.excerpt || "");
-    const image = cmsPost.featured_image ? String(cmsPost.featured_image) : undefined;
+    const image = getCmsImageUrl(cmsPost.featured_image);
     const articleUrl = getAbsoluteUrl(`/blog/${slug}`);
     return {
       title,
@@ -142,6 +145,7 @@ export default async function BlogPage({ params }: PageProps) {
     const categories = Array.isArray(cmsPost.categories) ? cmsPost.categories.map(String) : [];
     const tags = Array.isArray(cmsPost.tags) ? cmsPost.tags.map(String) : [];
     const internalLinks = getCmsInternalLinks(cmsPost.internal_links);
+    const cmsImageUrl = getCmsImageUrl(cmsPost.featured_image);
     const articleSchema = {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -158,7 +162,7 @@ export default async function BlogPage({ params }: PageProps) {
         url: siteConfig.url,
         logo: { "@type": "ImageObject", url: `${siteConfig.url}/icon?size=512` },
       },
-      image: cmsPost.featured_image ? [String(cmsPost.featured_image)] : undefined,
+      image: cmsImageUrl ? [cmsImageUrl] : undefined,
       mainEntityOfPage: articleUrl,
     };
 
@@ -173,15 +177,8 @@ export default async function BlogPage({ params }: PageProps) {
         </nav>
         <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
           {cmsPost.featured_image ? (
-            <figure className="mb-8">
-              <img
-                src={String(cmsPost.featured_image)}
-                alt={String(cmsPost.featured_image_alt ?? "")}
-                width={1200}
-                height={630}
-                fetchPriority="high"
-                className="max-h-[520px] w-full rounded-2xl object-cover"
-              />
+            <figure>
+              <CmsFeaturedImage src={String(cmsPost.featured_image)} alt={String(cmsPost.featured_image_alt ?? "")} title={String(cmsPost.title)} />
             </figure>
           ) : null}
           <div className="flex flex-wrap items-center gap-3 text-sm text-slate-600">
@@ -192,7 +189,7 @@ export default async function BlogPage({ params }: PageProps) {
           </div>
           <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 sm:text-4xl">{String(cmsPost.title)}</h1>
           {cmsPost.excerpt ? <p className="mt-5 text-xl leading-8 text-slate-600">{String(cmsPost.excerpt)}</p> : null}
-          <div className="cms-article-body mt-8" dangerouslySetInnerHTML={{ __html: String(cmsPost.content) }} />
+          <div className="cms-article-body mt-8" dangerouslySetInnerHTML={{ __html: sanitizeCmsContent(cmsPost.content) }} />
           {internalLinks.length ? (
             <nav aria-label="Related guides" className="mt-10 rounded-2xl border border-blue-100 bg-blue-50/60 p-5">
               <h2 className="text-lg font-bold text-slate-900">Related guides</h2>
