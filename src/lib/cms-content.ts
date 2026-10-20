@@ -2,7 +2,7 @@ import sanitizeHtml from "sanitize-html";
 import { isPinterestPinPage } from "@/lib/cms-image";
 
 const allowedTags = [
-  "p", "br", "h1", "h2", "h3", "strong", "b", "em", "i", "u",
+  "p", "br", "h1", "h2", "h3", "strong", "b", "em", "i", "u", "span",
   "ul", "ol", "li", "blockquote", "table", "thead", "tbody", "tr",
   "th", "td", "a", "img", "figure", "figcaption", "hr",
 ];
@@ -14,7 +14,33 @@ export function sanitizeCmsContent(value: unknown) {
     allowedAttributes: {
       a: ["href", "title", "rel"],
       img: ["src", "alt", "title", "width", "height"],
-      "*": ["colspan", "rowspan"],
+      "*": ["colspan", "rowspan", "style"],
+    },
+    allowedStyles: {
+      "*": {
+        "font-size": [/^(?:\d+(?:\.\d+)?(?:px|pt|em|rem|%)|xx-small|x-small|small|medium|large|x-large|xx-large|smaller|larger)$/i],
+        "font-weight": [/^(?:normal|bold|bolder|lighter|[1-9]00)$/i],
+        "font-style": [/^(?:normal|italic|oblique)$/i],
+        "font-family": [/^[\w ,"'-]{1,100}$/],
+        "text-decoration": [/^(?:none|underline|line-through|overline)(?:\s+(?:underline|line-through|overline))*$/i],
+        "text-align": [/^(?:left|right|center|justify|start|end)$/i],
+        "text-indent": [/^-?(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i],
+        "letter-spacing": [/^-?(?:normal|0|\d+(?:\.\d+)?(?:px|pt|em|rem))$/i],
+        "word-spacing": [/^-?(?:normal|0|\d+(?:\.\d+)?(?:px|pt|em|rem))$/i],
+        "white-space": [/^(?:normal|nowrap|pre|pre-wrap|pre-line|break-spaces)$/i],
+        "vertical-align": [/^(?:baseline|sub|super|top|middle|bottom|text-top|text-bottom)$/i],
+        "line-height": [/^(?:normal|\d+(?:\.\d+)?(?:px|pt|em|rem|%)?)$/i],
+        "color": [/^(?:#[\da-f]{3,8}|(?:rgb|rgba|hsl|hsla)\([\d.% ,/]+\)|[a-z]{3,20})$/i],
+        "background-color": [/^(?:#[\da-f]{3,8}|(?:rgb|rgba|hsl|hsla)\([\d.% ,/]+\)|[a-z]{3,20})$/i],
+        "margin-top": [/^(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i],
+        "margin-right": [/^(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i],
+        "margin-bottom": [/^(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i],
+        "margin-left": [/^(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i],
+        "padding-top": [/^(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i],
+        "padding-right": [/^(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i],
+        "padding-bottom": [/^(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i],
+        "padding-left": [/^(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i],
+      },
     },
     allowedSchemes: ["http", "https", "mailto"],
     transformTags: {

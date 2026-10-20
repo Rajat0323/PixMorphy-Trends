@@ -41,7 +41,33 @@ export function PostEditor({postId}:{postId?:string}) {
       const template=document.createElement("template");
       if(html){
         template.innerHTML=html;
-        const allowed=new Set(["P","BR","H1","H2","H3","STRONG","B","EM","I","U","UL","OL","LI","BLOCKQUOTE","TABLE","THEAD","TBODY","TR","TH","TD","A","IMG","FIGURE","FIGCAPTION","HR"]);
+        const allowed=new Set(["P","BR","H1","H2","H3","STRONG","B","EM","I","U","SPAN","UL","OL","LI","BLOCKQUOTE","TABLE","THEAD","TBODY","TR","TH","TD","A","IMG","FIGURE","FIGCAPTION","HR"]);
+        const safeStyle=(raw:string)=>raw.split(";").flatMap(declaration=>{
+          const colon=declaration.indexOf(":");
+          if(colon<0)return [];
+          const property=declaration.slice(0,colon).trim().toLowerCase();
+          const value=declaration.slice(colon+1).trim();
+          const length=/^(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i;
+          const patterns:Record<string,RegExp>={
+            "font-size":/^(?:\d+(?:\.\d+)?(?:px|pt|em|rem|%)|xx-small|x-small|small|medium|large|x-large|xx-large|smaller|larger)$/i,
+            "font-weight":/^(?:normal|bold|bolder|lighter|[1-9]00)$/i,
+            "font-style":/^(?:normal|italic|oblique)$/i,
+            "font-family":/^[\w ,"'-]{1,100}$/,
+            "text-decoration":/^(?:none|underline|line-through|overline)(?:\s+(?:underline|line-through|overline))*$/i,
+            "text-align":/^(?:left|right|center|justify|start|end)$/i,
+            "text-indent":/^-?(?:0|\d+(?:\.\d+)?(?:px|pt|em|rem|%))$/i,
+            "letter-spacing":/^-?(?:normal|0|\d+(?:\.\d+)?(?:px|pt|em|rem))$/i,
+            "word-spacing":/^-?(?:normal|0|\d+(?:\.\d+)?(?:px|pt|em|rem))$/i,
+            "white-space":/^(?:normal|nowrap|pre|pre-wrap|pre-line|break-spaces)$/i,
+            "vertical-align":/^(?:baseline|sub|super|top|middle|bottom|text-top|text-bottom)$/i,
+            "line-height":/^(?:normal|\d+(?:\.\d+)?(?:px|pt|em|rem|%)?)$/i,
+            "color":/^(?:#[\da-f]{3,8}|(?:rgb|rgba|hsl|hsla)\([\d.% ,/]+\)|[a-z]{3,20})$/i,
+            "background-color":/^(?:#[\da-f]{3,8}|(?:rgb|rgba|hsl|hsla)\([\d.% ,/]+\)|[a-z]{3,20})$/i,
+            "margin-top":length,"margin-right":length,"margin-bottom":length,"margin-left":length,
+            "padding-top":length,"padding-right":length,"padding-bottom":length,"padding-left":length,
+          };
+          return patterns[property]?.test(value)?[`${property}: ${value}`]:[];
+        }).join("; ");
         const clean=(node:ParentNode)=>Array.from(node.childNodes).forEach(child=>{
           if(child.nodeType!==Node.ELEMENT_NODE)return;
           const el=child as HTMLElement;
@@ -61,11 +87,19 @@ export function PostEditor({postId}:{postId?:string}) {
           for(const attr of Array.from(el.attributes)){
             const name=attr.name.toLowerCase();
             const keep=(el.tagName==="A"&&["href","title"].includes(name))||(el.tagName==="IMG"&&["src","alt","title","width","height"].includes(name))||(["TH","TD"].includes(el.tagName)&&["colspan","rowspan"].includes(name));
-            if(!keep)el.removeAttribute(attr.name);
+            if(name==="style"){
+              const styles=safeStyle(attr.value);
+              if(styles)el.setAttribute("style",styles);else el.removeAttribute("style");
+            }else if(!keep)el.removeAttribute(attr.name);
           }
           if(el.tagName==="A"&&el.hasAttribute("href")){try{if(!["http:","https:","mailto:"].includes(new URL(el.getAttribute("href")!,location.href).protocol))el.removeAttribute("href");}catch{el.removeAttribute("href");}}
           if(el.tagName==="IMG"&&el.hasAttribute("src")){try{if(!["http:","https:"].includes(new URL(el.getAttribute("src")!,location.href).protocol))el.remove();}catch{el.remove();}}
-          if(el.tagName==="H1")el.replaceWith(Object.assign(document.createElement("h2"),{innerHTML:el.innerHTML}));
+          if(el.tagName==="H1"){
+            const heading=document.createElement("h2");
+            for(const attr of Array.from(el.attributes))heading.setAttribute(attr.name,attr.value);
+            heading.innerHTML=el.innerHTML;
+            el.replaceWith(heading);
+          }
         });
         clean(template.content);
         // Word and Google Docs often mark their header row with bold cells rather than <th>.
