@@ -133,6 +133,16 @@ button, input, textarea { font: inherit; }
 .cms-article-body th, .cms-article-body td { border: 1px solid var(--border); padding: .65rem .8rem; text-align: left; }
 .cms-article-body th { background: var(--surface-muted); color: var(--text-primary); }
 
+/* Show pasted document tables in the editor with the same cell and row structure as the article. */
+#article-content table { display: table; width: 100%; max-width: 100%; margin: 1rem 0; border-collapse: collapse; table-layout: auto; }
+#article-content th, #article-content td { min-width: 8rem; border: 1px solid var(--border); padding: .65rem .8rem; text-align: left; vertical-align: top; }
+#article-content th { background: var(--surface-muted); color: var(--text-primary); font-weight: 700; }
+#article-content tr + tr td, #article-content tr + tr th { border-top: 1px solid var(--border); }
+#article-content p { margin: .75em 0; }
+#article-content ul, #article-content ol { padding-left: 1.5rem; }
+#article-content ul { list-style: disc; }
+#article-content ol { list-style: decimal; }
+
 @media (max-width: 639px) {
   .home-hero { border-radius: 1.25rem; }
   .home-hero::after { right: -14rem; }

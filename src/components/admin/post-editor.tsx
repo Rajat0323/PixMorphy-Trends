@@ -46,7 +46,18 @@ export function PostEditor({postId}:{postId?:string}) {
           if(child.nodeType!==Node.ELEMENT_NODE)return;
           const el=child as HTMLElement;
           clean(el);
-          if(!allowed.has(el.tagName)){el.replaceWith(...Array.from(el.childNodes));return;}
+          if(!allowed.has(el.tagName)){
+            const style=el.getAttribute("style")??"";
+            const emphasis: string[]=[];
+            if(/font-weight\s*:\s*(?:bold|[6-9]00)/i.test(style))emphasis.push("strong");
+            if(/font-style\s*:\s*italic/i.test(style))emphasis.push("em");
+            if(/text-decoration(?:-line)?\s*:[^;]*underline/i.test(style))emphasis.push("u");
+            let replacement: Node=el.ownerDocument.createDocumentFragment();
+            for(const nested of Array.from(el.childNodes))replacement.appendChild(nested);
+            for(const tag of emphasis.reverse()){const wrapper=el.ownerDocument.createElement(tag);wrapper.appendChild(replacement);replacement=wrapper;}
+            el.replaceWith(replacement);
+            return;
+          }
           for(const attr of Array.from(el.attributes)){
             const name=attr.name.toLowerCase();
             const keep=(el.tagName==="A"&&["href","title"].includes(name))||(el.tagName==="IMG"&&["src","alt","title","width","height"].includes(name))||(["TH","TD"].includes(el.tagName)&&["colspan","rowspan"].includes(name));
@@ -57,6 +68,19 @@ export function PostEditor({postId}:{postId?:string}) {
           if(el.tagName==="H1")el.replaceWith(Object.assign(document.createElement("h2"),{innerHTML:el.innerHTML}));
         });
         clean(template.content);
+        // Word and Google Docs often mark their header row with bold cells rather than <th>.
+        template.content.querySelectorAll("table").forEach(table=>{
+          const firstRow=table.querySelector("tr");
+          if(!firstRow||firstRow.querySelector("th"))return;
+          firstRow.querySelectorAll("td").forEach(cell=>{
+            if(cell.querySelector("strong,b")||cell.textContent?.trim()){
+              const header=document.createElement("th");
+              header.innerHTML=cell.innerHTML;
+              for(const attr of Array.from(cell.attributes))header.setAttribute(attr.name,attr.value);
+              cell.replaceWith(header);
+            }
+          });
+        });
       }else{
         plain.split(/\r?\n/).forEach((line,index)=>{if(index)template.content.append(document.createElement("br"));template.content.append(document.createTextNode(line));});
       }
