@@ -1,8 +1,11 @@
 import { decode, EntityLevel } from "entities";
+import { createHmac, timingSafeEqual } from "node:crypto";
 import { sanitizeCmsContent } from "@/lib/cms-content";
 
 const GROQ_CHAT_COMPLETIONS_URL = "https://api.groq.com/openai/v1/chat/completions";
 const MAX_FORMAT_INPUT = 80_000;
+export type CmsFormatCheck = { label: string; passed: boolean; detail: string };
+export type CmsFormatResult = { html: string; confidence: number; checks: CmsFormatCheck[]; verificationToken: string };
 
 export class CmsFormattingError extends Error {
   constructor(message: string, readonly status = 502) {
@@ -21,7 +24,47 @@ function visibleText(html: string) {
   ).replace(/[\s\u00a0]+/g, " ").trim();
 }
 
-export async function formatCmsContentForPublish(input: string) {
+function getStructureChecks(html: string): CmsFormatCheck[] {
+  const text = visibleText(html);
+  const headingTags = [...html.matchAll(/<h([23])\b/gi)].map((match) => Number(match[1]));
+  const paragraphs = [...html.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)].map((match) => visibleText(match[1]));
+  const tables = [...html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)].map((match) => match[1]);
+  const lists = [...html.matchAll(/<(ul|ol)\b[^>]*>([\s\S]*?)<\/\1>/gi)].map((match) => match[2]);
+  const words = text.split(/\s+/).filter(Boolean).length;
+  const validTables = tables.every((table) => {
+    const rows = [...table.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map((match) => match[1]);
+    if (rows.length < 2) return false;
+    const counts = rows.map((row) => [...row.matchAll(/<(?:td|th)\b/gi)].length);
+    return counts.every((count) => count > 0 && count === counts[0]) && /<thead\b/i.test(table) && /<th\b/i.test(rows[0]);
+  });
+  const validLists = lists.every((list) => {
+    const items = [...list.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi)];
+    return items.length > 0 && items.every((item) => visibleText(item[1]).length > 0);
+  });
+
+  return [
+    { label: "Article wording", passed: text.length > 0, detail: "Visible text is preserved exactly." },
+    { label: "Headings", passed: !(words >= 120 && !headingTags.includes(2)) && !headingTags.some((level, index) => level === 3 && !headingTags.slice(0, index).includes(2)), detail: headingTags.length ? "Heading levels follow a readable order." : words >= 120 ? "Long articles should include section headings." : "No section headings are needed for this short article." },
+    { label: "Paragraph flow", passed: paragraphs.length > 0 && paragraphs.every((paragraph) => paragraph.length <= 1800), detail: `${paragraphs.length} readable paragraphs detected.` },
+    { label: "Tables", passed: validTables, detail: tables.length ? (validTables ? "Table rows and header cells are consistent." : "A table needs matching rows and a header row.") : "No tables to verify." },
+    { label: "Lists", passed: validLists, detail: lists.length ? (validLists ? "List items are properly grouped." : "A list contains an empty or malformed item.") : "No lists to verify." },
+  ];
+}
+
+function signFormattedContent(html: string) {
+  const secret = process.env.ADMIN_SESSION_SECRET;
+  if (!secret) return "";
+  return createHmac("sha256", secret).update(html).digest("base64url");
+}
+
+export function isVerifiedCmsContent(html: string, token: unknown) {
+  if (typeof token !== "string" || !token || !process.env.ADMIN_SESSION_SECRET) return false;
+  const expected = Buffer.from(signFormattedContent(html));
+  const supplied = Buffer.from(token);
+  return supplied.length === expected.length && timingSafeEqual(supplied, expected);
+}
+
+export async function formatCmsContentForPublish(input: string, onProgress?: (stage: string, progress: number) => void): Promise<CmsFormatResult> {
   const apiKey = process.env.GROQ_API_KEY?.trim();
   if (!apiKey) {
     throw new CmsFormattingError("Groq formatting is not configured. Add GROQ_API_KEY to the Vercel Production environment, then redeploy.", 503);
@@ -31,6 +74,7 @@ export async function formatCmsContentForPublish(input: string) {
   }
 
   const original = sanitizeCmsContent(input);
+  onProgress?.("Sending article structure to Groq", 25);
   let response: Response;
   try {
     response = await fetch(GROQ_CHAT_COMPLETIONS_URL, {
@@ -68,6 +112,8 @@ export async function formatCmsContentForPublish(input: string) {
     throw new CmsFormattingError("Groq could not format the article. It was not published; try again shortly.");
   }
 
+  onProgress?.("Checking headings, paragraphs, tables, and lists", 70);
+
   let payload: {
     choices?: Array<{ finish_reason?: string; message?: { content?: string | null } }>;
   };
@@ -97,5 +143,8 @@ export async function formatCmsContentForPublish(input: string) {
   if (visibleText(original) !== visibleText(formatted)) {
     throw new CmsFormattingError("Formatting was stopped because the AI changed article text. Your draft is unchanged.");
   }
-  return formatted;
+  const checks = getStructureChecks(formatted);
+  const confidence = Math.round((checks.filter((check) => check.passed).length / checks.length) * 100);
+  onProgress?.("Verifying the formatted article", 90);
+  return { html: formatted, confidence, checks, verificationToken: signFormattedContent(formatted) };
 }

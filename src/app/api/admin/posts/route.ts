@@ -1,5 +1,5 @@
 import { sanitizeCmsContent } from "@/lib/cms-content";
-import { CmsFormattingError, formatCmsContentForPublish } from "@/lib/cms-format";
+import { CmsFormattingError, formatCmsContentForPublish, isVerifiedCmsContent } from "@/lib/cms-format";
 import { isPinterestPinPage } from "@/lib/cms-image";
 import { cmsDb } from "@/lib/cms-db";
 import { isAdmin } from "@/lib/cms-auth";
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     if (status === "published") {
       const privacyIssues = checkCmsPublicationPrivacy({ ...body, content, quality: JSON.stringify(quality) });
       if (!body.privacyReviewConfirmed || privacyIssues.length) return Response.json({ error: privacyIssues.length ? `Review privacy findings: ${privacyIssues.join(", ")}. Remove them, then confirm the manual privacy review.` : "Complete the manual privacy review before publishing.", privacyIssues }, { status: 400 });
-      content=await formatCmsContentForPublish(content);
+      if(!isVerifiedCmsContent(content,body.formatVerificationToken))content=(await formatCmsContentForPublish(content)).html;
       const formattedPrivacyIssues=checkCmsPublicationPrivacy({...body,content,quality:JSON.stringify(quality)});
       if(formattedPrivacyIssues.length)return Response.json({error:`Review privacy findings: ${formattedPrivacyIssues.join(", ")}. Remove them before publishing.`,privacyIssues:formattedPrivacyIssues},{status:400});
     }
