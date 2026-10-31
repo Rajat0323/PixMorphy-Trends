@@ -1,4 +1,5 @@
 import { sanitizeCmsContent } from "@/lib/cms-content";
+import { CmsFormattingError, formatCmsContentForPublish } from "@/lib/cms-format";
 import { isPinterestPinPage } from "@/lib/cms-image";
 import { cmsDb } from "@/lib/cms-db";
 import { isAdmin } from "@/lib/cms-auth";
@@ -6,6 +7,8 @@ import { evaluateSeo } from "@/lib/cms-seo";
 import { posts as staticPosts } from "@/data/content";
 import { revalidateCmsPublicPages } from "@/lib/cms-cache";
 import { checkCmsPublicationPrivacy } from "@/lib/cms-privacy";
+
+export const maxDuration = 60;
 
 function clean(value: unknown, max = 50000) { return String(value ?? "").slice(0, max); }
 export async function GET() {
@@ -22,18 +25,21 @@ export async function POST(request: Request) {
     if(staticPosts.some((post)=>post.slug===slug)) return Response.json({error:"This URL is already used by an existing PixMorphy article."},{status:409});
     const featuredImage=clean(body.featuredImage,1000).trim();
     if(body.status === "published" && isPinterestPinPage(featuredImage)) return Response.json({error:"Featured image must be a direct image URL. Upload it in Media or use the image file URL, not its Pinterest pin page."},{status:400});
-    const content=sanitizeCmsContent(body.content); const quality=body.quality && typeof body.quality === "object" ? body.quality : {};
+    let content=sanitizeCmsContent(body.content); const quality=body.quality && typeof body.quality === "object" ? body.quality : {};
     const status=body.status === "published" ? "published" : "draft";
     if (status === "published") {
       const privacyIssues = checkCmsPublicationPrivacy({ ...body, content, quality: JSON.stringify(quality) });
       if (!body.privacyReviewConfirmed || privacyIssues.length) return Response.json({ error: privacyIssues.length ? `Review privacy findings: ${privacyIssues.join(", ")}. Remove them, then confirm the manual privacy review.` : "Complete the manual privacy review before publishing.", privacyIssues }, { status: 400 });
+      content=await formatCmsContentForPublish(content);
+      const formattedPrivacyIssues=checkCmsPublicationPrivacy({...body,content,quality:JSON.stringify(quality)});
+      if(formattedPrivacyIssues.length)return Response.json({error:`Review privacy findings: ${formattedPrivacyIssues.join(", ")}. Remove them before publishing.`,privacyIssues:formattedPrivacyIssues},{status:400});
     }
     const rows=await sql`INSERT INTO cms_posts(slug,title,excerpt,content,status,categories,tags,author,published_at,seo_title,meta_description,og_title,og_description,sources,keyword,canonical,featured_image,featured_image_alt,internal_links,quality)
-      VALUES(${slug},${title},${clean(body.excerpt,1000)},${content},${status},${Array.isArray(body.categories)?body.categories.map(String):[]},${Array.isArray(body.tags)?body.tags.map(String):[]},${"PixMorphy Editorial Team"},${status === "published" ? new Date().toISOString() : null},${clean(body.seoTitle,300)},${clean(body.metaDescription,500)},${clean(body.ogTitle,300)},${clean(body.ogDescription,500)},${clean(body.sources,10000)},${clean(body.keyword,200)},${clean(body.canonical,1000)},${featuredImage},${clean(body.featuredImageAlt,500)},${clean(body.internalLinks,5000)},${JSON.stringify(quality)}::jsonb) RETURNING id,slug,status`;
+      VALUES(${slug},${title},${clean(body.excerpt,1000)},${content},${status},${Array.isArray(body.categories)?body.categories.map(String):[]},${Array.isArray(body.tags)?body.tags.map(String):[]},${"PixMorphy Editorial Team"},${status === "published" ? new Date().toISOString() : null},${clean(body.seoTitle,300)},${clean(body.metaDescription,500)},${clean(body.ogTitle,300)},${clean(body.ogDescription,500)},${clean(body.sources,10000)},${clean(body.keyword,200)},${clean(body.canonical,1000)},${featuredImage},${clean(body.featuredImageAlt,500)},${clean(body.internalLinks,5000)},${JSON.stringify(quality)}::jsonb) RETURNING id,slug,status,content`;
     const created=rows[0]; const evaluation=evaluateSeo({title,slug,excerpt:clean(body.excerpt),content,seoTitle:clean(body.seoTitle),metaDescription:clean(body.metaDescription),keyword:clean(body.keyword),canonical:clean(body.canonical),featuredImageAlt:clean(body.featuredImageAlt),internalLinks:clean(body.internalLinks),quality});
     await sql`INSERT INTO cms_evaluations(post_id,score,rules_version,checks) VALUES(${created.id},${evaluation.score},'1',${JSON.stringify(evaluation.checks)}::jsonb)`;
     await sql`INSERT INTO cms_audit_log(actor,action,entity_id) VALUES(${process.env.ADMIN_EMAIL},${status === "published"?"publish":"create"},${created.id})`;
     if(status === "published") revalidateCmsPublicPages(slug);
     return Response.json(created,{status:201});
-  } catch(error) { const message=error instanceof Error && error.message.includes("duplicate key") ? "That URL slug is already in use." : "Could not save this article. Check database configuration."; console.error("CMS post save failed",error); return Response.json({error:message},{status:500}); }
+  } catch(error) { const message=error instanceof CmsFormattingError?error.message:error instanceof Error && error.message.includes("duplicate key") ? "That URL slug is already in use." : "Could not save this article. Check database configuration."; console.error("CMS post save failed",error); return Response.json({error:message},{status:error instanceof CmsFormattingError?error.status:500}); }
 }
