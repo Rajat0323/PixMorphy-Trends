@@ -6,7 +6,7 @@ import { isAdmin } from "@/lib/cms-auth";
 import { evaluateSeo } from "@/lib/cms-seo";
 import { posts as staticPosts } from "@/data/content";
 import { revalidateCmsPublicPages } from "@/lib/cms-cache";
-import { checkCmsPublicationPrivacy } from "@/lib/cms-privacy";
+import { checkCmsPublicationPrivacy, findCmsPublicationPrivacyDetails } from "@/lib/cms-privacy";
 
 export const maxDuration = 60;
 
@@ -28,11 +28,15 @@ export async function POST(request: Request) {
     let content=sanitizeCmsContent(body.content); const quality=body.quality && typeof body.quality === "object" ? body.quality : {};
     const status=body.status === "published" ? "published" : "draft";
     if (status === "published") {
-      const privacyIssues = checkCmsPublicationPrivacy({ ...body, content, quality: JSON.stringify(quality) });
-      if (!body.privacyReviewConfirmed || privacyIssues.length) return Response.json({ error: privacyIssues.length ? `Review privacy findings: ${privacyIssues.join(", ")}. Remove them, then confirm the manual privacy review.` : "Complete the manual privacy review before publishing.", privacyIssues }, { status: 400 });
+      const privacyFields = { ...body, content, quality: JSON.stringify(quality) };
+      const privacyDetails = findCmsPublicationPrivacyDetails(privacyFields);
+      const privacyIssues = checkCmsPublicationPrivacy(privacyFields);
+      if (!body.privacyReviewConfirmed || privacyIssues.length) return Response.json({ error: privacyIssues.length ? `Review privacy findings: ${privacyIssues.join(", ")}. Remove them, then confirm the manual privacy review.` : "Complete the manual privacy review before publishing.", privacyIssues, privacyDetails }, { status: 400 });
       if(!isVerifiedCmsContent(content,body.formatVerificationToken))content=(await formatCmsContentForPublish(content)).html;
-      const formattedPrivacyIssues=checkCmsPublicationPrivacy({...body,content,quality:JSON.stringify(quality)});
-      if(formattedPrivacyIssues.length)return Response.json({error:`Review privacy findings: ${formattedPrivacyIssues.join(", ")}. Remove them before publishing.`,privacyIssues:formattedPrivacyIssues},{status:400});
+      const formattedPrivacyFields={...body,content,quality:JSON.stringify(quality)};
+      const formattedPrivacyDetails=findCmsPublicationPrivacyDetails(formattedPrivacyFields);
+      const formattedPrivacyIssues=checkCmsPublicationPrivacy(formattedPrivacyFields);
+      if(formattedPrivacyIssues.length)return Response.json({error:`Review privacy findings: ${formattedPrivacyIssues.join(", ")}. Remove them before publishing.`,privacyIssues:formattedPrivacyIssues,privacyDetails:formattedPrivacyDetails},{status:400});
     }
     const rows=await sql`INSERT INTO cms_posts(slug,title,excerpt,content,status,categories,tags,author,published_at,seo_title,meta_description,og_title,og_description,sources,keyword,canonical,featured_image,featured_image_alt,internal_links,quality)
       VALUES(${slug},${title},${clean(body.excerpt,1000)},${content},${status},${Array.isArray(body.categories)?body.categories.map(String):[]},${Array.isArray(body.tags)?body.tags.map(String):[]},${"PixMorphy Editorial Team"},${status === "published" ? new Date().toISOString() : null},${clean(body.seoTitle,300)},${clean(body.metaDescription,500)},${clean(body.ogTitle,300)},${clean(body.ogDescription,500)},${clean(body.sources,10000)},${clean(body.keyword,200)},${clean(body.canonical,1000)},${featuredImage},${clean(body.featuredImageAlt,500)},${clean(body.internalLinks,5000)},${JSON.stringify(quality)}::jsonb) RETURNING id,slug,status,content`;
